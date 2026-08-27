@@ -1,0 +1,586 @@
+﻿sira;hisse;karar;yildiz;skor;risk;guclu_yonler;dikkat;fiyat;stop_seviyesi;bugun_yeni;tarih
+1;TGSAS;GÜÇLÜ AL;*****;99;orta (28);trend güçlü, momentum tam, hacim destekli, endeksten güçlü, haftalık yukarı, osilatör 6/6;aşırı uzamış (4.7× ATR), RSI aşırı alım;268,5;198,54;;27.08.2026
+2;GESAN;GÜÇLÜ AL;*****;99;orta (28);trend güçlü, momentum tam, hacim destekli, endeksten güçlü, haftalık yukarı, osilatör 6/6;aşırı uzamış (3.5× ATR), RSI aşırı alım;93,6;83,74;;27.08.2026
+3;MTRKS;GÜÇLÜ AL;*****;98;düşük (10);trend güçlü, momentum tam, hacim destekli, endeksten güçlü, haftalık yukarı, osilatör 5/6;aşırı uzamış (2.6× ATR);34,36;31,00;;27.08.2026
+4;SANFM;GÜÇLÜ AL;*****;97;orta (28);trend güçlü, momentum tam, hacim destekli, endeksten güçlü, haftalık yukarı, osilatör 6/6;aşırı uzamış (4.0× ATR), RSI aşırı alım;11,16;9,85;;27.08.2026
+5;ARSAN;GÜÇLÜ AL;*****;97;orta (28);trend güçlü, momentum tam, hacim destekli, endeksten güçlü, haftalık yukarı, osilatör 5/6;aşırı uzamış (3.8× ATR), RSI aşırı alım;4,25;3,69;;27.08.2026
+6;AKFIS;GÜÇLÜ AL;*****;96;orta (38);trend güçlü, momentum tam, hacim destekli, endeksten güçlü, haftalık yukarı, osilatör 6/6;uyumsuzluk 1/5, aşırı uzamış (4.8× ATR), RSI aşırı alım;19,43;16,36;;27.08.2026
+7;HATSN;GÜÇLÜ AL;*****;96;orta (35);trend güçlü, hacim destekli, endeksten güçlü, haftalık yukarı, osilatör 5/6;aşırı uzamış (5.1× ATR), RSI aşırı alım;79,4;65,09;;27.08.2026
+8;DURKN;GÜÇLÜ AL;*****;95;düşük (0);trend güçlü, momentum tam, hacim destekli, endeksten güçlü, haftalık yukarı, osilatör 6/6;-;22,74;19,66;;27.08.2026
+9;RYSAS;GÜÇLÜ AL;*****;95;düşük (0);trend güçlü, momentum tam, hacim destekli, endeksten güçlü, haftalık yukarı, osilatör 6/6;-;25,6;21,32;BUGUN;27.08.2026
+10;ALTNY;GÜÇLÜ AL;*****;95;düşük (0);trend güçlü, momentum tam, hacim destekli, endeksten güçlü, haftalık yukarı, osilatör 5/6;-;18,56;16,42;;27.08.2026
+11;NETAS;GÜÇLÜ AL;****;95;düşük (20);trend güçlü, momentum tam, endeksten güçlü, haftalık yukarı;aşırı uzamış (3.9× ATR);95,9;83,84;;27.08.2026
+12;BIGTK;GÜÇLÜ AL;****;94;düşük (16);trend güçlü, momentum tam, hacim destekli, endeksten güçlü, haftalık yukarı, osilatör 6/6;aşırı uzamış (2.4× ATR), dağıtım 3 gün;381,5;296,10;;27.08.2026
+13;EGPRO;GÜÇLÜ AL;****;94;orta (30);trend güçlü, momentum tam, endeksten güçlü, haftalık yukarı, osilatör 6/6;aşırı uzamış (2.8× ATR), RSI aşırı alım, doruk hacim;41,02;36,68;;27.08.2026
+14;BJKAS;GÜÇLÜ AL;****;94;orta (28);trend güçlü, momentum tam, endeksten güçlü, haftalık yukarı;aşırı uzamış (3.7× ATR), momentum sönümü;2,72;2,36;;27.08.2026
+15;BINBN;GÜÇLÜ AL;****;94;düşük (10);trend güçlü, hacim destekli, endeksten güçlü, haftalık yukarı;uyumsuzluk 1/5;186,6;165,95;;27.08.2026
+16;TARKM;GÜÇLÜ AL;****;93;düşük (10);trend güçlü, momentum tam, hacim destekli, endeksten güçlü, haftalık yukarı, osilatör 5/6;aşırı uzamış (2.3× ATR);540,5;477,07;;27.08.2026
+17;KRGYO;GÜÇLÜ AL;****;93;orta (28);trend güçlü, momentum tam, hacim destekli, endeksten güçlü, haftalık yukarı, osilatör 6/6;aşırı uzamış (3.5× ATR), RSI aşırı alım;3,2;2,77;;27.08.2026
+18;BRLSM;GÜÇLÜ AL;****;93;orta (35);trend güçlü, hacim destekli, endeksten güçlü, haftalık yukarı, osilatör 6/6;aşırı uzamış (6.0× ATR), RSI aşırı alım;24,2;19,38;;27.08.2026
+19;TRMET;GÜÇLÜ AL;****;93;düşük (20);trend güçlü, momentum tam, endeksten güçlü, haftalık yukarı, osilatör 5/6;uyumsuzluk 1/5, aşırı uzamış (2.5× ATR);144,7;126,19;;27.08.2026
+20;KRDMD;GÜÇLÜ AL;****;93;düşük (18);trend güçlü, momentum tam, endeksten güçlü, haftalık yukarı, osilatör 6/6;aşırı uzamış (2.5× ATR), momentum sönümü;46,56;40,95;;27.08.2026
+21;GIPTA;GÜÇLÜ AL;****;92;orta (32);trend güçlü, momentum tam, hacim destekli, endeksten güçlü, haftalık yukarı, osilatör 5/6;aşırı uzamış (3.4× ATR), doruk hacim;94,4;79,91;;27.08.2026
+22;CATES;GÜÇLÜ AL;****;92;orta (35);trend güçlü, hacim destekli, endeksten güçlü, haftalık yukarı;aşırı uzamış (6.0× ATR), RSI aşırı alım;68;55,94;;27.08.2026
+23;INVES;GÜÇLÜ AL;****;91;orta (28);trend güçlü, momentum tam, endeksten güçlü, haftalık yukarı, osilatör 6/6;aşırı uzamış (4.9× ATR), RSI aşırı alım;857;779,75;;27.08.2026
+24;RYGYO;GÜÇLÜ AL;****;91;orta (28);trend güçlü, momentum tam, endeksten güçlü, haftalık yukarı, osilatör 6/6;aşırı uzamış (5.1× ATR), RSI aşırı alım;45,98;40,40;;27.08.2026
+25;ASELS;GÜÇLÜ AL;****;91;düşük (8);trend güçlü, momentum tam, endeksten güçlü, haftalık yukarı;momentum sönümü;403,75;357,42;;27.08.2026
+26;BIMAS;GÜÇLÜ AL;****;91;düşük (18);trend güçlü, momentum tam, endeksten güçlü, haftalık yukarı, osilatör 5/6;aşırı uzamış (2.2× ATR), momentum sönümü;413,75;383,65;;27.08.2026
+27;DUNYH;GÜÇLÜ AL;****;90;orta (30);trend güçlü, momentum tam, endeksten güçlü, haftalık yukarı, osilatör 6/6;uyumsuzluk 1/5, aşırı uzamış (3.1× ATR), hacim zayıf;168,5;140,93;;27.08.2026
+28;DEVA;GÜÇLÜ AL;****;90;orta (36);trend güçlü, momentum tam, endeksten güçlü, haftalık yukarı, osilatör 6/6;aşırı uzamış (4.0× ATR), RSI aşırı alım, momentum sönümü, hacim zayıf;90,5;78,97;;27.08.2026
+29;EUPWR;GÜÇLÜ AL;***;90;düşük (20);trend güçlü, momentum tam, endeksten güçlü, haftalık yukarı, osilatör 6/6;aşırı uzamış (3.2× ATR);103,1;90,76;BUGUN;27.08.2026
+30;PASEU;GÜÇLÜ AL;***;90;orta (35);trend güçlü, endeksten güçlü, haftalık yukarı, osilatör 6/6;aşırı uzamış (6.4× ATR), RSI aşırı alım;258;198,25;;27.08.2026
+31;ADGYO;GÜÇLÜ AL;***;90;düşük (0);trend güçlü, momentum tam, endeksten güçlü, haftalık yukarı;-;60,35;54,81;;27.08.2026
+32;GENIL;GÜÇLÜ AL;***;89;düşük (20);trend güçlü, momentum tam, endeksten güçlü, haftalık yukarı;aşırı uzamış (3.1× ATR), hacim zayıf;12,04;10,34;;27.08.2026
+33;VBTYZ;GÜÇLÜ AL;***;89;düşük (10);trend güçlü, momentum tam, endeksten güçlü, haftalık yukarı, osilatör 5/6;aşırı uzamış (2.7× ATR), hacim zayıf;37,2;32,80;;27.08.2026
+34;PSDTC;GÜÇLÜ AL;***;89;orta (32);trend güçlü, momentum tam, endeksten güçlü, haftalık yukarı, osilatör 6/6;uyumsuzluk 2/5, aşırı uzamış (2.2× ATR);168;141,60;;27.08.2026
+35;ALTIN;GÜÇLÜ AL;***;89;düşük (18);momentum tam, endeksten güçlü, haftalık yukarı;aşırı uzamış (2.4× ATR), momentum sönümü;77,51;74,56;;27.08.2026
+36;DMLKT;GÜÇLÜ AL;***;88;orta (36);trend güçlü, momentum tam, endeksten güçlü, haftalık yukarı;aşırı uzamış (4.2× ATR), RSI aşırı alım, momentum sönümü, hacim zayıf;6,9;6,58;;27.08.2026
+37;AYGAZ;GÜÇLÜ AL;***;88;düşük (20);trend güçlü, momentum tam, endeksten güçlü, haftalık yukarı;aşırı uzamış (3.1× ATR), hacim zayıf;319,5;295,18;;27.08.2026
+38;ARDYZ;GÜÇLÜ AL;***;88;düşük (20);trend güçlü, momentum tam, endeksten güçlü, haftalık yukarı;aşırı uzamış (3.3× ATR), hacim zayıf;91,2;80,55;;27.08.2026
+39;KLSYN;GÜÇLÜ AL;***;88;düşük (0);trend güçlü, momentum tam, endeksten güçlü, haftalık yukarı;hacim zayıf;15,64;13,72;;27.08.2026
+40;VANGD;GÜÇLÜ AL;***;88;düşük (0);trend güçlü, momentum tam, endeksten güçlü, haftalık yukarı;hacim zayıf;102;88,63;;27.08.2026
+41;HUNER;GÜÇLÜ AL;***;88;düşük (8);trend güçlü, momentum tam, endeksten güçlü, haftalık yukarı;momentum sönümü;3,88;3,50;BUGUN;27.08.2026
+42;KUVVA;GÜÇLÜ AL;***;87;düşük (10);trend güçlü, momentum tam, endeksten güçlü, haftalık yukarı;aşırı uzamış (2.4× ATR), hacim zayıf;181;163,41;;27.08.2026
+43;SELEC;GÜÇLÜ AL;***;87;orta (35);trend güçlü, endeksten güçlü, haftalık yukarı, osilatör 6/6;aşırı uzamış (5.8× ATR), RSI aşırı alım;324;258,07;;27.08.2026
+44;TNZTP;GÜÇLÜ AL;***;87;düşük (16);trend güçlü, momentum tam, endeksten güçlü, haftalık yukarı, osilatör 6/6;aşırı uzamış (2.8× ATR), dağıtım 3 gün, hacim zayıf;30,28;26,67;;27.08.2026
+45;AKSGY;GÜÇLÜ AL;***;87;düşük (0);trend güçlü, momentum tam, endeksten güçlü, haftalık yukarı, osilatör 5/6;hacim zayıf;10,09;9,55;;27.08.2026
+46;DAGI;GÜÇLÜ AL;***;87;orta (28);trend güçlü, momentum tam, endeksten güçlü, haftalık yukarı, osilatör 6/6;aşırı uzamış (3.7× ATR), RSI aşırı alım, hacim zayıf;11,2;9,61;;27.08.2026
+47;KRDMA;GÜÇLÜ AL;***;87;orta (35);trend güçlü, endeksten güçlü, haftalık yukarı, osilatör 5/6;aşırı uzamış (4.9× ATR), RSI aşırı alım;59,1;51,60;;27.08.2026
+48;KRPLS;GÜÇLÜ AL;***;87;düşük (0);trend güçlü, momentum tam, endeksten güçlü, haftalık yukarı;hacim zayıf;10,38;9,48;;27.08.2026
+49;BOBET;GÜÇLÜ AL;***;87;orta (40);trend güçlü, momentum tam, endeksten güçlü, haftalık yukarı, osilatör 6/6;uyumsuzluk 2/5, aşırı uzamış (2.4× ATR), momentum sönümü;21,4;18,07;BUGUN;27.08.2026
+50;ALARK;GÜÇLÜ AL;***;87;düşük (8);trend güçlü, momentum tam, endeksten güçlü, haftalık yukarı, osilatör 6/6;momentum sönümü, hacim zayıf;109,6;98,31;;27.08.2026
+51;SAYAS;GÜÇLÜ AL;***;86;düşük (10);trend güçlü, momentum tam, endeksten güçlü, haftalık yukarı, osilatör 5/6;aşırı uzamış (2.2× ATR);61,65;51,71;;27.08.2026
+52;TCKRC;GÜÇLÜ AL;***;86;düşük (10);trend güçlü, momentum tam, endeksten güçlü, haftalık yukarı;aşırı uzamış (2.1× ATR), hacim zayıf;164,5;148,45;;27.08.2026
+53;INDES;GÜÇLÜ AL;***;86;düşük (10);trend güçlü, momentum tam, endeksten güçlü, haftalık yukarı, osilatör 5/6;aşırı uzamış (2.7× ATR), hacim zayıf;12;10,82;;27.08.2026
+54;TRENJ;GÜÇLÜ AL;***;86;orta (32);trend güçlü, momentum tam, endeksten güçlü, haftalık yukarı, osilatör 5/6;uyumsuzluk 2/5, aşırı uzamış (2.4× ATR), hacim zayıf;108,5;95,68;;27.08.2026
+55;TRALT;GÜÇLÜ AL;***;86;düşük (0);trend güçlü, momentum tam, endeksten güçlü, haftalık yukarı, osilatör 5/6;hacim zayıf;54,3;48,12;;27.08.2026
+56;VERUS;GÜÇLÜ AL;***;86;orta (35);trend güçlü, endeksten güçlü, haftalık yukarı, osilatör 5/6;aşırı uzamış (6.1× ATR), RSI aşırı alım, hacim zayıf;749;667,54;;27.08.2026
+57;KORDS;GÜÇLÜ AL;***;86;düşük (10);trend güçlü, momentum tam, endeksten güçlü, haftalık yukarı;aşırı uzamış (2.2× ATR), hacim zayıf;88,1;80,94;;27.08.2026
+58;MANAS;GÜÇLÜ AL;***;86;düşük (0);trend güçlü, momentum tam, endeksten güçlü, haftalık yukarı;hacim zayıf;33,1;30,47;;27.08.2026
+59;ETYAT;GÜÇLÜ AL;***;85;düşük (10);trend güçlü, endeksten güçlü, haftalık yukarı;aşırı uzamış (2.2× ATR);15,52;13,55;;27.08.2026
+60;ATATP;GÜÇLÜ AL;***;85;düşük (10);trend güçlü, momentum tam, endeksten güçlü, haftalık yukarı;aşırı uzamış (2.8× ATR), hacim zayıf;319,5;267,66;;27.08.2026
+61;CEMZY;GÜÇLÜ AL;***;85;düşük (8);trend güçlü, momentum tam, endeksten güçlü, haftalık yukarı;momentum sönümü, hacim zayıf;16,43;13,41;;27.08.2026
+62;OZSUB;GÜÇLÜ AL;***;85;orta (30);trend güçlü, endeksten güçlü, haftalık yukarı, osilatör 5/6;uyumsuzluk 1/5, aşırı uzamış (3.2× ATR), hacim zayıf;44,18;36,62;;27.08.2026
+63;EGGUB;GÜÇLÜ AL;***;85;düşük (0);momentum tam, endeksten güçlü, haftalık yukarı, osilatör 5/6;-;109,6;100,13;;27.08.2026
+64;TRCAS;GÜÇLÜ AL;**;85;düşük (8);trend güçlü, momentum tam, endeksten güçlü, haftalık yukarı, osilatör 5/6;momentum sönümü, hacim zayıf;46,98;42,03;;27.08.2026
+65;ORGE;GÜÇLÜ AL;**;84;orta (30);trend güçlü, momentum tam, endeksten güçlü, haftalık yukarı, osilatör 5/6;uyumsuzluk 2/5, momentum sönümü, hacim zayıf;23,92;20,10;;27.08.2026
+66;BIOEN;GÜÇLÜ AL;**;84;düşük (0);momentum tam, hacim destekli, endeksten güçlü, haftalık yukarı, osilatör 5/6;-;19;17,84;;27.08.2026
+67;TBORG;GÜÇLÜ AL;**;84;orta (28);trend güçlü, momentum tam, endeksten güçlü, haftalık yukarı;aşırı uzamış (3.2× ATR), momentum sönümü, hacim zayıf;159,9;143,79;;27.08.2026
+68;SOKM;GÜÇLÜ AL;**;84;düşük (0);trend güçlü, momentum tam, endeksten güçlü, haftalık yukarı;hacim zayıf;56,3;52,67;;27.08.2026
+69;KRONT;GÜÇLÜ AL;**;83;düşük (10);trend güçlü, endeksten güçlü, haftalık yukarı;dağıtım 4 gün;25,56;23,51;BUGUN;27.08.2026
+70;KERVN;GÜÇLÜ AL;**;83;orta (26);trend güçlü, endeksten güçlü, haftalık yukarı;aşırı uzamış (6.8× ATR), dağıtım 3 gün, hacim zayıf;10,94;9,99;;27.08.2026
+71;PCILT;GÜÇLÜ AL;**;83;düşük (0);trend güçlü, momentum tam, endeksten güçlü, haftalık yukarı, osilatör 6/6;hacim zayıf;35,08;29,53;;27.08.2026
+72;TUPRS;GÜÇLÜ AL;**;83;düşük (20);trend güçlü, endeksten güçlü, haftalık yukarı;aşırı uzamış (4.5× ATR), hacim zayıf;380,75;361,06;;27.08.2026
+73;OYAKC;GÜÇLÜ AL;**;83;düşük (10);momentum tam, endeksten güçlü, haftalık yukarı, osilatör 5/6;aşırı uzamış (2.4× ATR);23,02;21,09;;27.08.2026
+74;POLHO;GÜÇLÜ AL;**;83;düşük (10);trend güçlü, haftalık yukarı;uyumsuzluk 1/5;22,08;20,89;;27.08.2026
+75;IEYHO;GÜÇLÜ AL;**;83;orta (35);trend güçlü, endeksten güçlü, haftalık yukarı, osilatör 6/6;aşırı uzamış (9.6× ATR), RSI aşırı alım, hacim zayıf;194;184,13;;27.08.2026
+76;OFSYM;GÜÇLÜ AL;**;82;düşük (0);trend güçlü, momentum tam, endeksten güçlü, haftalık yukarı;hacim zayıf;63,8;53,59;;27.08.2026
+77;GSDDE;GÜÇLÜ AL;**;82;düşük (0);trend güçlü, endeksten güçlü, haftalık yukarı, osilatör 5/6;hacim zayıf;14,06;12,38;;27.08.2026
+78;TSPOR;GÜÇLÜ AL;**;82;orta (38);trend güçlü, momentum tam, endeksten güçlü, haftalık yukarı, osilatör 6/6;uyumsuzluk 1/5, aşırı uzamış (4.2× ATR), RSI aşırı alım, hacim zayıf;1,25;1,05;;27.08.2026
+79;MOGAN;GÜÇLÜ AL;**;82;orta (28);trend güçlü, endeksten güçlü, haftalık yukarı;uyumsuzluk 2/5, dağıtım 3 gün, hacim zayıf;20,3;17,53;;27.08.2026
+80;CELHA;GÜÇLÜ AL;**;82;düşük (10);trend güçlü, endeksten güçlü, haftalık yukarı;uyumsuzluk 1/5, hacim zayıf;25,48;21,70;;27.08.2026
+81;ADEL;GÜÇLÜ AL;**;82;düşük (10);momentum tam, endeksten güçlü, haftalık yukarı, osilatör 5/6;uyumsuzluk 1/5;34,84;31,81;;27.08.2026
+82;GLRMK;GÜÇLÜ AL;**;81;düşük (8);momentum tam, endeksten güçlü, haftalık yukarı;momentum sönümü, hacim zayıf;180;159,06;;27.08.2026
+83;DOCO;GÜÇLÜ AL;**;81;düşük (0);trend güçlü, haftalık yukarı, osilatör 6/6;hacim zayıf;11635;10942,74;;27.08.2026
+84;KCHOL;GÜÇLÜ AL;**;81;düşük (16);trend güçlü, momentum tam, endeksten güçlü, haftalık yukarı;uyumsuzluk 1/5, dağıtım 3 gün, hacim zayıf;214,2;202,86;;27.08.2026
+85;ENDAE;GÜÇLÜ AL;**;80;düşük (8);trend güçlü, momentum tam, endeksten güçlü, haftalık yukarı;momentum sönümü, hacim zayıf;19,04;16,70;;27.08.2026
+86;BLUME;GÜÇLÜ AL;**;80;düşük (18);momentum tam, endeksten güçlü, haftalık yukarı;aşırı uzamış (2.7× ATR), momentum sönümü, hacim zayıf;42,2;38,48;;27.08.2026
+87;ARASE;GÜÇLÜ AL;**;80;düşük (0);trend güçlü, haftalık yukarı, osilatör 5/6;hacim zayıf;119,1;108,17;;27.08.2026
+88;HURGZ;GÜÇLÜ AL;**;80;düşük (0);trend güçlü, endeksten güçlü, haftalık yukarı;hacim zayıf;7,7;6,80;;27.08.2026
+89;PRZMA;GÜÇLÜ AL;**;80;orta (32);trend güçlü, momentum tam, endeksten güçlü, haftalık yukarı, osilatör 5/6;uyumsuzluk 2/5, aşırı uzamış (2.2× ATR);82;67,71;BUGUN;27.08.2026
+90;TKFEN;GÜÇLÜ AL;**;79;düşük (20);trend güçlü, endeksten güçlü, haftalık yukarı;aşırı uzamış (3.2× ATR), hacim zayıf;218,8;197,64;;27.08.2026
+91;EUKYO;GÜÇLÜ AL;**;79;düşük (0);trend güçlü, endeksten güçlü, haftalık yukarı;hacim zayıf;13,2;12,26;;27.08.2026
+92;MPARK;GÜÇLÜ AL;**;79;düşük (0);trend güçlü, haftalık yukarı;hacim zayıf;434;410,98;;27.08.2026
+93;PRDGS;GÜÇLÜ AL;**;79;düşük (10);trend güçlü, endeksten güçlü, haftalık yukarı;uyumsuzluk 1/5, hacim zayıf;7,97;6,85;;27.08.2026
+94;GUBRF;GÜÇLÜ AL;**;79;düşük (0);momentum tam, endeksten güçlü, haftalık yukarı, osilatör 5/6;hacim zayıf;488;428,49;;27.08.2026
+95;RUBNS;GÜÇLÜ AL;**;78;düşük (0);trend güçlü, endeksten güçlü, haftalık yukarı;hacim zayıf;31,96;29,16;;27.08.2026
+96;FORTE;GÜÇLÜ AL;**;78;düşük (16);trend güçlü, endeksten güçlü, haftalık yukarı;uyumsuzluk 1/5, dağıtım 3 gün, hacim zayıf;126,7;113,19;;27.08.2026
+97;MRGYO;GÜÇLÜ AL;**;77;düşük (18);momentum tam, hacim destekli, endeksten güçlü, haftalık yukarı, osilatör 5/6;aşırı uzamış (2.7× ATR), RSI aşırı alım;1,57;1,31;BUGUN;27.08.2026
+98;HKTM;GÜÇLÜ AL;**;77;düşük (6);trend güçlü, momentum tam, endeksten güçlü, haftalık yukarı;dağıtım 3 gün;13,66;12,25;;27.08.2026
+99;TRGYO;GÜÇLÜ AL;**;75;düşük (0);haftalık yukarı, osilatör 5/6;-;97,6;91,22;;27.08.2026
+100;ASTOR;AL;****;95;orta (28);trend güçlü, momentum tam, hacim destekli, endeksten güçlü, haftalık yukarı, osilatör 5/6;uyumsuzluk 1/5, aşırı uzamış (2.3× ATR), momentum sönümü;349;299,69;;27.08.2026
+101;BINHO;AL;****;92;düşük (10);trend güçlü, momentum tam, hacim destekli, endeksten güçlü, haftalık yukarı, osilatör 5/6;aşırı uzamış (2.2× ATR);11,23;9,66;;27.08.2026
+102;AHGAZ;AL;****;91;düşük (10);trend güçlü, momentum tam, hacim destekli, endeksten güçlü, haftalık yukarı, osilatör 5/6;aşırı uzamış (2.7× ATR);37,04;33,01;;27.08.2026
+103;MNDRS;AL;***;88;düşük (10);momentum tam, hacim destekli, endeksten güçlü, haftalık yukarı, osilatör 6/6;aşırı uzamış (2.6× ATR);12,3;10,95;;27.08.2026
+104;AKCNS;AL;***;86;düşük (20);hacim destekli, endeksten güçlü, haftalık yukarı;uyumsuzluk 1/5, aşırı uzamış (2.5× ATR);248,6;231,75;;27.08.2026
+105;KTLEV;AL;***;85;orta (36);trend güçlü, momentum tam, endeksten güçlü, haftalık yukarı, osilatör 5/6;aşırı uzamış (3.4× ATR), RSI aşırı alım, momentum sönümü, hacim zayıf;67;50,05;;27.08.2026
+106;EGEGY;AL;***;85;düşük (0);trend güçlü, momentum tam, endeksten güçlü, haftalık yukarı;hacim zayıf;32,4;28,10;;27.08.2026
+107;DOHOL;AL;***;85;düşük (0);momentum tam, hacim destekli, endeksten güçlü, haftalık yukarı;-;22,34;19,96;BUGUN;27.08.2026
+108;METRO;AL;**;82;düşük (0);trend güçlü, haftalık yukarı;-;8,65;7,70;;27.08.2026
+109;RNPOL;AL;**;81;düşük (8);trend güçlü, momentum tam, endeksten güçlü, haftalık yukarı, osilatör 5/6;momentum sönümü;2,6;2,19;;27.08.2026
+110;GSRAY;AL;**;80;düşük (18);momentum tam, hacim destekli, endeksten güçlü, haftalık yukarı, osilatör 5/6;aşırı uzamış (2.5× ATR), RSI aşırı alım;1,14;1,04;;27.08.2026
+111;ERSU;AL;**;80;düşük (0);trend güçlü, momentum tam, endeksten güçlü, haftalık yukarı;-;25,68;22,74;;27.08.2026
+112;ETILR;AL;**;79;düşük (6);haftalık yukarı;dağıtım 3 gün;5,93;5,44;;27.08.2026
+113;FRIGO;AL;**;77;orta (38);momentum tam, endeksten güçlü, haftalık yukarı, osilatör 5/6;uyumsuzluk 1/5, aşırı uzamış (3.1× ATR), RSI aşırı alım;2,7;2,31;;27.08.2026
+114;ULUUN;AL;**;77;düşük (10);hacim destekli, endeksten güçlü, haftalık yukarı, osilatör 5/6;uyumsuzluk 1/5;9,07;7,93;BUGUN;27.08.2026
+115;AKMGY;AL;**;77;düşük (14);trend güçlü, momentum tam, endeksten güçlü, haftalık yukarı;dağıtım 3 gün, momentum sönümü, hacim zayıf;272;241,49;;27.08.2026
+116;ISBTR;AL;**;75;düşük (0);momentum tam, endeksten güçlü, haftalık yukarı;-;520002,5;482449,90;;27.08.2026
+117;PATEK;AL;*;75;düşük (0);momentum tam, endeksten güçlü, haftalık yukarı;-;22,46;19,14;BUGUN;27.08.2026
+118;KRDMB;AL;*;75;düşük (8);haftalık yukarı, osilatör 5/6;momentum sönümü, hacim zayıf;133;121,64;;27.08.2026
+119;KLGYO;AL;*;74;düşük (0);momentum tam, hacim destekli, endeksten güçlü, haftalık yukarı, osilatör 6/6;-;5,06;4,49;;27.08.2026
+120;HALKB;AL;*;74;düşük (18);momentum tam, endeksten güçlü, haftalık yukarı, osilatör 6/6;aşırı uzamış (2.5× ATR), RSI aşırı alım, hacim zayıf;41,92;37,01;BUGUN;27.08.2026
+121;ARMGD;AL;*;73;orta (22);endeksten güçlü, haftalık yukarı;uyumsuzluk 2/5, hacim zayıf;198,6;181,05;;27.08.2026
+122;VAKBN;AL;*;73;düşük (0);hacim destekli, haftalık yukarı, osilatör 5/6;-;32,2;29,59;;27.08.2026
+123;BUCIM;AL;*;72;düşük (10);momentum tam, endeksten güçlü, haftalık yukarı, osilatör 5/6;aşırı uzamış (2.2× ATR);5,75;5,16;;27.08.2026
+124;RODRG;AL;*;72;düşük (6);haftalık yukarı, osilatör 5/6;dağıtım 3 gün;25,48;22,52;BUGUN;27.08.2026
+125;ENERY;AL;*;72;düşük (0);haftalık yukarı, osilatör 5/6;-;9,6;8,61;;27.08.2026
+126;FENER;AL;*;71;düşük (12);momentum tam, endeksten güçlü, haftalık yukarı, osilatör 6/6;doruk hacim;3,35;3,05;;27.08.2026
+127;KLYPV;AL;*;71;düşük (0);haftalık yukarı;-;61,9;59,40;;27.08.2026
+128;EYGYO;AL;*;70;düşük (10);momentum tam, endeksten güçlü, haftalık yukarı, osilatör 6/6;uyumsuzluk 1/5, hacim zayıf;2,74;2,27;;27.08.2026
+129;DIRIT;AL;*;70;düşük (0);momentum tam, endeksten güçlü, haftalık yukarı;hacim zayıf;26,42;25,07;;27.08.2026
+130;OZKGY;AL;*;70;düşük (0);haftalık yukarı, osilatör 5/6;-;13,81;12,25;;27.08.2026
+131;EKGYO;AL;*;69;düşük (0);endeksten güçlü, haftalık yukarı, osilatör 5/6;hacim zayıf;20,52;18,55;;27.08.2026
+132;GUNDG;AL;*;69;düşük (0);trend güçlü, haftalık yukarı;hacim zayıf;1807;1413,91;;27.08.2026
+133;YKBNK;AL;*;67;orta (22);haftalık yukarı, osilatör 5/6;uyumsuzluk 2/5;36,86;34,06;;27.08.2026
+134;MACKO;AL;*;66;düşük (8);endeksten güçlü, haftalık yukarı, osilatör 5/6;momentum sönümü;36,06;31,82;BUGUN;27.08.2026
+135;AKBNK;AL;*;66;düşük (0);haftalık yukarı, osilatör 5/6;-;72,85;66,67;;27.08.2026
+136;HRKET;AL;*;65;düşük (0);haftalık yukarı;hacim zayıf;98,7;86,29;;27.08.2026
+137;GEDZA;AL;*;64;düşük (0);haftalık yukarı, osilatör 5/6;-;30,1;27,38;;27.08.2026
+138;SAHOL;AL;*;64;orta (22);haftalık yukarı, osilatör 5/6;uyumsuzluk 2/5, hacim zayıf;93,75;88,21;;27.08.2026
+139;GARAN;AL;*;64;düşük (0);haftalık yukarı, osilatör 5/6;-;133;124,55;;27.08.2026
+140;DENGE;AL;*;64;düşük (0);endeksten güçlü, haftalık yukarı, osilatör 5/6;-;2,5;2,24;BUGUN;27.08.2026
+141;YGGYO;AL;*;63;düşük (0);haftalık yukarı;hacim zayıf;225,8;215,58;BUGUN;27.08.2026
+142;KNFRT;AL;*;63;düşük (0);momentum tam, endeksten güçlü, haftalık yukarı, osilatör 5/6;hacim zayıf;13,05;11,08;;27.08.2026
+143;EDATA;AL;*;62;düşük (0);haftalık yukarı;-;19,19;17,57;;27.08.2026
+144;BASCM;AL;*;62;düşük (10);momentum tam, endeksten güçlü, haftalık yukarı, osilatör 5/6;aşırı uzamış (2.4× ATR), hacim zayıf;14,42;13,70;;27.08.2026
+145;BAHKM;İZLE;*****;97;yüksek (45);trend güçlü, hacim destekli, endeksten güçlü, haftalık yukarı, osilatör 6/6;uyumsuzluk 1/5, aşırı uzamış (4.7× ATR), RSI aşırı alım;159;128,13;;27.08.2026
+146;PEKGY;İZLE;*****;96;yüksek (60);trend güçlü, momentum tam, hacim destekli, endeksten güçlü, haftalık yukarı, osilatör 6/6;uyumsuzluk 3/5, aşırı uzamış (3.3× ATR), RSI aşırı alım;16,5;14,42;;27.08.2026
+147;BRSAN;İZLE;****;95;yüksek (50);trend güçlü, momentum tam, endeksten güçlü, haftalık yukarı;uyumsuzluk 2/5, aşırı uzamış (3.7× ATR), momentum sönümü;732;635,12;;27.08.2026
+148;KCAER;İZLE;****;94;orta (32);trend güçlü, momentum tam, endeksten güçlü, haftalık yukarı;uyumsuzluk 3/5;16,3;14,75;;27.08.2026
+149;AGESA;İZLE;****;94;yüksek (50);trend güçlü, momentum tam, hacim destekli, endeksten güçlü, haftalık yukarı, osilatör 5/6;uyumsuzluk 4/5, aşırı uzamış (2.3× ATR);259,25;230,95;;27.08.2026
+150;ANELE;İZLE;****;94;çok yüksek (67);trend güçlü, hacim destekli, endeksten güçlü, haftalık yukarı, osilatör 6/6;uyumsuzluk 3/5, aşırı uzamış (5.3× ATR), RSI aşırı alım;180;135,49;;27.08.2026
+151;RGYAS;İZLE;****;92;orta (40);trend güçlü, momentum tam, hacim destekli, endeksten güçlü, haftalık yukarı, osilatör 5/6;uyumsuzluk 4/5;209,7;196,83;;27.08.2026
+152;EPLAS;İZLE;****;91;orta (40);momentum tam, hacim destekli, endeksten güçlü, haftalık yukarı, osilatör 6/6;uyumsuzluk 4/5;6,15;5,30;;27.08.2026
+153;ALBRK;İZLE;***;90;yüksek (50);trend güçlü, momentum tam, endeksten güçlü, haftalık yukarı, osilatör 6/6;uyumsuzluk 3/5, aşırı uzamış (2.7× ATR), RSI aşırı alım, hacim zayıf;9,07;8,39;;27.08.2026
+154;ISGYO;İZLE;***;89;orta (40);trend güçlü, momentum tam, endeksten güçlü, haftalık yukarı, osilatör 6/6;uyumsuzluk 4/5, hacim zayıf;28,12;24,99;;27.08.2026
+155;BIGEN;İZLE;***;86;yüksek (57);trend güçlü, endeksten güçlü, haftalık yukarı, osilatör 6/6;uyumsuzluk 2/5, aşırı uzamış (5.6× ATR), RSI aşırı alım, hacim zayıf;175;133,04;;27.08.2026
+156;IZMDC;İZLE;***;86;yüksek (48);trend güçlü, endeksten güçlü, haftalık yukarı, osilatör 5/6;uyumsuzluk 2/5, aşırı uzamış (3.1× ATR), dağıtım 3 gün, hacim zayıf;14,12;11,87;;27.08.2026
+157;ENJSA;İZLE;**;85;orta (40);momentum tam, endeksten güçlü, haftalık yukarı, osilatör 5/6;uyumsuzluk 4/5;114;103,40;;27.08.2026
+158;ALKLC;İZLE;**;85;yüksek (42);trend güçlü, endeksten güçlü, haftalık yukarı;uyumsuzluk 1/5, aşırı uzamış (2.7× ATR), dağıtım 5 gün, doruk hacim;421;401,45;;27.08.2026
+159;AYDEM;İZLE;**;84;orta (40);trend güçlü, endeksten güçlü, haftalık yukarı, osilatör 5/6;uyumsuzluk 4/5, hacim zayıf;27;24,22;;27.08.2026
+160;KGYO;İZLE;**;84;yüksek (48);trend güçlü, momentum tam, endeksten güçlü, haftalık yukarı;uyumsuzluk 4/5, momentum sönümü, hacim zayıf;12,93;10,80;;27.08.2026
+161;TRHOL;İZLE;**;83;yüksek (45);trend güçlü, endeksten güçlü, haftalık yukarı, osilatör 5/6;uyumsuzluk 1/5, aşırı uzamış (6.5× ATR), RSI aşırı alım, hacim zayıf;2957,5;2292,63;;27.08.2026
+162;OZATD;İZLE;**;78;yüksek (45);trend güçlü, endeksten güçlü, haftalık yukarı, osilatör 5/6;uyumsuzluk 1/5, aşırı uzamış (6.3× ATR), RSI aşırı alım, hacim zayıf;4775;4011,56;;27.08.2026
+163;RALYH;İZLE;**;78;orta (32);trend güçlü, endeksten güçlü, haftalık yukarı;uyumsuzluk 3/5;261,75;229,92;;27.08.2026
+164;KOCMT;İZLE;**;77;orta (32);trend güçlü, endeksten güçlü, haftalık yukarı;uyumsuzluk 3/5, hacim zayıf;5,17;4,58;;27.08.2026
+165;SONME;İZLE;**;76;orta (40);momentum tam, endeksten güçlü, haftalık yukarı;uyumsuzluk 4/5, hacim zayıf;140,9;126,44;;27.08.2026
+166;ATSYH;İZLE;**;75;orta (32);endeksten güçlü, haftalık yukarı;uyumsuzluk 3/5, hacim zayıf;120;108,73;;27.08.2026
+167;EFOR;İZLE;*;71;yüksek (46);trend güçlü, endeksten güçlü, haftalık yukarı;uyumsuzluk 4/5, dağıtım 3 gün;19,03;17,85;;27.08.2026
+168;PKART;İZLE;*;71;düşük (8);endeksten güçlü, haftalık yukarı, osilatör 6/6;momentum sönümü;134,5;140,43;;27.08.2026
+169;DMRGD;İZLE;*;71;düşük (6);haftalık yukarı, osilatör 5/6;dağıtım 3 gün;11,9;12,14;;27.08.2026
+170;EBEBK;İZLE;*;71;düşük (10);haftalık yukarı, osilatör 6/6;uyumsuzluk 1/5, hacim zayıf;83,1;87,54;;27.08.2026
+171;CRFSA;İZLE;*;68;düşük (20);endeksten güçlü, haftalık yukarı;aşırı uzamış (3.2× ATR), hacim zayıf;276,25;337,96;;27.08.2026
+172;SEGMN;İZLE;*;67;düşük (0);trend güçlü;fiyat EMA50 altında;51,6;46,64;;27.08.2026
+173;AVGYO;İZLE;*;66;düşük (0);trend güçlü, haftalık yukarı;fiyat EMA50 altında;15,36;14,98;;27.08.2026
+174;DGNMO;İZLE;*;66;düşük (10);trend güçlü, haftalık yukarı;uyumsuzluk 1/5;8,1;7,58;;27.08.2026
+175;KENT;İZLE;*;66;düşük (20);momentum tam, hacim destekli, endeksten güçlü, haftalık yukarı, osilatör 6/6;uyumsuzluk 1/5, aşırı uzamış (2.3× ATR);403,5;404,52;;27.08.2026
+176;EKSUN;İZLE;*;65;düşük (14);haftalık yukarı, osilatör 5/6;dağıtım 3 gün, momentum sönümü;6,56;6,76;;27.08.2026
+177;KBORU;İZLE;*;65;düşük (0);haftalık yukarı, osilatör 6/6;fiyat EMA50 altında;23,76;20,03;;27.08.2026
+178;PAGYO;İZLE;*;65;düşük (0);trend güçlü, haftalık yukarı;hacim zayıf;151,6;143,65;;27.08.2026
+179;ZRGYO;İZLE;*;65;yüksek (46);momentum tam, endeksten güçlü, haftalık yukarı;uyumsuzluk 4/5, dağıtım 3 gün, hacim zayıf;19,5;18,29;;27.08.2026
+180;MARKA;İZLE;*;64;düşük (0);haftalık yukarı;Supertrend aşağı;86,25;90,30;;27.08.2026
+181;IZFAS;İZLE;*;63;orta (32);haftalık yukarı;uyumsuzluk 3/5;63,6;64,00;;27.08.2026
+182;SKYMD;İZLE;*;62;düşük (10);haftalık yukarı;uyumsuzluk 1/5, hacim zayıf;14,28;13,12;;27.08.2026
+183;UFUK;İZLE;*;62;düşük (0);trend güçlü, haftalık yukarı;hacim zayıf;1710;1641,83;;27.08.2026
+184;FONET;İZLE;*;61;orta (22);haftalık yukarı;uyumsuzluk 2/5, hacim zayıf;5,28;5,61;;27.08.2026
+185;FADE;İZLE;*;61;düşük (0);haftalık yukarı;Supertrend aşağı;16,29;17,54;;27.08.2026
+186;ESCOM;İZLE;*;60;yüksek (46);haftalık yukarı;uyumsuzluk 4/5, dağıtım 3 gün, hacim zayıf;5,7;5,25;;27.08.2026
+187;BIENY;İZLE;*;59;düşük (0);endeksten güçlü, osilatör 6/6;skor düşük;22,52;19,77;;27.08.2026
+188;CVKMD;İZLE;*;59;düşük (0);trend güçlü, haftalık yukarı;hacim zayıf;15,73;14,58;;27.08.2026
+189;GEREL;İZLE;*;59;orta (28);haftalık yukarı;uyumsuzluk 2/5, dağıtım 3 gün, hacim zayıf;39,2;38,25;;27.08.2026
+190;GLRYH;İZLE;*;59;düşük (8);momentum tam, endeksten güçlü, osilatör 6/6;momentum sönümü;3,36;2,95;;27.08.2026
+191;MARMR;İZLE;*;59;düşük (0);-;skor düşük;2,36;2,19;;27.08.2026
+192;PETUN;İZLE;*;59;düşük (20);osilatör 5/6;doruk hacim, momentum sönümü;11,59;10,87;;27.08.2026
+193;SARKY;İZLE;*;59;düşük (8);osilatör 5/6;momentum sönümü;26,34;23,35;;27.08.2026
+194;PSGYO;İZLE;*;58;düşük (10);trend güçlü, haftalık yukarı;uyumsuzluk 1/5, hacim zayıf;3,32;3,25;;27.08.2026
+195;DNISI;İZLE;*;58;düşük (0);haftalık yukarı, osilatör 5/6;hacim zayıf;4,84;4,34;;27.08.2026
+196;TAVHL;İZLE;*;58;düşük (0);haftalık yukarı, osilatör 5/6;skor düşük;283;262,42;;27.08.2026
+197;KAYSE;İZLE;*;58;düşük (0);osilatör 5/6;skor düşük;4,2;3,85;;27.08.2026
+198;CEMAS;İZLE;*;57;düşük (12);endeksten güçlü;doruk hacim;4,47;4,05;;27.08.2026
+199;OZYSR;İZLE;*;57;düşük (0);trend güçlü, haftalık yukarı;hacim zayıf;12,59;11,56;;27.08.2026
+200;COSMO;İZLE;*;57;düşük (0);endeksten güçlü, osilatör 5/6;skor düşük;135,8;120,67;;27.08.2026
+201;DMSAS;İZLE;*;57;düşük (0);haftalık yukarı;hacim zayıf;9;9,08;;27.08.2026
+202;GLYHO;İZLE;*;57;düşük (0);haftalık yukarı;hacim zayıf;17;17,60;;27.08.2026
+203;ISFIN;İZLE;*;57;düşük (16);-;uyumsuzluk 1/5, dağıtım 3 gün;19,84;19,45;;27.08.2026
+204;NIBAS;İZLE;*;56;orta (22);momentum tam, endeksten güçlü, osilatör 5/6;dağıtım 4 gün, doruk hacim;4,48;3,94;;27.08.2026
+205;BYDNR;İZLE;*;56;orta (22);-;uyumsuzluk 2/5, hacim zayıf;38,18;35,98;;27.08.2026
+206;ICBCT;İZLE;*;56;düşük (0);haftalık yukarı;hacim zayıf;20,18;19,94;;27.08.2026
+207;TMPOL;İZLE;*;55;düşük (0);-;Supertrend aşağı;460;629,51;;27.08.2026
+208;ISBIR;İZLE;*;55;düşük (0);endeksten güçlü;hacim zayıf;74,1;70,46;;27.08.2026
+209;ICUGS;İZLE;*;55;düşük (6);haftalık yukarı;dağıtım 3 gün, hacim zayıf;5,36;6,11;;27.08.2026
+210;EREGL;İZLE;*;54;düşük (10);haftalık yukarı;uyumsuzluk 1/5, hacim zayıf;38,6;41,35;;27.08.2026
+211;FMIZP;İZLE;*;54;düşük (8);-;momentum sönümü, hacim zayıf;296,25;280,92;;27.08.2026
+212;BAGFS;İZLE;*;54;orta (32);endeksten güçlü, osilatör 5/6;uyumsuzluk 3/5, hacim zayıf;26,3;24,47;;27.08.2026
+213;DSTKF;İZLE;*;53;düşük (0);osilatör 5/6;hacim zayıf;2183;2072,78;;27.08.2026
+214;DERIM;İZLE;*;53;düşük (0);-;hacim zayıf;37,1;34,92;;27.08.2026
+215;BRKVY;İZLE;*;53;düşük (0);osilatör 5/6;skor düşük;82,3;73,58;;27.08.2026
+216;BORSK;İZLE;*;53;düşük (0);-;hacim zayıf;6,15;5,76;;27.08.2026
+217;ONCSM;İZLE;*;53;düşük (0);-;Supertrend aşağı;255,25;265,53;;27.08.2026
+218;TTRAK;İZLE;*;53;düşük (0);osilatör 5/6;hacim zayıf;430,5;407,42;;27.08.2026
+219;TURSG;İZLE;*;52;düşük (0);-;Supertrend aşağı;6,3;6,60;;27.08.2026
+220;SEKUR;İZLE;*;52;orta (32);haftalık yukarı;uyumsuzluk 2/5, dağıtım 4 gün;10,1;9,99;;27.08.2026
+221;TATGD;İZLE;*;52;düşük (8);-;momentum sönümü;18;19,42;;27.08.2026
+222;ODINE;İZLE;*;52;düşük (0);haftalık yukarı;Supertrend aşağı;1869;2534,49;;27.08.2026
+223;ESCAR;İZLE;*;52;düşük (0);haftalık yukarı;hacim zayıf;45,88;48,26;;27.08.2026
+224;TSGYO;İZLE;*;52;düşük (0);osilatör 6/6;skor düşük;6,13;5,50;;27.08.2026
+225;ISDMR;İZLE;*;52;düşük (0);haftalık yukarı;hacim zayıf;54,35;56,72;;27.08.2026
+226;SNICA;İZLE;*;51;düşük (0);osilatör 6/6;skor düşük;3,74;3,10;;27.08.2026
+227;AYES;İZLE;*;51;düşük (0);haftalık yukarı;hacim zayıf;31,26;29,80;;27.08.2026
+228;BNTAS;İZLE;*;51;düşük (0);-;hacim zayıf;6,39;5,97;;27.08.2026
+229;PLTUR;İZLE;*;51;düşük (6);-;dağıtım 3 gün;21,1;21,08;;27.08.2026
+230;TKNSA;İZLE;*;50;düşük (10);endeksten güçlü, osilatör 5/6;uyumsuzluk 1/5, hacim zayıf;19,2;18,60;;27.08.2026
+231;ESEN;İZLE;*;50;düşük (10);osilatör 6/6;uyumsuzluk 1/5, hacim zayıf;3,62;3,33;;27.08.2026
+232;BOSSA;İZLE;*;49;düşük (0);-;hacim zayıf;6,51;6,19;;27.08.2026
+233;AVPGY;İZLE;*;49;düşük (0);-;skor düşük;54,2;50,70;;27.08.2026
+234;TUCLK;İZLE;*;49;düşük (0);osilatör 5/6;hacim zayıf;3,98;3,67;;27.08.2026
+235;PNSUT;İZLE;*;49;düşük (0);osilatör 6/6;skor düşük;11,02;10,05;;27.08.2026
+236;MZHLD;İZLE;*;48;düşük (0);osilatör 6/6;hacim zayıf;5,56;5,18;;27.08.2026
+237;FLAP;İZLE;*;48;düşük (6);osilatör 6/6;dağıtım 3 gün;11;11,32;;27.08.2026
+238;AGYO;İZLE;*;48;düşük (6);-;dağıtım 3 gün;7,45;7,21;;27.08.2026
+239;PAPIL;İZLE;*;48;düşük (0);osilatör 5/6;skor düşük;13,12;11,65;;27.08.2026
+240;GMTAS;İZLE;*;48;düşük (6);haftalık yukarı;dağıtım 3 gün, hacim zayıf;44,68;48,51;;27.08.2026
+241;ECILC;İZLE;*;47;düşük (8);-;momentum sönümü;76,5;70,03;;27.08.2026
+242;YIGIT;İZLE;*;47;düşük (0);osilatör 5/6;skor düşük;22,12;20,44;;27.08.2026
+243;INFO;İZLE;*;47;düşük (0);haftalık yukarı;hacim zayıf;6,7;7,47;;27.08.2026
+244;ULKER;İZLE;*;46;orta (32);osilatör 5/6;uyumsuzluk 3/5;92,65;89,00;;27.08.2026
+245;ANSGR;İZLE;*;46;orta (32);-;uyumsuzluk 2/5, dağıtım 4 gün;27,18;26,74;;27.08.2026
+246;TABGD;İZLE;*;46;düşük (10);-;dağıtım 4 gün;245,2;237,22;;27.08.2026
+247;ENKAI;İZLE;*;46;düşük (0);osilatör 6/6;hacim zayıf;87,45;88,34;;27.08.2026
+248;OZGYO;İZLE;*;45;düşük (16);osilatör 5/6;uyumsuzluk 1/5, dağıtım 3 gün;2,11;2,35;;27.08.2026
+249;TERA;İZLE;*;45;düşük (10);momentum tam, endeksten güçlü, osilatör 5/6;uyumsuzluk 1/5, hacim zayıf;185;170,40;;27.08.2026
+250;BRKO;İZLE;*;45;düşük (8);osilatör 5/6;momentum sönümü;12,11;13,21;;27.08.2026
+251;INTEM;İZLE;*;45;düşük (8);osilatör 5/6;momentum sönümü, hacim zayıf;258,5;237,10;;27.08.2026
+252;MARBL;İZLE;*;44;düşük (0);-;Supertrend aşağı;12,63;13,00;;27.08.2026
+253;MOBTL;İZLE;*;44;orta (22);-;uyumsuzluk 2/5;13,31;14,35;;27.08.2026
+254;KONYA;İZLE;*;44;düşük (0);-;hacim zayıf;3800;3704,36;;27.08.2026
+255;CEOEM;İZLE;*;44;düşük (0);haftalık yukarı;Supertrend aşağı;24,9;26,21;;27.08.2026
+256;PENTA;İZLE;*;44;düşük (0);osilatör 5/6;Supertrend aşağı;13,76;13,99;;27.08.2026
+257;AKSUE;İZLE;*;43;düşük (10);haftalık yukarı;dağıtım 4 gün;41,52;48,58;;27.08.2026
+258;ENSRI;İZLE;*;43;düşük (0);endeksten güçlü, osilatör 5/6;skor düşük;6,14;5,16;;27.08.2026
+259;NUHCM;İZLE;*;43;düşük (6);-;dağıtım 3 gün;219,5;229,90;;27.08.2026
+260;SNGYO;İZLE;*;43;düşük (0);osilatör 5/6;hacim zayıf;3,46;3,11;;27.08.2026
+261;BRKSN;İZLE;*;43;düşük (6);-;dağıtım 3 gün, hacim zayıf;7,99;7,34;;27.08.2026
+262;TDGYO;İZLE;*;43;düşük (10);-;uyumsuzluk 1/5, hacim zayıf;16,4;16,24;;27.08.2026
+263;ANHYT;İZLE;*;42;düşük (0);-;hacim zayıf;106;115,03;;27.08.2026
+264;NTGAZ;İZLE;*;42;düşük (0);-;hacim zayıf;11,29;10,15;;27.08.2026
+265;DYOBY;İZLE;*;42;orta (30);-;uyumsuzluk 2/5, momentum sönümü, hacim zayıf;13,5;12,15;;27.08.2026
+266;KLKIM;İZLE;*;42;düşük (0);-;hacim zayıf;27,74;26,19;;27.08.2026
+267;DOFRB;İZLE;*;42;düşük (10);-;dağıtım 4 gün;138,3;152,89;;27.08.2026
+268;PRKME;İZLE;*;41;düşük (0);osilatör 5/6;skor düşük;18,41;16,33;;27.08.2026
+269;ECZYT;İZLE;*;41;orta (40);-;uyumsuzluk 4/5;322;351,36;;27.08.2026
+270;BMSTL;İZLE;*;41;düşük (10);-;uyumsuzluk 1/5, hacim zayıf;44,04;43,81;;27.08.2026
+271;OTKAR;İZLE;*;41;düşük (8);-;momentum sönümü, hacim zayıf;328;298,05;;27.08.2026
+272;GOLTS;İZLE;*;40;düşük (0);-;skor düşük;304,5;294,80;;27.08.2026
+273;BLCYT;İZLE;*;40;düşük (0);osilatör 5/6;hacim zayıf;21,2;18,63;;27.08.2026
+274;OBASE;İZLE;*;40;düşük (6);-;dağıtım 3 gün;38,6;42,16;;27.08.2026
+275;MEPET;İZLE;*;40;düşük (8);-;momentum sönümü, hacim zayıf;20,4;17,93;;27.08.2026
+276;OBAMS;İZLE;*;40;düşük (8);osilatör 5/6;momentum sönümü, hacim zayıf;5,3;4,77;;27.08.2026
+277;JANTS;İZLE;*;39;düşük (0);osilatör 5/6;skor düşük;15,73;14,45;;27.08.2026
+278;MAKTK;İZLE;*;39;düşük (0);osilatör 6/6;Supertrend aşağı;10,41;10,52;;27.08.2026
+279;DERHL;İZLE;*;39;düşük (0);-;hacim zayıf;2,22;2,05;;27.08.2026
+280;ALGYO;İZLE;*;39;düşük (8);osilatör 5/6;momentum sönümü, hacim zayıf;3,7;3,33;;27.08.2026
+281;KARTN;İZLE;*;39;düşük (10);haftalık yukarı;uyumsuzluk 1/5, hacim zayıf;162;198,48;;27.08.2026
+282;PETKM;İZLE;*;39;düşük (0);-;hacim zayıf;19,88;21,04;;27.08.2026
+283;DESA;İZLE;*;38;düşük (8);osilatör 5/6;momentum sönümü, hacim zayıf;10,2;9,23;;27.08.2026
+284;EDIP;İZLE;*;38;düşük (10);-;uyumsuzluk 1/5, hacim zayıf;36,44;39,68;;27.08.2026
+285;KOPOL;İZLE;*;38;düşük (0);-;Supertrend aşağı;5,67;6,06;;27.08.2026
+286;AFYON;İZLE;*;38;düşük (6);-;dağıtım 3 gün;12,7;13,12;;27.08.2026
+287;IHLAS;İZLE;*;38;düşük (0);-;hacim zayıf;1,06;0,99;;27.08.2026
+288;BERA;İZLE;*;38;düşük (8);-;momentum sönümü, hacim zayıf;13,44;12,59;;27.08.2026
+289;EGSER;İZLE;*;38;düşük (8);osilatör 5/6;momentum sönümü, hacim zayıf;3,06;3,13;;27.08.2026
+290;GATEG;İZLE;*;38;orta (40);-;uyumsuzluk 5/5;289,5;308,77;;27.08.2026
+291;MARTI;İZLE;*;38;düşük (0);-;Supertrend aşağı;1,46;1,55;;27.08.2026
+292;KZGYO;İZLE;*;37;düşük (0);osilatör 5/6;Supertrend aşağı;20,06;20,98;;27.08.2026
+293;TLMAN;İZLE;*;37;düşük (0);-;Supertrend aşağı;82,05;85,09;;27.08.2026
+294;PINSU;İZLE;*;37;düşük (0);-;Supertrend aşağı;10,35;11,02;;27.08.2026
+295;KLNMA;İZLE;*;37;düşük (0);osilatör 5/6;hacim zayıf;9,05;8,79;;27.08.2026
+296;AKFGY;İZLE;*;37;düşük (6);-;dağıtım 3 gün;2,6;2,55;;27.08.2026
+297;BAYRK;İZLE;*;37;orta (32);-;uyumsuzluk 3/5, hacim zayıf;4,37;4,25;;27.08.2026
+298;OZRDN;İZLE;*;36;düşük (0);-;hacim zayıf;27,94;25,42;;27.08.2026
+299;ZEDUR;İZLE;*;36;düşük (0);-;Supertrend aşağı;7,98;8,49;;27.08.2026
+300;PNLSN;İZLE;*;36;düşük (0);-;skor düşük;43,08;40,62;;27.08.2026
+301;DOKTA;İZLE;*;36;düşük (10);osilatör 5/6;uyumsuzluk 1/5, hacim zayıf;23,52;21,43;;27.08.2026
+302;THYAO;İZLE;*;36;düşük (6);-;dağıtım 3 gün;307,25;321,77;;27.08.2026
+303;GOZDE;İZLE;*;36;düşük (0);-;hacim zayıf;22,62;25,47;;27.08.2026
+304;SNPAM;İZLE;*;36;düşük (8);osilatör 5/6;momentum sönümü, hacim zayıf;20,4;18,99;;27.08.2026
+305;BFREN;İZLE;*;36;orta (32);-;uyumsuzluk 3/5, hacim zayıf;130,5;134,63;;27.08.2026
+306;ISKPL;İZLE;*;36;düşük (0);endeksten güçlü, osilatör 5/6;hacim zayıf;8,75;8,78;;27.08.2026
+307;BANVT;İZLE;*;36;düşük (0);-;hacim zayıf;157,1;152,42;;27.08.2026
+308;EMNIS;İZLE;*;36;orta (28);-;uyumsuzluk 2/5, dağıtım 3 gün;153,9;152,76;;27.08.2026
+309;ALKA;İZLE;*;35;düşük (0);-;Supertrend aşağı;8,39;8,81;;27.08.2026
+310;CWENE;İZLE;*;35;düşük (6);haftalık yukarı;dağıtım 3 gün, hacim zayıf;36,88;42,91;;27.08.2026
+311;BESLR;İZLE;*;35;orta (28);-;uyumsuzluk 2/5, dağıtım 3 gün, hacim zayıf;12,97;11,92;;27.08.2026
+312;HDFGS;İZLE;*;35;düşük (0);-;Supertrend aşağı;2,54;2,81;;27.08.2026
+313;MAKIM;İZLE;*;35;düşük (0);-;hacim zayıf;16,5;15,53;;27.08.2026
+314;TEHOL;İZLE;*;35;düşük (10);-;uyumsuzluk 1/5;33,7;41,34;;27.08.2026
+315;EKOS;İZLE;*;35;düşük (0);-;Supertrend aşağı;5,6;6,02;;27.08.2026
+316;TSKB;İZLE;*;35;düşük (6);-;dağıtım 3 gün;11,12;11,64;;27.08.2026
+317;ISCTR;İZLE;*;35;düşük (0);osilatör 5/6;Supertrend aşağı;12,75;13,05;;27.08.2026
+318;DGATE;İZLE;*;34;düşük (0);-;hacim zayıf;100,9;97,13;;27.08.2026
+319;MTRYO;İZLE;*;34;düşük (10);-;uyumsuzluk 1/5, hacim zayıf;9,22;9,63;;27.08.2026
+320;ASGYO;İZLE;*;34;düşük (0);-;Supertrend aşağı;11,17;11,76;;27.08.2026
+321;IHEVA;İZLE;*;34;düşük (0);-;hacim zayıf;2;2,09;;27.08.2026
+322;DOFER;İZLE;*;34;düşük (0);-;hacim zayıf;29,06;27,00;;27.08.2026
+323;SASA;İZLE;*;34;düşük (0);-;Supertrend aşağı;2,38;2,59;;27.08.2026
+324;KLMSN;İZLE;*;34;düşük (10);-;uyumsuzluk 1/5;28,68;26,86;;27.08.2026
+325;HOROZ;İZLE;*;34;düşük (0);-;hacim zayıf;62,35;58,38;;27.08.2026
+326;IHAAS;İZLE;*;34;düşük (10);-;dağıtım 4 gün;54;51,22;;27.08.2026
+327;BRMEN;İZLE;*;34;düşük (6);haftalık yukarı;dağıtım 3 gün, hacim zayıf;14,49;16,95;;27.08.2026
+328;BIZIM;İZLE;*;34;düşük (6);osilatör 5/6;dağıtım 3 gün, hacim zayıf;24,64;25,28;;27.08.2026
+329;ULAS;İZLE;*;33;düşük (0);-;hacim zayıf;21,36;19,75;;27.08.2026
+330;AHSGY;İZLE;*;33;düşük (10);-;dağıtım 5 gün, hacim zayıf;18,66;20,97;;27.08.2026
+331;HLGYO;İZLE;*;33;düşük (0);-;Supertrend aşağı;4,45;4,67;;27.08.2026
+332;AVOD;İZLE;*;33;düşük (0);-;hacim zayıf;3,93;4,16;;27.08.2026
+333;AKSEN;İZLE;*;33;düşük (0);-;hacim zayıf;83,4;93,81;;27.08.2026
+334;A1YEN;İZLE;*;33;düşük (8);osilatör 5/6;momentum sönümü;2,85;2,98;;27.08.2026
+335;CIMSA;İZLE;*;33;düşük (0);-;Supertrend aşağı;46,16;48,89;;27.08.2026
+336;VKGYO;İZLE;*;32;düşük (0);-;Supertrend aşağı;1,91;2,01;;27.08.2026
+337;SUNTK;İZLE;*;32;düşük (6);-;dağıtım 3 gün, hacim zayıf;36,7;46,08;;27.08.2026
+338;RUZYE;İZLE;*;32;düşük (0);osilatör 5/6;hacim zayıf;9,15;8,09;;27.08.2026
+339;TOASO;İZLE;*;32;düşük (0);-;hacim zayıf;273,5;292,97;;27.08.2026
+340;INVEO;İZLE;*;32;düşük (0);-;Supertrend aşağı;7,08;7,55;;27.08.2026
+341;LOGO;İZLE;*;32;orta (32);-;uyumsuzluk 3/5, hacim zayıf;137,3;143,73;;27.08.2026
+342;DAPGM;İZLE;*;32;düşük (0);-;Supertrend aşağı;8,48;9,69;;27.08.2026
+343;KAPLM;İZLE;*;32;düşük (8);-;momentum sönümü;432,75;476,78;;27.08.2026
+344;SANKO;İZLE;*;31;orta (32);-;uyumsuzluk 3/5, hacim zayıf;18,87;17,51;;27.08.2026
+345;PGSUS;İZLE;*;31;düşük (0);-;Supertrend aşağı;151,5;159,58;;27.08.2026
+346;CUSAN;İZLE;*;31;düşük (16);-;uyumsuzluk 1/5, dağıtım 3 gün, hacim zayıf;23,58;27,83;;27.08.2026
+347;AKFYE;İZLE;*;31;düşük (6);-;dağıtım 3 gün, hacim zayıf;23,14;25,16;;27.08.2026
+348;SRVGY;İZLE;*;31;düşük (0);-;hacim zayıf;2,56;2,61;;27.08.2026
+349;SELVA;İZLE;*;31;düşük (0);-;hacim zayıf;1,73;1,64;;27.08.2026
+350;MEGAP;İZLE;*;30;düşük (0);-;skor düşük;1,75;1,70;;27.08.2026
+351;ARTMS;İZLE;*;30;düşük (10);osilatör 5/6;uyumsuzluk 1/5, hacim zayıf;39,56;40,73;;27.08.2026
+352;TCELL;İZLE;*;30;düşük (0);-;Supertrend aşağı;102,8;109,99;;27.08.2026
+353;GLCVY;İZLE;*;30;düşük (0);-;hacim zayıf;52,95;55,12;;27.08.2026
+354;GARFA;İZLE;*;30;düşük (0);osilatör 5/6;Supertrend aşağı;27,1;28,60;;27.08.2026
+355;ISMEN;İZLE;*;30;düşük (6);-;dağıtım 3 gün;32,9;34,47;;27.08.2026
+356;BEGYO;İZLE;*;30;düşük (8);-;momentum sönümü, hacim zayıf;3,63;3,76;;27.08.2026
+357;CMBTN;İZLE;*;30;düşük (0);-;hacim zayıf;1555;1724,81;;27.08.2026
+358;SKYLP;İZLE;*;30;düşük (0);-;hacim zayıf;241,7;224,44;;27.08.2026
+359;SKTAS;İZLE;*;29;düşük (0);-;Supertrend aşağı;3,17;3,49;;27.08.2026
+360;VKFYO;İZLE;*;29;düşük (0);-;Supertrend aşağı;23,84;25,77;;27.08.2026
+361;MAVI;İZLE;*;29;düşük (16);-;uyumsuzluk 1/5, dağıtım 3 gün;38;40,40;;27.08.2026
+362;KMPUR;İZLE;*;29;düşük (0);-;hacim zayıf;19,7;23,21;;27.08.2026
+363;QUAGR;İZLE;*;29;düşük (0);-;Supertrend aşağı;3,4;3,63;;27.08.2026
+364;OYYAT;İZLE;*;29;düşük (8);osilatör 5/6;momentum sönümü, hacim zayıf;36,86;37,66;;27.08.2026
+365;SOKE;İZLE;*;29;düşük (0);-;Supertrend aşağı;14,3;15,65;;27.08.2026
+366;BRYAT;İZLE;*;28;düşük (0);-;Supertrend aşağı;1708;1872,38;;27.08.2026
+367;BURVA;İZLE;*;28;düşük (6);-;dağıtım 3 gün, hacim zayıf;765;698,58;;27.08.2026
+368;YYLGD;İZLE;*;28;düşük (10);-;uyumsuzluk 1/5, hacim zayıf;10,19;10,00;;27.08.2026
+369;SMART;İZLE;*;28;düşük (8);osilatör 5/6;momentum sönümü;25;26,43;;27.08.2026
+370;ARCLK;İZLE;*;28;düşük (0);-;Supertrend aşağı;93,95;97,44;;27.08.2026
+371;EUYO;İZLE;*;28;düşük (10);-;uyumsuzluk 1/5, hacim zayıf;4,94;4,67;;27.08.2026
+372;LILAK;İZLE;*;28;düşük (6);-;dağıtım 3 gün;29,86;31,00;;27.08.2026
+373;ATAKP;İZLE;*;28;düşük (0);-;Supertrend aşağı;45,7;49,40;;27.08.2026
+374;BRISA;İZLE;*;28;düşük (6);-;dağıtım 3 gün;78,1;85,19;;27.08.2026
+375;KLSER;İZLE;*;28;düşük (0);-;hacim zayıf;24,76;26,04;;27.08.2026
+376;ONRYT;İZLE;*;28;düşük (0);-;hacim zayıf;60,6;64,39;;27.08.2026
+377;AKENR;İZLE;*;28;düşük (10);-;uyumsuzluk 1/5, hacim zayıf;10,35;11,26;;27.08.2026
+378;ARENA;İZLE;*;27;düşük (0);-;Supertrend aşağı;21,5;23,39;;27.08.2026
+379;KUTPO;İZLE;*;27;yüksek (46);-;uyumsuzluk 5/5, dağıtım 3 gün;81;87,41;;27.08.2026
+380;DESPC;İZLE;*;27;düşük (0);osilatör 5/6;hacim zayıf;41,9;46,45;;27.08.2026
+381;HATEK;İZLE;*;27;orta (22);-;uyumsuzluk 2/5, hacim zayıf;12,88;11,48;;27.08.2026
+382;BIGCH;İZLE;*;27;düşük (6);-;dağıtım 3 gün;6,28;6,77;;27.08.2026
+383;ACSEL;İZLE;*;27;düşük (0);-;hacim zayıf;121,5;132,17;;27.08.2026
+384;SMRVA;İZLE;*;27;düşük (0);-;Supertrend aşağı;11,63;12,73;;27.08.2026
+385;BASGZ;İZLE;*;27;düşük (0);-;hacim zayıf;44,2;46,46;;27.08.2026
+386;DITAS;İZLE;*;27;düşük (0);-;hacim zayıf;25,54;29,20;;27.08.2026
+387;CGCAM;İZLE;*;26;düşük (0);-;Supertrend aşağı;37,08;40,46;;27.08.2026
+388;MAGEN;İZLE;*;26;düşük (0);-;Supertrend aşağı;33,52;37,68;;27.08.2026
+389;TEKTU;İZLE;*;26;düşük (0);-;hacim zayıf;7,93;8,40;;27.08.2026
+390;GENTS;İZLE;*;26;düşük (0);-;Supertrend aşağı;5,3;5,67;;27.08.2026
+391;BEYAZ;İZLE;*;26;orta (22);-;uyumsuzluk 2/5, hacim zayıf;23,2;22,77;;27.08.2026
+392;GRNYO;İZLE;*;26;düşük (10);-;dağıtım 4 gün;13,7;13,21;;27.08.2026
+393;CEMTS;İZLE;*;26;yüksek (46);-;uyumsuzluk 3/5, dağıtım 3 gün, momentum sönümü;8,92;9,43;;27.08.2026
+394;INGRM;İZLE;*;26;düşük (14);-;dağıtım 3 gün, momentum sönümü;393,25;411,43;;27.08.2026
+395;SANEL;İZLE;*;26;düşük (10);-;dağıtım 4 gün;56,15;70,71;;27.08.2026
+396;CONSE;İZLE;*;25;düşük (6);-;dağıtım 3 gün;2,28;2,44;;27.08.2026
+397;NTHOL;İZLE;*;25;orta (40);-;uyumsuzluk 5/5, hacim zayıf;43,3;46,99;;27.08.2026
+398;BURCE;İZLE;*;25;orta (22);-;uyumsuzluk 2/5;36,08;40,29;;27.08.2026
+399;DZGYO;İZLE;*;25;düşük (0);-;hacim zayıf;7,29;7,60;;27.08.2026
+400;YAPRK;İZLE;*;25;düşük (0);-;Supertrend aşağı;11,16;12,40;;27.08.2026
+401;MRSHL;İZLE;*;25;düşük (6);-;dağıtım 3 gün, hacim zayıf;1630;1560,78;;27.08.2026
+402;HTTBT;İZLE;*;25;düşük (6);-;dağıtım 3 gün;36,9;39,24;;27.08.2026
+403;TTKOM;İZLE;*;25;düşük (0);-;skor düşük;53,45;50,42;;27.08.2026
+404;ISSEN;İZLE;*;25;düşük (0);-;hacim zayıf;6,96;7,43;;27.08.2026
+405;SERNT;İZLE;*;25;düşük (0);-;hacim zayıf;7,95;8,46;;27.08.2026
+406;TURGG;İZLE;*;25;orta (22);-;uyumsuzluk 2/5, hacim zayıf;27,08;28,01;;27.08.2026
+407;POLTK;İZLE;*;25;düşük (0);-;Supertrend aşağı;4305;4918,19;;27.08.2026
+408;VAKFN;İZLE;*;25;düşük (0);-;hacim zayıf;1,19;1,26;;27.08.2026
+409;YYAPI;İZLE;*;24;düşük (0);-;Supertrend aşağı;0,82;0,86;;27.08.2026
+410;GEDIK;İZLE;*;24;düşük (0);-;hacim zayıf;6,24;7,05;;27.08.2026
+411;IHGZT;İZLE;*;24;düşük (0);-;hacim zayıf;1,19;1,26;;27.08.2026
+412;GRSEL;İZLE;*;24;düşük (0);-;hacim zayıf;315,5;346,63;;27.08.2026
+413;SMRTG;İZLE;*;24;düşük (0);-;Supertrend aşağı;10,06;11,24;;27.08.2026
+414;YAYLA;İZLE;*;24;orta (38);-;uyumsuzluk 3/5, dağıtım 3 gün, hacim zayıf;21,8;20,81;;27.08.2026
+415;EUREN;İZLE;*;24;düşük (0);-;hacim zayıf;3,9;4,10;;27.08.2026
+416;A1CAP;İZLE;*;24;düşük (0);-;Supertrend aşağı;8,4;8,98;;27.08.2026
+417;NUGYO;İZLE;*;24;düşük (0);-;Supertrend aşağı;9,11;9,70;;27.08.2026
+418;LIDFA;İZLE;*;24;düşük (0);-;Supertrend aşağı;2,73;2,93;;27.08.2026
+419;UNLU;İZLE;*;24;düşük (0);-;hacim zayıf;11,08;11,69;;27.08.2026
+420;MNDTR;İZLE;*;24;düşük (10);-;dağıtım 4 gün;4,98;5,37;;27.08.2026
+421;ASUZU;İZLE;*;24;düşük (0);-;hacim zayıf;49,06;50,78;;27.08.2026
+422;RAYSG;İZLE;*;24;düşük (0);-;hacim zayıf;160,5;172,80;;27.08.2026
+423;PKENT;İZLE;*;24;düşük (0);-;hacim zayıf;126,1;136,60;;27.08.2026
+424;IHLGM;İZLE;*;24;düşük (0);-;hacim zayıf;1,58;1,69;;27.08.2026
+425;IZINV;İZLE;*;23;düşük (0);-;Supertrend aşağı;54,25;60,53;;27.08.2026
+426;ANGEN;İZLE;*;23;düşük (0);-;hacim zayıf;9,24;9,72;;27.08.2026
+427;EGEEN;İZLE;*;23;düşük (8);-;momentum sönümü, hacim zayıf;5125;5506,98;;27.08.2026
+428;KARSN;İZLE;*;23;düşük (6);-;dağıtım 3 gün;9,27;10,15;;27.08.2026
+429;KUYAS;İZLE;*;23;düşük (0);-;hacim zayıf;63;72,64;;27.08.2026
+430;DURDO;İZLE;*;22;düşük (0);-;hacim zayıf;4,83;5,27;;27.08.2026
+431;SUWEN;İZLE;*;22;düşük (0);-;hacim zayıf;6,37;7,29;;27.08.2026
+432;PARSN;İZLE;*;22;düşük (0);-;hacim zayıf;72,55;77,91;;27.08.2026
+433;KOTON;İZLE;*;22;düşük (0);-;hacim zayıf;12,99;13,37;;27.08.2026
+434;YEOTK;İZLE;*;22;düşük (10);-;dağıtım 4 gün, hacim zayıf;35,7;40,86;;27.08.2026
+435;SODSN;İZLE;*;22;düşük (6);-;dağıtım 3 gün, hacim zayıf;7,56;7,13;;27.08.2026
+436;LMKDC;İZLE;*;22;düşük (10);-;uyumsuzluk 1/5, hacim zayıf;24,22;22,85;;27.08.2026
+437;KATMR;İZLE;*;22;düşük (0);-;hacim zayıf;2,12;2,32;;27.08.2026
+438;MAALT;İZLE;*;22;düşük (0);-;hacim zayıf;1000;1067,78;;27.08.2026
+439;MHRGY;İZLE;*;22;düşük (0);-;hacim zayıf;3,36;3,63;;27.08.2026
+440;MEDTR;İZLE;*;22;düşük (0);osilatör 5/6;hacim zayıf;25,76;26,93;;27.08.2026
+441;TMSN;İZLE;*;22;düşük (0);-;Supertrend aşağı;75,95;81,05;;27.08.2026
+442;MGROS;İZLE;*;22;düşük (0);-;hacim zayıf;563;611,26;;27.08.2026
+443;CCOLA;İZLE;*;21;düşük (6);-;dağıtım 3 gün, hacim zayıf;77,5;86,79;;27.08.2026
+444;VAKKO;İZLE;*;21;düşük (0);-;Supertrend aşağı;68,1;72,32;;27.08.2026
+445;SILVR;İZLE;*;21;düşük (8);-;momentum sönümü, hacim zayıf;2,26;2,42;;27.08.2026
+446;MERIT;İZLE;*;21;düşük (0);-;hacim zayıf;15,79;17,16;;27.08.2026
+447;YESIL;İZLE;*;21;düşük (0);-;hacim zayıf;1,21;1,30;;27.08.2026
+448;ADESE;İZLE;*;21;düşük (0);-;hacim zayıf;0,86;0,93;;27.08.2026
+449;CANTE;İZLE;*;21;düşük (0);-;hacim zayıf;1,21;1,28;;27.08.2026
+450;CLEBI;İZLE;*;21;düşük (0);-;hacim zayıf;1484;1553,35;;27.08.2026
+451;FROTO;İZLE;*;21;düşük (0);-;Supertrend aşağı;78,45;82,71;;27.08.2026
+452;ULUSE;İZLE;*;21;düşük (0);-;Supertrend aşağı;255;308,60;;27.08.2026
+453;AKYHO;İZLE;*;21;düşük (0);-;hacim zayıf;2,23;2,43;;27.08.2026
+454;HEDEF;İZLE;*;21;düşük (10);-;dağıtım 4 gün;104;161,80;;27.08.2026
+455;AYCES;İZLE;*;20;düşük (14);-;dağıtım 3 gün, momentum sönümü, hacim zayıf;449;489,81;;27.08.2026
+456;ALFAS;İZLE;*;20;düşük (0);-;hacim zayıf;41,8;43,63;;27.08.2026
+457;BSOKE;İZLE;*;20;düşük (10);-;dağıtım 4 gün;30,58;34,45;;27.08.2026
+458;GRTHO;İZLE;*;20;düşük (0);-;hacim zayıf;222,3;242,88;;27.08.2026
+459;BVSAN;İZLE;*;20;düşük (0);-;hacim zayıf;104,3;113,53;;27.08.2026
+460;BTCIM;İZLE;*;20;düşük (6);-;dağıtım 3 gün;4,57;5,06;;27.08.2026
+461;MEGMT;İZLE;*;20;düşük (6);-;dağıtım 3 gün;47,56;58,98;;27.08.2026
+462;BARMA;İZLE;*;20;düşük (0);-;hacim zayıf;9,26;13,08;;27.08.2026
+463;VESTL;İZLE;*;20;düşük (6);-;dağıtım 3 gün;22,28;24,54;;27.08.2026
+464;GOODY;İZLE;*;20;düşük (0);-;hacim zayıf;2,61;2,60;;27.08.2026
+465;IZENR;İZLE;*;20;düşük (0);-;hacim zayıf;8,32;9,24;;27.08.2026
+466;EGEPO;İZLE;*;20;düşük (0);-;hacim zayıf;16,27;18,45;;27.08.2026
+467;OSTIM;İZLE;*;20;düşük (0);-;hacim zayıf;1,61;1,71;;27.08.2026
+468;ATEKS;İZLE;*;20;düşük (6);-;dağıtım 3 gün;95;113,26;;27.08.2026
+469;SKBNK;İZLE;*;19;düşük (0);-;hacim zayıf;6,29;7,36;;27.08.2026
+470;GSDHO;İZLE;*;19;düşük (10);-;dağıtım 4 gün, hacim zayıf;4,85;5,32;;27.08.2026
+471;BMSCH;İZLE;*;19;düşük (0);-;Supertrend aşağı;11,25;12,77;;27.08.2026
+472;VKING;İZLE;*;19;düşük (6);-;dağıtım 3 gün;22,14;23,94;;27.08.2026
+473;MEKAG;İZLE;*;19;düşük (0);-;hacim zayıf;3,04;3,17;;27.08.2026
+474;KSTUR;İZLE;*;19;düşük (0);-;Supertrend aşağı;2395;2520,17;;27.08.2026
+475;AEFES;İZLE;*;19;düşük (0);-;Supertrend aşağı;18,53;20,55;;27.08.2026
+476;LUKSK;İZLE;*;19;düşük (0);-;Supertrend aşağı;85,25;95,03;;27.08.2026
+477;PAMEL;İZLE;*;19;düşük (6);-;dağıtım 3 gün, hacim zayıf;77,45;73,17;;27.08.2026
+478;TUREX;İZLE;*;19;düşük (0);-;hacim zayıf;6,6;7,06;;27.08.2026
+479;SEGYO;İZLE;*;19;düşük (0);-;Supertrend aşağı;3,77;4,09;;27.08.2026
+480;ORCAY;İZLE;*;19;düşük (0);-;Supertrend aşağı;3,47;3,95;;27.08.2026
+481;AGROT;İZLE;*;19;düşük (0);-;Supertrend aşağı;2,11;2,61;;27.08.2026
+482;TUKAS;İZLE;*;19;düşük (6);-;dağıtım 3 gün, hacim zayıf;2,02;2,12;;27.08.2026
+483;AGHOL;İZLE;*;18;orta (28);-;uyumsuzluk 2/5, dağıtım 3 gün;30,26;33,48;;27.08.2026
+484;SUMAS;İZLE;*;18;düşük (0);-;Supertrend aşağı;268,25;291,52;;27.08.2026
+485;PRKAB;İZLE;*;18;düşük (20);-;uyumsuzluk 1/5, dağıtım 4 gün;31,96;35,49;;27.08.2026
+486;LINK;İZLE;*;18;orta (28);-;uyumsuzluk 2/5, dağıtım 3 gün;5,66;6,22;;27.08.2026
+487;KAREL;İZLE;*;18;düşük (0);-;hacim zayıf;8,8;8,58;;27.08.2026
+488;ALKIM;İZLE;*;18;düşük (0);-;hacim zayıf;15,76;17,14;;27.08.2026
+489;ZOREN;İZLE;*;18;düşük (0);-;hacim zayıf;2,29;2,42;;27.08.2026
+490;AKGRT;İZLE;*;18;düşük (10);-;dağıtım 4 gün;6,23;6,56;;27.08.2026
+491;IDGYO;İZLE;*;17;düşük (0);-;hacim zayıf;3,08;3,62;;27.08.2026
+492;ALCAR;İZLE;*;17;düşük (0);-;hacim zayıf;701,5;761,69;;27.08.2026
+493;CASA;İZLE;*;17;düşük (10);-;dağıtım 4 gün;68;72,08;;27.08.2026
+494;CMENT;İZLE;*;17;düşük (6);-;dağıtım 3 gün;260;277,23;;27.08.2026
+495;AVHOL;İZLE;*;17;düşük (0);-;hacim zayıf;36,22;39,31;;27.08.2026
+496;QNBTR;İZLE;*;17;düşük (0);-;hacim zayıf;190,2;199,98;;27.08.2026
+497;FORMT;İZLE;*;17;düşük (0);-;hacim zayıf;1,69;1,83;;27.08.2026
+498;TRILC;İZLE;*;17;düşük (0);-;Supertrend aşağı;1,12;1,19;;27.08.2026
+499;FZLGY;İZLE;*;17;düşük (0);-;hacim zayıf;10,05;11,88;;27.08.2026
+500;KONKA;İZLE;*;17;yüksek (42);-;uyumsuzluk 3/5, dağıtım 4 gün;11,34;12,57;;27.08.2026
+501;ATLAS;İZLE;*;17;düşük (0);-;Supertrend aşağı;6,38;7,17;;27.08.2026
+502;IHYAY;İZLE;*;17;orta (28);-;uyumsuzluk 2/5, dağıtım 3 gün, hacim zayıf;1,22;1,34;;27.08.2026
+503;VRGYO;İZLE;*;17;düşük (6);-;dağıtım 3 gün, hacim zayıf;1,79;1,86;;27.08.2026
+504;ERCB;İZLE;*;17;düşük (0);-;hacim zayıf;46,64;51,41;;27.08.2026
+505;EKIZ;İZLE;*;17;düşük (6);-;dağıtım 3 gün;60,45;65,21;;27.08.2026
+506;ODAS;İZLE;*;16;düşük (6);-;dağıtım 3 gün, hacim zayıf;7,05;7,86;;27.08.2026
+507;YBTAS;İZLE;*;16;düşük (6);-;dağıtım 3 gün;14;15,26;;27.08.2026
+508;LKMNH;İZLE;*;16;düşük (0);-;hacim zayıf;13,61;14,65;;27.08.2026
+509;SAMAT;İZLE;*;16;düşük (0);-;hacim zayıf;5,39;6,00;;27.08.2026
+510;OYAYO;İZLE;*;16;düşük (6);-;dağıtım 3 gün, hacim zayıf;42,68;41,73;;27.08.2026
+511;ARZUM;İZLE;*;16;düşük (0);-;hacim zayıf;1,62;1,83;;27.08.2026
+512;SISE;İZLE;*;16;düşük (0);-;hacim zayıf;40,04;42,02;;27.08.2026
+513;KFEIN;İZLE;*;16;düşük (6);-;dağıtım 3 gün;8,24;9,10;;27.08.2026
+514;MOPAS;İZLE;*;16;düşük (0);-;Supertrend aşağı;27,94;30,04;;27.08.2026
+515;KONTR;İZLE;*;16;düşük (10);-;dağıtım 4 gün;3,73;4,17;;27.08.2026
+516;ENTRA;İZLE;*;15;düşük (6);-;dağıtım 3 gün, hacim zayıf;4,46;4,44;;27.08.2026
+517;ERBOS;İZLE;*;15;düşük (0);-;Supertrend aşağı;151,8;164,48;;27.08.2026
+518;SDTTR;İZLE;*;15;düşük (0);-;Supertrend aşağı;24,4;133,32;;27.08.2026
+519;INTEK;İZLE;*;15;düşük (0);-;hacim zayıf;246;275,95;;27.08.2026
+520;ORMA;İZLE;*;15;düşük (6);-;dağıtım 3 gün, hacim zayıf;158;153,19;;27.08.2026
+521;KRTEK;İZLE;*;15;düşük (6);-;dağıtım 3 gün, hacim zayıf;5,33;5,18;;27.08.2026
+522;KTSKR;İZLE;*;15;düşük (0);-;hacim zayıf;83,4;92,94;;27.08.2026
+523;GWIND;İZLE;*;15;düşük (0);-;hacim zayıf;23,22;24,71;;27.08.2026
+524;HEKTS;İZLE;*;15;düşük (6);-;dağıtım 3 gün, hacim zayıf;2,84;3,10;;27.08.2026
+525;DOGUB;İZLE;*;15;düşük (6);-;dağıtım 3 gün;69,05;85,12;;27.08.2026
+526;AKSA;İZLE;*;14;düşük (10);-;dağıtım 4 gün, hacim zayıf;10,95;12,02;;27.08.2026
+527;ULUFA;İZLE;*;14;düşük (0);-;hacim zayıf;1,67;1,85;;27.08.2026
+528;EUHOL;İZLE;*;14;düşük (0);-;hacim zayıf;10,6;12,26;;27.08.2026
+529;KRSTL;İZLE;*;14;düşük (16);-;uyumsuzluk 1/5, dağıtım 3 gün, hacim zayıf;9,42;10,06;;27.08.2026
+530;ELITE;İZLE;*;14;düşük (10);-;uyumsuzluk 1/5, hacim zayıf;27,7;30,13;;27.08.2026
+531;DARDL;İZLE;*;14;düşük (0);-;hacim zayıf;1,66;1,81;;27.08.2026
+532;OYLUM;İZLE;*;14;düşük (0);-;hacim zayıf;7,28;7,99;;27.08.2026
+533;NATEN;İZLE;*;14;düşük (0);-;hacim zayıf;5,55;6,03;;27.08.2026
+534;BORLS;İZLE;*;14;düşük (6);-;dağıtım 3 gün, hacim zayıf;4,5;5,27;;27.08.2026
+535;QNBFK;İZLE;*;14;düşük (10);-;dağıtım 4 gün, hacim zayıf;42,02;46,75;;27.08.2026
+536;KIMMR;İZLE;*;14;düşük (0);-;hacim zayıf;13,63;14,74;;27.08.2026
+537;ATAGY;İZLE;*;14;düşük (6);-;dağıtım 3 gün, hacim zayıf;10,24;11,08;;27.08.2026
+538;KRVGD;İZLE;*;14;düşük (10);-;dağıtım 4 gün;2,28;2,50;;27.08.2026
+539;IMASM;İZLE;*;13;orta (40);-;uyumsuzluk 4/5, hacim zayıf;2,34;2,66;;27.08.2026
+540;KZBGY;İZLE;*;13;düşük (0);-;hacim zayıf;1,98;2,17;;27.08.2026
+541;MERKO;İZLE;*;13;düşük (6);-;dağıtım 3 gün, hacim zayıf;1,35;1,45;;27.08.2026
+542;ALCTL;İZLE;*;13;düşük (20);-;uyumsuzluk 1/5, dağıtım 4 gün;120,3;144,34;;27.08.2026
+543;YKSLN;İZLE;*;13;düşük (0);-;hacim zayıf;2,8;3,06;;27.08.2026
+544;OSMEN;İZLE;*;13;orta (28);-;uyumsuzluk 2/5, dağıtım 3 gün, hacim zayıf;7,69;8,88;;27.08.2026
+545;ALVES;İZLE;*;13;düşük (0);-;hacim zayıf;1,75;2,05;;27.08.2026
+546;BALAT;İZLE;*;13;düşük (0);-;hacim zayıf;69;74,53;;27.08.2026
+547;BALSU;İZLE;*;13;düşük (0);-;hacim zayıf;10,75;13,06;;27.08.2026
+548;REEDR;İZLE;*;12;düşük (0);-;hacim zayıf;5,98;6,49;;27.08.2026
+549;TEZOL;İZLE;*;12;düşük (0);-;hacim zayıf;9,67;11,11;;27.08.2026
+550;AYEN;İZLE;*;12;düşük (0);-;hacim zayıf;31,26;35,51;;27.08.2026
+551;MIATK;İZLE;*;12;düşük (0);-;hacim zayıf;29,78;33,63;;27.08.2026
+552;GZNMI;İZLE;*;12;düşük (6);-;dağıtım 3 gün;56,4;65,91;;27.08.2026
+553;MSGYO;İZLE;*;12;düşük (16);-;uyumsuzluk 1/5, dağıtım 3 gün, hacim zayıf;5,7;6,21;;27.08.2026
+554;TATEN;İZLE;*;12;düşük (0);-;hacim zayıf;8,85;10,72;;27.08.2026
+555;RTALB;İZLE;*;12;düşük (0);-;hacim zayıf;2,9;3,14;;27.08.2026
+556;SEKFK;İZLE;*;12;düşük (10);-;dağıtım 4 gün, hacim zayıf;4,48;5,01;;27.08.2026
+557;GLBMD;İZLE;*;12;düşük (0);-;hacim zayıf;11,83;13,35;;27.08.2026
+558;DGGYO;İZLE;*;12;düşük (0);-;hacim zayıf;33,12;37,81;;27.08.2026
+559;PENGD;İZLE;*;11;düşük (0);-;hacim zayıf;9,11;10,01;;27.08.2026
+560;USAK;İZLE;*;11;düşük (0);-;hacim zayıf;1,24;1,36;;27.08.2026
+561;DCTTR;İZLE;*;10;düşük (0);-;hacim zayıf;6,96;8,41;;27.08.2026
+562;LRSHO;İZLE;*;10;orta (38);-;uyumsuzluk 3/5, dağıtım 3 gün, hacim zayıf;2,53;2,91;;27.08.2026
+563;VSNMD;İZLE;*;10;düşük (10);-;dağıtım 5 gün, hacim zayıf;46,38;51,31;;27.08.2026
+564;YUNSA;İZLE;*;10;düşük (6);-;dağıtım 3 gün, hacim zayıf;8,29;9,00;;27.08.2026
+565;BAKAB;İZLE;*;10;düşük (6);-;dağıtım 3 gün, hacim zayıf;40,04;45,96;;27.08.2026
+566;CRDFA;İZLE;*;10;orta (22);-;uyumsuzluk 2/5, hacim zayıf;26,08;31,71;;27.08.2026
+567;SEYKM;İZLE;*;9;düşük (6);-;dağıtım 3 gün;4,54;5,11;;27.08.2026
+568;LIDER;İZLE;*;9;düşük (6);-;dağıtım 3 gün;32,4;46,95;;27.08.2026
+569;OTTO;İZLE;*;9;orta (32);-;uyumsuzluk 2/5, dağıtım 4 gün;154,7;177,62;;27.08.2026
+570;YONGA;İZLE;*;9;düşük (0);-;Supertrend aşağı;45,9;49,27;;27.08.2026
+571;AZTEK;İZLE;*;7;düşük (10);-;dağıtım 4 gün, hacim zayıf;3,85;4,43;;27.08.2026
+572;LYDHO;İZLE;*;7;düşük (10);-;dağıtım 4 gün, hacim zayıf;162,8;182,57;;27.08.2026
+573;LYDYE;İZLE;*;7;yüksek (50);-;uyumsuzluk 4/5, dağıtım 4 gün, hacim zayıf;12422,5;13799,73;;27.08.2026
+574;MMCAS;İZLE;*;7;düşük (10);-;uyumsuzluk 1/5, hacim zayıf;50,5;57,77;;27.08.2026
+575;YATAS;İZLE;*;7;düşük (0);-;hacim zayıf;31,12;34,18;;27.08.2026
+576;SAFKR;İZLE;*;7;düşük (10);-;uyumsuzluk 1/5, hacim zayıf;18,3;20,81;;27.08.2026
+577;DOAS;İZLE;*;7;orta (22);-;uyumsuzluk 2/5, hacim zayıf;166,6;180,07;;27.08.2026
+578;EMKEL;İZLE;*;7;düşük (10);-;dağıtım 4 gün, hacim zayıf;15,2;17,24;;27.08.2026
+579;SURGY;İZLE;*;6;düşük (0);-;hacim zayıf;33,12;41,22;;27.08.2026
+580;BULGS;İZLE;*;6;orta (38);-;uyumsuzluk 3/5, dağıtım 3 gün, hacim zayıf;32,22;35,80;;27.08.2026
+581;MERCN;İZLE;*;6;düşük (6);-;dağıtım 3 gün, hacim zayıf;18,3;22,10;;27.08.2026
+582;GOKNR;İZLE;*;6;düşük (0);-;hacim zayıf;17,6;20,33;;27.08.2026
+583;KLRHO;İZLE;*;6;düşük (0);-;hacim zayıf;65;77,24;;27.08.2026
+584;HUBVC;İZLE;*;5;düşük (6);-;dağıtım 3 gün, hacim zayıf;2,46;2,77;;27.08.2026
+585;VESBE;İZLE;*;5;düşük (0);-;hacim zayıf;5,28;5,71;;27.08.2026
