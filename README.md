@@ -1,10 +1,14 @@
-# Supertrend Tarayıcı — BIST
+﻿# Supertrend Tarayıcı — BIST
 
 BIST hisselerinde **Supertrend** indikatörünün günlük grafikte AL / SAT sinyali ürettiği
 hisseleri bulur. Veri kaynağı TradingView'dir; ücretli üyelik gerekmez.
 
 Tarama her iş günü (Pazartesi–Cuma) **18:45 Türkiye saatinde** GitHub'ın sunucularında
 otomatik çalışır. Bilgisayarın açık olması gerekmez.
+
+## Günlük rapor sayfası
+
+Renkli, telefona uygun özet: **https://smhylmz23.github.io/supertrend/**
 
 ## Sonuçlar
 

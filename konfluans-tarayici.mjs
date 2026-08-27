@@ -32,6 +32,7 @@ import https from 'https';
 import path from 'path';
 import { fileURLToPath } from 'url';
 import * as ta from './ta.mjs';
+import { sadeListe, htmlRapor } from './rapor.mjs';
 
 const KLASOR = path.dirname(fileURLToPath(import.meta.url));
 const YEDEK_LISTE = path.join(KLASOR, 'hisseler.json');
@@ -441,6 +442,28 @@ if (CFG.csv) {
   fs.writeFileSync(path.join(SONUC, 'konfluans_' + bugunEtiket() + '.csv'), '﻿' + govde, 'utf8');
   fs.writeFileSync(path.join(SONUC, 'konfluans-son.csv'), govde, 'utf8');
   yaz('Excel dosyasi: sonuclar\\konfluans_' + bugunEtiket() + '.csv  (' + cikti.length + ' satir, ' + bas.length + ' sutun)\n');
+}
+
+// ---- KULLANICI DOSTU CIKTILAR ----
+if (CFG.csv || CFG.rapor) {
+  // 1) sade liste: dusunmeden okunan kisa CSV
+  const sade = sadeListe(satirlar);
+  fs.writeFileSync(path.join(SONUC, 'firsatlar_' + bugunEtiket() + '.csv'), '﻿' + sade, 'utf8');
+  fs.writeFileSync(path.join(SONUC, 'firsatlar-son.csv'), sade, 'utf8');
+
+  // 2) telefonda acilan renkli sayfa. Supertrend sinyallerini de ustune koy.
+  let stSinyal = [];
+  try {
+    const p = path.join(SONUC, 'son.csv');
+    if (fs.existsSync(p)) {
+      stSinyal = fs.readFileSync(p, 'utf8').split(/\r?\n/).slice(1)
+        .map((s) => s.split(';')).filter((c) => c[0] === 'AL').map((c) => c[1]).filter(Boolean);
+    }
+  } catch (e) {}
+  const gun = satirlar.length ? satirlar[0].tarih : bugunEtiket();
+  fs.writeFileSync(path.join(KLASOR, 'index.html'), htmlRapor(satirlar, stSinyal, gun), 'utf8');
+  yaz('Sade liste  : sonuclar\\firsatlar_' + bugunEtiket() + '.csv');
+  yaz('Renkli sayfa: index.html\n');
 }
 
 if (CFG.rapor) {
