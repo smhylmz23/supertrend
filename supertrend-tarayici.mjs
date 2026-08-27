@@ -303,10 +303,12 @@ if (CFG.csv) {
   const satirlar = ['sinyal;hisse;kapanis;degisim%;st_cizgisi;islem_hacmi_tl;tarih'];
   for (const x of al) satirlar.push(['AL', x.ad, vir(x.kapanis), vir(x.degisim.toFixed(2)), vir(x.st.toFixed(2)), Math.round(x.hacimTL), x.tarih].join(';'));
   for (const x of sat) satirlar.push(['SAT', x.ad, vir(x.kapanis), vir(x.degisim.toFixed(2)), vir(x.st.toFixed(2)), Math.round(x.hacimTL), x.tarih].join(';'));
-  const icerik = '﻿' + satirlar.join('\r\n');
-  fs.writeFileSync(path.join(SONUC_KLASORU, 'supertrend_' + bugunEtiket() + '.csv'), icerik, 'utf8');
-  // sabit isimli kopya: Google E-Tablolar formulu hep bu dosyaya baksin diye
-  fs.writeFileSync(path.join(SONUC_KLASORU, 'son.csv'), icerik, 'utf8');
+  const govdeCsv = satirlar.join('\r\n');
+  // Excel Turkce karakterleri dogru okusun diye tarihli dosyada BOM var
+  fs.writeFileSync(path.join(SONUC_KLASORU, 'supertrend_' + bugunEtiket() + '.csv'), '﻿' + govdeCsv, 'utf8');
+  // sabit isimli kopya: Google E-Tablolar formulu hep bu dosyaya baksin diye.
+  // Burada BOM YOK - olsaydi ilk hucre bozuk gorunurdu.
+  fs.writeFileSync(path.join(SONUC_KLASORU, 'son.csv'), govdeCsv, 'utf8');
   console.log('CSV yazildi: sonuclar\\supertrend_' + bugunEtiket() + '.csv  (Excel ile acilabilir)\n');
 }
 
