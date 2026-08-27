@@ -1,10 +1,12 @@
-name: Supertrend Tarama
+﻿name: Supertrend Tarama
 
 on:
   schedule:
     # 15:45 UTC = 18:45 Turkiye saati, Pazartesi-Cuma
     - cron: '45 15 * * 1-5'
   workflow_dispatch:        # elle de calistirilabilsin
+  push:
+    branches: [main]        # kod degisince test amacli calissin
 
 permissions:
   contents: write
