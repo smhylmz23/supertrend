@@ -1,0 +1,30 @@
+
+SUPERTREND TARAYICI  -  ATR 10 / Carpan 3 / Periyot 1D
+
+=== AL SINYALI: 10 hisse ===
+  HISSE   KAPANIS      DEG%    ST CIZGISI     ISLEM HACMI (TL)   TARIH
+  EUPWR    103.10    +3.62        90.76        1.337.108.436   27.08.2026
+  ATATR     16.10    +2.29        13.95          715.764.108   27.08.2026
+  DOHOL     22.34    +2.20        19.96          402.520.981   27.08.2026
+  MEYSU     12.74    +3.41        10.57          282.195.586   27.08.2026
+  ULUUN      9.07    +4.25         7.93          187.514.949   27.08.2026
+  PNSUT     11.02    +4.75        10.05          187.148.759   27.08.2026
+  ENSRI      6.14    +9.84         5.16          143.032.301   27.08.2026
+  BIENY     22.52    +2.46        19.77          131.030.368   27.08.2026
+  PETUN     11.59    +3.30        10.87           84.459.610   27.08.2026
+  AGESA    259.25    +2.98       230.95           84.058.183   27.08.2026
+
+=== SAT SINYALI: 5 hisse ===
+  HISSE   KAPANIS      DEG%    ST CIZGISI     ISLEM HACMI (TL)   TARIH
+  SDTTR     24.40   -90.62       133.32          524.165.582   27.08.2026
+  GZNMI     56.40    -1.23        65.91           79.213.180   27.08.2026
+  KMPUR     19.70    -1.89        23.21           35.661.827   27.08.2026
+  POLTK   4305.00    -2.21      4918.19           29.390.235   27.08.2026
+  SEYKM      4.54    -1.30         5.11            5.642.798   27.08.2026
+
+TradingView listesine yapistirmak icin:
+  BIST:EUPWR,BIST:ATATR,BIST:DOHOL,BIST:MEYSU,BIST:ULUUN,BIST:PNSUT,BIST:ENSRI,BIST:BIENY,BIST:PETUN,BIST:AGESA
+
+Not: 17 hisse yeterli gecmis veriye sahip degil (yeni islem gormeye baslamis): SARAE, TKNKA, KPEKS, METEN, CITAS, BETAE, MASFN, VEYAS, ALBTN, ORZAX, KARCL, GOLDA, ISVEA, QUICK, EKIM, SOHOE, SSAAT
+
+CSV yazildi: sonuclar\supertrend_2026-08-27.csv  (Excel ile acilabilir)
