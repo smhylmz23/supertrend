@@ -81,7 +81,7 @@ export function sadeListe(satirlar) {
 // ---------- 2) HTML RAPOR ----------
 const kacis = (s) => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
 
-export function htmlRapor(satirlar, stSinyalleri, tarih) {
+export function htmlRapor(satirlar, stSinyalleri, tarih, gunIci) {
   const liste = suz(satirlar);
   const gucluAdet = liste.filter((x) => x.guclu).length;
   const alAdet = liste.filter((x) => x.al && !x.guclu).length;
@@ -140,6 +140,9 @@ export function htmlRapor(satirlar, stSinyalleri, tarih) {
     border-radius:10px;padding:10px 12px}
   .ozet b{display:block;font-size:22px;line-height:1.2}
   .ozet span{font-size:12px;color:var(--soluk)}
+  .uyari{background:var(--amber-bg);border:1px solid var(--amber);color:var(--amber);
+    border-radius:10px;padding:11px 13px;margin-bottom:16px;font-size:13px;line-height:1.55}
+  .uyari b{display:block;font-size:14px;margin-bottom:2px}
   .st-kutu{background:var(--yesil-bg);border:1px solid var(--yesil);border-radius:10px;padding:12px;margin-bottom:16px}
   .st-kutu h2{margin:0 0 8px;font-size:14px;color:var(--yesil)}
   .st-kutu p{margin:0;display:flex;flex-wrap:wrap;gap:6px}
@@ -148,7 +151,14 @@ export function htmlRapor(satirlar, stSinyalleri, tarih) {
     background:var(--zemin);padding:8px 0;z-index:2}
   .suzgec button{border:1px solid var(--cizgi);background:var(--kart);color:var(--yazi);
     border-radius:999px;padding:7px 14px;font-size:14px;cursor:pointer}
+  .suzgec button b{font-weight:700;opacity:.55;margin-left:2px;font-size:12px}
   .suzgec button[aria-pressed="true"]{background:var(--yazi);color:var(--zemin);border-color:var(--yazi)}
+  .suzgec button[aria-pressed="true"].c-guclu{background:var(--yesil);border-color:var(--yesil);color:#fff}
+  .suzgec button[aria-pressed="true"].c-al{background:var(--mavi);border-color:var(--mavi);color:#fff}
+  .suzgec button[aria-pressed="true"].c-izle{background:var(--gri);border-color:var(--gri);color:#fff}
+  .suzgec button.ikincil{font-size:13px;opacity:.9}
+  .bos{display:none;text-align:center;color:var(--soluk);font-size:14px;
+    background:var(--kart);border:1px dashed var(--cizgi);border-radius:10px;padding:22px 14px;margin:0 0 12px}
   .suzgec input{flex:1;min-width:120px;border:1px solid var(--cizgi);background:var(--kart);
     color:var(--yazi);border-radius:999px;padding:7px 14px;font-size:14px}
   .sirala{display:flex;align-items:center;gap:8px;margin-bottom:12px}
@@ -202,8 +212,11 @@ export function htmlRapor(satirlar, stSinyalleri, tarih) {
 <body>
 <header>
   <h1>BIST Günlük Tarama</h1>
-  <p>${kacis(tarih)} kapanışı · konfluans sistemi + osilatör paneli</p>
+  <p>${kacis(tarih)}${gunIci ? '' : ' kapanışı'} · konfluans sistemi + osilatör paneli</p>
 </header>
+${gunIci ? `<div class="uyari"><b>Borsa açık — bu rakamlar geçici.</b>
+  Bugünün mumu henüz kapanmadı; kapanışa kadar skorlar ve sinyaller değişebilir.
+  Kesin liste her akşam 18:45'te oluşur.</div>` : ''}
 
 <div class="ozet">
   <div><b>${gucluAdet}</b><span>GÜÇLÜ AL</span></div>
@@ -215,10 +228,11 @@ export function htmlRapor(satirlar, stSinyalleri, tarih) {
 ${stKutu}
 
 <div class="suzgec">
-  <button data-f="hepsi" aria-pressed="true">Fırsatlar</button>
-  <button data-f="guclu" aria-pressed="false">Sadece güçlü</button>
-  <button data-f="tumu" aria-pressed="false">Tümü</button>
-  <button data-f="radar" aria-pressed="false">★ Radarım (<span id="radarSayi">0</span>)</button>
+  <button data-g="guclu" aria-pressed="true" class="c-guclu">GÜÇLÜ AL <b>${gucluAdet}</b></button>
+  <button data-g="al" aria-pressed="true" class="c-al">AL <b>${alAdet}</b></button>
+  <button data-g="izle" aria-pressed="false" class="c-izle">İZLE <b>${izleAdet}</b></button>
+  <button id="tumuBtn" class="ikincil">Tümü</button>
+  <button data-r="1" aria-pressed="false" class="ikincil">★ Radarım (<span id="radarSayi">0</span>)</button>
   <input type="search" placeholder="hisse ara..." aria-label="Hisse ara">
 </div>
 
@@ -233,6 +247,8 @@ ${stKutu}
   </select>
 </div>
 
+<p id="bosMesaj" class="bos">Seçili grupta gösterilecek hisse yok.</p>
+
 <main id="liste">
 ${kartlar}
 </main>
@@ -245,9 +261,14 @@ ${kartlar}
 <script>
 (function(){
   var kartlar = Array.prototype.slice.call(document.querySelectorAll('.kart'));
-  var dugmeler = Array.prototype.slice.call(document.querySelectorAll('.suzgec button'));
+  var grupDugmeleri = Array.prototype.slice.call(document.querySelectorAll('.suzgec button[data-g]'));
+  var radarDugmesi = document.querySelector('.suzgec button[data-r]');
+  var tumuDugmesi = document.getElementById('tumuBtn');
+  var bosMesaj = document.getElementById('bosMesaj');
   var arama = document.querySelector('.suzgec input');
-  var aktif = 'hepsi';
+  // hangi gruplar secili — birden fazlasi ayni anda acik olabilir
+  var secili = { guclu: true, al: true, izle: false };
+  var radarAktif = false;
 
   // ---- RADAR: isaretlenen hisseler tarayicida saklanir ----
   var ANAHTAR = 'bist-radar';
@@ -296,27 +317,41 @@ ${kartlar}
       var ad = k.dataset.ad;
       if (radar[ad]) delete radar[ad]; else radar[ad] = bugunISO();
       radarYaz(radar); radarCiz();
-      if (aktif === 'radar') uygula();
+      if (radarAktif) uygula();   // radar suzgeci aciksa liste aninda guncellensin
     });
   });
 
   function uygula(){
     var q = (arama.value || '').trim().toUpperCase();
+    var n = 0;
     kartlar.forEach(function(k){
-      var d = k.dataset.durum, gorunur = true;
-      if (aktif === 'hepsi') gorunur = (d === 'guclu' || d === 'al');
-      else if (aktif === 'guclu') gorunur = (d === 'guclu');
-      else if (aktif === 'radar') gorunur = !!radar[k.dataset.ad];
+      var gorunur = !!secili[k.dataset.durum];
+      if (gorunur && radarAktif) gorunur = !!radar[k.dataset.ad];
       if (gorunur && q) gorunur = k.dataset.ad.indexOf(q) === 0;
       k.style.display = gorunur ? '' : 'none';
+      if (gorunur) n++;
     });
+    bosMesaj.style.display = n === 0 ? 'block' : 'none';
+    grupDugmeleri.forEach(function(b){ b.setAttribute('aria-pressed', String(!!secili[b.dataset.g])); });
+    radarDugmesi.setAttribute('aria-pressed', String(radarAktif));
+    tumuDugmesi.setAttribute('aria-pressed', String(secili.guclu && secili.al && secili.izle));
   }
-  dugmeler.forEach(function(b){
+
+  grupDugmeleri.forEach(function(b){
     b.addEventListener('click', function(){
-      aktif = b.dataset.f;
-      dugmeler.forEach(function(x){ x.setAttribute('aria-pressed', String(x === b)); });
+      secili[b.dataset.g] = !secili[b.dataset.g];   // her grup bagimsiz acilip kapanir
       uygula();
     });
+  });
+  tumuDugmesi.addEventListener('click', function(){
+    var hepsiAcik = secili.guclu && secili.al && secili.izle;
+    // hepsi aciksa varsayilana don (guclu + al), degilse hepsini ac
+    secili = hepsiAcik ? { guclu: true, al: true, izle: false } : { guclu: true, al: true, izle: true };
+    uygula();
+  });
+  radarDugmesi.addEventListener('click', function(){
+    radarAktif = !radarAktif;
+    uygula();
   });
   arama.addEventListener('input', uygula);
 
