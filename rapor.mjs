@@ -86,14 +86,19 @@ export function htmlRapor(satirlar, stSinyalleri, tarih, gunIci) {
   const gucluAdet = liste.filter((x) => x.guclu).length;
   const alAdet = liste.filter((x) => x.al && !x.guclu).length;
   const izleAdet = liste.filter((x) => !x.al && !x.guclu).length;
+  // Supertrend'in TAM BUGUN yukari dondugu hisseler (yesil kutudaki liste)
+  const stKume = new Set((stSinyalleri || []).map((s) => String(s).trim().toUpperCase()));
+  const stAdet = liste.filter((x) => stKume.has(x.ad)).length;
 
   const kartlar = liste.map((x) => {
     const d = degerlendir(x);
     const sinif = x.guclu ? 'guclu' : x.al ? 'al' : 'izle';
-    return `<article class="kart ${sinif}" data-durum="${sinif}" data-ad="${kacis(x.ad)}" data-sira="${liste.indexOf(x)}" data-skor="${x.skor.toFixed(2)}" data-risk="${x.risk}" data-pot="${x.potansiyel.toFixed(2)}" data-osc="${x.osilator.alSayisi}">
+    const stAl = stKume.has(x.ad);
+    return `<article class="kart ${sinif}" data-durum="${sinif}" data-ad="${kacis(x.ad)}" data-sira="${liste.indexOf(x)}" data-skor="${x.skor.toFixed(2)}" data-risk="${x.risk}" data-pot="${x.potansiyel.toFixed(2)}" data-osc="${x.osilator.alSayisi}" data-st="${stAl ? 1 : 0}">
   <div class="ust">
     <span class="ad">${kacis(x.ad)}</span>
     <span class="karar k-${sinif}">${d.karar}</span>
+    ${stAl ? '<span class="rozet-st">⚡ ST bugün AL</span>' : ''}
     <button class="radarBtn" type="button" title="Radarıma ekle" aria-label="${kacis(x.ad)} radarıma ekle">☆</button>
   </div>
   <div class="radar-bilgi"></div>
@@ -152,10 +157,8 @@ export function htmlRapor(satirlar, stSinyalleri, tarih, gunIci) {
   .suzgec button{border:1px solid var(--cizgi);background:var(--kart);color:var(--yazi);
     border-radius:999px;padding:7px 14px;font-size:14px;cursor:pointer}
   .suzgec button b{font-weight:700;opacity:.55;margin-left:2px;font-size:12px}
+  /* secili dugmelerin hepsi ayni temada — etiket rengine gore degismiyor */
   .suzgec button[aria-pressed="true"]{background:var(--yazi);color:var(--zemin);border-color:var(--yazi)}
-  .suzgec button[aria-pressed="true"].c-guclu{background:var(--yesil);border-color:var(--yesil);color:#fff}
-  .suzgec button[aria-pressed="true"].c-al{background:var(--mavi);border-color:var(--mavi);color:#fff}
-  .suzgec button[aria-pressed="true"].c-izle{background:var(--gri);border-color:var(--gri);color:#fff}
   .suzgec button.ikincil{font-size:13px;opacity:.9}
   .bos{display:none;text-align:center;color:var(--soluk);font-size:14px;
     background:var(--kart);border:1px dashed var(--cizgi);border-radius:10px;padding:22px 14px;margin:0 0 12px}
@@ -186,6 +189,8 @@ export function htmlRapor(satirlar, stSinyalleri, tarih, gunIci) {
   .k-izle{background:var(--gri-bg);color:var(--soluk)}
   .rozet-yeni{background:var(--amber-bg);color:var(--amber);font-size:11px;font-weight:700;
     padding:3px 8px;border-radius:5px;margin-left:6px}
+  .rozet-st{background:var(--yesil-bg);color:var(--yesil);font-size:11px;font-weight:700;
+    padding:3px 8px;border-radius:5px;white-space:nowrap}
   .yildiz{color:#f5b400;letter-spacing:1px}
   .yildiz .sonuk{color:var(--cizgi)}
   .cubuk{position:relative;height:6px;background:var(--gri-bg);border-radius:99px;margin:10px 0 12px}
@@ -228,10 +233,11 @@ ${gunIci ? `<div class="uyari"><b>Borsa açık — bu rakamlar geçici.</b>
 ${stKutu}
 
 <div class="suzgec">
-  <button data-g="guclu" aria-pressed="true" class="c-guclu">GÜÇLÜ AL <b>${gucluAdet}</b></button>
-  <button data-g="al" aria-pressed="true" class="c-al">AL <b>${alAdet}</b></button>
-  <button data-g="izle" aria-pressed="false" class="c-izle">İZLE <b>${izleAdet}</b></button>
+  <button data-g="guclu" aria-pressed="true">GÜÇLÜ AL <b>${gucluAdet}</b></button>
+  <button data-g="al" aria-pressed="true">AL <b>${alAdet}</b></button>
+  <button data-g="izle" aria-pressed="false">İZLE <b>${izleAdet}</b></button>
   <button id="tumuBtn" class="ikincil">Tümü</button>
+  <button data-s="1" aria-pressed="false" class="ikincil">⚡ Bugün ST AL (${stAdet})</button>
   <button data-r="1" aria-pressed="false" class="ikincil">★ Radarım (<span id="radarSayi">0</span>)</button>
   <input type="search" placeholder="hisse ara..." aria-label="Hisse ara">
 </div>
@@ -263,12 +269,14 @@ ${kartlar}
   var kartlar = Array.prototype.slice.call(document.querySelectorAll('.kart'));
   var grupDugmeleri = Array.prototype.slice.call(document.querySelectorAll('.suzgec button[data-g]'));
   var radarDugmesi = document.querySelector('.suzgec button[data-r]');
+  var stDugmesi = document.querySelector('.suzgec button[data-s]');
   var tumuDugmesi = document.getElementById('tumuBtn');
   var bosMesaj = document.getElementById('bosMesaj');
   var arama = document.querySelector('.suzgec input');
   // hangi gruplar secili — birden fazlasi ayni anda acik olabilir
   var secili = { guclu: true, al: true, izle: false };
   var radarAktif = false;
+  var stAktif = false;
 
   // ---- RADAR: isaretlenen hisseler tarayicida saklanir ----
   var ANAHTAR = 'bist-radar';
@@ -326,6 +334,7 @@ ${kartlar}
     var n = 0;
     kartlar.forEach(function(k){
       var gorunur = !!secili[k.dataset.durum];
+      if (gorunur && stAktif) gorunur = k.dataset.st === '1';
       if (gorunur && radarAktif) gorunur = !!radar[k.dataset.ad];
       if (gorunur && q) gorunur = k.dataset.ad.indexOf(q) === 0;
       k.style.display = gorunur ? '' : 'none';
@@ -334,6 +343,7 @@ ${kartlar}
     bosMesaj.style.display = n === 0 ? 'block' : 'none';
     grupDugmeleri.forEach(function(b){ b.setAttribute('aria-pressed', String(!!secili[b.dataset.g])); });
     radarDugmesi.setAttribute('aria-pressed', String(radarAktif));
+    stDugmesi.setAttribute('aria-pressed', String(stAktif));
     tumuDugmesi.setAttribute('aria-pressed', String(secili.guclu && secili.al && secili.izle));
   }
 
@@ -351,6 +361,12 @@ ${kartlar}
   });
   radarDugmesi.addEventListener('click', function(){
     radarAktif = !radarAktif;
+    uygula();
+  });
+  stDugmesi.addEventListener('click', function(){
+    stAktif = !stAktif;
+    // ST filtresi acilinca gruplar daralmasin diye ucunu de ac
+    if (stAktif) secili = { guclu: true, al: true, izle: true };
     uygula();
   });
   arama.addEventListener('input', uygula);
