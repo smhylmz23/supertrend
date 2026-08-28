@@ -72,6 +72,73 @@ const raporSatirlari = [];
 const yaz = (...a) => { const s = a.join(' '); raporSatirlari.push(s); console.log(s); };
 const bugunEtiket = () => { const g = new Date(); return g.getFullYear() + '-' + String(g.getMonth() + 1).padStart(2, '0') + '-' + String(g.getDate()).padStart(2, '0'); };
 
+/* ================= TEMEL & BILANCO =================
+ * Tarayici servisinden gelen sutunlar. Sira onemli: asagidaki T.* indisleri buna bakar.
+ */
+const TEMEL_KOLON = ['name',
+  'price_book_fq',                 // 1  PD/DD        — dusuk iyi
+  'return_on_equity_fq',           // 2  ROE          — yuksek iyi
+  'net_margin_ttm',                // 3  net marj     — yuksek iyi
+  'debt_to_equity_fq',             // 4  borc/ozkaynak— dusuk iyi
+  'total_revenue_yoy_growth_fq',   // 5  gelir buyumesi (son ceyrek, yillik)
+  'net_income_yoy_growth_fq',      // 6  net kar buyumesi (son ceyrek, yillik)
+  'net_income_qoq_growth_fq',      // 7  net kar buyumesi (onceki ceyrege gore)
+  'price_earnings_ttm',            // 8  F/K — sadece bilgi amacli, puanlamada yok
+];
+const T = { PDDD: 1, ROE: 2, MARJ: 3, BORC: 4, GELIR: 5, KAR: 6, KARQ: 7, FK: 8 };
+
+const sayiMi = (v) => typeof v === 'number' && isFinite(v);
+const medyan = (dizi) => {
+  const s = dizi.filter(sayiMi).sort((a, b) => a - b);
+  return s.length ? s[Math.floor(s.length / 2)] : null;
+};
+
+/* Turkiye'de enflasyon yuzunden mutlak esik yaniltir: BIST'in medyan net kar
+ * buyumesi eksi cikabiliyor. Bu yuzden her metrik PIYASA MEDYANINA gore
+ * puanlaniyor — enflasyon herkesi ayni vurdugu icin medyan bunu notrler. */
+function temelPuanla(evren) {
+  const veri = evren.map((u) => u.temelVeri).filter(Boolean);
+  if (!veri.length) return new Map();
+  const m = {};
+  for (const k in T) m[k] = medyan(veri.map((d) => d[T[k]]));
+
+  const harita = new Map();
+  for (const u of evren) {
+    const d = u.temelVeri;
+    if (!d) { harita.set(u.ad, { temel: 'yok', bilanco: 'yok', medyan: m }); continue; }
+    const g = (i) => (sayiMi(d[i]) ? d[i] : null);
+
+    // --- TEMEL: deger + karlilik + borc (4 olcut, en az 3'u lazim) ---
+    let p = 0, n = 0, s = 0;
+    const oy = (deger, med, dusukIyi) => {
+      if (deger === null || med === null) return;
+      s++;
+      const iyi = dusukIyi ? deger < med : deger > med;
+      if (iyi) p++; else n++;
+    };
+    oy(g(T.PDDD), m.PDDD, true);
+    oy(g(T.ROE), m.ROE, false);
+    oy(g(T.MARJ), m.MARJ, false);
+    oy(g(T.BORC), m.BORC, true);
+    const temel = s < 3 ? 'yok' : (p - n >= 2 ? 'pozitif' : (n - p >= 2 ? 'negatif' : 'notr'));
+
+    // --- BILANCO: son ceyregin buyumeleri (3 olcut, en az 2'si lazim) ---
+    let bp = 0, bn = 0, bs = 0;
+    const boy = (deger, med) => { if (deger === null || med === null) return; bs++; if (deger > med) bp++; else bn++; };
+    boy(g(T.GELIR), m.GELIR);
+    boy(g(T.KAR), m.KAR);
+    boy(g(T.KARQ), m.KARQ);
+    const bilanco = bs < 2 ? 'yok' : (bp - bn >= 2 ? 'pozitif' : (bn - bp >= 2 ? 'negatif' : 'notr'));
+
+    harita.set(u.ad, {
+      temel, bilanco, medyan: m,
+      pddd: g(T.PDDD), roe: g(T.ROE), marj: g(T.MARJ), borc: g(T.BORC),
+      gelir: g(T.GELIR), kar: g(T.KAR), karQ: g(T.KARQ), fk: g(T.FK),
+    });
+  }
+  return harita;
+}
+
 // ================= VERI =================
 const WSOPTS = { headers: { Origin: 'https://www.tradingview.com', 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/126 Safari/537.36' } };
 const cerceve = (o) => { const s = JSON.stringify(o); return '~m~' + s.length + '~m~' + s; };
@@ -87,7 +154,7 @@ async function evreniAl() {
     filter: [{ left: 'type', operation: 'equal', right: 'stock' }],
     options: { lang: 'tr' }, markets: ['turkey'],
     symbols: { query: { types: [] }, tickers: [] },
-    columns: ['name'], sort: { sortBy: 'Value.Traded', sortOrder: 'desc' }, range: [0, 2000],
+    columns: TEMEL_KOLON, sort: { sortBy: 'Value.Traded', sortOrder: 'desc' }, range: [0, 2000],
   });
   const birDene = () => new Promise((ok, hata) => {
     const q = https.request({ host: 'scanner.tradingview.com', path: '/turkey/scan', method: 'POST', maxVersion: 'TLSv1.2',
@@ -101,7 +168,7 @@ async function evreniAl() {
   for (let i = 1; i <= 4; i++) {
     try {
       const j = JSON.parse(await birDene());
-      const liste = j.data.map((x) => ({ ticker: x.s, ad: x.d[0] }));
+      const liste = j.data.map((x) => ({ ticker: x.s, ad: x.d[0], temelVeri: x.d }));
       try { fs.writeFileSync(YEDEK_LISTE, JSON.stringify(liste)); } catch (e) {}
       return liste;
     } catch (e) { process.stderr.write('  liste alinamadi (' + e.message + '), ' + i + '. deneme...\n'); if (i < 4) await bekle(2000); }
@@ -371,6 +438,13 @@ const usdtry = veri['FX_IDC:USDTRY']?.bars || null;
 if (!xu100) process.stderr.write('UYARI: XU100 alinamadi, goreli guc notr sayilacak.\n');
 if (!usdtry) process.stderr.write('UYARI: USDTRY alinamadi, USD bazli uyumsuzluk devre disi.\n');
 
+const temelHarita = temelPuanla(evren);
+if (temelHarita.size) {
+  const say = (alan, deger) => Array.from(temelHarita.values()).filter((t) => t[alan] === deger).length;
+  process.stderr.write('Temel : ' + say('temel', 'pozitif') + ' pozitif / ' + say('temel', 'notr') + ' notr / ' + say('temel', 'negatif') + ' negatif\n');
+  process.stderr.write('Bilanco: ' + say('bilanco', 'pozitif') + ' pozitif / ' + say('bilanco', 'notr') + ' notr / ' + say('bilanco', 'negatif') + ' negatif\n\n');
+}
+
 const satirlar = []; const yetersiz = [];
 for (const k in veri) {
   if (k === 'BIST:XU100' || k === 'FX_IDC:USDTRY') continue;
@@ -381,8 +455,10 @@ for (const k in veri) {
   if (hacimTL < CFG.minHacim) continue;
   let h; try { h = hesapla(b, xu100, usdtry); } catch (e) { yetersiz.push(r.ad + '(hata)'); continue; }
   if (!h.bugun || Number.isNaN(h.bugun.skor)) { yetersiz.push(r.ad); continue; }
+  const tv = temelHarita.get(r.ad) || { temel: 'yok', bilanco: 'yok' };
   satirlar.push({
     ad: r.ad, ...h.bugun, divCnt: h.divCnt, osilator: h.osilator,
+    temel: tv.temel, bilanco: tv.bilanco, temelDetay: tv,
     yeniAl: h.bugun.al && h.dun && !h.dun.al,
     yeniGuclu: h.bugun.guclu && h.dun && !h.dun.guclu,
     kapanis: son.c, degisim: ((son.c - onceki.c) / onceki.c) * 100, hacimTL, tarih: new Date(son.t * 1000).toLocaleDateString('tr-TR'),
