@@ -327,16 +327,27 @@ ${kartlar}
 
   function uygula(){
     var q = (arama.value || '').trim().toUpperCase();
-    var n = 0;
+    var n = 0, grupHaric = 0;
     kartlar.forEach(function(k){
-      var gorunur = !!secili[k.dataset.durum];
-      if (gorunur && stAktif) gorunur = k.dataset.st === '1';
-      if (gorunur && radarAktif) gorunur = !!radar[k.dataset.ad];
-      if (gorunur && q) gorunur = k.dataset.ad.indexOf(q) === 0;
+      // once grup disindaki olcutler, sonra grup secimi — boylece
+      // "olcute uyuyor ama secili grupta degil" durumunu ayirt edebiliyoruz
+      var uyar = true;
+      if (stAktif) uyar = k.dataset.st === '1';
+      if (uyar && radarAktif) uyar = !!radar[k.dataset.ad];
+      if (uyar && q) uyar = k.dataset.ad.indexOf(q) === 0;
+      if (uyar) grupHaric++;
+      var gorunur = uyar && !!secili[k.dataset.durum];
       k.style.display = gorunur ? '' : 'none';
       if (gorunur) n++;
     });
-    bosMesaj.style.display = n === 0 ? 'block' : 'none';
+    if (n === 0) {
+      bosMesaj.style.display = 'block';
+      bosMesaj.innerHTML = grupHaric > 0
+        ? grupHaric + ' hisse bu ölçüte uyuyor ama seçili gruplarda değil.<br><b>Tümü</b> düğmesine basarak hepsini görebilirsiniz.'
+        : 'Bu ölçütlere uyan hisse yok.';
+    } else {
+      bosMesaj.style.display = 'none';
+    }
     grupDugmeleri.forEach(function(b){ b.setAttribute('aria-pressed', String(!!secili[b.dataset.g])); });
     radarDugmesi.setAttribute('aria-pressed', String(radarAktif));
     stDugmesi.setAttribute('aria-pressed', String(stAktif));
@@ -361,9 +372,7 @@ ${kartlar}
   });
   stDugmesi.addEventListener('click', function(){
     stAktif = !stAktif;
-    // ST filtresi acilinca gruplar daralmasin diye ucunu de ac
-    if (stAktif) secili = { guclu: true, al: true, izle: true };
-    uygula();
+    uygula();   // grup secimine dokunulmaz; bos kalirsa mesaj yol gosterir
   });
   arama.addEventListener('input', uygula);
 
