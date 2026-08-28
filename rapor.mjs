@@ -49,21 +49,30 @@ export const sirala = (a, b) => {
   return d(b) - d(a) || b.skor - a.skor;
 };
 
+/* Listeye girme kurallari (kullanici talebi):
+ *  1) Supertrend AL pozisyonunda olmayan hisse hic giremez.
+ *  2) Karari "IZLE" olup skoru 50'nin altinda kalanlar da giremez.
+ */
+export const listeyeUygun = (x) => {
+  if (!x.stBull) return false;
+  if (!x.al && !x.guclu && x.skor < 50) return false;
+  return true;
+};
+
+export const suz = (satirlar) => satirlar.filter(listeyeUygun).sort(sirala);
+
 // ---------- 1) SADE CSV ----------
 export function sadeListe(satirlar) {
   const vir = (v) => String(v).replace('.', ',');
-  const bas = ['sira', 'hisse', 'karar', 'yildiz', 'skor', 'risk', 'guclu_yonler', 'dikkat', 'fiyat', 'stop_seviyesi', 'bugun_yeni', 'tarih'];
+  const bas = ['sira', 'hisse', 'karar', 'skor', 'risk', 'potansiyel_%', 'osilator'];
   const out = [bas.join(';')];
-  const liste = satirlar.slice().sort(sirala);
-  liste.forEach((x, i) => {
+  suz(satirlar).forEach((x, i) => {
     const d = degerlendir(x);
     out.push([
-      i + 1, x.ad, d.karar, '*'.repeat(d.yildiz), vir(x.skor.toFixed(0)),
+      i + 1, x.ad, d.karar, vir(x.skor.toFixed(0)),
       d.riskSoz + ' (' + x.risk + ')',
-      d.artilar.join(', ') || '-',
-      (d.uyarilar.length ? d.uyarilar.join(', ') : (d.engel || '-')),
-      vir(x.kapanis), vir(x.stCizgi.toFixed(2)),
-      (x.yeniAl || x.yeniGuclu) ? 'BUGUN' : '', x.tarih,
+      vir(x.potansiyel.toFixed(1)),
+      x.osilator.alSayisi + '/6',
     ].join(';'));
   });
   return out.join('\r\n');
@@ -73,35 +82,25 @@ export function sadeListe(satirlar) {
 const kacis = (s) => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
 
 export function htmlRapor(satirlar, stSinyalleri, tarih) {
-  const liste = satirlar.slice().sort(sirala);
+  const liste = suz(satirlar);
   const gucluAdet = liste.filter((x) => x.guclu).length;
   const alAdet = liste.filter((x) => x.al && !x.guclu).length;
-  const yeniAdet = liste.filter((x) => x.yeniAl || x.yeniGuclu).length;
+  const izleAdet = liste.filter((x) => !x.al && !x.guclu).length;
 
   const kartlar = liste.map((x) => {
     const d = degerlendir(x);
     const sinif = x.guclu ? 'guclu' : x.al ? 'al' : 'izle';
-    const yeni = (x.yeniAl || x.yeniGuclu) ? '<span class="rozet-yeni">BUGÜN YENİ</span>' : '';
     return `<article class="kart ${sinif}" data-durum="${sinif}" data-ad="${kacis(x.ad)}">
   <div class="ust">
-    <div class="sol">
-      <span class="ad">${kacis(x.ad)}</span>
-      <span class="karar k-${sinif}">${d.karar}</span>
-      ${yeni}
-    </div>
-    <div class="sag">
-      <span class="yildiz" title="Konfluans ${x.skor.toFixed(0)}/100">${'★'.repeat(d.yildiz)}<span class="sonuk">${'★'.repeat(5 - d.yildiz)}</span></span>
-    </div>
+    <span class="ad">${kacis(x.ad)}</span>
+    <span class="karar k-${sinif}">${d.karar}</span>
   </div>
   <div class="cubuk"><i style="width:${Math.max(0, Math.min(100, x.skor))}%"></i><b>${x.skor.toFixed(0)}</b></div>
   <div class="satir">
-    <span class="etiket">Fiyat</span><span class="deger">${x.kapanis.toFixed(2)} <em class="${x.degisim >= 0 ? 'yes' : 'kir'}">${x.degisim >= 0 ? '+' : ''}${x.degisim.toFixed(1)}%</em></span>
-    <span class="etiket">Stop</span><span class="deger">${x.stCizgi.toFixed(2)}</span>
     <span class="etiket">Risk</span><span class="deger risk-${d.riskSoz.split(' ')[0]}">${d.riskSoz} (${x.risk})</span>
+    <span class="etiket">Potansiyel</span><span class="deger ${x.potansiyel < 0.1 ? '' : 'yes'}">${x.potansiyel < 0.1 ? 'zirvede' : '+' + x.potansiyel.toFixed(1) + '%'}</span>
+    <span class="etiket">Osilatör</span><span class="deger">${x.osilator.alSayisi}/6</span>
   </div>
-  ${d.artilar.length ? `<div class="etiketler arti">${d.artilar.map((a) => `<span>${kacis(a)}</span>`).join('')}</div>` : ''}
-  ${d.uyarilar.length ? `<div class="etiketler eksi">${d.uyarilar.map((a) => `<span>${kacis(a)}</span>`).join('')}</div>` : ''}
-  ${(!x.al && !x.guclu && d.engel) ? `<div class="engel">Neden alım değil: ${kacis(d.engel)}</div>` : ''}
 </article>`;
   }).join('\n');
 
@@ -193,8 +192,8 @@ export function htmlRapor(satirlar, stSinyalleri, tarih) {
 <div class="ozet">
   <div><b>${gucluAdet}</b><span>GÜÇLÜ AL</span></div>
   <div><b>${alAdet}</b><span>AL</span></div>
-  <div><b>${yeniAdet}</b><span>bugün yeni</span></div>
-  <div><b>${liste.length}</b><span>taranan hisse</span></div>
+  <div><b>${izleAdet}</b><span>izle</span></div>
+  <div><b>${liste.length}</b><span>toplam</span></div>
 </div>
 
 ${stKutu}
@@ -202,7 +201,6 @@ ${stKutu}
 <div class="suzgec">
   <button data-f="hepsi" aria-pressed="true">Fırsatlar</button>
   <button data-f="guclu" aria-pressed="false">Sadece güçlü</button>
-  <button data-f="yeni" aria-pressed="false">Bugün yeni</button>
   <button data-f="tumu" aria-pressed="false">Tümü</button>
   <input type="search" placeholder="hisse ara..." aria-label="Hisse ara">
 </div>
@@ -229,7 +227,6 @@ ${kartlar}
       var d = k.dataset.durum, gorunur = true;
       if (aktif === 'hepsi') gorunur = (d === 'guclu' || d === 'al');
       else if (aktif === 'guclu') gorunur = (d === 'guclu');
-      else if (aktif === 'yeni') gorunur = !!k.querySelector('.rozet-yeni');
       if (gorunur && q) gorunur = k.dataset.ad.indexOf(q) === 0;
       k.style.display = gorunur ? '' : 'none';
     });

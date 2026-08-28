@@ -279,7 +279,9 @@ function hesapla(bars, xu100, usdtry) {
       adx: adx[i], diP: diP[i], diM: diM[i], rsi: rsi[i], mfi: mfi[i], atr: atr[i],
       rsGuclu: !Number.isNaN(rsLine[i]) && !Number.isNaN(rsMa[i]) && rsLine[i] > rsMa[i],
       usdYukselis: !Number.isNaN(usdLine[i]) && !Number.isNaN(usdMa[i]) && usdLine[i] > usdMa[i],
-      htfBull: htfBull[i], stCizgi: st.cizgi[i], e21: e21[i], e50: e50[i], e200: e200[i] };
+      htfBull: htfBull[i], stCizgi: st.cizgi[i], e21: e21[i], e50: e50[i], e200: e200[i],
+      // Likidite Hedefi = son hhLen barin en yuksegi (panelde dogrulandi: RGYAS 214.70, ATATR 20.20)
+      likidite: hh[i], potansiyel: hh[i] > 0 ? (hh[i] / c - 1) * 100 : 0 };
   };
 
   // ---- osilator paneli (Gelismis Secmeli Osilator v4) ----
