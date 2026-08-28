@@ -195,6 +195,8 @@ function hesapla(bars, xu100, usdtry) {
   const volSma = ta.sma(hacim, P.volLen);
   const obv = ta.obv(bars), obvEma = ta.ema(obv, 21);
   const hh = ta.highest(ta.seri(bars, 'h'), P.hhLen);
+  // "Guclu Trend ve Hacim" taramasi icin gereken ek ortalamalar
+  const s20 = ta.sma(kapanis, 20), s50 = ta.sma(kapanis, 50), e9 = ta.ema(kapanis, 9);
 
   // haftalik EMA20 filtresi
   const haftalik = ta.haftalikYap(bars);
@@ -281,7 +283,15 @@ function hesapla(bars, xu100, usdtry) {
       usdYukselis: !Number.isNaN(usdLine[i]) && !Number.isNaN(usdMa[i]) && usdLine[i] > usdMa[i],
       htfBull: htfBull[i], stCizgi: st.cizgi[i], e21: e21[i], e50: e50[i], e200: e200[i],
       // Likidite Hedefi = son hhLen barin en yuksegi (panelde dogrulandi: RGYAS 214.70, ATATR 20.20)
-      likidite: hh[i], potansiyel: hh[i] > 0 ? (hh[i] / c - 1) * 100 : 0 };
+      likidite: hh[i], potansiyel: hh[i] > 0 ? (hh[i] / c - 1) * 100 : 0,
+      /* GUCLU TREND VE HACIM taramasi (kullanicinin verdigi kriterler):
+         gunu artida kapatmis + hacim > 500.000 adet + goreceli hacim > 1.5
+         + SMA20 > SMA50 + fiyat EMA9'un uzerinde */
+      trendHacim: ((c - kapanis[i - 1]) / kapanis[i - 1]) * 100 > 0
+        && hacim[i] > 500000
+        && volRat > 1.5
+        && s20[i] > s50[i]
+        && c > e9[i] };
   };
 
   // ---- osilator paneli (Gelismis Secmeli Osilator v4) ----

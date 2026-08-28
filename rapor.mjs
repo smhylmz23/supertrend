@@ -89,12 +89,13 @@ export function htmlRapor(satirlar, stSinyalleri, tarih, gunIci) {
   // Supertrend'in TAM BUGUN yukari dondugu hisseler (yesil kutudaki liste)
   const stKume = new Set((stSinyalleri || []).map((s) => String(s).trim().toUpperCase()));
   const stAdet = liste.filter((x) => stKume.has(x.ad)).length;
+  const thAdet = liste.filter((x) => x.trendHacim).length;
 
   const kartlar = liste.map((x) => {
     const d = degerlendir(x);
     const sinif = x.guclu ? 'guclu' : x.al ? 'al' : 'izle';
     const stAl = stKume.has(x.ad);
-    return `<article class="kart ${sinif}" data-durum="${sinif}" data-ad="${kacis(x.ad)}" data-sira="${liste.indexOf(x)}" data-skor="${x.skor.toFixed(2)}" data-risk="${x.risk}" data-pot="${x.potansiyel.toFixed(2)}" data-osc="${x.osilator.alSayisi}" data-st="${stAl ? 1 : 0}">
+    return `<article class="kart ${sinif}" data-durum="${sinif}" data-ad="${kacis(x.ad)}" data-sira="${liste.indexOf(x)}" data-skor="${x.skor.toFixed(2)}" data-risk="${x.risk}" data-pot="${x.potansiyel.toFixed(2)}" data-osc="${x.osilator.alSayisi}" data-st="${stAl ? 1 : 0}" data-th="${x.trendHacim ? 1 : 0}">
   <div class="ust">
     <span class="ad">${kacis(x.ad)}</span>
     <span class="karar k-${sinif}">${d.karar}</span>
@@ -242,6 +243,7 @@ ${gunIci ? `<div class="uyari"><b>Borsa açık — bu rakamlar geçici.</b>
   <button data-g="izle" aria-pressed="false">İZLE <b>${izleAdet}</b></button>
   <button id="tumuBtn" class="ikincil">Tümü</button>
   <button data-s="1" aria-pressed="false" class="ikincil">⚡ Bugün ST AL (${stAdet})</button>
+  <button data-th="1" aria-pressed="false" class="ikincil" title="Günü artıda kapatmış, hacmi 500 binin üzerinde, göreceli hacmi 1.5×'ten yüksek, SMA20 &gt; SMA50 ve fiyatı EMA9 üzerinde olanlar">📈 Trend + Hacim (${thAdet})</button>
   <button data-r="1" aria-pressed="false" class="ikincil">★ Radarım (<span id="radarSayi">0</span>)</button>
   <input type="search" placeholder="hisse ara..." aria-label="Hisse ara">
 </div>
@@ -275,6 +277,7 @@ ${kartlar}
   var grupDugmeleri = Array.prototype.slice.call(document.querySelectorAll('.suzgec button[data-g]'));
   var radarDugmesi = document.querySelector('.suzgec button[data-r]');
   var stDugmesi = document.querySelector('.suzgec button[data-s]');
+  var thDugmesi = document.querySelector('.suzgec button[data-th]');
   var tumuDugmesi = document.getElementById('tumuBtn');
   var bosMesaj = document.getElementById('bosMesaj');
   var arama = document.querySelector('.suzgec input');
@@ -282,6 +285,7 @@ ${kartlar}
   var secili = { guclu: true, al: true, izle: false };
   var radarAktif = false;
   var stAktif = false;
+  var thAktif = false;
 
   // ---- RADAR: isaretlenen hisseler tarayicida saklanir ----
   var ANAHTAR = 'bist-radar';
@@ -342,6 +346,7 @@ ${kartlar}
       // "olcute uyuyor ama secili grupta degil" durumunu ayirt edebiliyoruz
       var uyar = true;
       if (stAktif) uyar = k.dataset.st === '1';
+      if (uyar && thAktif) uyar = k.dataset.th === '1';
       if (uyar && radarAktif) uyar = !!radar[k.dataset.ad];
       if (uyar && q) uyar = k.dataset.ad.indexOf(q) === 0;
       if (uyar) grupHaric++;
@@ -360,6 +365,7 @@ ${kartlar}
     grupDugmeleri.forEach(function(b){ b.setAttribute('aria-pressed', String(!!secili[b.dataset.g])); });
     radarDugmesi.setAttribute('aria-pressed', String(radarAktif));
     stDugmesi.setAttribute('aria-pressed', String(stAktif));
+    thDugmesi.setAttribute('aria-pressed', String(thAktif));
     tumuDugmesi.setAttribute('aria-pressed', String(secili.guclu && secili.al && secili.izle));
   }
 
@@ -382,6 +388,10 @@ ${kartlar}
   stDugmesi.addEventListener('click', function(){
     stAktif = !stAktif;
     uygula();   // grup secimine dokunulmaz; bos kalirsa mesaj yol gosterir
+  });
+  thDugmesi.addEventListener('click', function(){
+    thAktif = !thAktif;
+    uygula();
   });
   arama.addEventListener('input', uygula);
 
