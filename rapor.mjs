@@ -90,7 +90,7 @@ export function htmlRapor(satirlar, stSinyalleri, tarih) {
   const kartlar = liste.map((x) => {
     const d = degerlendir(x);
     const sinif = x.guclu ? 'guclu' : x.al ? 'al' : 'izle';
-    return `<article class="kart ${sinif}" data-durum="${sinif}" data-ad="${kacis(x.ad)}">
+    return `<article class="kart ${sinif}" data-durum="${sinif}" data-ad="${kacis(x.ad)}" data-sira="${liste.indexOf(x)}" data-skor="${x.skor.toFixed(2)}" data-risk="${x.risk}" data-pot="${x.potansiyel.toFixed(2)}" data-osc="${x.osilator.alSayisi}">
   <div class="ust">
     <span class="ad">${kacis(x.ad)}</span>
     <span class="karar k-${sinif}">${d.karar}</span>
@@ -147,6 +147,10 @@ export function htmlRapor(satirlar, stSinyalleri, tarih) {
   .suzgec button[aria-pressed="true"]{background:var(--yazi);color:var(--zemin);border-color:var(--yazi)}
   .suzgec input{flex:1;min-width:120px;border:1px solid var(--cizgi);background:var(--kart);
     color:var(--yazi);border-radius:999px;padding:7px 14px;font-size:14px}
+  .sirala{display:flex;align-items:center;gap:8px;margin-bottom:12px}
+  .sirala label{font-size:13px;color:var(--soluk)}
+  .sirala select{flex:1;border:1px solid var(--cizgi);background:var(--kart);color:var(--yazi);
+    border-radius:8px;padding:8px 10px;font-size:14px}
   .kart{background:var(--kart);border:1px solid var(--cizgi);border-left-width:4px;
     border-radius:10px;padding:12px 14px;margin-bottom:10px}
   .kart.guclu{border-left-color:var(--yesil)}
@@ -205,6 +209,17 @@ ${stKutu}
   <input type="search" placeholder="hisse ara..." aria-label="Hisse ara">
 </div>
 
+<div class="sirala">
+  <label for="sirasec">Sırala</label>
+  <select id="sirasec">
+    <option value="varsayilan">Karar sırası (önce güçlüler)</option>
+    <option value="skor">Skor — yüksekten düşüğe</option>
+    <option value="risk">Risk — düşükten yükseğe</option>
+    <option value="pot">Potansiyel — yüksekten düşüğe</option>
+    <option value="osc">Osilatör — yüksekten düşüğe</option>
+  </select>
+</div>
+
 <main id="liste">
 ${kartlar}
 </main>
@@ -239,6 +254,26 @@ ${kartlar}
     });
   });
   arama.addEventListener('input', uygula);
+
+  // --- siralama ---
+  var kapsayici = document.getElementById('liste');
+  var sirasec = document.getElementById('sirasec');
+  var sayi = function(k, ad){ return parseFloat(k.dataset[ad]); };
+  function siralamayiUygula(){
+    var t = sirasec.value, kopya = kartlar.slice();
+    kopya.sort(function(a, b){
+      if (t === 'skor') return sayi(b,'skor') - sayi(a,'skor');
+      if (t === 'risk') return sayi(a,'risk') - sayi(b,'risk') || sayi(b,'skor') - sayi(a,'skor');
+      if (t === 'pot')  return sayi(b,'pot')  - sayi(a,'pot')  || sayi(b,'skor') - sayi(a,'skor');
+      if (t === 'osc')  return sayi(b,'osc')  - sayi(a,'osc')  || sayi(b,'skor') - sayi(a,'skor');
+      return sayi(a,'sira') - sayi(b,'sira');
+    });
+    var parca = document.createDocumentFragment();
+    kopya.forEach(function(k){ parca.appendChild(k); });
+    kapsayici.appendChild(parca);
+  }
+  sirasec.addEventListener('change', siralamayiUygula);
+
   uygula();
 })();
 </script>
