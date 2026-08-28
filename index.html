@@ -37,6 +37,10 @@
   .suzgec button[aria-pressed="true"]{background:var(--yazi);color:var(--zemin);border-color:var(--yazi)}
   .suzgec input{flex:1;min-width:120px;border:1px solid var(--cizgi);background:var(--kart);
     color:var(--yazi);border-radius:999px;padding:7px 14px;font-size:14px}
+  .sirala{display:flex;align-items:center;gap:8px;margin-bottom:12px}
+  .sirala label{font-size:13px;color:var(--soluk)}
+  .sirala select{flex:1;border:1px solid var(--cizgi);background:var(--kart);color:var(--yazi);
+    border-radius:8px;padding:8px 10px;font-size:14px}
   .kart{background:var(--kart);border:1px solid var(--cizgi);border-left-width:4px;
     border-radius:10px;padding:12px 14px;margin-bottom:10px}
   .kart.guclu{border-left-color:var(--yesil)}
@@ -95,8 +99,19 @@
   <input type="search" placeholder="hisse ara..." aria-label="Hisse ara">
 </div>
 
+<div class="sirala">
+  <label for="sirasec">Sırala</label>
+  <select id="sirasec">
+    <option value="varsayilan">Karar sırası (önce güçlüler)</option>
+    <option value="skor">Skor — yüksekten düşüğe</option>
+    <option value="risk">Risk — düşükten yükseğe</option>
+    <option value="pot">Potansiyel — yüksekten düşüğe</option>
+    <option value="osc">Osilatör — yüksekten düşüğe</option>
+  </select>
+</div>
+
 <main id="liste">
-<article class="kart guclu" data-durum="guclu" data-ad="TGSAS">
+<article class="kart guclu" data-durum="guclu" data-ad="TGSAS" data-sira="0" data-skor="99.21" data-risk="28" data-pot="0.00" data-osc="6">
   <div class="ust">
     <span class="ad">TGSAS</span>
     <span class="karar k-guclu">GÜÇLÜ AL</span>
@@ -108,7 +123,7 @@
     <span class="etiket">Osilatör</span><span class="deger">6/6</span>
   </div>
 </article>
-<article class="kart guclu" data-durum="guclu" data-ad="GESAN">
+<article class="kart guclu" data-durum="guclu" data-ad="GESAN" data-sira="1" data-skor="98.99" data-risk="28" data-pot="3.85" data-osc="6">
   <div class="ust">
     <span class="ad">GESAN</span>
     <span class="karar k-guclu">GÜÇLÜ AL</span>
@@ -120,7 +135,7 @@
     <span class="etiket">Osilatör</span><span class="deger">6/6</span>
   </div>
 </article>
-<article class="kart guclu" data-durum="guclu" data-ad="MTRKS">
+<article class="kart guclu" data-durum="guclu" data-ad="MTRKS" data-sira="2" data-skor="97.55" data-risk="10" data-pot="8.27" data-osc="5">
   <div class="ust">
     <span class="ad">MTRKS</span>
     <span class="karar k-guclu">GÜÇLÜ AL</span>
@@ -132,7 +147,7 @@
     <span class="etiket">Osilatör</span><span class="deger">5/6</span>
   </div>
 </article>
-<article class="kart guclu" data-durum="guclu" data-ad="SANFM">
+<article class="kart guclu" data-durum="guclu" data-ad="SANFM" data-sira="3" data-skor="97.47" data-risk="28" data-pot="1.97" data-osc="6">
   <div class="ust">
     <span class="ad">SANFM</span>
     <span class="karar k-guclu">GÜÇLÜ AL</span>
@@ -144,7 +159,7 @@
     <span class="etiket">Osilatör</span><span class="deger">6/6</span>
   </div>
 </article>
-<article class="kart guclu" data-durum="guclu" data-ad="ARSAN">
+<article class="kart guclu" data-durum="guclu" data-ad="ARSAN" data-sira="4" data-skor="96.95" data-risk="28" data-pot="2.59" data-osc="5">
   <div class="ust">
     <span class="ad">ARSAN</span>
     <span class="karar k-guclu">GÜÇLÜ AL</span>
@@ -156,7 +171,7 @@
     <span class="etiket">Osilatör</span><span class="deger">5/6</span>
   </div>
 </article>
-<article class="kart guclu" data-durum="guclu" data-ad="AKFIS">
+<article class="kart guclu" data-durum="guclu" data-ad="AKFIS" data-sira="5" data-skor="96.09" data-risk="38" data-pot="0.31" data-osc="6">
   <div class="ust">
     <span class="ad">AKFIS</span>
     <span class="karar k-guclu">GÜÇLÜ AL</span>
@@ -168,7 +183,7 @@
     <span class="etiket">Osilatör</span><span class="deger">6/6</span>
   </div>
 </article>
-<article class="kart guclu" data-durum="guclu" data-ad="HATSN">
+<article class="kart guclu" data-durum="guclu" data-ad="HATSN" data-sira="6" data-skor="95.66" data-risk="35" data-pot="2.90" data-osc="5">
   <div class="ust">
     <span class="ad">HATSN</span>
     <span class="karar k-guclu">GÜÇLÜ AL</span>
@@ -180,7 +195,7 @@
     <span class="etiket">Osilatör</span><span class="deger">5/6</span>
   </div>
 </article>
-<article class="kart guclu" data-durum="guclu" data-ad="DURKN">
+<article class="kart guclu" data-durum="guclu" data-ad="DURKN" data-sira="7" data-skor="95.30" data-risk="0" data-pot="7.04" data-osc="6">
   <div class="ust">
     <span class="ad">DURKN</span>
     <span class="karar k-guclu">GÜÇLÜ AL</span>
@@ -192,7 +207,7 @@
     <span class="etiket">Osilatör</span><span class="deger">6/6</span>
   </div>
 </article>
-<article class="kart guclu" data-durum="guclu" data-ad="RYSAS">
+<article class="kart guclu" data-durum="guclu" data-ad="RYSAS" data-sira="8" data-skor="95.25" data-risk="0" data-pot="10.70" data-osc="6">
   <div class="ust">
     <span class="ad">RYSAS</span>
     <span class="karar k-guclu">GÜÇLÜ AL</span>
@@ -204,7 +219,7 @@
     <span class="etiket">Osilatör</span><span class="deger">6/6</span>
   </div>
 </article>
-<article class="kart guclu" data-durum="guclu" data-ad="ALTNY">
+<article class="kart guclu" data-durum="guclu" data-ad="ALTNY" data-sira="9" data-skor="95.04" data-risk="0" data-pot="6.30" data-osc="5">
   <div class="ust">
     <span class="ad">ALTNY</span>
     <span class="karar k-guclu">GÜÇLÜ AL</span>
@@ -216,7 +231,7 @@
     <span class="etiket">Osilatör</span><span class="deger">5/6</span>
   </div>
 </article>
-<article class="kart guclu" data-durum="guclu" data-ad="NETAS">
+<article class="kart guclu" data-durum="guclu" data-ad="NETAS" data-sira="10" data-skor="94.97" data-risk="20" data-pot="14.29" data-osc="4">
   <div class="ust">
     <span class="ad">NETAS</span>
     <span class="karar k-guclu">GÜÇLÜ AL</span>
@@ -228,7 +243,7 @@
     <span class="etiket">Osilatör</span><span class="deger">4/6</span>
   </div>
 </article>
-<article class="kart guclu" data-durum="guclu" data-ad="BIGTK">
+<article class="kart guclu" data-durum="guclu" data-ad="BIGTK" data-sira="11" data-skor="94.42" data-risk="16" data-pot="2.49" data-osc="6">
   <div class="ust">
     <span class="ad">BIGTK</span>
     <span class="karar k-guclu">GÜÇLÜ AL</span>
@@ -240,7 +255,7 @@
     <span class="etiket">Osilatör</span><span class="deger">6/6</span>
   </div>
 </article>
-<article class="kart guclu" data-durum="guclu" data-ad="EGPRO">
+<article class="kart guclu" data-durum="guclu" data-ad="EGPRO" data-sira="12" data-skor="94.33" data-risk="30" data-pot="15.07" data-osc="6">
   <div class="ust">
     <span class="ad">EGPRO</span>
     <span class="karar k-guclu">GÜÇLÜ AL</span>
@@ -252,7 +267,7 @@
     <span class="etiket">Osilatör</span><span class="deger">6/6</span>
   </div>
 </article>
-<article class="kart guclu" data-durum="guclu" data-ad="BJKAS">
+<article class="kart guclu" data-durum="guclu" data-ad="BJKAS" data-sira="13" data-skor="93.65" data-risk="28" data-pot="17.65" data-osc="4">
   <div class="ust">
     <span class="ad">BJKAS</span>
     <span class="karar k-guclu">GÜÇLÜ AL</span>
@@ -264,7 +279,7 @@
     <span class="etiket">Osilatör</span><span class="deger">4/6</span>
   </div>
 </article>
-<article class="kart guclu" data-durum="guclu" data-ad="BINBN">
+<article class="kart guclu" data-durum="guclu" data-ad="BINBN" data-sira="14" data-skor="93.57" data-risk="10" data-pot="5.36" data-osc="4">
   <div class="ust">
     <span class="ad">BINBN</span>
     <span class="karar k-guclu">GÜÇLÜ AL</span>
@@ -276,7 +291,7 @@
     <span class="etiket">Osilatör</span><span class="deger">4/6</span>
   </div>
 </article>
-<article class="kart guclu" data-durum="guclu" data-ad="TARKM">
+<article class="kart guclu" data-durum="guclu" data-ad="TARKM" data-sira="15" data-skor="92.98" data-risk="10" data-pot="12.40" data-osc="5">
   <div class="ust">
     <span class="ad">TARKM</span>
     <span class="karar k-guclu">GÜÇLÜ AL</span>
@@ -288,7 +303,7 @@
     <span class="etiket">Osilatör</span><span class="deger">5/6</span>
   </div>
 </article>
-<article class="kart guclu" data-durum="guclu" data-ad="KRGYO">
+<article class="kart guclu" data-durum="guclu" data-ad="KRGYO" data-sira="16" data-skor="92.82" data-risk="28" data-pot="2.81" data-osc="6">
   <div class="ust">
     <span class="ad">KRGYO</span>
     <span class="karar k-guclu">GÜÇLÜ AL</span>
@@ -300,7 +315,7 @@
     <span class="etiket">Osilatör</span><span class="deger">6/6</span>
   </div>
 </article>
-<article class="kart guclu" data-durum="guclu" data-ad="BRLSM">
+<article class="kart guclu" data-durum="guclu" data-ad="BRLSM" data-sira="17" data-skor="92.77" data-risk="35" data-pot="4.55" data-osc="6">
   <div class="ust">
     <span class="ad">BRLSM</span>
     <span class="karar k-guclu">GÜÇLÜ AL</span>
@@ -312,7 +327,7 @@
     <span class="etiket">Osilatör</span><span class="deger">6/6</span>
   </div>
 </article>
-<article class="kart guclu" data-durum="guclu" data-ad="TRMET">
+<article class="kart guclu" data-durum="guclu" data-ad="TRMET" data-sira="18" data-skor="92.68" data-risk="20" data-pot="3.73" data-osc="5">
   <div class="ust">
     <span class="ad">TRMET</span>
     <span class="karar k-guclu">GÜÇLÜ AL</span>
@@ -324,7 +339,7 @@
     <span class="etiket">Osilatör</span><span class="deger">5/6</span>
   </div>
 </article>
-<article class="kart guclu" data-durum="guclu" data-ad="KRDMD">
+<article class="kart guclu" data-durum="guclu" data-ad="KRDMD" data-sira="19" data-skor="92.51" data-risk="18" data-pot="1.80" data-osc="6">
   <div class="ust">
     <span class="ad">KRDMD</span>
     <span class="karar k-guclu">GÜÇLÜ AL</span>
@@ -336,7 +351,7 @@
     <span class="etiket">Osilatör</span><span class="deger">6/6</span>
   </div>
 </article>
-<article class="kart guclu" data-durum="guclu" data-ad="GIPTA">
+<article class="kart guclu" data-durum="guclu" data-ad="GIPTA" data-sira="20" data-skor="92.07" data-risk="32" data-pot="9.32" data-osc="5">
   <div class="ust">
     <span class="ad">GIPTA</span>
     <span class="karar k-guclu">GÜÇLÜ AL</span>
@@ -348,7 +363,7 @@
     <span class="etiket">Osilatör</span><span class="deger">5/6</span>
   </div>
 </article>
-<article class="kart guclu" data-durum="guclu" data-ad="CATES">
+<article class="kart guclu" data-durum="guclu" data-ad="CATES" data-sira="21" data-skor="91.55" data-risk="35" data-pot="0.00" data-osc="4">
   <div class="ust">
     <span class="ad">CATES</span>
     <span class="karar k-guclu">GÜÇLÜ AL</span>
@@ -360,7 +375,7 @@
     <span class="etiket">Osilatör</span><span class="deger">4/6</span>
   </div>
 </article>
-<article class="kart guclu" data-durum="guclu" data-ad="INVES">
+<article class="kart guclu" data-durum="guclu" data-ad="INVES" data-sira="22" data-skor="91.45" data-risk="28" data-pot="1.52" data-osc="6">
   <div class="ust">
     <span class="ad">INVES</span>
     <span class="karar k-guclu">GÜÇLÜ AL</span>
@@ -372,7 +387,7 @@
     <span class="etiket">Osilatör</span><span class="deger">6/6</span>
   </div>
 </article>
-<article class="kart guclu" data-durum="guclu" data-ad="RYGYO">
+<article class="kart guclu" data-durum="guclu" data-ad="RYGYO" data-sira="23" data-skor="91.17" data-risk="28" data-pot="0.48" data-osc="6">
   <div class="ust">
     <span class="ad">RYGYO</span>
     <span class="karar k-guclu">GÜÇLÜ AL</span>
@@ -384,7 +399,7 @@
     <span class="etiket">Osilatör</span><span class="deger">6/6</span>
   </div>
 </article>
-<article class="kart guclu" data-durum="guclu" data-ad="ASELS">
+<article class="kart guclu" data-durum="guclu" data-ad="ASELS" data-sira="24" data-skor="90.94" data-risk="8" data-pot="2.23" data-osc="4">
   <div class="ust">
     <span class="ad">ASELS</span>
     <span class="karar k-guclu">GÜÇLÜ AL</span>
@@ -396,7 +411,7 @@
     <span class="etiket">Osilatör</span><span class="deger">4/6</span>
   </div>
 </article>
-<article class="kart guclu" data-durum="guclu" data-ad="BIMAS">
+<article class="kart guclu" data-durum="guclu" data-ad="BIMAS" data-sira="25" data-skor="90.71" data-risk="18" data-pot="2.18" data-osc="5">
   <div class="ust">
     <span class="ad">BIMAS</span>
     <span class="karar k-guclu">GÜÇLÜ AL</span>
@@ -408,19 +423,7 @@
     <span class="etiket">Osilatör</span><span class="deger">5/6</span>
   </div>
 </article>
-<article class="kart guclu" data-durum="guclu" data-ad="DUNYH">
-  <div class="ust">
-    <span class="ad">DUNYH</span>
-    <span class="karar k-guclu">GÜÇLÜ AL</span>
-  </div>
-  <div class="cubuk"><i style="width:90%"></i><b>90</b></div>
-  <div class="satir">
-    <span class="etiket">Risk</span><span class="deger risk-orta">orta (30)</span>
-    <span class="etiket">Potansiyel</span><span class="deger yes">+0.5%</span>
-    <span class="etiket">Osilatör</span><span class="deger">6/6</span>
-  </div>
-</article>
-<article class="kart guclu" data-durum="guclu" data-ad="DEVA">
+<article class="kart guclu" data-durum="guclu" data-ad="DEVA" data-sira="26" data-skor="90.00" data-risk="36" data-pot="2.43" data-osc="6">
   <div class="ust">
     <span class="ad">DEVA</span>
     <span class="karar k-guclu">GÜÇLÜ AL</span>
@@ -432,7 +435,19 @@
     <span class="etiket">Osilatör</span><span class="deger">6/6</span>
   </div>
 </article>
-<article class="kart guclu" data-durum="guclu" data-ad="EUPWR">
+<article class="kart guclu" data-durum="guclu" data-ad="DUNYH" data-sira="27" data-skor="90.00" data-risk="30" data-pot="0.47" data-osc="6">
+  <div class="ust">
+    <span class="ad">DUNYH</span>
+    <span class="karar k-guclu">GÜÇLÜ AL</span>
+  </div>
+  <div class="cubuk"><i style="width:90%"></i><b>90</b></div>
+  <div class="satir">
+    <span class="etiket">Risk</span><span class="deger risk-orta">orta (30)</span>
+    <span class="etiket">Potansiyel</span><span class="deger yes">+0.5%</span>
+    <span class="etiket">Osilatör</span><span class="deger">6/6</span>
+  </div>
+</article>
+<article class="kart guclu" data-durum="guclu" data-ad="EUPWR" data-sira="28" data-skor="90.00" data-risk="20" data-pot="5.33" data-osc="6">
   <div class="ust">
     <span class="ad">EUPWR</span>
     <span class="karar k-guclu">GÜÇLÜ AL</span>
@@ -444,7 +459,7 @@
     <span class="etiket">Osilatör</span><span class="deger">6/6</span>
   </div>
 </article>
-<article class="kart guclu" data-durum="guclu" data-ad="PASEU">
+<article class="kart guclu" data-durum="guclu" data-ad="PASEU" data-sira="29" data-skor="89.75" data-risk="35" data-pot="0.00" data-osc="6">
   <div class="ust">
     <span class="ad">PASEU</span>
     <span class="karar k-guclu">GÜÇLÜ AL</span>
@@ -456,7 +471,7 @@
     <span class="etiket">Osilatör</span><span class="deger">6/6</span>
   </div>
 </article>
-<article class="kart guclu" data-durum="guclu" data-ad="ADGYO">
+<article class="kart guclu" data-durum="guclu" data-ad="ADGYO" data-sira="30" data-skor="89.61" data-risk="0" data-pot="9.11" data-osc="4">
   <div class="ust">
     <span class="ad">ADGYO</span>
     <span class="karar k-guclu">GÜÇLÜ AL</span>
@@ -468,7 +483,7 @@
     <span class="etiket">Osilatör</span><span class="deger">4/6</span>
   </div>
 </article>
-<article class="kart guclu" data-durum="guclu" data-ad="GENIL">
+<article class="kart guclu" data-durum="guclu" data-ad="GENIL" data-sira="31" data-skor="89.00" data-risk="20" data-pot="5.15" data-osc="4">
   <div class="ust">
     <span class="ad">GENIL</span>
     <span class="karar k-guclu">GÜÇLÜ AL</span>
@@ -480,7 +495,7 @@
     <span class="etiket">Osilatör</span><span class="deger">4/6</span>
   </div>
 </article>
-<article class="kart guclu" data-durum="guclu" data-ad="VBTYZ">
+<article class="kart guclu" data-durum="guclu" data-ad="VBTYZ" data-sira="32" data-skor="88.66" data-risk="10" data-pot="7.26" data-osc="5">
   <div class="ust">
     <span class="ad">VBTYZ</span>
     <span class="karar k-guclu">GÜÇLÜ AL</span>
@@ -492,7 +507,7 @@
     <span class="etiket">Osilatör</span><span class="deger">5/6</span>
   </div>
 </article>
-<article class="kart guclu" data-durum="guclu" data-ad="PSDTC">
+<article class="kart guclu" data-durum="guclu" data-ad="PSDTC" data-sira="33" data-skor="88.56" data-risk="32" data-pot="9.52" data-osc="6">
   <div class="ust">
     <span class="ad">PSDTC</span>
     <span class="karar k-guclu">GÜÇLÜ AL</span>
@@ -504,7 +519,7 @@
     <span class="etiket">Osilatör</span><span class="deger">6/6</span>
   </div>
 </article>
-<article class="kart guclu" data-durum="guclu" data-ad="ALTIN">
+<article class="kart guclu" data-durum="guclu" data-ad="ALTIN" data-sira="34" data-skor="88.51" data-risk="18" data-pot="3.54" data-osc="4">
   <div class="ust">
     <span class="ad">ALTIN</span>
     <span class="karar k-guclu">GÜÇLÜ AL</span>
@@ -516,7 +531,7 @@
     <span class="etiket">Osilatör</span><span class="deger">4/6</span>
   </div>
 </article>
-<article class="kart guclu" data-durum="guclu" data-ad="DMLKT">
+<article class="kart guclu" data-durum="guclu" data-ad="DMLKT" data-sira="35" data-skor="88.27" data-risk="36" data-pot="5.51" data-osc="4">
   <div class="ust">
     <span class="ad">DMLKT</span>
     <span class="karar k-guclu">GÜÇLÜ AL</span>
@@ -528,7 +543,7 @@
     <span class="etiket">Osilatör</span><span class="deger">4/6</span>
   </div>
 </article>
-<article class="kart guclu" data-durum="guclu" data-ad="AYGAZ">
+<article class="kart guclu" data-durum="guclu" data-ad="AYGAZ" data-sira="36" data-skor="88.03" data-risk="20" data-pot="7.20" data-osc="4">
   <div class="ust">
     <span class="ad">AYGAZ</span>
     <span class="karar k-guclu">GÜÇLÜ AL</span>
@@ -540,7 +555,7 @@
     <span class="etiket">Osilatör</span><span class="deger">4/6</span>
   </div>
 </article>
-<article class="kart guclu" data-durum="guclu" data-ad="ARDYZ">
+<article class="kart guclu" data-durum="guclu" data-ad="ARDYZ" data-sira="37" data-skor="87.97" data-risk="20" data-pot="7.35" data-osc="4">
   <div class="ust">
     <span class="ad">ARDYZ</span>
     <span class="karar k-guclu">GÜÇLÜ AL</span>
@@ -552,7 +567,7 @@
     <span class="etiket">Osilatör</span><span class="deger">4/6</span>
   </div>
 </article>
-<article class="kart guclu" data-durum="guclu" data-ad="KLSYN">
+<article class="kart guclu" data-durum="guclu" data-ad="KLSYN" data-sira="38" data-skor="87.92" data-risk="0" data-pot="5.82" data-osc="4">
   <div class="ust">
     <span class="ad">KLSYN</span>
     <span class="karar k-guclu">GÜÇLÜ AL</span>
@@ -564,7 +579,7 @@
     <span class="etiket">Osilatör</span><span class="deger">4/6</span>
   </div>
 </article>
-<article class="kart guclu" data-durum="guclu" data-ad="VANGD">
+<article class="kart guclu" data-durum="guclu" data-ad="VANGD" data-sira="39" data-skor="87.68" data-risk="0" data-pot="6.86" data-osc="3">
   <div class="ust">
     <span class="ad">VANGD</span>
     <span class="karar k-guclu">GÜÇLÜ AL</span>
@@ -576,7 +591,7 @@
     <span class="etiket">Osilatör</span><span class="deger">3/6</span>
   </div>
 </article>
-<article class="kart guclu" data-durum="guclu" data-ad="HUNER">
+<article class="kart guclu" data-durum="guclu" data-ad="HUNER" data-sira="40" data-skor="87.62" data-risk="8" data-pot="9.79" data-osc="4">
   <div class="ust">
     <span class="ad">HUNER</span>
     <span class="karar k-guclu">GÜÇLÜ AL</span>
@@ -588,7 +603,7 @@
     <span class="etiket">Osilatör</span><span class="deger">4/6</span>
   </div>
 </article>
-<article class="kart guclu" data-durum="guclu" data-ad="KUVVA">
+<article class="kart guclu" data-durum="guclu" data-ad="KUVVA" data-sira="41" data-skor="87.46" data-risk="10" data-pot="8.45" data-osc="4">
   <div class="ust">
     <span class="ad">KUVVA</span>
     <span class="karar k-guclu">GÜÇLÜ AL</span>
@@ -600,7 +615,7 @@
     <span class="etiket">Osilatör</span><span class="deger">4/6</span>
   </div>
 </article>
-<article class="kart guclu" data-durum="guclu" data-ad="SELEC">
+<article class="kart guclu" data-durum="guclu" data-ad="SELEC" data-sira="42" data-skor="87.31" data-risk="35" data-pot="0.62" data-osc="6">
   <div class="ust">
     <span class="ad">SELEC</span>
     <span class="karar k-guclu">GÜÇLÜ AL</span>
@@ -612,7 +627,7 @@
     <span class="etiket">Osilatör</span><span class="deger">6/6</span>
   </div>
 </article>
-<article class="kart guclu" data-durum="guclu" data-ad="TNZTP">
+<article class="kart guclu" data-durum="guclu" data-ad="TNZTP" data-sira="43" data-skor="87.28" data-risk="16" data-pot="0.73" data-osc="6">
   <div class="ust">
     <span class="ad">TNZTP</span>
     <span class="karar k-guclu">GÜÇLÜ AL</span>
@@ -624,7 +639,7 @@
     <span class="etiket">Osilatör</span><span class="deger">6/6</span>
   </div>
 </article>
-<article class="kart guclu" data-durum="guclu" data-ad="AKSGY">
+<article class="kart guclu" data-durum="guclu" data-ad="AKSGY" data-sira="44" data-skor="87.20" data-risk="0" data-pot="2.48" data-osc="5">
   <div class="ust">
     <span class="ad">AKSGY</span>
     <span class="karar k-guclu">GÜÇLÜ AL</span>
@@ -636,7 +651,7 @@
     <span class="etiket">Osilatör</span><span class="deger">5/6</span>
   </div>
 </article>
-<article class="kart guclu" data-durum="guclu" data-ad="DAGI">
+<article class="kart guclu" data-durum="guclu" data-ad="DAGI" data-sira="45" data-skor="87.09" data-risk="28" data-pot="4.91" data-osc="6">
   <div class="ust">
     <span class="ad">DAGI</span>
     <span class="karar k-guclu">GÜÇLÜ AL</span>
@@ -648,7 +663,7 @@
     <span class="etiket">Osilatör</span><span class="deger">6/6</span>
   </div>
 </article>
-<article class="kart guclu" data-durum="guclu" data-ad="KRDMA">
+<article class="kart guclu" data-durum="guclu" data-ad="KRDMA" data-sira="46" data-skor="87.06" data-risk="35" data-pot="9.14" data-osc="5">
   <div class="ust">
     <span class="ad">KRDMA</span>
     <span class="karar k-guclu">GÜÇLÜ AL</span>
@@ -660,7 +675,7 @@
     <span class="etiket">Osilatör</span><span class="deger">5/6</span>
   </div>
 </article>
-<article class="kart guclu" data-durum="guclu" data-ad="KRPLS">
+<article class="kart guclu" data-durum="guclu" data-ad="KRPLS" data-sira="47" data-skor="87.05" data-risk="0" data-pot="9.06" data-osc="4">
   <div class="ust">
     <span class="ad">KRPLS</span>
     <span class="karar k-guclu">GÜÇLÜ AL</span>
@@ -672,7 +687,7 @@
     <span class="etiket">Osilatör</span><span class="deger">4/6</span>
   </div>
 </article>
-<article class="kart guclu" data-durum="guclu" data-ad="BOBET">
+<article class="kart guclu" data-durum="guclu" data-ad="BOBET" data-sira="48" data-skor="86.69" data-risk="40" data-pot="2.71" data-osc="6">
   <div class="ust">
     <span class="ad">BOBET</span>
     <span class="karar k-guclu">GÜÇLÜ AL</span>
@@ -684,7 +699,7 @@
     <span class="etiket">Osilatör</span><span class="deger">6/6</span>
   </div>
 </article>
-<article class="kart guclu" data-durum="guclu" data-ad="ALARK">
+<article class="kart guclu" data-durum="guclu" data-ad="ALARK" data-sira="49" data-skor="86.63" data-risk="8" data-pot="6.11" data-osc="6">
   <div class="ust">
     <span class="ad">ALARK</span>
     <span class="karar k-guclu">GÜÇLÜ AL</span>
@@ -696,7 +711,7 @@
     <span class="etiket">Osilatör</span><span class="deger">6/6</span>
   </div>
 </article>
-<article class="kart guclu" data-durum="guclu" data-ad="SAYAS">
+<article class="kart guclu" data-durum="guclu" data-ad="SAYAS" data-sira="50" data-skor="86.46" data-risk="10" data-pot="15.98" data-osc="5">
   <div class="ust">
     <span class="ad">SAYAS</span>
     <span class="karar k-guclu">GÜÇLÜ AL</span>
@@ -708,7 +723,7 @@
     <span class="etiket">Osilatör</span><span class="deger">5/6</span>
   </div>
 </article>
-<article class="kart guclu" data-durum="guclu" data-ad="TCKRC">
+<article class="kart guclu" data-durum="guclu" data-ad="TCKRC" data-sira="51" data-skor="86.46" data-risk="10" data-pot="7.72" data-osc="4">
   <div class="ust">
     <span class="ad">TCKRC</span>
     <span class="karar k-guclu">GÜÇLÜ AL</span>
@@ -720,7 +735,7 @@
     <span class="etiket">Osilatör</span><span class="deger">4/6</span>
   </div>
 </article>
-<article class="kart guclu" data-durum="guclu" data-ad="INDES">
+<article class="kart guclu" data-durum="guclu" data-ad="INDES" data-sira="52" data-skor="86.43" data-risk="10" data-pot="7.08" data-osc="5">
   <div class="ust">
     <span class="ad">INDES</span>
     <span class="karar k-guclu">GÜÇLÜ AL</span>
@@ -732,7 +747,7 @@
     <span class="etiket">Osilatör</span><span class="deger">5/6</span>
   </div>
 </article>
-<article class="kart guclu" data-durum="guclu" data-ad="TRENJ">
+<article class="kart guclu" data-durum="guclu" data-ad="TRENJ" data-sira="53" data-skor="86.24" data-risk="32" data-pot="3.69" data-osc="5">
   <div class="ust">
     <span class="ad">TRENJ</span>
     <span class="karar k-guclu">GÜÇLÜ AL</span>
@@ -744,7 +759,7 @@
     <span class="etiket">Osilatör</span><span class="deger">5/6</span>
   </div>
 </article>
-<article class="kart guclu" data-durum="guclu" data-ad="TRALT">
+<article class="kart guclu" data-durum="guclu" data-ad="TRALT" data-sira="54" data-skor="86.00" data-risk="0" data-pot="5.80" data-osc="5">
   <div class="ust">
     <span class="ad">TRALT</span>
     <span class="karar k-guclu">GÜÇLÜ AL</span>
@@ -756,7 +771,7 @@
     <span class="etiket">Osilatör</span><span class="deger">5/6</span>
   </div>
 </article>
-<article class="kart guclu" data-durum="guclu" data-ad="VERUS">
+<article class="kart guclu" data-durum="guclu" data-ad="VERUS" data-sira="55" data-skor="85.95" data-risk="35" data-pot="1.07" data-osc="5">
   <div class="ust">
     <span class="ad">VERUS</span>
     <span class="karar k-guclu">GÜÇLÜ AL</span>
@@ -768,7 +783,7 @@
     <span class="etiket">Osilatör</span><span class="deger">5/6</span>
   </div>
 </article>
-<article class="kart guclu" data-durum="guclu" data-ad="KORDS">
+<article class="kart guclu" data-durum="guclu" data-ad="KORDS" data-sira="56" data-skor="85.81" data-risk="10" data-pot="12.26" data-osc="4">
   <div class="ust">
     <span class="ad">KORDS</span>
     <span class="karar k-guclu">GÜÇLÜ AL</span>
@@ -780,7 +795,7 @@
     <span class="etiket">Osilatör</span><span class="deger">4/6</span>
   </div>
 </article>
-<article class="kart guclu" data-durum="guclu" data-ad="MANAS">
+<article class="kart guclu" data-durum="guclu" data-ad="MANAS" data-sira="57" data-skor="85.79" data-risk="0" data-pot="7.19" data-osc="4">
   <div class="ust">
     <span class="ad">MANAS</span>
     <span class="karar k-guclu">GÜÇLÜ AL</span>
@@ -792,7 +807,7 @@
     <span class="etiket">Osilatör</span><span class="deger">4/6</span>
   </div>
 </article>
-<article class="kart guclu" data-durum="guclu" data-ad="ETYAT">
+<article class="kart guclu" data-durum="guclu" data-ad="ETYAT" data-sira="58" data-skor="85.49" data-risk="10" data-pot="6.25" data-osc="4">
   <div class="ust">
     <span class="ad">ETYAT</span>
     <span class="karar k-guclu">GÜÇLÜ AL</span>
@@ -804,7 +819,7 @@
     <span class="etiket">Osilatör</span><span class="deger">4/6</span>
   </div>
 </article>
-<article class="kart guclu" data-durum="guclu" data-ad="ATATP">
+<article class="kart guclu" data-durum="guclu" data-ad="ATATP" data-sira="59" data-skor="85.35" data-risk="10" data-pot="15.34" data-osc="4">
   <div class="ust">
     <span class="ad">ATATP</span>
     <span class="karar k-guclu">GÜÇLÜ AL</span>
@@ -816,7 +831,7 @@
     <span class="etiket">Osilatör</span><span class="deger">4/6</span>
   </div>
 </article>
-<article class="kart guclu" data-durum="guclu" data-ad="CEMZY">
+<article class="kart guclu" data-durum="guclu" data-ad="CEMZY" data-sira="60" data-skor="85.34" data-risk="8" data-pot="13.39" data-osc="4">
   <div class="ust">
     <span class="ad">CEMZY</span>
     <span class="karar k-guclu">GÜÇLÜ AL</span>
@@ -828,7 +843,7 @@
     <span class="etiket">Osilatör</span><span class="deger">4/6</span>
   </div>
 </article>
-<article class="kart guclu" data-durum="guclu" data-ad="OZSUB">
+<article class="kart guclu" data-durum="guclu" data-ad="OZSUB" data-sira="61" data-skor="85.13" data-risk="30" data-pot="3.67" data-osc="5">
   <div class="ust">
     <span class="ad">OZSUB</span>
     <span class="karar k-guclu">GÜÇLÜ AL</span>
@@ -840,7 +855,7 @@
     <span class="etiket">Osilatör</span><span class="deger">5/6</span>
   </div>
 </article>
-<article class="kart guclu" data-durum="guclu" data-ad="EGGUB">
+<article class="kart guclu" data-durum="guclu" data-ad="EGGUB" data-sira="62" data-skor="85.05" data-risk="0" data-pot="9.22" data-osc="5">
   <div class="ust">
     <span class="ad">EGGUB</span>
     <span class="karar k-guclu">GÜÇLÜ AL</span>
@@ -852,7 +867,7 @@
     <span class="etiket">Osilatör</span><span class="deger">5/6</span>
   </div>
 </article>
-<article class="kart guclu" data-durum="guclu" data-ad="TRCAS">
+<article class="kart guclu" data-durum="guclu" data-ad="TRCAS" data-sira="63" data-skor="84.52" data-risk="8" data-pot="3.45" data-osc="5">
   <div class="ust">
     <span class="ad">TRCAS</span>
     <span class="karar k-guclu">GÜÇLÜ AL</span>
@@ -864,7 +879,7 @@
     <span class="etiket">Osilatör</span><span class="deger">5/6</span>
   </div>
 </article>
-<article class="kart guclu" data-durum="guclu" data-ad="ORGE">
+<article class="kart guclu" data-durum="guclu" data-ad="ORGE" data-sira="64" data-skor="84.44" data-risk="30" data-pot="12.12" data-osc="5">
   <div class="ust">
     <span class="ad">ORGE</span>
     <span class="karar k-guclu">GÜÇLÜ AL</span>
@@ -876,7 +891,7 @@
     <span class="etiket">Osilatör</span><span class="deger">5/6</span>
   </div>
 </article>
-<article class="kart guclu" data-durum="guclu" data-ad="BIOEN">
+<article class="kart guclu" data-durum="guclu" data-ad="BIOEN" data-sira="65" data-skor="84.35" data-risk="0" data-pot="7.89" data-osc="5">
   <div class="ust">
     <span class="ad">BIOEN</span>
     <span class="karar k-guclu">GÜÇLÜ AL</span>
@@ -888,7 +903,7 @@
     <span class="etiket">Osilatör</span><span class="deger">5/6</span>
   </div>
 </article>
-<article class="kart guclu" data-durum="guclu" data-ad="TBORG">
+<article class="kart guclu" data-durum="guclu" data-ad="TBORG" data-sira="66" data-skor="84.04" data-risk="28" data-pot="5.07" data-osc="4">
   <div class="ust">
     <span class="ad">TBORG</span>
     <span class="karar k-guclu">GÜÇLÜ AL</span>
@@ -900,7 +915,7 @@
     <span class="etiket">Osilatör</span><span class="deger">4/6</span>
   </div>
 </article>
-<article class="kart guclu" data-durum="guclu" data-ad="SOKM">
+<article class="kart guclu" data-durum="guclu" data-ad="SOKM" data-sira="67" data-skor="83.95" data-risk="0" data-pot="8.53" data-osc="4">
   <div class="ust">
     <span class="ad">SOKM</span>
     <span class="karar k-guclu">GÜÇLÜ AL</span>
@@ -912,7 +927,7 @@
     <span class="etiket">Osilatör</span><span class="deger">4/6</span>
   </div>
 </article>
-<article class="kart guclu" data-durum="guclu" data-ad="KRONT">
+<article class="kart guclu" data-durum="guclu" data-ad="KRONT" data-sira="68" data-skor="83.45" data-risk="10" data-pot="14.55" data-osc="3">
   <div class="ust">
     <span class="ad">KRONT</span>
     <span class="karar k-guclu">GÜÇLÜ AL</span>
@@ -924,7 +939,7 @@
     <span class="etiket">Osilatör</span><span class="deger">3/6</span>
   </div>
 </article>
-<article class="kart guclu" data-durum="guclu" data-ad="KERVN">
+<article class="kart guclu" data-durum="guclu" data-ad="KERVN" data-sira="69" data-skor="83.18" data-risk="26" data-pot="1.55" data-osc="3">
   <div class="ust">
     <span class="ad">KERVN</span>
     <span class="karar k-guclu">GÜÇLÜ AL</span>
@@ -936,7 +951,7 @@
     <span class="etiket">Osilatör</span><span class="deger">3/6</span>
   </div>
 </article>
-<article class="kart guclu" data-durum="guclu" data-ad="PCILT">
+<article class="kart guclu" data-durum="guclu" data-ad="PCILT" data-sira="70" data-skor="83.16" data-risk="0" data-pot="8.38" data-osc="6">
   <div class="ust">
     <span class="ad">PCILT</span>
     <span class="karar k-guclu">GÜÇLÜ AL</span>
@@ -948,7 +963,7 @@
     <span class="etiket">Osilatör</span><span class="deger">6/6</span>
   </div>
 </article>
-<article class="kart guclu" data-durum="guclu" data-ad="TUPRS">
+<article class="kart guclu" data-durum="guclu" data-ad="TUPRS" data-sira="71" data-skor="83.04" data-risk="20" data-pot="7.03" data-osc="3">
   <div class="ust">
     <span class="ad">TUPRS</span>
     <span class="karar k-guclu">GÜÇLÜ AL</span>
@@ -960,7 +975,7 @@
     <span class="etiket">Osilatör</span><span class="deger">3/6</span>
   </div>
 </article>
-<article class="kart guclu" data-durum="guclu" data-ad="OYAKC">
+<article class="kart guclu" data-durum="guclu" data-ad="OYAKC" data-sira="72" data-skor="83.03" data-risk="10" data-pot="1.13" data-osc="5">
   <div class="ust">
     <span class="ad">OYAKC</span>
     <span class="karar k-guclu">GÜÇLÜ AL</span>
@@ -972,7 +987,7 @@
     <span class="etiket">Osilatör</span><span class="deger">5/6</span>
   </div>
 </article>
-<article class="kart guclu" data-durum="guclu" data-ad="POLHO">
+<article class="kart guclu" data-durum="guclu" data-ad="POLHO" data-sira="73" data-skor="82.83" data-risk="10" data-pot="6.16" data-osc="2">
   <div class="ust">
     <span class="ad">POLHO</span>
     <span class="karar k-guclu">GÜÇLÜ AL</span>
@@ -984,7 +999,7 @@
     <span class="etiket">Osilatör</span><span class="deger">2/6</span>
   </div>
 </article>
-<article class="kart guclu" data-durum="guclu" data-ad="IEYHO">
+<article class="kart guclu" data-durum="guclu" data-ad="IEYHO" data-sira="74" data-skor="82.76" data-risk="35" data-pot="0.05" data-osc="6">
   <div class="ust">
     <span class="ad">IEYHO</span>
     <span class="karar k-guclu">GÜÇLÜ AL</span>
@@ -996,7 +1011,7 @@
     <span class="etiket">Osilatör</span><span class="deger">6/6</span>
   </div>
 </article>
-<article class="kart guclu" data-durum="guclu" data-ad="OFSYM">
+<article class="kart guclu" data-durum="guclu" data-ad="OFSYM" data-sira="75" data-skor="82.45" data-risk="0" data-pot="7.92" data-osc="3">
   <div class="ust">
     <span class="ad">OFSYM</span>
     <span class="karar k-guclu">GÜÇLÜ AL</span>
@@ -1008,7 +1023,7 @@
     <span class="etiket">Osilatör</span><span class="deger">3/6</span>
   </div>
 </article>
-<article class="kart guclu" data-durum="guclu" data-ad="GSDDE">
+<article class="kart guclu" data-durum="guclu" data-ad="GSDDE" data-sira="76" data-skor="82.41" data-risk="0" data-pot="14.72" data-osc="5">
   <div class="ust">
     <span class="ad">GSDDE</span>
     <span class="karar k-guclu">GÜÇLÜ AL</span>
@@ -1020,7 +1035,7 @@
     <span class="etiket">Osilatör</span><span class="deger">5/6</span>
   </div>
 </article>
-<article class="kart guclu" data-durum="guclu" data-ad="TSPOR">
+<article class="kart guclu" data-durum="guclu" data-ad="TSPOR" data-sira="77" data-skor="82.32" data-risk="38" data-pot="2.40" data-osc="6">
   <div class="ust">
     <span class="ad">TSPOR</span>
     <span class="karar k-guclu">GÜÇLÜ AL</span>
@@ -1032,7 +1047,7 @@
     <span class="etiket">Osilatör</span><span class="deger">6/6</span>
   </div>
 </article>
-<article class="kart guclu" data-durum="guclu" data-ad="MOGAN">
+<article class="kart guclu" data-durum="guclu" data-ad="MOGAN" data-sira="78" data-skor="82.02" data-risk="28" data-pot="7.68" data-osc="3">
   <div class="ust">
     <span class="ad">MOGAN</span>
     <span class="karar k-guclu">GÜÇLÜ AL</span>
@@ -1044,7 +1059,7 @@
     <span class="etiket">Osilatör</span><span class="deger">3/6</span>
   </div>
 </article>
-<article class="kart guclu" data-durum="guclu" data-ad="CELHA">
+<article class="kart guclu" data-durum="guclu" data-ad="CELHA" data-sira="79" data-skor="81.55" data-risk="10" data-pot="9.18" data-osc="3">
   <div class="ust">
     <span class="ad">CELHA</span>
     <span class="karar k-guclu">GÜÇLÜ AL</span>
@@ -1056,7 +1071,7 @@
     <span class="etiket">Osilatör</span><span class="deger">3/6</span>
   </div>
 </article>
-<article class="kart guclu" data-durum="guclu" data-ad="ADEL">
+<article class="kart guclu" data-durum="guclu" data-ad="ADEL" data-sira="80" data-skor="81.54" data-risk="10" data-pot="12.23" data-osc="5">
   <div class="ust">
     <span class="ad">ADEL</span>
     <span class="karar k-guclu">GÜÇLÜ AL</span>
@@ -1068,7 +1083,7 @@
     <span class="etiket">Osilatör</span><span class="deger">5/6</span>
   </div>
 </article>
-<article class="kart guclu" data-durum="guclu" data-ad="GLRMK">
+<article class="kart guclu" data-durum="guclu" data-ad="GLRMK" data-sira="81" data-skor="81.32" data-risk="8" data-pot="3.17" data-osc="4">
   <div class="ust">
     <span class="ad">GLRMK</span>
     <span class="karar k-guclu">GÜÇLÜ AL</span>
@@ -1080,7 +1095,7 @@
     <span class="etiket">Osilatör</span><span class="deger">4/6</span>
   </div>
 </article>
-<article class="kart guclu" data-durum="guclu" data-ad="DOCO">
+<article class="kart guclu" data-durum="guclu" data-ad="DOCO" data-sira="82" data-skor="80.94" data-risk="0" data-pot="6.66" data-osc="6">
   <div class="ust">
     <span class="ad">DOCO</span>
     <span class="karar k-guclu">GÜÇLÜ AL</span>
@@ -1092,7 +1107,7 @@
     <span class="etiket">Osilatör</span><span class="deger">6/6</span>
   </div>
 </article>
-<article class="kart guclu" data-durum="guclu" data-ad="KCHOL">
+<article class="kart guclu" data-durum="guclu" data-ad="KCHOL" data-sira="83" data-skor="80.66" data-risk="16" data-pot="5.88" data-osc="4">
   <div class="ust">
     <span class="ad">KCHOL</span>
     <span class="karar k-guclu">GÜÇLÜ AL</span>
@@ -1104,7 +1119,7 @@
     <span class="etiket">Osilatör</span><span class="deger">4/6</span>
   </div>
 </article>
-<article class="kart guclu" data-durum="guclu" data-ad="ENDAE">
+<article class="kart guclu" data-durum="guclu" data-ad="ENDAE" data-sira="84" data-skor="80.30" data-risk="8" data-pot="24.79" data-osc="4">
   <div class="ust">
     <span class="ad">ENDAE</span>
     <span class="karar k-guclu">GÜÇLÜ AL</span>
@@ -1116,7 +1131,7 @@
     <span class="etiket">Osilatör</span><span class="deger">4/6</span>
   </div>
 </article>
-<article class="kart guclu" data-durum="guclu" data-ad="BLUME">
+<article class="kart guclu" data-durum="guclu" data-ad="BLUME" data-sira="85" data-skor="79.87" data-risk="18" data-pot="7.39" data-osc="4">
   <div class="ust">
     <span class="ad">BLUME</span>
     <span class="karar k-guclu">GÜÇLÜ AL</span>
@@ -1128,7 +1143,7 @@
     <span class="etiket">Osilatör</span><span class="deger">4/6</span>
   </div>
 </article>
-<article class="kart guclu" data-durum="guclu" data-ad="ARASE">
+<article class="kart guclu" data-durum="guclu" data-ad="ARASE" data-sira="86" data-skor="79.81" data-risk="0" data-pot="8.82" data-osc="5">
   <div class="ust">
     <span class="ad">ARASE</span>
     <span class="karar k-guclu">GÜÇLÜ AL</span>
@@ -1140,7 +1155,7 @@
     <span class="etiket">Osilatör</span><span class="deger">5/6</span>
   </div>
 </article>
-<article class="kart guclu" data-durum="guclu" data-ad="HURGZ">
+<article class="kart guclu" data-durum="guclu" data-ad="HURGZ" data-sira="87" data-skor="79.69" data-risk="0" data-pot="11.56" data-osc="2">
   <div class="ust">
     <span class="ad">HURGZ</span>
     <span class="karar k-guclu">GÜÇLÜ AL</span>
@@ -1152,7 +1167,7 @@
     <span class="etiket">Osilatör</span><span class="deger">2/6</span>
   </div>
 </article>
-<article class="kart guclu" data-durum="guclu" data-ad="PRZMA">
+<article class="kart guclu" data-durum="guclu" data-ad="PRZMA" data-sira="88" data-skor="79.68" data-risk="32" data-pot="16.40" data-osc="5">
   <div class="ust">
     <span class="ad">PRZMA</span>
     <span class="karar k-guclu">GÜÇLÜ AL</span>
@@ -1164,7 +1179,7 @@
     <span class="etiket">Osilatör</span><span class="deger">5/6</span>
   </div>
 </article>
-<article class="kart guclu" data-durum="guclu" data-ad="TKFEN">
+<article class="kart guclu" data-durum="guclu" data-ad="TKFEN" data-sira="89" data-skor="79.41" data-risk="20" data-pot="12.07" data-osc="3">
   <div class="ust">
     <span class="ad">TKFEN</span>
     <span class="karar k-guclu">GÜÇLÜ AL</span>
@@ -1176,7 +1191,7 @@
     <span class="etiket">Osilatör</span><span class="deger">3/6</span>
   </div>
 </article>
-<article class="kart guclu" data-durum="guclu" data-ad="EUKYO">
+<article class="kart guclu" data-durum="guclu" data-ad="EUKYO" data-sira="90" data-skor="79.32" data-risk="0" data-pot="9.09" data-osc="3">
   <div class="ust">
     <span class="ad">EUKYO</span>
     <span class="karar k-guclu">GÜÇLÜ AL</span>
@@ -1188,7 +1203,7 @@
     <span class="etiket">Osilatör</span><span class="deger">3/6</span>
   </div>
 </article>
-<article class="kart guclu" data-durum="guclu" data-ad="MPARK">
+<article class="kart guclu" data-durum="guclu" data-ad="MPARK" data-sira="91" data-skor="78.71" data-risk="0" data-pot="6.51" data-osc="4">
   <div class="ust">
     <span class="ad">MPARK</span>
     <span class="karar k-guclu">GÜÇLÜ AL</span>
@@ -1200,7 +1215,7 @@
     <span class="etiket">Osilatör</span><span class="deger">4/6</span>
   </div>
 </article>
-<article class="kart guclu" data-durum="guclu" data-ad="PRDGS">
+<article class="kart guclu" data-durum="guclu" data-ad="PRDGS" data-sira="92" data-skor="78.71" data-risk="10" data-pot="10.29" data-osc="3">
   <div class="ust">
     <span class="ad">PRDGS</span>
     <span class="karar k-guclu">GÜÇLÜ AL</span>
@@ -1212,7 +1227,7 @@
     <span class="etiket">Osilatör</span><span class="deger">3/6</span>
   </div>
 </article>
-<article class="kart guclu" data-durum="guclu" data-ad="GUBRF">
+<article class="kart guclu" data-durum="guclu" data-ad="GUBRF" data-sira="93" data-skor="78.54" data-risk="0" data-pot="12.30" data-osc="5">
   <div class="ust">
     <span class="ad">GUBRF</span>
     <span class="karar k-guclu">GÜÇLÜ AL</span>
@@ -1224,7 +1239,7 @@
     <span class="etiket">Osilatör</span><span class="deger">5/6</span>
   </div>
 </article>
-<article class="kart guclu" data-durum="guclu" data-ad="RUBNS">
+<article class="kart guclu" data-durum="guclu" data-ad="RUBNS" data-sira="94" data-skor="78.32" data-risk="0" data-pot="17.33" data-osc="3">
   <div class="ust">
     <span class="ad">RUBNS</span>
     <span class="karar k-guclu">GÜÇLÜ AL</span>
@@ -1236,7 +1251,7 @@
     <span class="etiket">Osilatör</span><span class="deger">3/6</span>
   </div>
 </article>
-<article class="kart guclu" data-durum="guclu" data-ad="FORTE">
+<article class="kart guclu" data-durum="guclu" data-ad="FORTE" data-sira="95" data-skor="78.32" data-risk="16" data-pot="15.31" data-osc="3">
   <div class="ust">
     <span class="ad">FORTE</span>
     <span class="karar k-guclu">GÜÇLÜ AL</span>
@@ -1248,7 +1263,7 @@
     <span class="etiket">Osilatör</span><span class="deger">3/6</span>
   </div>
 </article>
-<article class="kart guclu" data-durum="guclu" data-ad="MRGYO">
+<article class="kart guclu" data-durum="guclu" data-ad="MRGYO" data-sira="96" data-skor="77.24" data-risk="18" data-pot="10.19" data-osc="5">
   <div class="ust">
     <span class="ad">MRGYO</span>
     <span class="karar k-guclu">GÜÇLÜ AL</span>
@@ -1260,7 +1275,7 @@
     <span class="etiket">Osilatör</span><span class="deger">5/6</span>
   </div>
 </article>
-<article class="kart guclu" data-durum="guclu" data-ad="HKTM">
+<article class="kart guclu" data-durum="guclu" data-ad="HKTM" data-sira="97" data-skor="76.65" data-risk="6" data-pot="18.74" data-osc="4">
   <div class="ust">
     <span class="ad">HKTM</span>
     <span class="karar k-guclu">GÜÇLÜ AL</span>
@@ -1272,7 +1287,7 @@
     <span class="etiket">Osilatör</span><span class="deger">4/6</span>
   </div>
 </article>
-<article class="kart guclu" data-durum="guclu" data-ad="TRGYO">
+<article class="kart guclu" data-durum="guclu" data-ad="TRGYO" data-sira="98" data-skor="75.04" data-risk="0" data-pot="5.74" data-osc="5">
   <div class="ust">
     <span class="ad">TRGYO</span>
     <span class="karar k-guclu">GÜÇLÜ AL</span>
@@ -1284,7 +1299,7 @@
     <span class="etiket">Osilatör</span><span class="deger">5/6</span>
   </div>
 </article>
-<article class="kart al" data-durum="al" data-ad="ASTOR">
+<article class="kart al" data-durum="al" data-ad="ASTOR" data-sira="99" data-skor="94.73" data-risk="28" data-pot="5.37" data-osc="5">
   <div class="ust">
     <span class="ad">ASTOR</span>
     <span class="karar k-al">AL</span>
@@ -1296,7 +1311,7 @@
     <span class="etiket">Osilatör</span><span class="deger">5/6</span>
   </div>
 </article>
-<article class="kart al" data-durum="al" data-ad="BINHO">
+<article class="kart al" data-durum="al" data-ad="BINHO" data-sira="100" data-skor="91.52" data-risk="10" data-pot="4.27" data-osc="5">
   <div class="ust">
     <span class="ad">BINHO</span>
     <span class="karar k-al">AL</span>
@@ -1308,7 +1323,7 @@
     <span class="etiket">Osilatör</span><span class="deger">5/6</span>
   </div>
 </article>
-<article class="kart al" data-durum="al" data-ad="AHGAZ">
+<article class="kart al" data-durum="al" data-ad="AHGAZ" data-sira="101" data-skor="90.96" data-risk="10" data-pot="8.96" data-osc="5">
   <div class="ust">
     <span class="ad">AHGAZ</span>
     <span class="karar k-al">AL</span>
@@ -1320,7 +1335,7 @@
     <span class="etiket">Osilatör</span><span class="deger">5/6</span>
   </div>
 </article>
-<article class="kart al" data-durum="al" data-ad="MNDRS">
+<article class="kart al" data-durum="al" data-ad="MNDRS" data-sira="102" data-skor="88.21" data-risk="10" data-pot="1.87" data-osc="6">
   <div class="ust">
     <span class="ad">MNDRS</span>
     <span class="karar k-al">AL</span>
@@ -1332,7 +1347,7 @@
     <span class="etiket">Osilatör</span><span class="deger">6/6</span>
   </div>
 </article>
-<article class="kart al" data-durum="al" data-ad="AKCNS">
+<article class="kart al" data-durum="al" data-ad="AKCNS" data-sira="103" data-skor="86.49" data-risk="20" data-pot="2.07" data-osc="4">
   <div class="ust">
     <span class="ad">AKCNS</span>
     <span class="karar k-al">AL</span>
@@ -1344,7 +1359,7 @@
     <span class="etiket">Osilatör</span><span class="deger">4/6</span>
   </div>
 </article>
-<article class="kart al" data-durum="al" data-ad="KTLEV">
+<article class="kart al" data-durum="al" data-ad="KTLEV" data-sira="104" data-skor="85.32" data-risk="36" data-pot="0.00" data-osc="5">
   <div class="ust">
     <span class="ad">KTLEV</span>
     <span class="karar k-al">AL</span>
@@ -1356,7 +1371,7 @@
     <span class="etiket">Osilatör</span><span class="deger">5/6</span>
   </div>
 </article>
-<article class="kart al" data-durum="al" data-ad="EGEGY">
+<article class="kart al" data-durum="al" data-ad="EGEGY" data-sira="105" data-skor="85.25" data-risk="0" data-pot="3.27" data-osc="4">
   <div class="ust">
     <span class="ad">EGEGY</span>
     <span class="karar k-al">AL</span>
@@ -1368,7 +1383,7 @@
     <span class="etiket">Osilatör</span><span class="deger">4/6</span>
   </div>
 </article>
-<article class="kart al" data-durum="al" data-ad="DOHOL">
+<article class="kart al" data-durum="al" data-ad="DOHOL" data-sira="106" data-skor="85.08" data-risk="0" data-pot="4.57" data-osc="4">
   <div class="ust">
     <span class="ad">DOHOL</span>
     <span class="karar k-al">AL</span>
@@ -1380,7 +1395,7 @@
     <span class="etiket">Osilatör</span><span class="deger">4/6</span>
   </div>
 </article>
-<article class="kart al" data-durum="al" data-ad="METRO">
+<article class="kart al" data-durum="al" data-ad="METRO" data-sira="107" data-skor="82.16" data-risk="0" data-pot="11.56" data-osc="4">
   <div class="ust">
     <span class="ad">METRO</span>
     <span class="karar k-al">AL</span>
@@ -1392,7 +1407,7 @@
     <span class="etiket">Osilatör</span><span class="deger">4/6</span>
   </div>
 </article>
-<article class="kart al" data-durum="al" data-ad="RNPOL">
+<article class="kart al" data-durum="al" data-ad="RNPOL" data-sira="108" data-skor="81.15" data-risk="8" data-pot="15.00" data-osc="5">
   <div class="ust">
     <span class="ad">RNPOL</span>
     <span class="karar k-al">AL</span>
@@ -1404,7 +1419,7 @@
     <span class="etiket">Osilatör</span><span class="deger">5/6</span>
   </div>
 </article>
-<article class="kart al" data-durum="al" data-ad="GSRAY">
+<article class="kart al" data-durum="al" data-ad="GSRAY" data-sira="109" data-skor="80.47" data-risk="18" data-pot="2.63" data-osc="5">
   <div class="ust">
     <span class="ad">GSRAY</span>
     <span class="karar k-al">AL</span>
@@ -1416,7 +1431,7 @@
     <span class="etiket">Osilatör</span><span class="deger">5/6</span>
   </div>
 </article>
-<article class="kart al" data-durum="al" data-ad="ERSU">
+<article class="kart al" data-durum="al" data-ad="ERSU" data-sira="110" data-skor="79.53" data-risk="0" data-pot="16.04" data-osc="3">
   <div class="ust">
     <span class="ad">ERSU</span>
     <span class="karar k-al">AL</span>
@@ -1428,7 +1443,7 @@
     <span class="etiket">Osilatör</span><span class="deger">3/6</span>
   </div>
 </article>
-<article class="kart al" data-durum="al" data-ad="ETILR">
+<article class="kart al" data-durum="al" data-ad="ETILR" data-sira="111" data-skor="79.41" data-risk="6" data-pot="16.53" data-osc="1">
   <div class="ust">
     <span class="ad">ETILR</span>
     <span class="karar k-al">AL</span>
@@ -1440,7 +1455,7 @@
     <span class="etiket">Osilatör</span><span class="deger">1/6</span>
   </div>
 </article>
-<article class="kart al" data-durum="al" data-ad="FRIGO">
+<article class="kart al" data-durum="al" data-ad="FRIGO" data-sira="112" data-skor="77.20" data-risk="38" data-pot="19.63" data-osc="5">
   <div class="ust">
     <span class="ad">FRIGO</span>
     <span class="karar k-al">AL</span>
@@ -1452,7 +1467,7 @@
     <span class="etiket">Osilatör</span><span class="deger">5/6</span>
   </div>
 </article>
-<article class="kart al" data-durum="al" data-ad="ULUUN">
+<article class="kart al" data-durum="al" data-ad="ULUUN" data-sira="113" data-skor="77.12" data-risk="10" data-pot="14.00" data-osc="5">
   <div class="ust">
     <span class="ad">ULUUN</span>
     <span class="karar k-al">AL</span>
@@ -1464,7 +1479,7 @@
     <span class="etiket">Osilatör</span><span class="deger">5/6</span>
   </div>
 </article>
-<article class="kart al" data-durum="al" data-ad="AKMGY">
+<article class="kart al" data-durum="al" data-ad="AKMGY" data-sira="114" data-skor="76.60" data-risk="14" data-pot="3.03" data-osc="4">
   <div class="ust">
     <span class="ad">AKMGY</span>
     <span class="karar k-al">AL</span>
@@ -1476,7 +1491,7 @@
     <span class="etiket">Osilatör</span><span class="deger">4/6</span>
   </div>
 </article>
-<article class="kart al" data-durum="al" data-ad="ISBTR">
+<article class="kart al" data-durum="al" data-ad="ISBTR" data-sira="115" data-skor="75.26" data-risk="0" data-pot="23.08" data-osc="4">
   <div class="ust">
     <span class="ad">ISBTR</span>
     <span class="karar k-al">AL</span>
@@ -1488,7 +1503,7 @@
     <span class="etiket">Osilatör</span><span class="deger">4/6</span>
   </div>
 </article>
-<article class="kart al" data-durum="al" data-ad="PATEK">
+<article class="kart al" data-durum="al" data-ad="PATEK" data-sira="116" data-skor="74.96" data-risk="0" data-pot="15.49" data-osc="4">
   <div class="ust">
     <span class="ad">PATEK</span>
     <span class="karar k-al">AL</span>
@@ -1500,7 +1515,7 @@
     <span class="etiket">Osilatör</span><span class="deger">4/6</span>
   </div>
 </article>
-<article class="kart al" data-durum="al" data-ad="KRDMB">
+<article class="kart al" data-durum="al" data-ad="KRDMB" data-sira="117" data-skor="74.72" data-risk="8" data-pot="9.40" data-osc="5">
   <div class="ust">
     <span class="ad">KRDMB</span>
     <span class="karar k-al">AL</span>
@@ -1512,7 +1527,7 @@
     <span class="etiket">Osilatör</span><span class="deger">5/6</span>
   </div>
 </article>
-<article class="kart al" data-durum="al" data-ad="KLGYO">
+<article class="kart al" data-durum="al" data-ad="KLGYO" data-sira="118" data-skor="74.32" data-risk="0" data-pot="9.49" data-osc="6">
   <div class="ust">
     <span class="ad">KLGYO</span>
     <span class="karar k-al">AL</span>
@@ -1524,7 +1539,7 @@
     <span class="etiket">Osilatör</span><span class="deger">6/6</span>
   </div>
 </article>
-<article class="kart al" data-durum="al" data-ad="HALKB">
+<article class="kart al" data-durum="al" data-ad="HALKB" data-sira="119" data-skor="73.80" data-risk="18" data-pot="24.52" data-osc="6">
   <div class="ust">
     <span class="ad">HALKB</span>
     <span class="karar k-al">AL</span>
@@ -1536,7 +1551,7 @@
     <span class="etiket">Osilatör</span><span class="deger">6/6</span>
   </div>
 </article>
-<article class="kart al" data-durum="al" data-ad="ARMGD">
+<article class="kart al" data-durum="al" data-ad="ARMGD" data-sira="120" data-skor="73.24" data-risk="22" data-pot="11.13" data-osc="2">
   <div class="ust">
     <span class="ad">ARMGD</span>
     <span class="karar k-al">AL</span>
@@ -1548,7 +1563,7 @@
     <span class="etiket">Osilatör</span><span class="deger">2/6</span>
   </div>
 </article>
-<article class="kart al" data-durum="al" data-ad="VAKBN">
+<article class="kart al" data-durum="al" data-ad="VAKBN" data-sira="121" data-skor="72.62" data-risk="0" data-pot="10.06" data-osc="5">
   <div class="ust">
     <span class="ad">VAKBN</span>
     <span class="karar k-al">AL</span>
@@ -1560,7 +1575,7 @@
     <span class="etiket">Osilatör</span><span class="deger">5/6</span>
   </div>
 </article>
-<article class="kart al" data-durum="al" data-ad="BUCIM">
+<article class="kart al" data-durum="al" data-ad="BUCIM" data-sira="122" data-skor="72.31" data-risk="10" data-pot="11.83" data-osc="5">
   <div class="ust">
     <span class="ad">BUCIM</span>
     <span class="karar k-al">AL</span>
@@ -1572,7 +1587,7 @@
     <span class="etiket">Osilatör</span><span class="deger">5/6</span>
   </div>
 </article>
-<article class="kart al" data-durum="al" data-ad="RODRG">
+<article class="kart al" data-durum="al" data-ad="RODRG" data-sira="123" data-skor="71.93" data-risk="6" data-pot="20.25" data-osc="5">
   <div class="ust">
     <span class="ad">RODRG</span>
     <span class="karar k-al">AL</span>
@@ -1584,7 +1599,7 @@
     <span class="etiket">Osilatör</span><span class="deger">5/6</span>
   </div>
 </article>
-<article class="kart al" data-durum="al" data-ad="ENERY">
+<article class="kart al" data-durum="al" data-ad="ENERY" data-sira="124" data-skor="71.74" data-risk="0" data-pot="22.81" data-osc="5">
   <div class="ust">
     <span class="ad">ENERY</span>
     <span class="karar k-al">AL</span>
@@ -1596,7 +1611,7 @@
     <span class="etiket">Osilatör</span><span class="deger">5/6</span>
   </div>
 </article>
-<article class="kart al" data-durum="al" data-ad="FENER">
+<article class="kart al" data-durum="al" data-ad="FENER" data-sira="125" data-skor="71.36" data-risk="12" data-pot="25.07" data-osc="6">
   <div class="ust">
     <span class="ad">FENER</span>
     <span class="karar k-al">AL</span>
@@ -1608,7 +1623,7 @@
     <span class="etiket">Osilatör</span><span class="deger">6/6</span>
   </div>
 </article>
-<article class="kart al" data-durum="al" data-ad="KLYPV">
+<article class="kart al" data-durum="al" data-ad="KLYPV" data-sira="126" data-skor="70.75" data-risk="0" data-pot="15.51" data-osc="4">
   <div class="ust">
     <span class="ad">KLYPV</span>
     <span class="karar k-al">AL</span>
@@ -1620,7 +1635,7 @@
     <span class="etiket">Osilatör</span><span class="deger">4/6</span>
   </div>
 </article>
-<article class="kart al" data-durum="al" data-ad="EYGYO">
+<article class="kart al" data-durum="al" data-ad="EYGYO" data-sira="127" data-skor="70.34" data-risk="10" data-pot="5.84" data-osc="6">
   <div class="ust">
     <span class="ad">EYGYO</span>
     <span class="karar k-al">AL</span>
@@ -1632,7 +1647,7 @@
     <span class="etiket">Osilatör</span><span class="deger">6/6</span>
   </div>
 </article>
-<article class="kart al" data-durum="al" data-ad="DIRIT">
+<article class="kart al" data-durum="al" data-ad="DIRIT" data-sira="128" data-skor="70.24" data-risk="0" data-pot="13.47" data-osc="3">
   <div class="ust">
     <span class="ad">DIRIT</span>
     <span class="karar k-al">AL</span>
@@ -1644,7 +1659,7 @@
     <span class="etiket">Osilatör</span><span class="deger">3/6</span>
   </div>
 </article>
-<article class="kart al" data-durum="al" data-ad="OZKGY">
+<article class="kart al" data-durum="al" data-ad="OZKGY" data-sira="129" data-skor="69.68" data-risk="0" data-pot="12.45" data-osc="5">
   <div class="ust">
     <span class="ad">OZKGY</span>
     <span class="karar k-al">AL</span>
@@ -1656,7 +1671,7 @@
     <span class="etiket">Osilatör</span><span class="deger">5/6</span>
   </div>
 </article>
-<article class="kart al" data-durum="al" data-ad="EKGYO">
+<article class="kart al" data-durum="al" data-ad="EKGYO" data-sira="130" data-skor="68.86" data-risk="0" data-pot="9.06" data-osc="5">
   <div class="ust">
     <span class="ad">EKGYO</span>
     <span class="karar k-al">AL</span>
@@ -1668,7 +1683,7 @@
     <span class="etiket">Osilatör</span><span class="deger">5/6</span>
   </div>
 </article>
-<article class="kart al" data-durum="al" data-ad="GUNDG">
+<article class="kart al" data-durum="al" data-ad="GUNDG" data-sira="131" data-skor="68.86" data-risk="0" data-pot="49.83" data-osc="3">
   <div class="ust">
     <span class="ad">GUNDG</span>
     <span class="karar k-al">AL</span>
@@ -1680,7 +1695,7 @@
     <span class="etiket">Osilatör</span><span class="deger">3/6</span>
   </div>
 </article>
-<article class="kart al" data-durum="al" data-ad="YKBNK">
+<article class="kart al" data-durum="al" data-ad="YKBNK" data-sira="132" data-skor="66.53" data-risk="22" data-pot="19.91" data-osc="5">
   <div class="ust">
     <span class="ad">YKBNK</span>
     <span class="karar k-al">AL</span>
@@ -1692,7 +1707,7 @@
     <span class="etiket">Osilatör</span><span class="deger">5/6</span>
   </div>
 </article>
-<article class="kart al" data-durum="al" data-ad="MACKO">
+<article class="kart al" data-durum="al" data-ad="MACKO" data-sira="133" data-skor="66.45" data-risk="8" data-pot="15.64" data-osc="5">
   <div class="ust">
     <span class="ad">MACKO</span>
     <span class="karar k-al">AL</span>
@@ -1704,7 +1719,7 @@
     <span class="etiket">Osilatör</span><span class="deger">5/6</span>
   </div>
 </article>
-<article class="kart al" data-durum="al" data-ad="AKBNK">
+<article class="kart al" data-durum="al" data-ad="AKBNK" data-sira="134" data-skor="66.42" data-risk="0" data-pot="13.93" data-osc="5">
   <div class="ust">
     <span class="ad">AKBNK</span>
     <span class="karar k-al">AL</span>
@@ -1716,7 +1731,7 @@
     <span class="etiket">Osilatör</span><span class="deger">5/6</span>
   </div>
 </article>
-<article class="kart al" data-durum="al" data-ad="HRKET">
+<article class="kart al" data-durum="al" data-ad="HRKET" data-sira="135" data-skor="64.93" data-risk="0" data-pot="44.78" data-osc="3">
   <div class="ust">
     <span class="ad">HRKET</span>
     <span class="karar k-al">AL</span>
@@ -1728,7 +1743,7 @@
     <span class="etiket">Osilatör</span><span class="deger">3/6</span>
   </div>
 </article>
-<article class="kart al" data-durum="al" data-ad="GEDZA">
+<article class="kart al" data-durum="al" data-ad="GEDZA" data-sira="136" data-skor="64.36" data-risk="0" data-pot="32.96" data-osc="5">
   <div class="ust">
     <span class="ad">GEDZA</span>
     <span class="karar k-al">AL</span>
@@ -1740,7 +1755,7 @@
     <span class="etiket">Osilatör</span><span class="deger">5/6</span>
   </div>
 </article>
-<article class="kart al" data-durum="al" data-ad="SAHOL">
+<article class="kart al" data-durum="al" data-ad="SAHOL" data-sira="137" data-skor="64.13" data-risk="22" data-pot="10.19" data-osc="5">
   <div class="ust">
     <span class="ad">SAHOL</span>
     <span class="karar k-al">AL</span>
@@ -1752,7 +1767,7 @@
     <span class="etiket">Osilatör</span><span class="deger">5/6</span>
   </div>
 </article>
-<article class="kart al" data-durum="al" data-ad="GARAN">
+<article class="kart al" data-durum="al" data-ad="GARAN" data-sira="138" data-skor="64.04" data-risk="0" data-pot="9.10" data-osc="5">
   <div class="ust">
     <span class="ad">GARAN</span>
     <span class="karar k-al">AL</span>
@@ -1764,7 +1779,7 @@
     <span class="etiket">Osilatör</span><span class="deger">5/6</span>
   </div>
 </article>
-<article class="kart al" data-durum="al" data-ad="DENGE">
+<article class="kart al" data-durum="al" data-ad="DENGE" data-sira="139" data-skor="63.52" data-risk="0" data-pot="8.80" data-osc="5">
   <div class="ust">
     <span class="ad">DENGE</span>
     <span class="karar k-al">AL</span>
@@ -1776,7 +1791,7 @@
     <span class="etiket">Osilatör</span><span class="deger">5/6</span>
   </div>
 </article>
-<article class="kart al" data-durum="al" data-ad="YGGYO">
+<article class="kart al" data-durum="al" data-ad="YGGYO" data-sira="140" data-skor="63.33" data-risk="0" data-pot="19.80" data-osc="1">
   <div class="ust">
     <span class="ad">YGGYO</span>
     <span class="karar k-al">AL</span>
@@ -1788,7 +1803,7 @@
     <span class="etiket">Osilatör</span><span class="deger">1/6</span>
   </div>
 </article>
-<article class="kart al" data-durum="al" data-ad="KNFRT">
+<article class="kart al" data-durum="al" data-ad="KNFRT" data-sira="141" data-skor="62.52" data-risk="0" data-pot="34.41" data-osc="5">
   <div class="ust">
     <span class="ad">KNFRT</span>
     <span class="karar k-al">AL</span>
@@ -1800,7 +1815,7 @@
     <span class="etiket">Osilatör</span><span class="deger">5/6</span>
   </div>
 </article>
-<article class="kart al" data-durum="al" data-ad="EDATA">
+<article class="kart al" data-durum="al" data-ad="EDATA" data-sira="142" data-skor="62.32" data-risk="0" data-pot="14.64" data-osc="0">
   <div class="ust">
     <span class="ad">EDATA</span>
     <span class="karar k-al">AL</span>
@@ -1812,7 +1827,7 @@
     <span class="etiket">Osilatör</span><span class="deger">0/6</span>
   </div>
 </article>
-<article class="kart al" data-durum="al" data-ad="BASCM">
+<article class="kart al" data-durum="al" data-ad="BASCM" data-sira="143" data-skor="62.14" data-risk="10" data-pot="17.89" data-osc="5">
   <div class="ust">
     <span class="ad">BASCM</span>
     <span class="karar k-al">AL</span>
@@ -1824,7 +1839,7 @@
     <span class="etiket">Osilatör</span><span class="deger">5/6</span>
   </div>
 </article>
-<article class="kart izle" data-durum="izle" data-ad="BAHKM">
+<article class="kart izle" data-durum="izle" data-ad="BAHKM" data-sira="144" data-skor="96.89" data-risk="45" data-pot="0.00" data-osc="6">
   <div class="ust">
     <span class="ad">BAHKM</span>
     <span class="karar k-izle">İZLE</span>
@@ -1836,7 +1851,7 @@
     <span class="etiket">Osilatör</span><span class="deger">6/6</span>
   </div>
 </article>
-<article class="kart izle" data-durum="izle" data-ad="PEKGY">
+<article class="kart izle" data-durum="izle" data-ad="PEKGY" data-sira="145" data-skor="95.72" data-risk="60" data-pot="2.24" data-osc="6">
   <div class="ust">
     <span class="ad">PEKGY</span>
     <span class="karar k-izle">İZLE</span>
@@ -1848,7 +1863,7 @@
     <span class="etiket">Osilatör</span><span class="deger">6/6</span>
   </div>
 </article>
-<article class="kart izle" data-durum="izle" data-ad="BRSAN">
+<article class="kart izle" data-durum="izle" data-ad="BRSAN" data-sira="146" data-skor="94.86" data-risk="50" data-pot="3.76" data-osc="4">
   <div class="ust">
     <span class="ad">BRSAN</span>
     <span class="karar k-izle">İZLE</span>
@@ -1860,7 +1875,7 @@
     <span class="etiket">Osilatör</span><span class="deger">4/6</span>
   </div>
 </article>
-<article class="kart izle" data-durum="izle" data-ad="KCAER">
+<article class="kart izle" data-durum="izle" data-ad="KCAER" data-sira="147" data-skor="94.09" data-risk="32" data-pot="3.68" data-osc="4">
   <div class="ust">
     <span class="ad">KCAER</span>
     <span class="karar k-izle">İZLE</span>
@@ -1872,7 +1887,7 @@
     <span class="etiket">Osilatör</span><span class="deger">4/6</span>
   </div>
 </article>
-<article class="kart izle" data-durum="izle" data-ad="AGESA">
+<article class="kart izle" data-durum="izle" data-ad="AGESA" data-sira="148" data-skor="94.03" data-risk="50" data-pot="1.83" data-osc="5">
   <div class="ust">
     <span class="ad">AGESA</span>
     <span class="karar k-izle">İZLE</span>
@@ -1884,7 +1899,7 @@
     <span class="etiket">Osilatör</span><span class="deger">5/6</span>
   </div>
 </article>
-<article class="kart izle" data-durum="izle" data-ad="ANELE">
+<article class="kart izle" data-durum="izle" data-ad="ANELE" data-sira="149" data-skor="93.80" data-risk="67" data-pot="0.83" data-osc="6">
   <div class="ust">
     <span class="ad">ANELE</span>
     <span class="karar k-izle">İZLE</span>
@@ -1896,7 +1911,7 @@
     <span class="etiket">Osilatör</span><span class="deger">6/6</span>
   </div>
 </article>
-<article class="kart izle" data-durum="izle" data-ad="RGYAS">
+<article class="kart izle" data-durum="izle" data-ad="RGYAS" data-sira="150" data-skor="91.89" data-risk="40" data-pot="2.38" data-osc="5">
   <div class="ust">
     <span class="ad">RGYAS</span>
     <span class="karar k-izle">İZLE</span>
@@ -1908,7 +1923,7 @@
     <span class="etiket">Osilatör</span><span class="deger">5/6</span>
   </div>
 </article>
-<article class="kart izle" data-durum="izle" data-ad="EPLAS">
+<article class="kart izle" data-durum="izle" data-ad="EPLAS" data-sira="151" data-skor="91.49" data-risk="40" data-pot="5.53" data-osc="6">
   <div class="ust">
     <span class="ad">EPLAS</span>
     <span class="karar k-izle">İZLE</span>
@@ -1920,7 +1935,7 @@
     <span class="etiket">Osilatör</span><span class="deger">6/6</span>
   </div>
 </article>
-<article class="kart izle" data-durum="izle" data-ad="ALBRK">
+<article class="kart izle" data-durum="izle" data-ad="ALBRK" data-sira="152" data-skor="89.51" data-risk="50" data-pot="3.97" data-osc="6">
   <div class="ust">
     <span class="ad">ALBRK</span>
     <span class="karar k-izle">İZLE</span>
@@ -1932,7 +1947,7 @@
     <span class="etiket">Osilatör</span><span class="deger">6/6</span>
   </div>
 </article>
-<article class="kart izle" data-durum="izle" data-ad="ISGYO">
+<article class="kart izle" data-durum="izle" data-ad="ISGYO" data-sira="153" data-skor="89.19" data-risk="40" data-pot="3.91" data-osc="6">
   <div class="ust">
     <span class="ad">ISGYO</span>
     <span class="karar k-izle">İZLE</span>
@@ -1944,7 +1959,7 @@
     <span class="etiket">Osilatör</span><span class="deger">6/6</span>
   </div>
 </article>
-<article class="kart izle" data-durum="izle" data-ad="BIGEN">
+<article class="kart izle" data-durum="izle" data-ad="BIGEN" data-sira="154" data-skor="86.24" data-risk="57" data-pot="0.00" data-osc="6">
   <div class="ust">
     <span class="ad">BIGEN</span>
     <span class="karar k-izle">İZLE</span>
@@ -1956,7 +1971,7 @@
     <span class="etiket">Osilatör</span><span class="deger">6/6</span>
   </div>
 </article>
-<article class="kart izle" data-durum="izle" data-ad="IZMDC">
+<article class="kart izle" data-durum="izle" data-ad="IZMDC" data-sira="155" data-skor="85.60" data-risk="48" data-pot="5.17" data-osc="5">
   <div class="ust">
     <span class="ad">IZMDC</span>
     <span class="karar k-izle">İZLE</span>
@@ -1968,7 +1983,7 @@
     <span class="etiket">Osilatör</span><span class="deger">5/6</span>
   </div>
 </article>
-<article class="kart izle" data-durum="izle" data-ad="ENJSA">
+<article class="kart izle" data-durum="izle" data-ad="ENJSA" data-sira="156" data-skor="85.00" data-risk="40" data-pot="2.98" data-osc="5">
   <div class="ust">
     <span class="ad">ENJSA</span>
     <span class="karar k-izle">İZLE</span>
@@ -1980,7 +1995,7 @@
     <span class="etiket">Osilatör</span><span class="deger">5/6</span>
   </div>
 </article>
-<article class="kart izle" data-durum="izle" data-ad="ALKLC">
+<article class="kart izle" data-durum="izle" data-ad="ALKLC" data-sira="157" data-skor="84.73" data-risk="42" data-pot="4.22" data-osc="2">
   <div class="ust">
     <span class="ad">ALKLC</span>
     <span class="karar k-izle">İZLE</span>
@@ -1992,7 +2007,7 @@
     <span class="etiket">Osilatör</span><span class="deger">2/6</span>
   </div>
 </article>
-<article class="kart izle" data-durum="izle" data-ad="AYDEM">
+<article class="kart izle" data-durum="izle" data-ad="AYDEM" data-sira="158" data-skor="84.50" data-risk="40" data-pot="8.00" data-osc="5">
   <div class="ust">
     <span class="ad">AYDEM</span>
     <span class="karar k-izle">İZLE</span>
@@ -2004,7 +2019,7 @@
     <span class="etiket">Osilatör</span><span class="deger">5/6</span>
   </div>
 </article>
-<article class="kart izle" data-durum="izle" data-ad="KGYO">
+<article class="kart izle" data-durum="izle" data-ad="KGYO" data-sira="159" data-skor="83.65" data-risk="48" data-pot="8.28" data-osc="3">
   <div class="ust">
     <span class="ad">KGYO</span>
     <span class="karar k-izle">İZLE</span>
@@ -2016,7 +2031,7 @@
     <span class="etiket">Osilatör</span><span class="deger">3/6</span>
   </div>
 </article>
-<article class="kart izle" data-durum="izle" data-ad="TRHOL">
+<article class="kart izle" data-durum="izle" data-ad="TRHOL" data-sira="160" data-skor="83.40" data-risk="45" data-pot="0.00" data-osc="5">
   <div class="ust">
     <span class="ad">TRHOL</span>
     <span class="karar k-izle">İZLE</span>
@@ -2028,7 +2043,7 @@
     <span class="etiket">Osilatör</span><span class="deger">5/6</span>
   </div>
 </article>
-<article class="kart izle" data-durum="izle" data-ad="OZATD">
+<article class="kart izle" data-durum="izle" data-ad="OZATD" data-sira="161" data-skor="78.47" data-risk="45" data-pot="0.31" data-osc="5">
   <div class="ust">
     <span class="ad">OZATD</span>
     <span class="karar k-izle">İZLE</span>
@@ -2040,7 +2055,7 @@
     <span class="etiket">Osilatör</span><span class="deger">5/6</span>
   </div>
 </article>
-<article class="kart izle" data-durum="izle" data-ad="RALYH">
+<article class="kart izle" data-durum="izle" data-ad="RALYH" data-sira="162" data-skor="78.46" data-risk="32" data-pot="7.35" data-osc="3">
   <div class="ust">
     <span class="ad">RALYH</span>
     <span class="karar k-izle">İZLE</span>
@@ -2052,7 +2067,7 @@
     <span class="etiket">Osilatör</span><span class="deger">3/6</span>
   </div>
 </article>
-<article class="kart izle" data-durum="izle" data-ad="KOCMT">
+<article class="kart izle" data-durum="izle" data-ad="KOCMT" data-sira="163" data-skor="76.90" data-risk="32" data-pot="23.60" data-osc="4">
   <div class="ust">
     <span class="ad">KOCMT</span>
     <span class="karar k-izle">İZLE</span>
@@ -2064,7 +2079,7 @@
     <span class="etiket">Osilatör</span><span class="deger">4/6</span>
   </div>
 </article>
-<article class="kart izle" data-durum="izle" data-ad="SONME">
+<article class="kart izle" data-durum="izle" data-ad="SONME" data-sira="164" data-skor="76.19" data-risk="40" data-pot="14.62" data-osc="4">
   <div class="ust">
     <span class="ad">SONME</span>
     <span class="karar k-izle">İZLE</span>
@@ -2076,7 +2091,7 @@
     <span class="etiket">Osilatör</span><span class="deger">4/6</span>
   </div>
 </article>
-<article class="kart izle" data-durum="izle" data-ad="ATSYH">
+<article class="kart izle" data-durum="izle" data-ad="ATSYH" data-sira="165" data-skor="75.46" data-risk="32" data-pot="8.33" data-osc="1">
   <div class="ust">
     <span class="ad">ATSYH</span>
     <span class="karar k-izle">İZLE</span>
@@ -2088,7 +2103,7 @@
     <span class="etiket">Osilatör</span><span class="deger">1/6</span>
   </div>
 </article>
-<article class="kart izle" data-durum="izle" data-ad="EFOR">
+<article class="kart izle" data-durum="izle" data-ad="EFOR" data-sira="166" data-skor="71.22" data-risk="46" data-pot="14.87" data-osc="1">
   <div class="ust">
     <span class="ad">EFOR</span>
     <span class="karar k-izle">İZLE</span>
@@ -2100,7 +2115,7 @@
     <span class="etiket">Osilatör</span><span class="deger">1/6</span>
   </div>
 </article>
-<article class="kart izle" data-durum="izle" data-ad="SEGMN">
+<article class="kart izle" data-durum="izle" data-ad="SEGMN" data-sira="167" data-skor="66.94" data-risk="0" data-pot="17.05" data-osc="1">
   <div class="ust">
     <span class="ad">SEGMN</span>
     <span class="karar k-izle">İZLE</span>
@@ -2112,7 +2127,7 @@
     <span class="etiket">Osilatör</span><span class="deger">1/6</span>
   </div>
 </article>
-<article class="kart izle" data-durum="izle" data-ad="AVGYO">
+<article class="kart izle" data-durum="izle" data-ad="AVGYO" data-sira="168" data-skor="65.90" data-risk="0" data-pot="25.07" data-osc="1">
   <div class="ust">
     <span class="ad">AVGYO</span>
     <span class="karar k-izle">İZLE</span>
@@ -2124,7 +2139,7 @@
     <span class="etiket">Osilatör</span><span class="deger">1/6</span>
   </div>
 </article>
-<article class="kart izle" data-durum="izle" data-ad="DGNMO">
+<article class="kart izle" data-durum="izle" data-ad="DGNMO" data-sira="169" data-skor="65.78" data-risk="10" data-pot="26.05" data-osc="0">
   <div class="ust">
     <span class="ad">DGNMO</span>
     <span class="karar k-izle">İZLE</span>
@@ -2136,7 +2151,7 @@
     <span class="etiket">Osilatör</span><span class="deger">0/6</span>
   </div>
 </article>
-<article class="kart izle" data-durum="izle" data-ad="KBORU">
+<article class="kart izle" data-durum="izle" data-ad="KBORU" data-sira="170" data-skor="65.06" data-risk="0" data-pot="18.86" data-osc="6">
   <div class="ust">
     <span class="ad">KBORU</span>
     <span class="karar k-izle">İZLE</span>
@@ -2148,7 +2163,7 @@
     <span class="etiket">Osilatör</span><span class="deger">6/6</span>
   </div>
 </article>
-<article class="kart izle" data-durum="izle" data-ad="PAGYO">
+<article class="kart izle" data-durum="izle" data-ad="PAGYO" data-sira="171" data-skor="64.87" data-risk="0" data-pot="16.82" data-osc="1">
   <div class="ust">
     <span class="ad">PAGYO</span>
     <span class="karar k-izle">İZLE</span>
@@ -2160,7 +2175,7 @@
     <span class="etiket">Osilatör</span><span class="deger">1/6</span>
   </div>
 </article>
-<article class="kart izle" data-durum="izle" data-ad="ZRGYO">
+<article class="kart izle" data-durum="izle" data-ad="ZRGYO" data-sira="172" data-skor="64.84" data-risk="46" data-pot="4.00" data-osc="3">
   <div class="ust">
     <span class="ad">ZRGYO</span>
     <span class="karar k-izle">İZLE</span>
@@ -2172,7 +2187,7 @@
     <span class="etiket">Osilatör</span><span class="deger">3/6</span>
   </div>
 </article>
-<article class="kart izle" data-durum="izle" data-ad="SKYMD">
+<article class="kart izle" data-durum="izle" data-ad="SKYMD" data-sira="173" data-skor="62.31" data-risk="10" data-pot="11.97" data-osc="1">
   <div class="ust">
     <span class="ad">SKYMD</span>
     <span class="karar k-izle">İZLE</span>
@@ -2184,7 +2199,7 @@
     <span class="etiket">Osilatör</span><span class="deger">1/6</span>
   </div>
 </article>
-<article class="kart izle" data-durum="izle" data-ad="UFUK">
+<article class="kart izle" data-durum="izle" data-ad="UFUK" data-sira="174" data-skor="61.60" data-risk="0" data-pot="16.37" data-osc="0">
   <div class="ust">
     <span class="ad">UFUK</span>
     <span class="karar k-izle">İZLE</span>
@@ -2196,7 +2211,7 @@
     <span class="etiket">Osilatör</span><span class="deger">0/6</span>
   </div>
 </article>
-<article class="kart izle" data-durum="izle" data-ad="ESCOM">
+<article class="kart izle" data-durum="izle" data-ad="ESCOM" data-sira="175" data-skor="60.17" data-risk="46" data-pot="20.35" data-osc="0">
   <div class="ust">
     <span class="ad">ESCOM</span>
     <span class="karar k-izle">İZLE</span>
@@ -2208,7 +2223,7 @@
     <span class="etiket">Osilatör</span><span class="deger">0/6</span>
   </div>
 </article>
-<article class="kart izle" data-durum="izle" data-ad="BIENY">
+<article class="kart izle" data-durum="izle" data-ad="BIENY" data-sira="176" data-skor="59.34" data-risk="0" data-pot="16.87" data-osc="6">
   <div class="ust">
     <span class="ad">BIENY</span>
     <span class="karar k-izle">İZLE</span>
@@ -2220,7 +2235,7 @@
     <span class="etiket">Osilatör</span><span class="deger">6/6</span>
   </div>
 </article>
-<article class="kart izle" data-durum="izle" data-ad="CVKMD">
+<article class="kart izle" data-durum="izle" data-ad="CVKMD" data-sira="177" data-skor="58.97" data-risk="0" data-pot="15.30" data-osc="0">
   <div class="ust">
     <span class="ad">CVKMD</span>
     <span class="karar k-izle">İZLE</span>
@@ -2232,7 +2247,7 @@
     <span class="etiket">Osilatör</span><span class="deger">0/6</span>
   </div>
 </article>
-<article class="kart izle" data-durum="izle" data-ad="GEREL">
+<article class="kart izle" data-durum="izle" data-ad="GEREL" data-sira="178" data-skor="58.91" data-risk="28" data-pot="20.51" data-osc="1">
   <div class="ust">
     <span class="ad">GEREL</span>
     <span class="karar k-izle">İZLE</span>
@@ -2244,7 +2259,7 @@
     <span class="etiket">Osilatör</span><span class="deger">1/6</span>
   </div>
 </article>
-<article class="kart izle" data-durum="izle" data-ad="GLRYH">
+<article class="kart izle" data-durum="izle" data-ad="GLRYH" data-sira="179" data-skor="58.83" data-risk="8" data-pot="6.25" data-osc="6">
   <div class="ust">
     <span class="ad">GLRYH</span>
     <span class="karar k-izle">İZLE</span>
@@ -2256,7 +2271,7 @@
     <span class="etiket">Osilatör</span><span class="deger">6/6</span>
   </div>
 </article>
-<article class="kart izle" data-durum="izle" data-ad="MARMR">
+<article class="kart izle" data-durum="izle" data-ad="MARMR" data-sira="180" data-skor="58.72" data-risk="0" data-pot="16.10" data-osc="2">
   <div class="ust">
     <span class="ad">MARMR</span>
     <span class="karar k-izle">İZLE</span>
@@ -2268,7 +2283,7 @@
     <span class="etiket">Osilatör</span><span class="deger">2/6</span>
   </div>
 </article>
-<article class="kart izle" data-durum="izle" data-ad="PETUN">
+<article class="kart izle" data-durum="izle" data-ad="PETUN" data-sira="181" data-skor="58.62" data-risk="20" data-pot="11.99" data-osc="5">
   <div class="ust">
     <span class="ad">PETUN</span>
     <span class="karar k-izle">İZLE</span>
@@ -2280,7 +2295,7 @@
     <span class="etiket">Osilatör</span><span class="deger">5/6</span>
   </div>
 </article>
-<article class="kart izle" data-durum="izle" data-ad="SARKY">
+<article class="kart izle" data-durum="izle" data-ad="SARKY" data-sira="182" data-skor="58.50" data-risk="8" data-pot="25.21" data-osc="5">
   <div class="ust">
     <span class="ad">SARKY</span>
     <span class="karar k-izle">İZLE</span>
@@ -2292,7 +2307,7 @@
     <span class="etiket">Osilatör</span><span class="deger">5/6</span>
   </div>
 </article>
-<article class="kart izle" data-durum="izle" data-ad="PSGYO">
+<article class="kart izle" data-durum="izle" data-ad="PSGYO" data-sira="183" data-skor="58.42" data-risk="10" data-pot="28.61" data-osc="1">
   <div class="ust">
     <span class="ad">PSGYO</span>
     <span class="karar k-izle">İZLE</span>
@@ -2304,7 +2319,7 @@
     <span class="etiket">Osilatör</span><span class="deger">1/6</span>
   </div>
 </article>
-<article class="kart izle" data-durum="izle" data-ad="DNISI">
+<article class="kart izle" data-durum="izle" data-ad="DNISI" data-sira="184" data-skor="58.08" data-risk="0" data-pot="17.22" data-osc="5">
   <div class="ust">
     <span class="ad">DNISI</span>
     <span class="karar k-izle">İZLE</span>
@@ -2316,7 +2331,7 @@
     <span class="etiket">Osilatör</span><span class="deger">5/6</span>
   </div>
 </article>
-<article class="kart izle" data-durum="izle" data-ad="TAVHL">
+<article class="kart izle" data-durum="izle" data-ad="TAVHL" data-sira="185" data-skor="57.83" data-risk="0" data-pot="9.63" data-osc="5">
   <div class="ust">
     <span class="ad">TAVHL</span>
     <span class="karar k-izle">İZLE</span>
@@ -2328,7 +2343,7 @@
     <span class="etiket">Osilatör</span><span class="deger">5/6</span>
   </div>
 </article>
-<article class="kart izle" data-durum="izle" data-ad="KAYSE">
+<article class="kart izle" data-durum="izle" data-ad="KAYSE" data-sira="186" data-skor="57.62" data-risk="0" data-pot="13.10" data-osc="5">
   <div class="ust">
     <span class="ad">KAYSE</span>
     <span class="karar k-izle">İZLE</span>
@@ -2340,7 +2355,7 @@
     <span class="etiket">Osilatör</span><span class="deger">5/6</span>
   </div>
 </article>
-<article class="kart izle" data-durum="izle" data-ad="CEMAS">
+<article class="kart izle" data-durum="izle" data-ad="CEMAS" data-sira="187" data-skor="57.46" data-risk="12" data-pot="17.67" data-osc="4">
   <div class="ust">
     <span class="ad">CEMAS</span>
     <span class="karar k-izle">İZLE</span>
@@ -2352,7 +2367,7 @@
     <span class="etiket">Osilatör</span><span class="deger">4/6</span>
   </div>
 </article>
-<article class="kart izle" data-durum="izle" data-ad="OZYSR">
+<article class="kart izle" data-durum="izle" data-ad="OZYSR" data-sira="188" data-skor="57.41" data-risk="0" data-pot="13.50" data-osc="0">
   <div class="ust">
     <span class="ad">OZYSR</span>
     <span class="karar k-izle">İZLE</span>
@@ -2364,7 +2379,7 @@
     <span class="etiket">Osilatör</span><span class="deger">0/6</span>
   </div>
 </article>
-<article class="kart izle" data-durum="izle" data-ad="COSMO">
+<article class="kart izle" data-durum="izle" data-ad="COSMO" data-sira="189" data-skor="57.34" data-risk="0" data-pot="28.87" data-osc="5">
   <div class="ust">
     <span class="ad">COSMO</span>
     <span class="karar k-izle">İZLE</span>
@@ -2376,7 +2391,7 @@
     <span class="etiket">Osilatör</span><span class="deger">5/6</span>
   </div>
 </article>
-<article class="kart izle" data-durum="izle" data-ad="ISFIN">
+<article class="kart izle" data-durum="izle" data-ad="ISFIN" data-sira="190" data-skor="57.23" data-risk="16" data-pot="6.85" data-osc="1">
   <div class="ust">
     <span class="ad">ISFIN</span>
     <span class="karar k-izle">İZLE</span>
@@ -2388,7 +2403,7 @@
     <span class="etiket">Osilatör</span><span class="deger">1/6</span>
   </div>
 </article>
-<article class="kart izle" data-durum="izle" data-ad="NIBAS">
+<article class="kart izle" data-durum="izle" data-ad="NIBAS" data-sira="191" data-skor="55.99" data-risk="22" data-pot="11.38" data-osc="5">
   <div class="ust">
     <span class="ad">NIBAS</span>
     <span class="karar k-izle">İZLE</span>
@@ -2400,7 +2415,7 @@
     <span class="etiket">Osilatör</span><span class="deger">5/6</span>
   </div>
 </article>
-<article class="kart izle" data-durum="izle" data-ad="BYDNR">
+<article class="kart izle" data-durum="izle" data-ad="BYDNR" data-sira="192" data-skor="55.85" data-risk="22" data-pot="21.48" data-osc="3">
   <div class="ust">
     <span class="ad">BYDNR</span>
     <span class="karar k-izle">İZLE</span>
@@ -2412,7 +2427,7 @@
     <span class="etiket">Osilatör</span><span class="deger">3/6</span>
   </div>
 </article>
-<article class="kart izle" data-durum="izle" data-ad="ICBCT">
+<article class="kart izle" data-durum="izle" data-ad="ICBCT" data-sira="193" data-skor="55.53" data-risk="0" data-pot="23.79" data-osc="1">
   <div class="ust">
     <span class="ad">ICBCT</span>
     <span class="karar k-izle">İZLE</span>
@@ -2424,7 +2439,7 @@
     <span class="etiket">Osilatör</span><span class="deger">1/6</span>
   </div>
 </article>
-<article class="kart izle" data-durum="izle" data-ad="ISBIR">
+<article class="kart izle" data-durum="izle" data-ad="ISBIR" data-sira="194" data-skor="54.58" data-risk="0" data-pot="6.61" data-osc="3">
   <div class="ust">
     <span class="ad">ISBIR</span>
     <span class="karar k-izle">İZLE</span>
@@ -2436,7 +2451,7 @@
     <span class="etiket">Osilatör</span><span class="deger">3/6</span>
   </div>
 </article>
-<article class="kart izle" data-durum="izle" data-ad="FMIZP">
+<article class="kart izle" data-durum="izle" data-ad="FMIZP" data-sira="195" data-skor="53.58" data-risk="8" data-pot="10.46" data-osc="4">
   <div class="ust">
     <span class="ad">FMIZP</span>
     <span class="karar k-izle">İZLE</span>
@@ -2448,7 +2463,7 @@
     <span class="etiket">Osilatör</span><span class="deger">4/6</span>
   </div>
 </article>
-<article class="kart izle" data-durum="izle" data-ad="BAGFS">
+<article class="kart izle" data-durum="izle" data-ad="BAGFS" data-sira="196" data-skor="53.58" data-risk="32" data-pot="8.82" data-osc="5">
   <div class="ust">
     <span class="ad">BAGFS</span>
     <span class="karar k-izle">İZLE</span>
@@ -2460,7 +2475,7 @@
     <span class="etiket">Osilatör</span><span class="deger">5/6</span>
   </div>
 </article>
-<article class="kart izle" data-durum="izle" data-ad="DSTKF">
+<article class="kart izle" data-durum="izle" data-ad="DSTKF" data-sira="197" data-skor="53.49" data-risk="0" data-pot="81.40" data-osc="5">
   <div class="ust">
     <span class="ad">DSTKF</span>
     <span class="karar k-izle">İZLE</span>
@@ -2472,7 +2487,7 @@
     <span class="etiket">Osilatör</span><span class="deger">5/6</span>
   </div>
 </article>
-<article class="kart izle" data-durum="izle" data-ad="DERIM">
+<article class="kart izle" data-durum="izle" data-ad="DERIM" data-sira="198" data-skor="53.27" data-risk="0" data-pot="20.81" data-osc="4">
   <div class="ust">
     <span class="ad">DERIM</span>
     <span class="karar k-izle">İZLE</span>
@@ -2484,7 +2499,7 @@
     <span class="etiket">Osilatör</span><span class="deger">4/6</span>
   </div>
 </article>
-<article class="kart izle" data-durum="izle" data-ad="BRKVY">
+<article class="kart izle" data-durum="izle" data-ad="BRKVY" data-sira="199" data-skor="53.26" data-risk="0" data-pot="28.19" data-osc="5">
   <div class="ust">
     <span class="ad">BRKVY</span>
     <span class="karar k-izle">İZLE</span>
@@ -2496,7 +2511,7 @@
     <span class="etiket">Osilatör</span><span class="deger">5/6</span>
   </div>
 </article>
-<article class="kart izle" data-durum="izle" data-ad="BORSK">
+<article class="kart izle" data-durum="izle" data-ad="BORSK" data-sira="200" data-skor="53.02" data-risk="0" data-pot="7.32" data-osc="4">
   <div class="ust">
     <span class="ad">BORSK</span>
     <span class="karar k-izle">İZLE</span>
@@ -2508,7 +2523,7 @@
     <span class="etiket">Osilatör</span><span class="deger">4/6</span>
   </div>
 </article>
-<article class="kart izle" data-durum="izle" data-ad="TTRAK">
+<article class="kart izle" data-durum="izle" data-ad="TTRAK" data-sira="201" data-skor="52.61" data-risk="0" data-pot="6.39" data-osc="5">
   <div class="ust">
     <span class="ad">TTRAK</span>
     <span class="karar k-izle">İZLE</span>
@@ -2520,7 +2535,7 @@
     <span class="etiket">Osilatör</span><span class="deger">5/6</span>
   </div>
 </article>
-<article class="kart izle" data-durum="izle" data-ad="SEKUR">
+<article class="kart izle" data-durum="izle" data-ad="SEKUR" data-sira="202" data-skor="52.28" data-risk="32" data-pot="31.19" data-osc="0">
   <div class="ust">
     <span class="ad">SEKUR</span>
     <span class="karar k-izle">İZLE</span>
@@ -2532,7 +2547,7 @@
     <span class="etiket">Osilatör</span><span class="deger">0/6</span>
   </div>
 </article>
-<article class="kart izle" data-durum="izle" data-ad="TSGYO">
+<article class="kart izle" data-durum="izle" data-ad="TSGYO" data-sira="203" data-skor="51.87" data-risk="0" data-pot="19.41" data-osc="6">
   <div class="ust">
     <span class="ad">TSGYO</span>
     <span class="karar k-izle">İZLE</span>
@@ -2544,7 +2559,7 @@
     <span class="etiket">Osilatör</span><span class="deger">6/6</span>
   </div>
 </article>
-<article class="kart izle" data-durum="izle" data-ad="SNICA">
+<article class="kart izle" data-durum="izle" data-ad="SNICA" data-sira="204" data-skor="51.47" data-risk="0" data-pot="36.90" data-osc="6">
   <div class="ust">
     <span class="ad">SNICA</span>
     <span class="karar k-izle">İZLE</span>
@@ -2556,7 +2571,7 @@
     <span class="etiket">Osilatör</span><span class="deger">6/6</span>
   </div>
 </article>
-<article class="kart izle" data-durum="izle" data-ad="AYES">
+<article class="kart izle" data-durum="izle" data-ad="AYES" data-sira="205" data-skor="51.02" data-risk="0" data-pot="20.03" data-osc="3">
   <div class="ust">
     <span class="ad">AYES</span>
     <span class="karar k-izle">İZLE</span>
@@ -2568,7 +2583,7 @@
     <span class="etiket">Osilatör</span><span class="deger">3/6</span>
   </div>
 </article>
-<article class="kart izle" data-durum="izle" data-ad="BNTAS">
+<article class="kart izle" data-durum="izle" data-ad="BNTAS" data-sira="206" data-skor="50.97" data-risk="0" data-pot="10.17" data-osc="4">
   <div class="ust">
     <span class="ad">BNTAS</span>
     <span class="karar k-izle">İZLE</span>
@@ -2580,7 +2595,7 @@
     <span class="etiket">Osilatör</span><span class="deger">4/6</span>
   </div>
 </article>
-<article class="kart izle" data-durum="izle" data-ad="PLTUR">
+<article class="kart izle" data-durum="izle" data-ad="PLTUR" data-sira="207" data-skor="50.68" data-risk="6" data-pot="16.68" data-osc="4">
   <div class="ust">
     <span class="ad">PLTUR</span>
     <span class="karar k-izle">İZLE</span>
@@ -2624,6 +2639,26 @@
     });
   });
   arama.addEventListener('input', uygula);
+
+  // --- siralama ---
+  var kapsayici = document.getElementById('liste');
+  var sirasec = document.getElementById('sirasec');
+  var sayi = function(k, ad){ return parseFloat(k.dataset[ad]); };
+  function siralamayiUygula(){
+    var t = sirasec.value, kopya = kartlar.slice();
+    kopya.sort(function(a, b){
+      if (t === 'skor') return sayi(b,'skor') - sayi(a,'skor');
+      if (t === 'risk') return sayi(a,'risk') - sayi(b,'risk') || sayi(b,'skor') - sayi(a,'skor');
+      if (t === 'pot')  return sayi(b,'pot')  - sayi(a,'pot')  || sayi(b,'skor') - sayi(a,'skor');
+      if (t === 'osc')  return sayi(b,'osc')  - sayi(a,'osc')  || sayi(b,'skor') - sayi(a,'skor');
+      return sayi(a,'sira') - sayi(b,'sira');
+    });
+    var parca = document.createDocumentFragment();
+    kopya.forEach(function(k){ parca.appendChild(k); });
+    kapsayici.appendChild(parca);
+  }
+  sirasec.addEventListener('change', siralamayiUygula);
+
   uygula();
 })();
 </script>
