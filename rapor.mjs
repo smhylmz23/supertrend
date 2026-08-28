@@ -111,9 +111,10 @@ export function htmlRapor(satirlar, stSinyalleri, tarih, gunIci) {
 </article>`;
   }).join('\n');
 
-  const stKutu = stSinyalleri && stSinyalleri.length
-    ? `<div class="st-kutu"><h2>Supertrend bugün AL verdi</h2><p>${stSinyalleri.map((s) => `<span>${kacis(s)}</span>`).join('')}</p></div>`
-    : '';
+  // Bugun ST AL veren ama listeye giremeyen hisseler (200 gunluk gecmisi yetersiz olanlar).
+  // Ust kutu kaldirildi; bu bilgi dipnotta duruyor ki gozden kacmasinlar.
+  const listedekiler = new Set(liste.map((x) => x.ad));
+  const stListeDisi = Array.from(stKume).filter((s) => !listedekiler.has(s));
 
   return `<!doctype html>
 <html lang="tr">
@@ -148,10 +149,6 @@ export function htmlRapor(satirlar, stSinyalleri, tarih, gunIci) {
   .uyari{background:var(--amber-bg);border:1px solid var(--amber);color:var(--amber);
     border-radius:10px;padding:11px 13px;margin-bottom:16px;font-size:13px;line-height:1.55}
   .uyari b{display:block;font-size:14px;margin-bottom:2px}
-  .st-kutu{background:var(--yesil-bg);border:1px solid var(--yesil);border-radius:10px;padding:12px;margin-bottom:16px}
-  .st-kutu h2{margin:0 0 8px;font-size:14px;color:var(--yesil)}
-  .st-kutu p{margin:0;display:flex;flex-wrap:wrap;gap:6px}
-  .st-kutu span{background:var(--kart);border-radius:6px;padding:2px 8px;font-weight:600;font-size:13px}
   .suzgec{display:flex;gap:8px;margin-bottom:12px;flex-wrap:wrap;position:sticky;top:0;
     background:var(--zemin);padding:8px 0;z-index:2}
   .suzgec button{border:1px solid var(--cizgi);background:var(--kart);color:var(--yazi);
@@ -230,8 +227,6 @@ ${gunIci ? `<div class="uyari"><b>Borsa açık — bu rakamlar geçici.</b>
   <div><b>${liste.length}</b><span>toplam</span></div>
 </div>
 
-${stKutu}
-
 <div class="suzgec">
   <button data-g="guclu" aria-pressed="true">GÜÇLÜ AL <b>${gucluAdet}</b></button>
   <button data-g="al" aria-pressed="true">AL <b>${alAdet}</b></button>
@@ -260,6 +255,7 @@ ${kartlar}
 </main>
 
 <footer>
+  ${stListeDisi.length ? `Bugün Supertrend AL veren <b>${stListeDisi.map(kacis).join(', ')}</b> bu listede yok — 200 günlük geçmişi yetersiz.<br>` : ''}
   Bu sayfa her iş günü 18:45'te kendiliğinden yenilenir.<br>
   Teknik tarama sonucudur, yatırım tavsiyesi değildir.
 </footer>
