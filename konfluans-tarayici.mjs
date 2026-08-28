@@ -499,6 +499,12 @@ if (CFG.csv || CFG.rapor) {
   const trBugun = iki(trSimdi.getUTCDate()) + '.' + iki(trSimdi.getUTCMonth() + 1) + '.' + trSimdi.getUTCFullYear();
   const gunIci = gun === trBugun && trSimdi.getUTCHours() < 18;
   if (gunIci) yaz('UYARI: Borsa acik, son mum kapanmadi — rakamlar gecici.\n');
+  // Sayfanin girdisini sakla: tasarim degisikliginde 90 saniyelik taramayi
+  // tekrarlamadan `node yeniden-ciz.mjs` ile index.html yeniden uretilebilsin.
+  try {
+    fs.writeFileSync(path.join(SONUC, 'veri.json'),
+      JSON.stringify({ satirlar, stSinyal, gun, gunIci }), 'utf8');
+  } catch (e) {}
   fs.writeFileSync(path.join(KLASOR, 'index.html'), htmlRapor(satirlar, stSinyal, gun, gunIci), 'utf8');
   yaz('Sade liste  : sonuclar\\firsatlar_' + bugunEtiket() + '.csv');
   yaz('Renkli sayfa: index.html\n');
