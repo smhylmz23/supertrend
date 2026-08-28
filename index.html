@@ -9,11 +9,13 @@
     --zemin:#f6f7f9; --kart:#ffffff; --yazi:#1a1d21; --soluk:#6b7280; --cizgi:#e5e7eb;
     --yesil:#0f9d58; --yesil-bg:#e8f5ee; --mavi:#1a73e8; --mavi-bg:#e8f0fe;
     --gri:#9aa0a6; --gri-bg:#f1f3f4; --kirmizi:#d93025; --amber:#b06000; --amber-bg:#fef3e2;
+    --sari-bg:#fdf5d8;
   }
   @media (prefers-color-scheme: dark){
     :root{ --zemin:#15181c; --kart:#1e2227; --yazi:#e8eaed; --soluk:#9aa0a6; --cizgi:#2f343a;
       --yesil:#4ade80; --yesil-bg:#12301f; --mavi:#7cb0ff; --mavi-bg:#14243d;
-      --gri:#7c848d; --gri-bg:#23272c; --kirmizi:#f28b82; --amber:#fbbf24; --amber-bg:#33260f; }
+      --gri:#7c848d; --gri-bg:#23272c; --kirmizi:#f28b82; --amber:#fbbf24; --amber-bg:#33260f;
+      --sari-bg:#2b2412; }
   }
   *{box-sizing:border-box}
   body{margin:0;background:var(--zemin);color:var(--yazi);
@@ -46,7 +48,15 @@
   .kart.guclu{border-left-color:var(--yesil)}
   .kart.al{border-left-color:var(--mavi)}
   .kart.izle{border-left-color:var(--gri)}
-  .ust{display:flex;justify-content:space-between;align-items:center;gap:8px;flex-wrap:wrap}
+  .ust{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+  .radarBtn{margin-left:auto;background:none;border:0;font-size:22px;line-height:1;cursor:pointer;
+    color:var(--cizgi);padding:2px 4px;transition:color .15s,transform .1s}
+  .radarBtn:hover{color:#f5b400}
+  .radarBtn:active{transform:scale(1.2)}
+  .radarBtn.acik{color:#f5b400}
+  .kart.radarda{background:linear-gradient(90deg,var(--sari-bg) 0%,var(--kart) 55%)}
+  .radar-bilgi{display:none;margin-top:6px;font-size:12px;color:var(--amber);font-weight:600}
+  .kart.radarda .radar-bilgi{display:block}
   .ad{font-weight:700;font-size:17px;letter-spacing:.3px}
   .karar{font-size:11px;font-weight:700;padding:3px 8px;border-radius:5px;margin-left:8px;white-space:nowrap}
   .k-guclu{background:var(--yesil-bg);color:var(--yesil)}
@@ -96,6 +106,7 @@
   <button data-f="hepsi" aria-pressed="true">Fırsatlar</button>
   <button data-f="guclu" aria-pressed="false">Sadece güçlü</button>
   <button data-f="tumu" aria-pressed="false">Tümü</button>
+  <button data-f="radar" aria-pressed="false">★ Radarım (<span id="radarSayi">0</span>)</button>
   <input type="search" placeholder="hisse ara..." aria-label="Hisse ara">
 </div>
 
@@ -115,7 +126,9 @@
   <div class="ust">
     <span class="ad">TGSAS</span>
     <span class="karar k-guclu">GÜÇLÜ AL</span>
+    <button class="radarBtn" type="button" title="Radarıma ekle" aria-label="TGSAS radarıma ekle">☆</button>
   </div>
+  <div class="radar-bilgi"></div>
   <div class="cubuk"><i style="width:99.21261077973465%"></i><b>99</b></div>
   <div class="satir">
     <span class="etiket">Risk</span><span class="deger risk-orta">orta (28)</span>
@@ -127,7 +140,9 @@
   <div class="ust">
     <span class="ad">GESAN</span>
     <span class="karar k-guclu">GÜÇLÜ AL</span>
+    <button class="radarBtn" type="button" title="Radarıma ekle" aria-label="GESAN radarıma ekle">☆</button>
   </div>
+  <div class="radar-bilgi"></div>
   <div class="cubuk"><i style="width:98.98511184458596%"></i><b>99</b></div>
   <div class="satir">
     <span class="etiket">Risk</span><span class="deger risk-orta">orta (28)</span>
@@ -139,7 +154,9 @@
   <div class="ust">
     <span class="ad">MTRKS</span>
     <span class="karar k-guclu">GÜÇLÜ AL</span>
+    <button class="radarBtn" type="button" title="Radarıma ekle" aria-label="MTRKS radarıma ekle">☆</button>
   </div>
+  <div class="radar-bilgi"></div>
   <div class="cubuk"><i style="width:97.54648956356736%"></i><b>98</b></div>
   <div class="satir">
     <span class="etiket">Risk</span><span class="deger risk-düşük">düşük (10)</span>
@@ -151,7 +168,9 @@
   <div class="ust">
     <span class="ad">SANFM</span>
     <span class="karar k-guclu">GÜÇLÜ AL</span>
+    <button class="radarBtn" type="button" title="Radarıma ekle" aria-label="SANFM radarıma ekle">☆</button>
   </div>
+  <div class="radar-bilgi"></div>
   <div class="cubuk"><i style="width:97.47365850497887%"></i><b>97</b></div>
   <div class="satir">
     <span class="etiket">Risk</span><span class="deger risk-orta">orta (28)</span>
@@ -163,7 +182,9 @@
   <div class="ust">
     <span class="ad">ARSAN</span>
     <span class="karar k-guclu">GÜÇLÜ AL</span>
+    <button class="radarBtn" type="button" title="Radarıma ekle" aria-label="ARSAN radarıma ekle">☆</button>
   </div>
+  <div class="radar-bilgi"></div>
   <div class="cubuk"><i style="width:96.95043875278176%"></i><b>97</b></div>
   <div class="satir">
     <span class="etiket">Risk</span><span class="deger risk-orta">orta (28)</span>
@@ -175,7 +196,9 @@
   <div class="ust">
     <span class="ad">AKFIS</span>
     <span class="karar k-guclu">GÜÇLÜ AL</span>
+    <button class="radarBtn" type="button" title="Radarıma ekle" aria-label="AKFIS radarıma ekle">☆</button>
   </div>
+  <div class="radar-bilgi"></div>
   <div class="cubuk"><i style="width:96.09266248091126%"></i><b>96</b></div>
   <div class="satir">
     <span class="etiket">Risk</span><span class="deger risk-orta">orta (38)</span>
@@ -187,7 +210,9 @@
   <div class="ust">
     <span class="ad">HATSN</span>
     <span class="karar k-guclu">GÜÇLÜ AL</span>
+    <button class="radarBtn" type="button" title="Radarıma ekle" aria-label="HATSN radarıma ekle">☆</button>
   </div>
+  <div class="radar-bilgi"></div>
   <div class="cubuk"><i style="width:95.65950425816638%"></i><b>96</b></div>
   <div class="satir">
     <span class="etiket">Risk</span><span class="deger risk-orta">orta (35)</span>
@@ -199,7 +224,9 @@
   <div class="ust">
     <span class="ad">DURKN</span>
     <span class="karar k-guclu">GÜÇLÜ AL</span>
+    <button class="radarBtn" type="button" title="Radarıma ekle" aria-label="DURKN radarıma ekle">☆</button>
   </div>
+  <div class="radar-bilgi"></div>
   <div class="cubuk"><i style="width:95.30325525374188%"></i><b>95</b></div>
   <div class="satir">
     <span class="etiket">Risk</span><span class="deger risk-düşük">düşük (0)</span>
@@ -211,7 +238,9 @@
   <div class="ust">
     <span class="ad">RYSAS</span>
     <span class="karar k-guclu">GÜÇLÜ AL</span>
+    <button class="radarBtn" type="button" title="Radarıma ekle" aria-label="RYSAS radarıma ekle">☆</button>
   </div>
+  <div class="radar-bilgi"></div>
   <div class="cubuk"><i style="width:95.24705176800356%"></i><b>95</b></div>
   <div class="satir">
     <span class="etiket">Risk</span><span class="deger risk-düşük">düşük (0)</span>
@@ -223,7 +252,9 @@
   <div class="ust">
     <span class="ad">ALTNY</span>
     <span class="karar k-guclu">GÜÇLÜ AL</span>
+    <button class="radarBtn" type="button" title="Radarıma ekle" aria-label="ALTNY radarıma ekle">☆</button>
   </div>
+  <div class="radar-bilgi"></div>
   <div class="cubuk"><i style="width:95.04139262491988%"></i><b>95</b></div>
   <div class="satir">
     <span class="etiket">Risk</span><span class="deger risk-düşük">düşük (0)</span>
@@ -235,7 +266,9 @@
   <div class="ust">
     <span class="ad">NETAS</span>
     <span class="karar k-guclu">GÜÇLÜ AL</span>
+    <button class="radarBtn" type="button" title="Radarıma ekle" aria-label="NETAS radarıma ekle">☆</button>
   </div>
+  <div class="radar-bilgi"></div>
   <div class="cubuk"><i style="width:94.97058823529412%"></i><b>95</b></div>
   <div class="satir">
     <span class="etiket">Risk</span><span class="deger risk-düşük">düşük (20)</span>
@@ -247,7 +280,9 @@
   <div class="ust">
     <span class="ad">BIGTK</span>
     <span class="karar k-guclu">GÜÇLÜ AL</span>
+    <button class="radarBtn" type="button" title="Radarıma ekle" aria-label="BIGTK radarıma ekle">☆</button>
   </div>
+  <div class="radar-bilgi"></div>
   <div class="cubuk"><i style="width:94.41689619269778%"></i><b>94</b></div>
   <div class="satir">
     <span class="etiket">Risk</span><span class="deger risk-düşük">düşük (16)</span>
@@ -259,7 +294,9 @@
   <div class="ust">
     <span class="ad">EGPRO</span>
     <span class="karar k-guclu">GÜÇLÜ AL</span>
+    <button class="radarBtn" type="button" title="Radarıma ekle" aria-label="EGPRO radarıma ekle">☆</button>
   </div>
+  <div class="radar-bilgi"></div>
   <div class="cubuk"><i style="width:94.3265432781121%"></i><b>94</b></div>
   <div class="satir">
     <span class="etiket">Risk</span><span class="deger risk-orta">orta (30)</span>
@@ -271,7 +308,9 @@
   <div class="ust">
     <span class="ad">BJKAS</span>
     <span class="karar k-guclu">GÜÇLÜ AL</span>
+    <button class="radarBtn" type="button" title="Radarıma ekle" aria-label="BJKAS radarıma ekle">☆</button>
   </div>
+  <div class="radar-bilgi"></div>
   <div class="cubuk"><i style="width:93.6470588235294%"></i><b>94</b></div>
   <div class="satir">
     <span class="etiket">Risk</span><span class="deger risk-orta">orta (28)</span>
@@ -283,7 +322,9 @@
   <div class="ust">
     <span class="ad">BINBN</span>
     <span class="karar k-guclu">GÜÇLÜ AL</span>
+    <button class="radarBtn" type="button" title="Radarıma ekle" aria-label="BINBN radarıma ekle">☆</button>
   </div>
+  <div class="radar-bilgi"></div>
   <div class="cubuk"><i style="width:93.57145225015665%"></i><b>94</b></div>
   <div class="satir">
     <span class="etiket">Risk</span><span class="deger risk-düşük">düşük (10)</span>
@@ -295,7 +336,9 @@
   <div class="ust">
     <span class="ad">TARKM</span>
     <span class="karar k-guclu">GÜÇLÜ AL</span>
+    <button class="radarBtn" type="button" title="Radarıma ekle" aria-label="TARKM radarıma ekle">☆</button>
   </div>
+  <div class="radar-bilgi"></div>
   <div class="cubuk"><i style="width:92.98039016116446%"></i><b>93</b></div>
   <div class="satir">
     <span class="etiket">Risk</span><span class="deger risk-düşük">düşük (10)</span>
@@ -307,7 +350,9 @@
   <div class="ust">
     <span class="ad">KRGYO</span>
     <span class="karar k-guclu">GÜÇLÜ AL</span>
+    <button class="radarBtn" type="button" title="Radarıma ekle" aria-label="KRGYO radarıma ekle">☆</button>
   </div>
+  <div class="radar-bilgi"></div>
   <div class="cubuk"><i style="width:92.81747719692738%"></i><b>93</b></div>
   <div class="satir">
     <span class="etiket">Risk</span><span class="deger risk-orta">orta (28)</span>
@@ -319,7 +364,9 @@
   <div class="ust">
     <span class="ad">BRLSM</span>
     <span class="karar k-guclu">GÜÇLÜ AL</span>
+    <button class="radarBtn" type="button" title="Radarıma ekle" aria-label="BRLSM radarıma ekle">☆</button>
   </div>
+  <div class="radar-bilgi"></div>
   <div class="cubuk"><i style="width:92.77257829190188%"></i><b>93</b></div>
   <div class="satir">
     <span class="etiket">Risk</span><span class="deger risk-orta">orta (35)</span>
@@ -331,7 +378,9 @@
   <div class="ust">
     <span class="ad">TRMET</span>
     <span class="karar k-guclu">GÜÇLÜ AL</span>
+    <button class="radarBtn" type="button" title="Radarıma ekle" aria-label="TRMET radarıma ekle">☆</button>
   </div>
+  <div class="radar-bilgi"></div>
   <div class="cubuk"><i style="width:92.68096008711964%"></i><b>93</b></div>
   <div class="satir">
     <span class="etiket">Risk</span><span class="deger risk-düşük">düşük (20)</span>
@@ -343,7 +392,9 @@
   <div class="ust">
     <span class="ad">KRDMD</span>
     <span class="karar k-guclu">GÜÇLÜ AL</span>
+    <button class="radarBtn" type="button" title="Radarıma ekle" aria-label="KRDMD radarıma ekle">☆</button>
   </div>
+  <div class="radar-bilgi"></div>
   <div class="cubuk"><i style="width:92.51452976763403%"></i><b>93</b></div>
   <div class="satir">
     <span class="etiket">Risk</span><span class="deger risk-düşük">düşük (18)</span>
@@ -355,7 +406,9 @@
   <div class="ust">
     <span class="ad">GIPTA</span>
     <span class="karar k-guclu">GÜÇLÜ AL</span>
+    <button class="radarBtn" type="button" title="Radarıma ekle" aria-label="GIPTA radarıma ekle">☆</button>
   </div>
+  <div class="radar-bilgi"></div>
   <div class="cubuk"><i style="width:92.07387140902873%"></i><b>92</b></div>
   <div class="satir">
     <span class="etiket">Risk</span><span class="deger risk-orta">orta (32)</span>
@@ -367,7 +420,9 @@
   <div class="ust">
     <span class="ad">CATES</span>
     <span class="karar k-guclu">GÜÇLÜ AL</span>
+    <button class="radarBtn" type="button" title="Radarıma ekle" aria-label="CATES radarıma ekle">☆</button>
   </div>
+  <div class="radar-bilgi"></div>
   <div class="cubuk"><i style="width:91.5504634120492%"></i><b>92</b></div>
   <div class="satir">
     <span class="etiket">Risk</span><span class="deger risk-orta">orta (35)</span>
@@ -379,7 +434,9 @@
   <div class="ust">
     <span class="ad">INVES</span>
     <span class="karar k-guclu">GÜÇLÜ AL</span>
+    <button class="radarBtn" type="button" title="Radarıma ekle" aria-label="INVES radarıma ekle">☆</button>
   </div>
+  <div class="radar-bilgi"></div>
   <div class="cubuk"><i style="width:91.44712378777028%"></i><b>91</b></div>
   <div class="satir">
     <span class="etiket">Risk</span><span class="deger risk-orta">orta (28)</span>
@@ -391,7 +448,9 @@
   <div class="ust">
     <span class="ad">RYGYO</span>
     <span class="karar k-guclu">GÜÇLÜ AL</span>
+    <button class="radarBtn" type="button" title="Radarıma ekle" aria-label="RYGYO radarıma ekle">☆</button>
   </div>
+  <div class="radar-bilgi"></div>
   <div class="cubuk"><i style="width:91.17092687297881%"></i><b>91</b></div>
   <div class="satir">
     <span class="etiket">Risk</span><span class="deger risk-orta">orta (28)</span>
@@ -403,7 +462,9 @@
   <div class="ust">
     <span class="ad">ASELS</span>
     <span class="karar k-guclu">GÜÇLÜ AL</span>
+    <button class="radarBtn" type="button" title="Radarıma ekle" aria-label="ASELS radarıma ekle">☆</button>
   </div>
+  <div class="radar-bilgi"></div>
   <div class="cubuk"><i style="width:90.93707877641003%"></i><b>91</b></div>
   <div class="satir">
     <span class="etiket">Risk</span><span class="deger risk-düşük">düşük (8)</span>
@@ -415,7 +476,9 @@
   <div class="ust">
     <span class="ad">BIMAS</span>
     <span class="karar k-guclu">GÜÇLÜ AL</span>
+    <button class="radarBtn" type="button" title="Radarıma ekle" aria-label="BIMAS radarıma ekle">☆</button>
   </div>
+  <div class="radar-bilgi"></div>
   <div class="cubuk"><i style="width:90.71076916866379%"></i><b>91</b></div>
   <div class="satir">
     <span class="etiket">Risk</span><span class="deger risk-düşük">düşük (18)</span>
@@ -423,23 +486,13 @@
     <span class="etiket">Osilatör</span><span class="deger">5/6</span>
   </div>
 </article>
-<article class="kart guclu" data-durum="guclu" data-ad="DEVA" data-sira="26" data-skor="90.00" data-risk="36" data-pot="2.43" data-osc="6">
-  <div class="ust">
-    <span class="ad">DEVA</span>
-    <span class="karar k-guclu">GÜÇLÜ AL</span>
-  </div>
-  <div class="cubuk"><i style="width:90%"></i><b>90</b></div>
-  <div class="satir">
-    <span class="etiket">Risk</span><span class="deger risk-orta">orta (36)</span>
-    <span class="etiket">Potansiyel</span><span class="deger yes">+2.4%</span>
-    <span class="etiket">Osilatör</span><span class="deger">6/6</span>
-  </div>
-</article>
-<article class="kart guclu" data-durum="guclu" data-ad="DUNYH" data-sira="27" data-skor="90.00" data-risk="30" data-pot="0.47" data-osc="6">
+<article class="kart guclu" data-durum="guclu" data-ad="DUNYH" data-sira="26" data-skor="90.00" data-risk="30" data-pot="0.47" data-osc="6">
   <div class="ust">
     <span class="ad">DUNYH</span>
     <span class="karar k-guclu">GÜÇLÜ AL</span>
+    <button class="radarBtn" type="button" title="Radarıma ekle" aria-label="DUNYH radarıma ekle">☆</button>
   </div>
+  <div class="radar-bilgi"></div>
   <div class="cubuk"><i style="width:90%"></i><b>90</b></div>
   <div class="satir">
     <span class="etiket">Risk</span><span class="deger risk-orta">orta (30)</span>
@@ -447,11 +500,27 @@
     <span class="etiket">Osilatör</span><span class="deger">6/6</span>
   </div>
 </article>
+<article class="kart guclu" data-durum="guclu" data-ad="DEVA" data-sira="27" data-skor="90.00" data-risk="36" data-pot="2.43" data-osc="6">
+  <div class="ust">
+    <span class="ad">DEVA</span>
+    <span class="karar k-guclu">GÜÇLÜ AL</span>
+    <button class="radarBtn" type="button" title="Radarıma ekle" aria-label="DEVA radarıma ekle">☆</button>
+  </div>
+  <div class="radar-bilgi"></div>
+  <div class="cubuk"><i style="width:90%"></i><b>90</b></div>
+  <div class="satir">
+    <span class="etiket">Risk</span><span class="deger risk-orta">orta (36)</span>
+    <span class="etiket">Potansiyel</span><span class="deger yes">+2.4%</span>
+    <span class="etiket">Osilatör</span><span class="deger">6/6</span>
+  </div>
+</article>
 <article class="kart guclu" data-durum="guclu" data-ad="EUPWR" data-sira="28" data-skor="90.00" data-risk="20" data-pot="5.33" data-osc="6">
   <div class="ust">
     <span class="ad">EUPWR</span>
     <span class="karar k-guclu">GÜÇLÜ AL</span>
+    <button class="radarBtn" type="button" title="Radarıma ekle" aria-label="EUPWR radarıma ekle">☆</button>
   </div>
+  <div class="radar-bilgi"></div>
   <div class="cubuk"><i style="width:89.99907602697932%"></i><b>90</b></div>
   <div class="satir">
     <span class="etiket">Risk</span><span class="deger risk-düşük">düşük (20)</span>
@@ -463,7 +532,9 @@
   <div class="ust">
     <span class="ad">PASEU</span>
     <span class="karar k-guclu">GÜÇLÜ AL</span>
+    <button class="radarBtn" type="button" title="Radarıma ekle" aria-label="PASEU radarıma ekle">☆</button>
   </div>
+  <div class="radar-bilgi"></div>
   <div class="cubuk"><i style="width:89.74834183171035%"></i><b>90</b></div>
   <div class="satir">
     <span class="etiket">Risk</span><span class="deger risk-orta">orta (35)</span>
@@ -475,7 +546,9 @@
   <div class="ust">
     <span class="ad">ADGYO</span>
     <span class="karar k-guclu">GÜÇLÜ AL</span>
+    <button class="radarBtn" type="button" title="Radarıma ekle" aria-label="ADGYO radarıma ekle">☆</button>
   </div>
+  <div class="radar-bilgi"></div>
   <div class="cubuk"><i style="width:89.6118242175816%"></i><b>90</b></div>
   <div class="satir">
     <span class="etiket">Risk</span><span class="deger risk-düşük">düşük (0)</span>
@@ -487,7 +560,9 @@
   <div class="ust">
     <span class="ad">GENIL</span>
     <span class="karar k-guclu">GÜÇLÜ AL</span>
+    <button class="radarBtn" type="button" title="Radarıma ekle" aria-label="GENIL radarıma ekle">☆</button>
   </div>
+  <div class="radar-bilgi"></div>
   <div class="cubuk"><i style="width:88.99553944800668%"></i><b>89</b></div>
   <div class="satir">
     <span class="etiket">Risk</span><span class="deger risk-düşük">düşük (20)</span>
@@ -499,7 +574,9 @@
   <div class="ust">
     <span class="ad">VBTYZ</span>
     <span class="karar k-guclu">GÜÇLÜ AL</span>
+    <button class="radarBtn" type="button" title="Radarıma ekle" aria-label="VBTYZ radarıma ekle">☆</button>
   </div>
+  <div class="radar-bilgi"></div>
   <div class="cubuk"><i style="width:88.65761050477195%"></i><b>89</b></div>
   <div class="satir">
     <span class="etiket">Risk</span><span class="deger risk-düşük">düşük (10)</span>
@@ -511,7 +588,9 @@
   <div class="ust">
     <span class="ad">PSDTC</span>
     <span class="karar k-guclu">GÜÇLÜ AL</span>
+    <button class="radarBtn" type="button" title="Radarıma ekle" aria-label="PSDTC radarıma ekle">☆</button>
   </div>
+  <div class="radar-bilgi"></div>
   <div class="cubuk"><i style="width:88.55612749719702%"></i><b>89</b></div>
   <div class="satir">
     <span class="etiket">Risk</span><span class="deger risk-orta">orta (32)</span>
@@ -523,7 +602,9 @@
   <div class="ust">
     <span class="ad">ALTIN</span>
     <span class="karar k-guclu">GÜÇLÜ AL</span>
+    <button class="radarBtn" type="button" title="Radarıma ekle" aria-label="ALTIN radarıma ekle">☆</button>
   </div>
+  <div class="radar-bilgi"></div>
   <div class="cubuk"><i style="width:88.5053172854174%"></i><b>89</b></div>
   <div class="satir">
     <span class="etiket">Risk</span><span class="deger risk-düşük">düşük (18)</span>
@@ -535,7 +616,9 @@
   <div class="ust">
     <span class="ad">DMLKT</span>
     <span class="karar k-guclu">GÜÇLÜ AL</span>
+    <button class="radarBtn" type="button" title="Radarıma ekle" aria-label="DMLKT radarıma ekle">☆</button>
   </div>
+  <div class="radar-bilgi"></div>
   <div class="cubuk"><i style="width:88.27495759933915%"></i><b>88</b></div>
   <div class="satir">
     <span class="etiket">Risk</span><span class="deger risk-orta">orta (36)</span>
@@ -547,7 +630,9 @@
   <div class="ust">
     <span class="ad">AYGAZ</span>
     <span class="karar k-guclu">GÜÇLÜ AL</span>
+    <button class="radarBtn" type="button" title="Radarıma ekle" aria-label="AYGAZ radarıma ekle">☆</button>
   </div>
+  <div class="radar-bilgi"></div>
   <div class="cubuk"><i style="width:88.03306139974238%"></i><b>88</b></div>
   <div class="satir">
     <span class="etiket">Risk</span><span class="deger risk-düşük">düşük (20)</span>
@@ -559,7 +644,9 @@
   <div class="ust">
     <span class="ad">ARDYZ</span>
     <span class="karar k-guclu">GÜÇLÜ AL</span>
+    <button class="radarBtn" type="button" title="Radarıma ekle" aria-label="ARDYZ radarıma ekle">☆</button>
   </div>
+  <div class="radar-bilgi"></div>
   <div class="cubuk"><i style="width:87.96509042840835%"></i><b>88</b></div>
   <div class="satir">
     <span class="etiket">Risk</span><span class="deger risk-düşük">düşük (20)</span>
@@ -571,7 +658,9 @@
   <div class="ust">
     <span class="ad">KLSYN</span>
     <span class="karar k-guclu">GÜÇLÜ AL</span>
+    <button class="radarBtn" type="button" title="Radarıma ekle" aria-label="KLSYN radarıma ekle">☆</button>
   </div>
+  <div class="radar-bilgi"></div>
   <div class="cubuk"><i style="width:87.91692033394871%"></i><b>88</b></div>
   <div class="satir">
     <span class="etiket">Risk</span><span class="deger risk-düşük">düşük (0)</span>
@@ -583,7 +672,9 @@
   <div class="ust">
     <span class="ad">VANGD</span>
     <span class="karar k-guclu">GÜÇLÜ AL</span>
+    <button class="radarBtn" type="button" title="Radarıma ekle" aria-label="VANGD radarıma ekle">☆</button>
   </div>
+  <div class="radar-bilgi"></div>
   <div class="cubuk"><i style="width:87.67948229913308%"></i><b>88</b></div>
   <div class="satir">
     <span class="etiket">Risk</span><span class="deger risk-düşük">düşük (0)</span>
@@ -595,7 +686,9 @@
   <div class="ust">
     <span class="ad">HUNER</span>
     <span class="karar k-guclu">GÜÇLÜ AL</span>
+    <button class="radarBtn" type="button" title="Radarıma ekle" aria-label="HUNER radarıma ekle">☆</button>
   </div>
+  <div class="radar-bilgi"></div>
   <div class="cubuk"><i style="width:87.6150175236767%"></i><b>88</b></div>
   <div class="satir">
     <span class="etiket">Risk</span><span class="deger risk-düşük">düşük (8)</span>
@@ -607,7 +700,9 @@
   <div class="ust">
     <span class="ad">KUVVA</span>
     <span class="karar k-guclu">GÜÇLÜ AL</span>
+    <button class="radarBtn" type="button" title="Radarıma ekle" aria-label="KUVVA radarıma ekle">☆</button>
   </div>
+  <div class="radar-bilgi"></div>
   <div class="cubuk"><i style="width:87.46189805519762%"></i><b>87</b></div>
   <div class="satir">
     <span class="etiket">Risk</span><span class="deger risk-düşük">düşük (10)</span>
@@ -619,7 +714,9 @@
   <div class="ust">
     <span class="ad">SELEC</span>
     <span class="karar k-guclu">GÜÇLÜ AL</span>
+    <button class="radarBtn" type="button" title="Radarıma ekle" aria-label="SELEC radarıma ekle">☆</button>
   </div>
+  <div class="radar-bilgi"></div>
   <div class="cubuk"><i style="width:87.31151920698458%"></i><b>87</b></div>
   <div class="satir">
     <span class="etiket">Risk</span><span class="deger risk-orta">orta (35)</span>
@@ -631,7 +728,9 @@
   <div class="ust">
     <span class="ad">TNZTP</span>
     <span class="karar k-guclu">GÜÇLÜ AL</span>
+    <button class="radarBtn" type="button" title="Radarıma ekle" aria-label="TNZTP radarıma ekle">☆</button>
   </div>
+  <div class="radar-bilgi"></div>
   <div class="cubuk"><i style="width:87.27905854646524%"></i><b>87</b></div>
   <div class="satir">
     <span class="etiket">Risk</span><span class="deger risk-düşük">düşük (16)</span>
@@ -643,7 +742,9 @@
   <div class="ust">
     <span class="ad">AKSGY</span>
     <span class="karar k-guclu">GÜÇLÜ AL</span>
+    <button class="radarBtn" type="button" title="Radarıma ekle" aria-label="AKSGY radarıma ekle">☆</button>
   </div>
+  <div class="radar-bilgi"></div>
   <div class="cubuk"><i style="width:87.20020806303316%"></i><b>87</b></div>
   <div class="satir">
     <span class="etiket">Risk</span><span class="deger risk-düşük">düşük (0)</span>
@@ -655,7 +756,9 @@
   <div class="ust">
     <span class="ad">DAGI</span>
     <span class="karar k-guclu">GÜÇLÜ AL</span>
+    <button class="radarBtn" type="button" title="Radarıma ekle" aria-label="DAGI radarıma ekle">☆</button>
   </div>
+  <div class="radar-bilgi"></div>
   <div class="cubuk"><i style="width:87.0875402538374%"></i><b>87</b></div>
   <div class="satir">
     <span class="etiket">Risk</span><span class="deger risk-orta">orta (28)</span>
@@ -667,7 +770,9 @@
   <div class="ust">
     <span class="ad">KRDMA</span>
     <span class="karar k-guclu">GÜÇLÜ AL</span>
+    <button class="radarBtn" type="button" title="Radarıma ekle" aria-label="KRDMA radarıma ekle">☆</button>
   </div>
+  <div class="radar-bilgi"></div>
   <div class="cubuk"><i style="width:87.05820118953591%"></i><b>87</b></div>
   <div class="satir">
     <span class="etiket">Risk</span><span class="deger risk-orta">orta (35)</span>
@@ -679,7 +784,9 @@
   <div class="ust">
     <span class="ad">KRPLS</span>
     <span class="karar k-guclu">GÜÇLÜ AL</span>
+    <button class="radarBtn" type="button" title="Radarıma ekle" aria-label="KRPLS radarıma ekle">☆</button>
   </div>
+  <div class="radar-bilgi"></div>
   <div class="cubuk"><i style="width:87.05499263750667%"></i><b>87</b></div>
   <div class="satir">
     <span class="etiket">Risk</span><span class="deger risk-düşük">düşük (0)</span>
@@ -691,7 +798,9 @@
   <div class="ust">
     <span class="ad">BOBET</span>
     <span class="karar k-guclu">GÜÇLÜ AL</span>
+    <button class="radarBtn" type="button" title="Radarıma ekle" aria-label="BOBET radarıma ekle">☆</button>
   </div>
+  <div class="radar-bilgi"></div>
   <div class="cubuk"><i style="width:86.68721269447767%"></i><b>87</b></div>
   <div class="satir">
     <span class="etiket">Risk</span><span class="deger risk-orta">orta (40)</span>
@@ -703,7 +812,9 @@
   <div class="ust">
     <span class="ad">ALARK</span>
     <span class="karar k-guclu">GÜÇLÜ AL</span>
+    <button class="radarBtn" type="button" title="Radarıma ekle" aria-label="ALARK radarıma ekle">☆</button>
   </div>
+  <div class="radar-bilgi"></div>
   <div class="cubuk"><i style="width:86.62599182940171%"></i><b>87</b></div>
   <div class="satir">
     <span class="etiket">Risk</span><span class="deger risk-düşük">düşük (8)</span>
@@ -715,7 +826,9 @@
   <div class="ust">
     <span class="ad">SAYAS</span>
     <span class="karar k-guclu">GÜÇLÜ AL</span>
+    <button class="radarBtn" type="button" title="Radarıma ekle" aria-label="SAYAS radarıma ekle">☆</button>
   </div>
+  <div class="radar-bilgi"></div>
   <div class="cubuk"><i style="width:86.4569106101118%"></i><b>86</b></div>
   <div class="satir">
     <span class="etiket">Risk</span><span class="deger risk-düşük">düşük (10)</span>
@@ -727,7 +840,9 @@
   <div class="ust">
     <span class="ad">TCKRC</span>
     <span class="karar k-guclu">GÜÇLÜ AL</span>
+    <button class="radarBtn" type="button" title="Radarıma ekle" aria-label="TCKRC radarıma ekle">☆</button>
   </div>
+  <div class="radar-bilgi"></div>
   <div class="cubuk"><i style="width:86.45502826661362%"></i><b>86</b></div>
   <div class="satir">
     <span class="etiket">Risk</span><span class="deger risk-düşük">düşük (10)</span>
@@ -739,7 +854,9 @@
   <div class="ust">
     <span class="ad">INDES</span>
     <span class="karar k-guclu">GÜÇLÜ AL</span>
+    <button class="radarBtn" type="button" title="Radarıma ekle" aria-label="INDES radarıma ekle">☆</button>
   </div>
+  <div class="radar-bilgi"></div>
   <div class="cubuk"><i style="width:86.43277118075876%"></i><b>86</b></div>
   <div class="satir">
     <span class="etiket">Risk</span><span class="deger risk-düşük">düşük (10)</span>
@@ -751,7 +868,9 @@
   <div class="ust">
     <span class="ad">TRENJ</span>
     <span class="karar k-guclu">GÜÇLÜ AL</span>
+    <button class="radarBtn" type="button" title="Radarıma ekle" aria-label="TRENJ radarıma ekle">☆</button>
   </div>
+  <div class="radar-bilgi"></div>
   <div class="cubuk"><i style="width:86.23784812752217%"></i><b>86</b></div>
   <div class="satir">
     <span class="etiket">Risk</span><span class="deger risk-orta">orta (32)</span>
@@ -763,7 +882,9 @@
   <div class="ust">
     <span class="ad">TRALT</span>
     <span class="karar k-guclu">GÜÇLÜ AL</span>
+    <button class="radarBtn" type="button" title="Radarıma ekle" aria-label="TRALT radarıma ekle">☆</button>
   </div>
+  <div class="radar-bilgi"></div>
   <div class="cubuk"><i style="width:85.99983371640029%"></i><b>86</b></div>
   <div class="satir">
     <span class="etiket">Risk</span><span class="deger risk-düşük">düşük (0)</span>
@@ -775,7 +896,9 @@
   <div class="ust">
     <span class="ad">VERUS</span>
     <span class="karar k-guclu">GÜÇLÜ AL</span>
+    <button class="radarBtn" type="button" title="Radarıma ekle" aria-label="VERUS radarıma ekle">☆</button>
   </div>
+  <div class="radar-bilgi"></div>
   <div class="cubuk"><i style="width:85.94934603111989%"></i><b>86</b></div>
   <div class="satir">
     <span class="etiket">Risk</span><span class="deger risk-orta">orta (35)</span>
@@ -787,7 +910,9 @@
   <div class="ust">
     <span class="ad">KORDS</span>
     <span class="karar k-guclu">GÜÇLÜ AL</span>
+    <button class="radarBtn" type="button" title="Radarıma ekle" aria-label="KORDS radarıma ekle">☆</button>
   </div>
+  <div class="radar-bilgi"></div>
   <div class="cubuk"><i style="width:85.80699458752156%"></i><b>86</b></div>
   <div class="satir">
     <span class="etiket">Risk</span><span class="deger risk-düşük">düşük (10)</span>
@@ -799,7 +924,9 @@
   <div class="ust">
     <span class="ad">MANAS</span>
     <span class="karar k-guclu">GÜÇLÜ AL</span>
+    <button class="radarBtn" type="button" title="Radarıma ekle" aria-label="MANAS radarıma ekle">☆</button>
   </div>
+  <div class="radar-bilgi"></div>
   <div class="cubuk"><i style="width:85.78569392373899%"></i><b>86</b></div>
   <div class="satir">
     <span class="etiket">Risk</span><span class="deger risk-düşük">düşük (0)</span>
@@ -811,7 +938,9 @@
   <div class="ust">
     <span class="ad">ETYAT</span>
     <span class="karar k-guclu">GÜÇLÜ AL</span>
+    <button class="radarBtn" type="button" title="Radarıma ekle" aria-label="ETYAT radarıma ekle">☆</button>
   </div>
+  <div class="radar-bilgi"></div>
   <div class="cubuk"><i style="width:85.49046002204004%"></i><b>85</b></div>
   <div class="satir">
     <span class="etiket">Risk</span><span class="deger risk-düşük">düşük (10)</span>
@@ -823,7 +952,9 @@
   <div class="ust">
     <span class="ad">ATATP</span>
     <span class="karar k-guclu">GÜÇLÜ AL</span>
+    <button class="radarBtn" type="button" title="Radarıma ekle" aria-label="ATATP radarıma ekle">☆</button>
   </div>
+  <div class="radar-bilgi"></div>
   <div class="cubuk"><i style="width:85.34567669467725%"></i><b>85</b></div>
   <div class="satir">
     <span class="etiket">Risk</span><span class="deger risk-düşük">düşük (10)</span>
@@ -835,7 +966,9 @@
   <div class="ust">
     <span class="ad">CEMZY</span>
     <span class="karar k-guclu">GÜÇLÜ AL</span>
+    <button class="radarBtn" type="button" title="Radarıma ekle" aria-label="CEMZY radarıma ekle">☆</button>
   </div>
+  <div class="radar-bilgi"></div>
   <div class="cubuk"><i style="width:85.33645922136971%"></i><b>85</b></div>
   <div class="satir">
     <span class="etiket">Risk</span><span class="deger risk-düşük">düşük (8)</span>
@@ -847,7 +980,9 @@
   <div class="ust">
     <span class="ad">OZSUB</span>
     <span class="karar k-guclu">GÜÇLÜ AL</span>
+    <button class="radarBtn" type="button" title="Radarıma ekle" aria-label="OZSUB radarıma ekle">☆</button>
   </div>
+  <div class="radar-bilgi"></div>
   <div class="cubuk"><i style="width:85.12829067276704%"></i><b>85</b></div>
   <div class="satir">
     <span class="etiket">Risk</span><span class="deger risk-orta">orta (30)</span>
@@ -859,7 +994,9 @@
   <div class="ust">
     <span class="ad">EGGUB</span>
     <span class="karar k-guclu">GÜÇLÜ AL</span>
+    <button class="radarBtn" type="button" title="Radarıma ekle" aria-label="EGGUB radarıma ekle">☆</button>
   </div>
+  <div class="radar-bilgi"></div>
   <div class="cubuk"><i style="width:85.0500021379221%"></i><b>85</b></div>
   <div class="satir">
     <span class="etiket">Risk</span><span class="deger risk-düşük">düşük (0)</span>
@@ -871,7 +1008,9 @@
   <div class="ust">
     <span class="ad">TRCAS</span>
     <span class="karar k-guclu">GÜÇLÜ AL</span>
+    <button class="radarBtn" type="button" title="Radarıma ekle" aria-label="TRCAS radarıma ekle">☆</button>
   </div>
+  <div class="radar-bilgi"></div>
   <div class="cubuk"><i style="width:84.52010095055293%"></i><b>85</b></div>
   <div class="satir">
     <span class="etiket">Risk</span><span class="deger risk-düşük">düşük (8)</span>
@@ -883,7 +1022,9 @@
   <div class="ust">
     <span class="ad">ORGE</span>
     <span class="karar k-guclu">GÜÇLÜ AL</span>
+    <button class="radarBtn" type="button" title="Radarıma ekle" aria-label="ORGE radarıma ekle">☆</button>
   </div>
+  <div class="radar-bilgi"></div>
   <div class="cubuk"><i style="width:84.4397221071978%"></i><b>84</b></div>
   <div class="satir">
     <span class="etiket">Risk</span><span class="deger risk-orta">orta (30)</span>
@@ -895,7 +1036,9 @@
   <div class="ust">
     <span class="ad">BIOEN</span>
     <span class="karar k-guclu">GÜÇLÜ AL</span>
+    <button class="radarBtn" type="button" title="Radarıma ekle" aria-label="BIOEN radarıma ekle">☆</button>
   </div>
+  <div class="radar-bilgi"></div>
   <div class="cubuk"><i style="width:84.34865047467116%"></i><b>84</b></div>
   <div class="satir">
     <span class="etiket">Risk</span><span class="deger risk-düşük">düşük (0)</span>
@@ -907,7 +1050,9 @@
   <div class="ust">
     <span class="ad">TBORG</span>
     <span class="karar k-guclu">GÜÇLÜ AL</span>
+    <button class="radarBtn" type="button" title="Radarıma ekle" aria-label="TBORG radarıma ekle">☆</button>
   </div>
+  <div class="radar-bilgi"></div>
   <div class="cubuk"><i style="width:84.03571428571429%"></i><b>84</b></div>
   <div class="satir">
     <span class="etiket">Risk</span><span class="deger risk-orta">orta (28)</span>
@@ -919,7 +1064,9 @@
   <div class="ust">
     <span class="ad">SOKM</span>
     <span class="karar k-guclu">GÜÇLÜ AL</span>
+    <button class="radarBtn" type="button" title="Radarıma ekle" aria-label="SOKM radarıma ekle">☆</button>
   </div>
+  <div class="radar-bilgi"></div>
   <div class="cubuk"><i style="width:83.95256880806309%"></i><b>84</b></div>
   <div class="satir">
     <span class="etiket">Risk</span><span class="deger risk-düşük">düşük (0)</span>
@@ -931,7 +1078,9 @@
   <div class="ust">
     <span class="ad">KRONT</span>
     <span class="karar k-guclu">GÜÇLÜ AL</span>
+    <button class="radarBtn" type="button" title="Radarıma ekle" aria-label="KRONT radarıma ekle">☆</button>
   </div>
+  <div class="radar-bilgi"></div>
   <div class="cubuk"><i style="width:83.44642128601865%"></i><b>83</b></div>
   <div class="satir">
     <span class="etiket">Risk</span><span class="deger risk-düşük">düşük (10)</span>
@@ -943,7 +1092,9 @@
   <div class="ust">
     <span class="ad">KERVN</span>
     <span class="karar k-guclu">GÜÇLÜ AL</span>
+    <button class="radarBtn" type="button" title="Radarıma ekle" aria-label="KERVN radarıma ekle">☆</button>
   </div>
+  <div class="radar-bilgi"></div>
   <div class="cubuk"><i style="width:83.18352504179461%"></i><b>83</b></div>
   <div class="satir">
     <span class="etiket">Risk</span><span class="deger risk-orta">orta (26)</span>
@@ -955,7 +1106,9 @@
   <div class="ust">
     <span class="ad">PCILT</span>
     <span class="karar k-guclu">GÜÇLÜ AL</span>
+    <button class="radarBtn" type="button" title="Radarıma ekle" aria-label="PCILT radarıma ekle">☆</button>
   </div>
+  <div class="radar-bilgi"></div>
   <div class="cubuk"><i style="width:83.16385536680761%"></i><b>83</b></div>
   <div class="satir">
     <span class="etiket">Risk</span><span class="deger risk-düşük">düşük (0)</span>
@@ -967,7 +1120,9 @@
   <div class="ust">
     <span class="ad">TUPRS</span>
     <span class="karar k-guclu">GÜÇLÜ AL</span>
+    <button class="radarBtn" type="button" title="Radarıma ekle" aria-label="TUPRS radarıma ekle">☆</button>
   </div>
+  <div class="radar-bilgi"></div>
   <div class="cubuk"><i style="width:83.03650257503118%"></i><b>83</b></div>
   <div class="satir">
     <span class="etiket">Risk</span><span class="deger risk-düşük">düşük (20)</span>
@@ -979,7 +1134,9 @@
   <div class="ust">
     <span class="ad">OYAKC</span>
     <span class="karar k-guclu">GÜÇLÜ AL</span>
+    <button class="radarBtn" type="button" title="Radarıma ekle" aria-label="OYAKC radarıma ekle">☆</button>
   </div>
+  <div class="radar-bilgi"></div>
   <div class="cubuk"><i style="width:83.02645675993384%"></i><b>83</b></div>
   <div class="satir">
     <span class="etiket">Risk</span><span class="deger risk-düşük">düşük (10)</span>
@@ -991,7 +1148,9 @@
   <div class="ust">
     <span class="ad">POLHO</span>
     <span class="karar k-guclu">GÜÇLÜ AL</span>
+    <button class="radarBtn" type="button" title="Radarıma ekle" aria-label="POLHO radarıma ekle">☆</button>
   </div>
+  <div class="radar-bilgi"></div>
   <div class="cubuk"><i style="width:82.82923651215107%"></i><b>83</b></div>
   <div class="satir">
     <span class="etiket">Risk</span><span class="deger risk-düşük">düşük (10)</span>
@@ -1003,7 +1162,9 @@
   <div class="ust">
     <span class="ad">IEYHO</span>
     <span class="karar k-guclu">GÜÇLÜ AL</span>
+    <button class="radarBtn" type="button" title="Radarıma ekle" aria-label="IEYHO radarıma ekle">☆</button>
   </div>
+  <div class="radar-bilgi"></div>
   <div class="cubuk"><i style="width:82.75530593970086%"></i><b>83</b></div>
   <div class="satir">
     <span class="etiket">Risk</span><span class="deger risk-orta">orta (35)</span>
@@ -1015,7 +1176,9 @@
   <div class="ust">
     <span class="ad">OFSYM</span>
     <span class="karar k-guclu">GÜÇLÜ AL</span>
+    <button class="radarBtn" type="button" title="Radarıma ekle" aria-label="OFSYM radarıma ekle">☆</button>
   </div>
+  <div class="radar-bilgi"></div>
   <div class="cubuk"><i style="width:82.45160861349441%"></i><b>82</b></div>
   <div class="satir">
     <span class="etiket">Risk</span><span class="deger risk-düşük">düşük (0)</span>
@@ -1027,7 +1190,9 @@
   <div class="ust">
     <span class="ad">GSDDE</span>
     <span class="karar k-guclu">GÜÇLÜ AL</span>
+    <button class="radarBtn" type="button" title="Radarıma ekle" aria-label="GSDDE radarıma ekle">☆</button>
   </div>
+  <div class="radar-bilgi"></div>
   <div class="cubuk"><i style="width:82.41229964147304%"></i><b>82</b></div>
   <div class="satir">
     <span class="etiket">Risk</span><span class="deger risk-düşük">düşük (0)</span>
@@ -1039,7 +1204,9 @@
   <div class="ust">
     <span class="ad">TSPOR</span>
     <span class="karar k-guclu">GÜÇLÜ AL</span>
+    <button class="radarBtn" type="button" title="Radarıma ekle" aria-label="TSPOR radarıma ekle">☆</button>
   </div>
+  <div class="radar-bilgi"></div>
   <div class="cubuk"><i style="width:82.32304462229774%"></i><b>82</b></div>
   <div class="satir">
     <span class="etiket">Risk</span><span class="deger risk-orta">orta (38)</span>
@@ -1051,7 +1218,9 @@
   <div class="ust">
     <span class="ad">MOGAN</span>
     <span class="karar k-guclu">GÜÇLÜ AL</span>
+    <button class="radarBtn" type="button" title="Radarıma ekle" aria-label="MOGAN radarıma ekle">☆</button>
   </div>
+  <div class="radar-bilgi"></div>
   <div class="cubuk"><i style="width:82.0239400039878%"></i><b>82</b></div>
   <div class="satir">
     <span class="etiket">Risk</span><span class="deger risk-orta">orta (28)</span>
@@ -1063,7 +1232,9 @@
   <div class="ust">
     <span class="ad">CELHA</span>
     <span class="karar k-guclu">GÜÇLÜ AL</span>
+    <button class="radarBtn" type="button" title="Radarıma ekle" aria-label="CELHA radarıma ekle">☆</button>
   </div>
+  <div class="radar-bilgi"></div>
   <div class="cubuk"><i style="width:81.5459093790993%"></i><b>82</b></div>
   <div class="satir">
     <span class="etiket">Risk</span><span class="deger risk-düşük">düşük (10)</span>
@@ -1075,7 +1246,9 @@
   <div class="ust">
     <span class="ad">ADEL</span>
     <span class="karar k-guclu">GÜÇLÜ AL</span>
+    <button class="radarBtn" type="button" title="Radarıma ekle" aria-label="ADEL radarıma ekle">☆</button>
   </div>
+  <div class="radar-bilgi"></div>
   <div class="cubuk"><i style="width:81.54441349322242%"></i><b>82</b></div>
   <div class="satir">
     <span class="etiket">Risk</span><span class="deger risk-düşük">düşük (10)</span>
@@ -1087,7 +1260,9 @@
   <div class="ust">
     <span class="ad">GLRMK</span>
     <span class="karar k-guclu">GÜÇLÜ AL</span>
+    <button class="radarBtn" type="button" title="Radarıma ekle" aria-label="GLRMK radarıma ekle">☆</button>
   </div>
+  <div class="radar-bilgi"></div>
   <div class="cubuk"><i style="width:81.32476295355339%"></i><b>81</b></div>
   <div class="satir">
     <span class="etiket">Risk</span><span class="deger risk-düşük">düşük (8)</span>
@@ -1099,7 +1274,9 @@
   <div class="ust">
     <span class="ad">DOCO</span>
     <span class="karar k-guclu">GÜÇLÜ AL</span>
+    <button class="radarBtn" type="button" title="Radarıma ekle" aria-label="DOCO radarıma ekle">☆</button>
   </div>
+  <div class="radar-bilgi"></div>
   <div class="cubuk"><i style="width:80.94040946310079%"></i><b>81</b></div>
   <div class="satir">
     <span class="etiket">Risk</span><span class="deger risk-düşük">düşük (0)</span>
@@ -1111,7 +1288,9 @@
   <div class="ust">
     <span class="ad">KCHOL</span>
     <span class="karar k-guclu">GÜÇLÜ AL</span>
+    <button class="radarBtn" type="button" title="Radarıma ekle" aria-label="KCHOL radarıma ekle">☆</button>
   </div>
+  <div class="radar-bilgi"></div>
   <div class="cubuk"><i style="width:80.66075006853193%"></i><b>81</b></div>
   <div class="satir">
     <span class="etiket">Risk</span><span class="deger risk-düşük">düşük (16)</span>
@@ -1123,7 +1302,9 @@
   <div class="ust">
     <span class="ad">ENDAE</span>
     <span class="karar k-guclu">GÜÇLÜ AL</span>
+    <button class="radarBtn" type="button" title="Radarıma ekle" aria-label="ENDAE radarıma ekle">☆</button>
   </div>
+  <div class="radar-bilgi"></div>
   <div class="cubuk"><i style="width:80.30227250165714%"></i><b>80</b></div>
   <div class="satir">
     <span class="etiket">Risk</span><span class="deger risk-düşük">düşük (8)</span>
@@ -1135,7 +1316,9 @@
   <div class="ust">
     <span class="ad">BLUME</span>
     <span class="karar k-guclu">GÜÇLÜ AL</span>
+    <button class="radarBtn" type="button" title="Radarıma ekle" aria-label="BLUME radarıma ekle">☆</button>
   </div>
+  <div class="radar-bilgi"></div>
   <div class="cubuk"><i style="width:79.87465472537902%"></i><b>80</b></div>
   <div class="satir">
     <span class="etiket">Risk</span><span class="deger risk-düşük">düşük (18)</span>
@@ -1147,7 +1330,9 @@
   <div class="ust">
     <span class="ad">ARASE</span>
     <span class="karar k-guclu">GÜÇLÜ AL</span>
+    <button class="radarBtn" type="button" title="Radarıma ekle" aria-label="ARASE radarıma ekle">☆</button>
   </div>
+  <div class="radar-bilgi"></div>
   <div class="cubuk"><i style="width:79.80591837319955%"></i><b>80</b></div>
   <div class="satir">
     <span class="etiket">Risk</span><span class="deger risk-düşük">düşük (0)</span>
@@ -1159,7 +1344,9 @@
   <div class="ust">
     <span class="ad">HURGZ</span>
     <span class="karar k-guclu">GÜÇLÜ AL</span>
+    <button class="radarBtn" type="button" title="Radarıma ekle" aria-label="HURGZ radarıma ekle">☆</button>
   </div>
+  <div class="radar-bilgi"></div>
   <div class="cubuk"><i style="width:79.69133387379895%"></i><b>80</b></div>
   <div class="satir">
     <span class="etiket">Risk</span><span class="deger risk-düşük">düşük (0)</span>
@@ -1171,7 +1358,9 @@
   <div class="ust">
     <span class="ad">PRZMA</span>
     <span class="karar k-guclu">GÜÇLÜ AL</span>
+    <button class="radarBtn" type="button" title="Radarıma ekle" aria-label="PRZMA radarıma ekle">☆</button>
   </div>
+  <div class="radar-bilgi"></div>
   <div class="cubuk"><i style="width:79.68051588281844%"></i><b>80</b></div>
   <div class="satir">
     <span class="etiket">Risk</span><span class="deger risk-orta">orta (32)</span>
@@ -1183,7 +1372,9 @@
   <div class="ust">
     <span class="ad">TKFEN</span>
     <span class="karar k-guclu">GÜÇLÜ AL</span>
+    <button class="radarBtn" type="button" title="Radarıma ekle" aria-label="TKFEN radarıma ekle">☆</button>
   </div>
+  <div class="radar-bilgi"></div>
   <div class="cubuk"><i style="width:79.4106509334591%"></i><b>79</b></div>
   <div class="satir">
     <span class="etiket">Risk</span><span class="deger risk-düşük">düşük (20)</span>
@@ -1195,7 +1386,9 @@
   <div class="ust">
     <span class="ad">EUKYO</span>
     <span class="karar k-guclu">GÜÇLÜ AL</span>
+    <button class="radarBtn" type="button" title="Radarıma ekle" aria-label="EUKYO radarıma ekle">☆</button>
   </div>
+  <div class="radar-bilgi"></div>
   <div class="cubuk"><i style="width:79.31770426250974%"></i><b>79</b></div>
   <div class="satir">
     <span class="etiket">Risk</span><span class="deger risk-düşük">düşük (0)</span>
@@ -1207,7 +1400,9 @@
   <div class="ust">
     <span class="ad">MPARK</span>
     <span class="karar k-guclu">GÜÇLÜ AL</span>
+    <button class="radarBtn" type="button" title="Radarıma ekle" aria-label="MPARK radarıma ekle">☆</button>
   </div>
+  <div class="radar-bilgi"></div>
   <div class="cubuk"><i style="width:78.71441837411459%"></i><b>79</b></div>
   <div class="satir">
     <span class="etiket">Risk</span><span class="deger risk-düşük">düşük (0)</span>
@@ -1219,7 +1414,9 @@
   <div class="ust">
     <span class="ad">PRDGS</span>
     <span class="karar k-guclu">GÜÇLÜ AL</span>
+    <button class="radarBtn" type="button" title="Radarıma ekle" aria-label="PRDGS radarıma ekle">☆</button>
   </div>
+  <div class="radar-bilgi"></div>
   <div class="cubuk"><i style="width:78.70849202008421%"></i><b>79</b></div>
   <div class="satir">
     <span class="etiket">Risk</span><span class="deger risk-düşük">düşük (10)</span>
@@ -1231,7 +1428,9 @@
   <div class="ust">
     <span class="ad">GUBRF</span>
     <span class="karar k-guclu">GÜÇLÜ AL</span>
+    <button class="radarBtn" type="button" title="Radarıma ekle" aria-label="GUBRF radarıma ekle">☆</button>
   </div>
+  <div class="radar-bilgi"></div>
   <div class="cubuk"><i style="width:78.53888599170305%"></i><b>79</b></div>
   <div class="satir">
     <span class="etiket">Risk</span><span class="deger risk-düşük">düşük (0)</span>
@@ -1243,7 +1442,9 @@
   <div class="ust">
     <span class="ad">RUBNS</span>
     <span class="karar k-guclu">GÜÇLÜ AL</span>
+    <button class="radarBtn" type="button" title="Radarıma ekle" aria-label="RUBNS radarıma ekle">☆</button>
   </div>
+  <div class="radar-bilgi"></div>
   <div class="cubuk"><i style="width:78.32419111744176%"></i><b>78</b></div>
   <div class="satir">
     <span class="etiket">Risk</span><span class="deger risk-düşük">düşük (0)</span>
@@ -1255,7 +1456,9 @@
   <div class="ust">
     <span class="ad">FORTE</span>
     <span class="karar k-guclu">GÜÇLÜ AL</span>
+    <button class="radarBtn" type="button" title="Radarıma ekle" aria-label="FORTE radarıma ekle">☆</button>
   </div>
+  <div class="radar-bilgi"></div>
   <div class="cubuk"><i style="width:78.31711963200908%"></i><b>78</b></div>
   <div class="satir">
     <span class="etiket">Risk</span><span class="deger risk-düşük">düşük (16)</span>
@@ -1267,7 +1470,9 @@
   <div class="ust">
     <span class="ad">MRGYO</span>
     <span class="karar k-guclu">GÜÇLÜ AL</span>
+    <button class="radarBtn" type="button" title="Radarıma ekle" aria-label="MRGYO radarıma ekle">☆</button>
   </div>
+  <div class="radar-bilgi"></div>
   <div class="cubuk"><i style="width:77.23869738781022%"></i><b>77</b></div>
   <div class="satir">
     <span class="etiket">Risk</span><span class="deger risk-düşük">düşük (18)</span>
@@ -1279,7 +1484,9 @@
   <div class="ust">
     <span class="ad">HKTM</span>
     <span class="karar k-guclu">GÜÇLÜ AL</span>
+    <button class="radarBtn" type="button" title="Radarıma ekle" aria-label="HKTM radarıma ekle">☆</button>
   </div>
+  <div class="radar-bilgi"></div>
   <div class="cubuk"><i style="width:76.65190722458163%"></i><b>77</b></div>
   <div class="satir">
     <span class="etiket">Risk</span><span class="deger risk-düşük">düşük (6)</span>
@@ -1291,7 +1498,9 @@
   <div class="ust">
     <span class="ad">TRGYO</span>
     <span class="karar k-guclu">GÜÇLÜ AL</span>
+    <button class="radarBtn" type="button" title="Radarıma ekle" aria-label="TRGYO radarıma ekle">☆</button>
   </div>
+  <div class="radar-bilgi"></div>
   <div class="cubuk"><i style="width:75.04218335574447%"></i><b>75</b></div>
   <div class="satir">
     <span class="etiket">Risk</span><span class="deger risk-düşük">düşük (0)</span>
@@ -1303,7 +1512,9 @@
   <div class="ust">
     <span class="ad">ASTOR</span>
     <span class="karar k-al">AL</span>
+    <button class="radarBtn" type="button" title="Radarıma ekle" aria-label="ASTOR radarıma ekle">☆</button>
   </div>
+  <div class="radar-bilgi"></div>
   <div class="cubuk"><i style="width:94.73262613935228%"></i><b>95</b></div>
   <div class="satir">
     <span class="etiket">Risk</span><span class="deger risk-orta">orta (28)</span>
@@ -1315,7 +1526,9 @@
   <div class="ust">
     <span class="ad">BINHO</span>
     <span class="karar k-al">AL</span>
+    <button class="radarBtn" type="button" title="Radarıma ekle" aria-label="BINHO radarıma ekle">☆</button>
   </div>
+  <div class="radar-bilgi"></div>
   <div class="cubuk"><i style="width:91.52166243593643%"></i><b>92</b></div>
   <div class="satir">
     <span class="etiket">Risk</span><span class="deger risk-düşük">düşük (10)</span>
@@ -1327,7 +1540,9 @@
   <div class="ust">
     <span class="ad">AHGAZ</span>
     <span class="karar k-al">AL</span>
+    <button class="radarBtn" type="button" title="Radarıma ekle" aria-label="AHGAZ radarıma ekle">☆</button>
   </div>
+  <div class="radar-bilgi"></div>
   <div class="cubuk"><i style="width:90.96389074645583%"></i><b>91</b></div>
   <div class="satir">
     <span class="etiket">Risk</span><span class="deger risk-düşük">düşük (10)</span>
@@ -1339,7 +1554,9 @@
   <div class="ust">
     <span class="ad">MNDRS</span>
     <span class="karar k-al">AL</span>
+    <button class="radarBtn" type="button" title="Radarıma ekle" aria-label="MNDRS radarıma ekle">☆</button>
   </div>
+  <div class="radar-bilgi"></div>
   <div class="cubuk"><i style="width:88.20643842165006%"></i><b>88</b></div>
   <div class="satir">
     <span class="etiket">Risk</span><span class="deger risk-düşük">düşük (10)</span>
@@ -1351,7 +1568,9 @@
   <div class="ust">
     <span class="ad">AKCNS</span>
     <span class="karar k-al">AL</span>
+    <button class="radarBtn" type="button" title="Radarıma ekle" aria-label="AKCNS radarıma ekle">☆</button>
   </div>
+  <div class="radar-bilgi"></div>
   <div class="cubuk"><i style="width:86.49328711881053%"></i><b>86</b></div>
   <div class="satir">
     <span class="etiket">Risk</span><span class="deger risk-düşük">düşük (20)</span>
@@ -1363,7 +1582,9 @@
   <div class="ust">
     <span class="ad">KTLEV</span>
     <span class="karar k-al">AL</span>
+    <button class="radarBtn" type="button" title="Radarıma ekle" aria-label="KTLEV radarıma ekle">☆</button>
   </div>
+  <div class="radar-bilgi"></div>
   <div class="cubuk"><i style="width:85.32142078001633%"></i><b>85</b></div>
   <div class="satir">
     <span class="etiket">Risk</span><span class="deger risk-orta">orta (36)</span>
@@ -1375,7 +1596,9 @@
   <div class="ust">
     <span class="ad">EGEGY</span>
     <span class="karar k-al">AL</span>
+    <button class="radarBtn" type="button" title="Radarıma ekle" aria-label="EGEGY radarıma ekle">☆</button>
   </div>
+  <div class="radar-bilgi"></div>
   <div class="cubuk"><i style="width:85.25046641631687%"></i><b>85</b></div>
   <div class="satir">
     <span class="etiket">Risk</span><span class="deger risk-düşük">düşük (0)</span>
@@ -1387,7 +1610,9 @@
   <div class="ust">
     <span class="ad">DOHOL</span>
     <span class="karar k-al">AL</span>
+    <button class="radarBtn" type="button" title="Radarıma ekle" aria-label="DOHOL radarıma ekle">☆</button>
   </div>
+  <div class="radar-bilgi"></div>
   <div class="cubuk"><i style="width:85.08400053623185%"></i><b>85</b></div>
   <div class="satir">
     <span class="etiket">Risk</span><span class="deger risk-düşük">düşük (0)</span>
@@ -1399,7 +1624,9 @@
   <div class="ust">
     <span class="ad">METRO</span>
     <span class="karar k-al">AL</span>
+    <button class="radarBtn" type="button" title="Radarıma ekle" aria-label="METRO radarıma ekle">☆</button>
   </div>
+  <div class="radar-bilgi"></div>
   <div class="cubuk"><i style="width:82.16155823095009%"></i><b>82</b></div>
   <div class="satir">
     <span class="etiket">Risk</span><span class="deger risk-düşük">düşük (0)</span>
@@ -1411,7 +1638,9 @@
   <div class="ust">
     <span class="ad">RNPOL</span>
     <span class="karar k-al">AL</span>
+    <button class="radarBtn" type="button" title="Radarıma ekle" aria-label="RNPOL radarıma ekle">☆</button>
   </div>
+  <div class="radar-bilgi"></div>
   <div class="cubuk"><i style="width:81.14913090193045%"></i><b>81</b></div>
   <div class="satir">
     <span class="etiket">Risk</span><span class="deger risk-düşük">düşük (8)</span>
@@ -1423,7 +1652,9 @@
   <div class="ust">
     <span class="ad">GSRAY</span>
     <span class="karar k-al">AL</span>
+    <button class="radarBtn" type="button" title="Radarıma ekle" aria-label="GSRAY radarıma ekle">☆</button>
   </div>
+  <div class="radar-bilgi"></div>
   <div class="cubuk"><i style="width:80.47045709954277%"></i><b>80</b></div>
   <div class="satir">
     <span class="etiket">Risk</span><span class="deger risk-düşük">düşük (18)</span>
@@ -1435,7 +1666,9 @@
   <div class="ust">
     <span class="ad">ERSU</span>
     <span class="karar k-al">AL</span>
+    <button class="radarBtn" type="button" title="Radarıma ekle" aria-label="ERSU radarıma ekle">☆</button>
   </div>
+  <div class="radar-bilgi"></div>
   <div class="cubuk"><i style="width:79.52635978462143%"></i><b>80</b></div>
   <div class="satir">
     <span class="etiket">Risk</span><span class="deger risk-düşük">düşük (0)</span>
@@ -1447,7 +1680,9 @@
   <div class="ust">
     <span class="ad">ETILR</span>
     <span class="karar k-al">AL</span>
+    <button class="radarBtn" type="button" title="Radarıma ekle" aria-label="ETILR radarıma ekle">☆</button>
   </div>
+  <div class="radar-bilgi"></div>
   <div class="cubuk"><i style="width:79.40859871695645%"></i><b>79</b></div>
   <div class="satir">
     <span class="etiket">Risk</span><span class="deger risk-düşük">düşük (6)</span>
@@ -1459,7 +1694,9 @@
   <div class="ust">
     <span class="ad">FRIGO</span>
     <span class="karar k-al">AL</span>
+    <button class="radarBtn" type="button" title="Radarıma ekle" aria-label="FRIGO radarıma ekle">☆</button>
   </div>
+  <div class="radar-bilgi"></div>
   <div class="cubuk"><i style="width:77.20365706607367%"></i><b>77</b></div>
   <div class="satir">
     <span class="etiket">Risk</span><span class="deger risk-orta">orta (38)</span>
@@ -1471,7 +1708,9 @@
   <div class="ust">
     <span class="ad">ULUUN</span>
     <span class="karar k-al">AL</span>
+    <button class="radarBtn" type="button" title="Radarıma ekle" aria-label="ULUUN radarıma ekle">☆</button>
   </div>
+  <div class="radar-bilgi"></div>
   <div class="cubuk"><i style="width:77.1166192112442%"></i><b>77</b></div>
   <div class="satir">
     <span class="etiket">Risk</span><span class="deger risk-düşük">düşük (10)</span>
@@ -1483,7 +1722,9 @@
   <div class="ust">
     <span class="ad">AKMGY</span>
     <span class="karar k-al">AL</span>
+    <button class="radarBtn" type="button" title="Radarıma ekle" aria-label="AKMGY radarıma ekle">☆</button>
   </div>
+  <div class="radar-bilgi"></div>
   <div class="cubuk"><i style="width:76.60085250581018%"></i><b>77</b></div>
   <div class="satir">
     <span class="etiket">Risk</span><span class="deger risk-düşük">düşük (14)</span>
@@ -1495,7 +1736,9 @@
   <div class="ust">
     <span class="ad">ISBTR</span>
     <span class="karar k-al">AL</span>
+    <button class="radarBtn" type="button" title="Radarıma ekle" aria-label="ISBTR radarıma ekle">☆</button>
   </div>
+  <div class="radar-bilgi"></div>
   <div class="cubuk"><i style="width:75.25952991412638%"></i><b>75</b></div>
   <div class="satir">
     <span class="etiket">Risk</span><span class="deger risk-düşük">düşük (0)</span>
@@ -1507,7 +1750,9 @@
   <div class="ust">
     <span class="ad">PATEK</span>
     <span class="karar k-al">AL</span>
+    <button class="radarBtn" type="button" title="Radarıma ekle" aria-label="PATEK radarıma ekle">☆</button>
   </div>
+  <div class="radar-bilgi"></div>
   <div class="cubuk"><i style="width:74.95918026094456%"></i><b>75</b></div>
   <div class="satir">
     <span class="etiket">Risk</span><span class="deger risk-düşük">düşük (0)</span>
@@ -1519,7 +1764,9 @@
   <div class="ust">
     <span class="ad">KRDMB</span>
     <span class="karar k-al">AL</span>
+    <button class="radarBtn" type="button" title="Radarıma ekle" aria-label="KRDMB radarıma ekle">☆</button>
   </div>
+  <div class="radar-bilgi"></div>
   <div class="cubuk"><i style="width:74.71506208235789%"></i><b>75</b></div>
   <div class="satir">
     <span class="etiket">Risk</span><span class="deger risk-düşük">düşük (8)</span>
@@ -1531,7 +1778,9 @@
   <div class="ust">
     <span class="ad">KLGYO</span>
     <span class="karar k-al">AL</span>
+    <button class="radarBtn" type="button" title="Radarıma ekle" aria-label="KLGYO radarıma ekle">☆</button>
   </div>
+  <div class="radar-bilgi"></div>
   <div class="cubuk"><i style="width:74.31520012261778%"></i><b>74</b></div>
   <div class="satir">
     <span class="etiket">Risk</span><span class="deger risk-düşük">düşük (0)</span>
@@ -1543,7 +1792,9 @@
   <div class="ust">
     <span class="ad">HALKB</span>
     <span class="karar k-al">AL</span>
+    <button class="radarBtn" type="button" title="Radarıma ekle" aria-label="HALKB radarıma ekle">☆</button>
   </div>
+  <div class="radar-bilgi"></div>
   <div class="cubuk"><i style="width:73.80229869978923%"></i><b>74</b></div>
   <div class="satir">
     <span class="etiket">Risk</span><span class="deger risk-düşük">düşük (18)</span>
@@ -1555,7 +1806,9 @@
   <div class="ust">
     <span class="ad">ARMGD</span>
     <span class="karar k-al">AL</span>
+    <button class="radarBtn" type="button" title="Radarıma ekle" aria-label="ARMGD radarıma ekle">☆</button>
   </div>
+  <div class="radar-bilgi"></div>
   <div class="cubuk"><i style="width:73.24102206472844%"></i><b>73</b></div>
   <div class="satir">
     <span class="etiket">Risk</span><span class="deger risk-orta">orta (22)</span>
@@ -1567,7 +1820,9 @@
   <div class="ust">
     <span class="ad">VAKBN</span>
     <span class="karar k-al">AL</span>
+    <button class="radarBtn" type="button" title="Radarıma ekle" aria-label="VAKBN radarıma ekle">☆</button>
   </div>
+  <div class="radar-bilgi"></div>
   <div class="cubuk"><i style="width:72.62005742526244%"></i><b>73</b></div>
   <div class="satir">
     <span class="etiket">Risk</span><span class="deger risk-düşük">düşük (0)</span>
@@ -1579,7 +1834,9 @@
   <div class="ust">
     <span class="ad">BUCIM</span>
     <span class="karar k-al">AL</span>
+    <button class="radarBtn" type="button" title="Radarıma ekle" aria-label="BUCIM radarıma ekle">☆</button>
   </div>
+  <div class="radar-bilgi"></div>
   <div class="cubuk"><i style="width:72.30641926707045%"></i><b>72</b></div>
   <div class="satir">
     <span class="etiket">Risk</span><span class="deger risk-düşük">düşük (10)</span>
@@ -1591,7 +1848,9 @@
   <div class="ust">
     <span class="ad">RODRG</span>
     <span class="karar k-al">AL</span>
+    <button class="radarBtn" type="button" title="Radarıma ekle" aria-label="RODRG radarıma ekle">☆</button>
   </div>
+  <div class="radar-bilgi"></div>
   <div class="cubuk"><i style="width:71.92732679233781%"></i><b>72</b></div>
   <div class="satir">
     <span class="etiket">Risk</span><span class="deger risk-düşük">düşük (6)</span>
@@ -1603,7 +1862,9 @@
   <div class="ust">
     <span class="ad">ENERY</span>
     <span class="karar k-al">AL</span>
+    <button class="radarBtn" type="button" title="Radarıma ekle" aria-label="ENERY radarıma ekle">☆</button>
   </div>
+  <div class="radar-bilgi"></div>
   <div class="cubuk"><i style="width:71.74421321033496%"></i><b>72</b></div>
   <div class="satir">
     <span class="etiket">Risk</span><span class="deger risk-düşük">düşük (0)</span>
@@ -1615,7 +1876,9 @@
   <div class="ust">
     <span class="ad">FENER</span>
     <span class="karar k-al">AL</span>
+    <button class="radarBtn" type="button" title="Radarıma ekle" aria-label="FENER radarıma ekle">☆</button>
   </div>
+  <div class="radar-bilgi"></div>
   <div class="cubuk"><i style="width:71.35908825032955%"></i><b>71</b></div>
   <div class="satir">
     <span class="etiket">Risk</span><span class="deger risk-düşük">düşük (12)</span>
@@ -1627,7 +1890,9 @@
   <div class="ust">
     <span class="ad">KLYPV</span>
     <span class="karar k-al">AL</span>
+    <button class="radarBtn" type="button" title="Radarıma ekle" aria-label="KLYPV radarıma ekle">☆</button>
   </div>
+  <div class="radar-bilgi"></div>
   <div class="cubuk"><i style="width:70.75259253549525%"></i><b>71</b></div>
   <div class="satir">
     <span class="etiket">Risk</span><span class="deger risk-düşük">düşük (0)</span>
@@ -1639,7 +1904,9 @@
   <div class="ust">
     <span class="ad">EYGYO</span>
     <span class="karar k-al">AL</span>
+    <button class="radarBtn" type="button" title="Radarıma ekle" aria-label="EYGYO radarıma ekle">☆</button>
   </div>
+  <div class="radar-bilgi"></div>
   <div class="cubuk"><i style="width:70.33957912773597%"></i><b>70</b></div>
   <div class="satir">
     <span class="etiket">Risk</span><span class="deger risk-düşük">düşük (10)</span>
@@ -1651,7 +1918,9 @@
   <div class="ust">
     <span class="ad">DIRIT</span>
     <span class="karar k-al">AL</span>
+    <button class="radarBtn" type="button" title="Radarıma ekle" aria-label="DIRIT radarıma ekle">☆</button>
   </div>
+  <div class="radar-bilgi"></div>
   <div class="cubuk"><i style="width:70.24152332275754%"></i><b>70</b></div>
   <div class="satir">
     <span class="etiket">Risk</span><span class="deger risk-düşük">düşük (0)</span>
@@ -1663,7 +1932,9 @@
   <div class="ust">
     <span class="ad">OZKGY</span>
     <span class="karar k-al">AL</span>
+    <button class="radarBtn" type="button" title="Radarıma ekle" aria-label="OZKGY radarıma ekle">☆</button>
   </div>
+  <div class="radar-bilgi"></div>
   <div class="cubuk"><i style="width:69.67554731248907%"></i><b>70</b></div>
   <div class="satir">
     <span class="etiket">Risk</span><span class="deger risk-düşük">düşük (0)</span>
@@ -1675,7 +1946,9 @@
   <div class="ust">
     <span class="ad">EKGYO</span>
     <span class="karar k-al">AL</span>
+    <button class="radarBtn" type="button" title="Radarıma ekle" aria-label="EKGYO radarıma ekle">☆</button>
   </div>
+  <div class="radar-bilgi"></div>
   <div class="cubuk"><i style="width:68.86076885974248%"></i><b>69</b></div>
   <div class="satir">
     <span class="etiket">Risk</span><span class="deger risk-düşük">düşük (0)</span>
@@ -1687,7 +1960,9 @@
   <div class="ust">
     <span class="ad">GUNDG</span>
     <span class="karar k-al">AL</span>
+    <button class="radarBtn" type="button" title="Radarıma ekle" aria-label="GUNDG radarıma ekle">☆</button>
   </div>
+  <div class="radar-bilgi"></div>
   <div class="cubuk"><i style="width:68.85652197562885%"></i><b>69</b></div>
   <div class="satir">
     <span class="etiket">Risk</span><span class="deger risk-düşük">düşük (0)</span>
@@ -1699,7 +1974,9 @@
   <div class="ust">
     <span class="ad">YKBNK</span>
     <span class="karar k-al">AL</span>
+    <button class="radarBtn" type="button" title="Radarıma ekle" aria-label="YKBNK radarıma ekle">☆</button>
   </div>
+  <div class="radar-bilgi"></div>
   <div class="cubuk"><i style="width:66.52891056816462%"></i><b>67</b></div>
   <div class="satir">
     <span class="etiket">Risk</span><span class="deger risk-orta">orta (22)</span>
@@ -1711,7 +1988,9 @@
   <div class="ust">
     <span class="ad">MACKO</span>
     <span class="karar k-al">AL</span>
+    <button class="radarBtn" type="button" title="Radarıma ekle" aria-label="MACKO radarıma ekle">☆</button>
   </div>
+  <div class="radar-bilgi"></div>
   <div class="cubuk"><i style="width:66.45485427523512%"></i><b>66</b></div>
   <div class="satir">
     <span class="etiket">Risk</span><span class="deger risk-düşük">düşük (8)</span>
@@ -1723,7 +2002,9 @@
   <div class="ust">
     <span class="ad">AKBNK</span>
     <span class="karar k-al">AL</span>
+    <button class="radarBtn" type="button" title="Radarıma ekle" aria-label="AKBNK radarıma ekle">☆</button>
   </div>
+  <div class="radar-bilgi"></div>
   <div class="cubuk"><i style="width:66.4245708864394%"></i><b>66</b></div>
   <div class="satir">
     <span class="etiket">Risk</span><span class="deger risk-düşük">düşük (0)</span>
@@ -1735,7 +2016,9 @@
   <div class="ust">
     <span class="ad">HRKET</span>
     <span class="karar k-al">AL</span>
+    <button class="radarBtn" type="button" title="Radarıma ekle" aria-label="HRKET radarıma ekle">☆</button>
   </div>
+  <div class="radar-bilgi"></div>
   <div class="cubuk"><i style="width:64.92954835125526%"></i><b>65</b></div>
   <div class="satir">
     <span class="etiket">Risk</span><span class="deger risk-düşük">düşük (0)</span>
@@ -1747,7 +2030,9 @@
   <div class="ust">
     <span class="ad">GEDZA</span>
     <span class="karar k-al">AL</span>
+    <button class="radarBtn" type="button" title="Radarıma ekle" aria-label="GEDZA radarıma ekle">☆</button>
   </div>
+  <div class="radar-bilgi"></div>
   <div class="cubuk"><i style="width:64.36179481465254%"></i><b>64</b></div>
   <div class="satir">
     <span class="etiket">Risk</span><span class="deger risk-düşük">düşük (0)</span>
@@ -1759,7 +2044,9 @@
   <div class="ust">
     <span class="ad">SAHOL</span>
     <span class="karar k-al">AL</span>
+    <button class="radarBtn" type="button" title="Radarıma ekle" aria-label="SAHOL radarıma ekle">☆</button>
   </div>
+  <div class="radar-bilgi"></div>
   <div class="cubuk"><i style="width:64.12982863527262%"></i><b>64</b></div>
   <div class="satir">
     <span class="etiket">Risk</span><span class="deger risk-orta">orta (22)</span>
@@ -1771,7 +2058,9 @@
   <div class="ust">
     <span class="ad">GARAN</span>
     <span class="karar k-al">AL</span>
+    <button class="radarBtn" type="button" title="Radarıma ekle" aria-label="GARAN radarıma ekle">☆</button>
   </div>
+  <div class="radar-bilgi"></div>
   <div class="cubuk"><i style="width:64.03851022138588%"></i><b>64</b></div>
   <div class="satir">
     <span class="etiket">Risk</span><span class="deger risk-düşük">düşük (0)</span>
@@ -1783,7 +2072,9 @@
   <div class="ust">
     <span class="ad">DENGE</span>
     <span class="karar k-al">AL</span>
+    <button class="radarBtn" type="button" title="Radarıma ekle" aria-label="DENGE radarıma ekle">☆</button>
   </div>
+  <div class="radar-bilgi"></div>
   <div class="cubuk"><i style="width:63.52435366451894%"></i><b>64</b></div>
   <div class="satir">
     <span class="etiket">Risk</span><span class="deger risk-düşük">düşük (0)</span>
@@ -1795,7 +2086,9 @@
   <div class="ust">
     <span class="ad">YGGYO</span>
     <span class="karar k-al">AL</span>
+    <button class="radarBtn" type="button" title="Radarıma ekle" aria-label="YGGYO radarıma ekle">☆</button>
   </div>
+  <div class="radar-bilgi"></div>
   <div class="cubuk"><i style="width:63.33203241338921%"></i><b>63</b></div>
   <div class="satir">
     <span class="etiket">Risk</span><span class="deger risk-düşük">düşük (0)</span>
@@ -1807,7 +2100,9 @@
   <div class="ust">
     <span class="ad">KNFRT</span>
     <span class="karar k-al">AL</span>
+    <button class="radarBtn" type="button" title="Radarıma ekle" aria-label="KNFRT radarıma ekle">☆</button>
   </div>
+  <div class="radar-bilgi"></div>
   <div class="cubuk"><i style="width:62.5194949129514%"></i><b>63</b></div>
   <div class="satir">
     <span class="etiket">Risk</span><span class="deger risk-düşük">düşük (0)</span>
@@ -1819,7 +2114,9 @@
   <div class="ust">
     <span class="ad">EDATA</span>
     <span class="karar k-al">AL</span>
+    <button class="radarBtn" type="button" title="Radarıma ekle" aria-label="EDATA radarıma ekle">☆</button>
   </div>
+  <div class="radar-bilgi"></div>
   <div class="cubuk"><i style="width:62.32337190011944%"></i><b>62</b></div>
   <div class="satir">
     <span class="etiket">Risk</span><span class="deger risk-düşük">düşük (0)</span>
@@ -1831,7 +2128,9 @@
   <div class="ust">
     <span class="ad">BASCM</span>
     <span class="karar k-al">AL</span>
+    <button class="radarBtn" type="button" title="Radarıma ekle" aria-label="BASCM radarıma ekle">☆</button>
   </div>
+  <div class="radar-bilgi"></div>
   <div class="cubuk"><i style="width:62.143350528863955%"></i><b>62</b></div>
   <div class="satir">
     <span class="etiket">Risk</span><span class="deger risk-düşük">düşük (10)</span>
@@ -1843,7 +2142,9 @@
   <div class="ust">
     <span class="ad">BAHKM</span>
     <span class="karar k-izle">İZLE</span>
+    <button class="radarBtn" type="button" title="Radarıma ekle" aria-label="BAHKM radarıma ekle">☆</button>
   </div>
+  <div class="radar-bilgi"></div>
   <div class="cubuk"><i style="width:96.89107741934922%"></i><b>97</b></div>
   <div class="satir">
     <span class="etiket">Risk</span><span class="deger risk-yüksek">yüksek (45)</span>
@@ -1855,7 +2156,9 @@
   <div class="ust">
     <span class="ad">PEKGY</span>
     <span class="karar k-izle">İZLE</span>
+    <button class="radarBtn" type="button" title="Radarıma ekle" aria-label="PEKGY radarıma ekle">☆</button>
   </div>
+  <div class="radar-bilgi"></div>
   <div class="cubuk"><i style="width:95.72192347051919%"></i><b>96</b></div>
   <div class="satir">
     <span class="etiket">Risk</span><span class="deger risk-yüksek">yüksek (60)</span>
@@ -1867,7 +2170,9 @@
   <div class="ust">
     <span class="ad">BRSAN</span>
     <span class="karar k-izle">İZLE</span>
+    <button class="radarBtn" type="button" title="Radarıma ekle" aria-label="BRSAN radarıma ekle">☆</button>
   </div>
+  <div class="radar-bilgi"></div>
   <div class="cubuk"><i style="width:94.86220551794081%"></i><b>95</b></div>
   <div class="satir">
     <span class="etiket">Risk</span><span class="deger risk-yüksek">yüksek (50)</span>
@@ -1879,7 +2184,9 @@
   <div class="ust">
     <span class="ad">KCAER</span>
     <span class="karar k-izle">İZLE</span>
+    <button class="radarBtn" type="button" title="Radarıma ekle" aria-label="KCAER radarıma ekle">☆</button>
   </div>
+  <div class="radar-bilgi"></div>
   <div class="cubuk"><i style="width:94.0910532640726%"></i><b>94</b></div>
   <div class="satir">
     <span class="etiket">Risk</span><span class="deger risk-orta">orta (32)</span>
@@ -1891,7 +2198,9 @@
   <div class="ust">
     <span class="ad">AGESA</span>
     <span class="karar k-izle">İZLE</span>
+    <button class="radarBtn" type="button" title="Radarıma ekle" aria-label="AGESA radarıma ekle">☆</button>
   </div>
+  <div class="radar-bilgi"></div>
   <div class="cubuk"><i style="width:94.03349149788524%"></i><b>94</b></div>
   <div class="satir">
     <span class="etiket">Risk</span><span class="deger risk-yüksek">yüksek (50)</span>
@@ -1903,7 +2212,9 @@
   <div class="ust">
     <span class="ad">ANELE</span>
     <span class="karar k-izle">İZLE</span>
+    <button class="radarBtn" type="button" title="Radarıma ekle" aria-label="ANELE radarıma ekle">☆</button>
   </div>
+  <div class="radar-bilgi"></div>
   <div class="cubuk"><i style="width:93.79914303969139%"></i><b>94</b></div>
   <div class="satir">
     <span class="etiket">Risk</span><span class="deger risk-çok">çok yüksek (67)</span>
@@ -1915,7 +2226,9 @@
   <div class="ust">
     <span class="ad">RGYAS</span>
     <span class="karar k-izle">İZLE</span>
+    <button class="radarBtn" type="button" title="Radarıma ekle" aria-label="RGYAS radarıma ekle">☆</button>
   </div>
+  <div class="radar-bilgi"></div>
   <div class="cubuk"><i style="width:91.88501447091824%"></i><b>92</b></div>
   <div class="satir">
     <span class="etiket">Risk</span><span class="deger risk-orta">orta (40)</span>
@@ -1927,7 +2240,9 @@
   <div class="ust">
     <span class="ad">EPLAS</span>
     <span class="karar k-izle">İZLE</span>
+    <button class="radarBtn" type="button" title="Radarıma ekle" aria-label="EPLAS radarıma ekle">☆</button>
   </div>
+  <div class="radar-bilgi"></div>
   <div class="cubuk"><i style="width:91.4866570297619%"></i><b>91</b></div>
   <div class="satir">
     <span class="etiket">Risk</span><span class="deger risk-orta">orta (40)</span>
@@ -1939,7 +2254,9 @@
   <div class="ust">
     <span class="ad">ALBRK</span>
     <span class="karar k-izle">İZLE</span>
+    <button class="radarBtn" type="button" title="Radarıma ekle" aria-label="ALBRK radarıma ekle">☆</button>
   </div>
+  <div class="radar-bilgi"></div>
   <div class="cubuk"><i style="width:89.50875581366242%"></i><b>90</b></div>
   <div class="satir">
     <span class="etiket">Risk</span><span class="deger risk-yüksek">yüksek (50)</span>
@@ -1951,7 +2268,9 @@
   <div class="ust">
     <span class="ad">ISGYO</span>
     <span class="karar k-izle">İZLE</span>
+    <button class="radarBtn" type="button" title="Radarıma ekle" aria-label="ISGYO radarıma ekle">☆</button>
   </div>
+  <div class="radar-bilgi"></div>
   <div class="cubuk"><i style="width:89.18663087487755%"></i><b>89</b></div>
   <div class="satir">
     <span class="etiket">Risk</span><span class="deger risk-orta">orta (40)</span>
@@ -1963,7 +2282,9 @@
   <div class="ust">
     <span class="ad">BIGEN</span>
     <span class="karar k-izle">İZLE</span>
+    <button class="radarBtn" type="button" title="Radarıma ekle" aria-label="BIGEN radarıma ekle">☆</button>
   </div>
+  <div class="radar-bilgi"></div>
   <div class="cubuk"><i style="width:86.24152955647281%"></i><b>86</b></div>
   <div class="satir">
     <span class="etiket">Risk</span><span class="deger risk-yüksek">yüksek (57)</span>
@@ -1975,7 +2296,9 @@
   <div class="ust">
     <span class="ad">IZMDC</span>
     <span class="karar k-izle">İZLE</span>
+    <button class="radarBtn" type="button" title="Radarıma ekle" aria-label="IZMDC radarıma ekle">☆</button>
   </div>
+  <div class="radar-bilgi"></div>
   <div class="cubuk"><i style="width:85.60104424789331%"></i><b>86</b></div>
   <div class="satir">
     <span class="etiket">Risk</span><span class="deger risk-yüksek">yüksek (48)</span>
@@ -1987,7 +2310,9 @@
   <div class="ust">
     <span class="ad">ENJSA</span>
     <span class="karar k-izle">İZLE</span>
+    <button class="radarBtn" type="button" title="Radarıma ekle" aria-label="ENJSA radarıma ekle">☆</button>
   </div>
+  <div class="radar-bilgi"></div>
   <div class="cubuk"><i style="width:84.99928006729975%"></i><b>85</b></div>
   <div class="satir">
     <span class="etiket">Risk</span><span class="deger risk-orta">orta (40)</span>
@@ -1999,7 +2324,9 @@
   <div class="ust">
     <span class="ad">ALKLC</span>
     <span class="karar k-izle">İZLE</span>
+    <button class="radarBtn" type="button" title="Radarıma ekle" aria-label="ALKLC radarıma ekle">☆</button>
   </div>
+  <div class="radar-bilgi"></div>
   <div class="cubuk"><i style="width:84.72977244059985%"></i><b>85</b></div>
   <div class="satir">
     <span class="etiket">Risk</span><span class="deger risk-yüksek">yüksek (42)</span>
@@ -2011,7 +2338,9 @@
   <div class="ust">
     <span class="ad">AYDEM</span>
     <span class="karar k-izle">İZLE</span>
+    <button class="radarBtn" type="button" title="Radarıma ekle" aria-label="AYDEM radarıma ekle">☆</button>
   </div>
+  <div class="radar-bilgi"></div>
   <div class="cubuk"><i style="width:84.49803085664139%"></i><b>84</b></div>
   <div class="satir">
     <span class="etiket">Risk</span><span class="deger risk-orta">orta (40)</span>
@@ -2023,7 +2352,9 @@
   <div class="ust">
     <span class="ad">KGYO</span>
     <span class="karar k-izle">İZLE</span>
+    <button class="radarBtn" type="button" title="Radarıma ekle" aria-label="KGYO radarıma ekle">☆</button>
   </div>
+  <div class="radar-bilgi"></div>
   <div class="cubuk"><i style="width:83.64555274936914%"></i><b>84</b></div>
   <div class="satir">
     <span class="etiket">Risk</span><span class="deger risk-yüksek">yüksek (48)</span>
@@ -2035,7 +2366,9 @@
   <div class="ust">
     <span class="ad">TRHOL</span>
     <span class="karar k-izle">İZLE</span>
+    <button class="radarBtn" type="button" title="Radarıma ekle" aria-label="TRHOL radarıma ekle">☆</button>
   </div>
+  <div class="radar-bilgi"></div>
   <div class="cubuk"><i style="width:83.39857012713512%"></i><b>83</b></div>
   <div class="satir">
     <span class="etiket">Risk</span><span class="deger risk-yüksek">yüksek (45)</span>
@@ -2047,7 +2380,9 @@
   <div class="ust">
     <span class="ad">OZATD</span>
     <span class="karar k-izle">İZLE</span>
+    <button class="radarBtn" type="button" title="Radarıma ekle" aria-label="OZATD radarıma ekle">☆</button>
   </div>
+  <div class="radar-bilgi"></div>
   <div class="cubuk"><i style="width:78.46943267724644%"></i><b>78</b></div>
   <div class="satir">
     <span class="etiket">Risk</span><span class="deger risk-yüksek">yüksek (45)</span>
@@ -2059,7 +2394,9 @@
   <div class="ust">
     <span class="ad">RALYH</span>
     <span class="karar k-izle">İZLE</span>
+    <button class="radarBtn" type="button" title="Radarıma ekle" aria-label="RALYH radarıma ekle">☆</button>
   </div>
+  <div class="radar-bilgi"></div>
   <div class="cubuk"><i style="width:78.46134463641432%"></i><b>78</b></div>
   <div class="satir">
     <span class="etiket">Risk</span><span class="deger risk-orta">orta (32)</span>
@@ -2071,7 +2408,9 @@
   <div class="ust">
     <span class="ad">KOCMT</span>
     <span class="karar k-izle">İZLE</span>
+    <button class="radarBtn" type="button" title="Radarıma ekle" aria-label="KOCMT radarıma ekle">☆</button>
   </div>
+  <div class="radar-bilgi"></div>
   <div class="cubuk"><i style="width:76.89609218181926%"></i><b>77</b></div>
   <div class="satir">
     <span class="etiket">Risk</span><span class="deger risk-orta">orta (32)</span>
@@ -2083,7 +2422,9 @@
   <div class="ust">
     <span class="ad">SONME</span>
     <span class="karar k-izle">İZLE</span>
+    <button class="radarBtn" type="button" title="Radarıma ekle" aria-label="SONME radarıma ekle">☆</button>
   </div>
+  <div class="radar-bilgi"></div>
   <div class="cubuk"><i style="width:76.19399268649936%"></i><b>76</b></div>
   <div class="satir">
     <span class="etiket">Risk</span><span class="deger risk-orta">orta (40)</span>
@@ -2095,7 +2436,9 @@
   <div class="ust">
     <span class="ad">ATSYH</span>
     <span class="karar k-izle">İZLE</span>
+    <button class="radarBtn" type="button" title="Radarıma ekle" aria-label="ATSYH radarıma ekle">☆</button>
   </div>
+  <div class="radar-bilgi"></div>
   <div class="cubuk"><i style="width:75.46270833522972%"></i><b>75</b></div>
   <div class="satir">
     <span class="etiket">Risk</span><span class="deger risk-orta">orta (32)</span>
@@ -2107,7 +2450,9 @@
   <div class="ust">
     <span class="ad">EFOR</span>
     <span class="karar k-izle">İZLE</span>
+    <button class="radarBtn" type="button" title="Radarıma ekle" aria-label="EFOR radarıma ekle">☆</button>
   </div>
+  <div class="radar-bilgi"></div>
   <div class="cubuk"><i style="width:71.21677531775434%"></i><b>71</b></div>
   <div class="satir">
     <span class="etiket">Risk</span><span class="deger risk-yüksek">yüksek (46)</span>
@@ -2119,7 +2464,9 @@
   <div class="ust">
     <span class="ad">SEGMN</span>
     <span class="karar k-izle">İZLE</span>
+    <button class="radarBtn" type="button" title="Radarıma ekle" aria-label="SEGMN radarıma ekle">☆</button>
   </div>
+  <div class="radar-bilgi"></div>
   <div class="cubuk"><i style="width:66.94463032050288%"></i><b>67</b></div>
   <div class="satir">
     <span class="etiket">Risk</span><span class="deger risk-düşük">düşük (0)</span>
@@ -2131,7 +2478,9 @@
   <div class="ust">
     <span class="ad">AVGYO</span>
     <span class="karar k-izle">İZLE</span>
+    <button class="radarBtn" type="button" title="Radarıma ekle" aria-label="AVGYO radarıma ekle">☆</button>
   </div>
+  <div class="radar-bilgi"></div>
   <div class="cubuk"><i style="width:65.9043801403208%"></i><b>66</b></div>
   <div class="satir">
     <span class="etiket">Risk</span><span class="deger risk-düşük">düşük (0)</span>
@@ -2143,7 +2492,9 @@
   <div class="ust">
     <span class="ad">DGNMO</span>
     <span class="karar k-izle">İZLE</span>
+    <button class="radarBtn" type="button" title="Radarıma ekle" aria-label="DGNMO radarıma ekle">☆</button>
   </div>
+  <div class="radar-bilgi"></div>
   <div class="cubuk"><i style="width:65.78282987972638%"></i><b>66</b></div>
   <div class="satir">
     <span class="etiket">Risk</span><span class="deger risk-düşük">düşük (10)</span>
@@ -2155,7 +2506,9 @@
   <div class="ust">
     <span class="ad">KBORU</span>
     <span class="karar k-izle">İZLE</span>
+    <button class="radarBtn" type="button" title="Radarıma ekle" aria-label="KBORU radarıma ekle">☆</button>
   </div>
+  <div class="radar-bilgi"></div>
   <div class="cubuk"><i style="width:65.05952993743877%"></i><b>65</b></div>
   <div class="satir">
     <span class="etiket">Risk</span><span class="deger risk-düşük">düşük (0)</span>
@@ -2167,7 +2520,9 @@
   <div class="ust">
     <span class="ad">PAGYO</span>
     <span class="karar k-izle">İZLE</span>
+    <button class="radarBtn" type="button" title="Radarıma ekle" aria-label="PAGYO radarıma ekle">☆</button>
   </div>
+  <div class="radar-bilgi"></div>
   <div class="cubuk"><i style="width:64.86516578667273%"></i><b>65</b></div>
   <div class="satir">
     <span class="etiket">Risk</span><span class="deger risk-düşük">düşük (0)</span>
@@ -2179,7 +2534,9 @@
   <div class="ust">
     <span class="ad">ZRGYO</span>
     <span class="karar k-izle">İZLE</span>
+    <button class="radarBtn" type="button" title="Radarıma ekle" aria-label="ZRGYO radarıma ekle">☆</button>
   </div>
+  <div class="radar-bilgi"></div>
   <div class="cubuk"><i style="width:64.84186819395018%"></i><b>65</b></div>
   <div class="satir">
     <span class="etiket">Risk</span><span class="deger risk-yüksek">yüksek (46)</span>
@@ -2191,7 +2548,9 @@
   <div class="ust">
     <span class="ad">SKYMD</span>
     <span class="karar k-izle">İZLE</span>
+    <button class="radarBtn" type="button" title="Radarıma ekle" aria-label="SKYMD radarıma ekle">☆</button>
   </div>
+  <div class="radar-bilgi"></div>
   <div class="cubuk"><i style="width:62.30503771578111%"></i><b>62</b></div>
   <div class="satir">
     <span class="etiket">Risk</span><span class="deger risk-düşük">düşük (10)</span>
@@ -2203,7 +2562,9 @@
   <div class="ust">
     <span class="ad">UFUK</span>
     <span class="karar k-izle">İZLE</span>
+    <button class="radarBtn" type="button" title="Radarıma ekle" aria-label="UFUK radarıma ekle">☆</button>
   </div>
+  <div class="radar-bilgi"></div>
   <div class="cubuk"><i style="width:61.602669373840484%"></i><b>62</b></div>
   <div class="satir">
     <span class="etiket">Risk</span><span class="deger risk-düşük">düşük (0)</span>
@@ -2215,7 +2576,9 @@
   <div class="ust">
     <span class="ad">ESCOM</span>
     <span class="karar k-izle">İZLE</span>
+    <button class="radarBtn" type="button" title="Radarıma ekle" aria-label="ESCOM radarıma ekle">☆</button>
   </div>
+  <div class="radar-bilgi"></div>
   <div class="cubuk"><i style="width:60.17092272221552%"></i><b>60</b></div>
   <div class="satir">
     <span class="etiket">Risk</span><span class="deger risk-yüksek">yüksek (46)</span>
@@ -2227,7 +2590,9 @@
   <div class="ust">
     <span class="ad">BIENY</span>
     <span class="karar k-izle">İZLE</span>
+    <button class="radarBtn" type="button" title="Radarıma ekle" aria-label="BIENY radarıma ekle">☆</button>
   </div>
+  <div class="radar-bilgi"></div>
   <div class="cubuk"><i style="width:59.33886160673916%"></i><b>59</b></div>
   <div class="satir">
     <span class="etiket">Risk</span><span class="deger risk-düşük">düşük (0)</span>
@@ -2239,7 +2604,9 @@
   <div class="ust">
     <span class="ad">CVKMD</span>
     <span class="karar k-izle">İZLE</span>
+    <button class="radarBtn" type="button" title="Radarıma ekle" aria-label="CVKMD radarıma ekle">☆</button>
   </div>
+  <div class="radar-bilgi"></div>
   <div class="cubuk"><i style="width:58.97088412869064%"></i><b>59</b></div>
   <div class="satir">
     <span class="etiket">Risk</span><span class="deger risk-düşük">düşük (0)</span>
@@ -2251,7 +2618,9 @@
   <div class="ust">
     <span class="ad">GEREL</span>
     <span class="karar k-izle">İZLE</span>
+    <button class="radarBtn" type="button" title="Radarıma ekle" aria-label="GEREL radarıma ekle">☆</button>
   </div>
+  <div class="radar-bilgi"></div>
   <div class="cubuk"><i style="width:58.91469744879108%"></i><b>59</b></div>
   <div class="satir">
     <span class="etiket">Risk</span><span class="deger risk-orta">orta (28)</span>
@@ -2263,7 +2632,9 @@
   <div class="ust">
     <span class="ad">GLRYH</span>
     <span class="karar k-izle">İZLE</span>
+    <button class="radarBtn" type="button" title="Radarıma ekle" aria-label="GLRYH radarıma ekle">☆</button>
   </div>
+  <div class="radar-bilgi"></div>
   <div class="cubuk"><i style="width:58.82771724245308%"></i><b>59</b></div>
   <div class="satir">
     <span class="etiket">Risk</span><span class="deger risk-düşük">düşük (8)</span>
@@ -2275,7 +2646,9 @@
   <div class="ust">
     <span class="ad">MARMR</span>
     <span class="karar k-izle">İZLE</span>
+    <button class="radarBtn" type="button" title="Radarıma ekle" aria-label="MARMR radarıma ekle">☆</button>
   </div>
+  <div class="radar-bilgi"></div>
   <div class="cubuk"><i style="width:58.72405658594367%"></i><b>59</b></div>
   <div class="satir">
     <span class="etiket">Risk</span><span class="deger risk-düşük">düşük (0)</span>
@@ -2287,7 +2660,9 @@
   <div class="ust">
     <span class="ad">PETUN</span>
     <span class="karar k-izle">İZLE</span>
+    <button class="radarBtn" type="button" title="Radarıma ekle" aria-label="PETUN radarıma ekle">☆</button>
   </div>
+  <div class="radar-bilgi"></div>
   <div class="cubuk"><i style="width:58.62489825507078%"></i><b>59</b></div>
   <div class="satir">
     <span class="etiket">Risk</span><span class="deger risk-düşük">düşük (20)</span>
@@ -2299,7 +2674,9 @@
   <div class="ust">
     <span class="ad">SARKY</span>
     <span class="karar k-izle">İZLE</span>
+    <button class="radarBtn" type="button" title="Radarıma ekle" aria-label="SARKY radarıma ekle">☆</button>
   </div>
+  <div class="radar-bilgi"></div>
   <div class="cubuk"><i style="width:58.500710610533545%"></i><b>59</b></div>
   <div class="satir">
     <span class="etiket">Risk</span><span class="deger risk-düşük">düşük (8)</span>
@@ -2311,7 +2688,9 @@
   <div class="ust">
     <span class="ad">PSGYO</span>
     <span class="karar k-izle">İZLE</span>
+    <button class="radarBtn" type="button" title="Radarıma ekle" aria-label="PSGYO radarıma ekle">☆</button>
   </div>
+  <div class="radar-bilgi"></div>
   <div class="cubuk"><i style="width:58.424070925729026%"></i><b>58</b></div>
   <div class="satir">
     <span class="etiket">Risk</span><span class="deger risk-düşük">düşük (10)</span>
@@ -2323,7 +2702,9 @@
   <div class="ust">
     <span class="ad">DNISI</span>
     <span class="karar k-izle">İZLE</span>
+    <button class="radarBtn" type="button" title="Radarıma ekle" aria-label="DNISI radarıma ekle">☆</button>
   </div>
+  <div class="radar-bilgi"></div>
   <div class="cubuk"><i style="width:58.076976723988125%"></i><b>58</b></div>
   <div class="satir">
     <span class="etiket">Risk</span><span class="deger risk-düşük">düşük (0)</span>
@@ -2335,7 +2716,9 @@
   <div class="ust">
     <span class="ad">TAVHL</span>
     <span class="karar k-izle">İZLE</span>
+    <button class="radarBtn" type="button" title="Radarıma ekle" aria-label="TAVHL radarıma ekle">☆</button>
   </div>
+  <div class="radar-bilgi"></div>
   <div class="cubuk"><i style="width:57.82605015057236%"></i><b>58</b></div>
   <div class="satir">
     <span class="etiket">Risk</span><span class="deger risk-düşük">düşük (0)</span>
@@ -2347,7 +2730,9 @@
   <div class="ust">
     <span class="ad">KAYSE</span>
     <span class="karar k-izle">İZLE</span>
+    <button class="radarBtn" type="button" title="Radarıma ekle" aria-label="KAYSE radarıma ekle">☆</button>
   </div>
+  <div class="radar-bilgi"></div>
   <div class="cubuk"><i style="width:57.619826666426015%"></i><b>58</b></div>
   <div class="satir">
     <span class="etiket">Risk</span><span class="deger risk-düşük">düşük (0)</span>
@@ -2359,7 +2744,9 @@
   <div class="ust">
     <span class="ad">CEMAS</span>
     <span class="karar k-izle">İZLE</span>
+    <button class="radarBtn" type="button" title="Radarıma ekle" aria-label="CEMAS radarıma ekle">☆</button>
   </div>
+  <div class="radar-bilgi"></div>
   <div class="cubuk"><i style="width:57.456192634617615%"></i><b>57</b></div>
   <div class="satir">
     <span class="etiket">Risk</span><span class="deger risk-düşük">düşük (12)</span>
@@ -2371,7 +2758,9 @@
   <div class="ust">
     <span class="ad">OZYSR</span>
     <span class="karar k-izle">İZLE</span>
+    <button class="radarBtn" type="button" title="Radarıma ekle" aria-label="OZYSR radarıma ekle">☆</button>
   </div>
+  <div class="radar-bilgi"></div>
   <div class="cubuk"><i style="width:57.40801077682466%"></i><b>57</b></div>
   <div class="satir">
     <span class="etiket">Risk</span><span class="deger risk-düşük">düşük (0)</span>
@@ -2383,7 +2772,9 @@
   <div class="ust">
     <span class="ad">COSMO</span>
     <span class="karar k-izle">İZLE</span>
+    <button class="radarBtn" type="button" title="Radarıma ekle" aria-label="COSMO radarıma ekle">☆</button>
   </div>
+  <div class="radar-bilgi"></div>
   <div class="cubuk"><i style="width:57.33816346815091%"></i><b>57</b></div>
   <div class="satir">
     <span class="etiket">Risk</span><span class="deger risk-düşük">düşük (0)</span>
@@ -2395,7 +2786,9 @@
   <div class="ust">
     <span class="ad">ISFIN</span>
     <span class="karar k-izle">İZLE</span>
+    <button class="radarBtn" type="button" title="Radarıma ekle" aria-label="ISFIN radarıma ekle">☆</button>
   </div>
+  <div class="radar-bilgi"></div>
   <div class="cubuk"><i style="width:57.22905823389955%"></i><b>57</b></div>
   <div class="satir">
     <span class="etiket">Risk</span><span class="deger risk-düşük">düşük (16)</span>
@@ -2407,7 +2800,9 @@
   <div class="ust">
     <span class="ad">NIBAS</span>
     <span class="karar k-izle">İZLE</span>
+    <button class="radarBtn" type="button" title="Radarıma ekle" aria-label="NIBAS radarıma ekle">☆</button>
   </div>
+  <div class="radar-bilgi"></div>
   <div class="cubuk"><i style="width:55.99313753956214%"></i><b>56</b></div>
   <div class="satir">
     <span class="etiket">Risk</span><span class="deger risk-orta">orta (22)</span>
@@ -2419,7 +2814,9 @@
   <div class="ust">
     <span class="ad">BYDNR</span>
     <span class="karar k-izle">İZLE</span>
+    <button class="radarBtn" type="button" title="Radarıma ekle" aria-label="BYDNR radarıma ekle">☆</button>
   </div>
+  <div class="radar-bilgi"></div>
   <div class="cubuk"><i style="width:55.851033531564774%"></i><b>56</b></div>
   <div class="satir">
     <span class="etiket">Risk</span><span class="deger risk-orta">orta (22)</span>
@@ -2431,7 +2828,9 @@
   <div class="ust">
     <span class="ad">ICBCT</span>
     <span class="karar k-izle">İZLE</span>
+    <button class="radarBtn" type="button" title="Radarıma ekle" aria-label="ICBCT radarıma ekle">☆</button>
   </div>
+  <div class="radar-bilgi"></div>
   <div class="cubuk"><i style="width:55.53279478625943%"></i><b>56</b></div>
   <div class="satir">
     <span class="etiket">Risk</span><span class="deger risk-düşük">düşük (0)</span>
@@ -2443,7 +2842,9 @@
   <div class="ust">
     <span class="ad">ISBIR</span>
     <span class="karar k-izle">İZLE</span>
+    <button class="radarBtn" type="button" title="Radarıma ekle" aria-label="ISBIR radarıma ekle">☆</button>
   </div>
+  <div class="radar-bilgi"></div>
   <div class="cubuk"><i style="width:54.584690407796984%"></i><b>55</b></div>
   <div class="satir">
     <span class="etiket">Risk</span><span class="deger risk-düşük">düşük (0)</span>
@@ -2455,7 +2856,9 @@
   <div class="ust">
     <span class="ad">FMIZP</span>
     <span class="karar k-izle">İZLE</span>
+    <button class="radarBtn" type="button" title="Radarıma ekle" aria-label="FMIZP radarıma ekle">☆</button>
   </div>
+  <div class="radar-bilgi"></div>
   <div class="cubuk"><i style="width:53.57873370573069%"></i><b>54</b></div>
   <div class="satir">
     <span class="etiket">Risk</span><span class="deger risk-düşük">düşük (8)</span>
@@ -2467,7 +2870,9 @@
   <div class="ust">
     <span class="ad">BAGFS</span>
     <span class="karar k-izle">İZLE</span>
+    <button class="radarBtn" type="button" title="Radarıma ekle" aria-label="BAGFS radarıma ekle">☆</button>
   </div>
+  <div class="radar-bilgi"></div>
   <div class="cubuk"><i style="width:53.57548914473401%"></i><b>54</b></div>
   <div class="satir">
     <span class="etiket">Risk</span><span class="deger risk-orta">orta (32)</span>
@@ -2479,7 +2884,9 @@
   <div class="ust">
     <span class="ad">DSTKF</span>
     <span class="karar k-izle">İZLE</span>
+    <button class="radarBtn" type="button" title="Radarıma ekle" aria-label="DSTKF radarıma ekle">☆</button>
   </div>
+  <div class="radar-bilgi"></div>
   <div class="cubuk"><i style="width:53.488009082900874%"></i><b>53</b></div>
   <div class="satir">
     <span class="etiket">Risk</span><span class="deger risk-düşük">düşük (0)</span>
@@ -2491,7 +2898,9 @@
   <div class="ust">
     <span class="ad">DERIM</span>
     <span class="karar k-izle">İZLE</span>
+    <button class="radarBtn" type="button" title="Radarıma ekle" aria-label="DERIM radarıma ekle">☆</button>
   </div>
+  <div class="radar-bilgi"></div>
   <div class="cubuk"><i style="width:53.27201665715033%"></i><b>53</b></div>
   <div class="satir">
     <span class="etiket">Risk</span><span class="deger risk-düşük">düşük (0)</span>
@@ -2503,7 +2912,9 @@
   <div class="ust">
     <span class="ad">BRKVY</span>
     <span class="karar k-izle">İZLE</span>
+    <button class="radarBtn" type="button" title="Radarıma ekle" aria-label="BRKVY radarıma ekle">☆</button>
   </div>
+  <div class="radar-bilgi"></div>
   <div class="cubuk"><i style="width:53.26214444080047%"></i><b>53</b></div>
   <div class="satir">
     <span class="etiket">Risk</span><span class="deger risk-düşük">düşük (0)</span>
@@ -2515,7 +2926,9 @@
   <div class="ust">
     <span class="ad">BORSK</span>
     <span class="karar k-izle">İZLE</span>
+    <button class="radarBtn" type="button" title="Radarıma ekle" aria-label="BORSK radarıma ekle">☆</button>
   </div>
+  <div class="radar-bilgi"></div>
   <div class="cubuk"><i style="width:53.01633328259655%"></i><b>53</b></div>
   <div class="satir">
     <span class="etiket">Risk</span><span class="deger risk-düşük">düşük (0)</span>
@@ -2527,7 +2940,9 @@
   <div class="ust">
     <span class="ad">TTRAK</span>
     <span class="karar k-izle">İZLE</span>
+    <button class="radarBtn" type="button" title="Radarıma ekle" aria-label="TTRAK radarıma ekle">☆</button>
   </div>
+  <div class="radar-bilgi"></div>
   <div class="cubuk"><i style="width:52.60931651613033%"></i><b>53</b></div>
   <div class="satir">
     <span class="etiket">Risk</span><span class="deger risk-düşük">düşük (0)</span>
@@ -2539,7 +2954,9 @@
   <div class="ust">
     <span class="ad">SEKUR</span>
     <span class="karar k-izle">İZLE</span>
+    <button class="radarBtn" type="button" title="Radarıma ekle" aria-label="SEKUR radarıma ekle">☆</button>
   </div>
+  <div class="radar-bilgi"></div>
   <div class="cubuk"><i style="width:52.28439549671259%"></i><b>52</b></div>
   <div class="satir">
     <span class="etiket">Risk</span><span class="deger risk-orta">orta (32)</span>
@@ -2551,7 +2968,9 @@
   <div class="ust">
     <span class="ad">TSGYO</span>
     <span class="karar k-izle">İZLE</span>
+    <button class="radarBtn" type="button" title="Radarıma ekle" aria-label="TSGYO radarıma ekle">☆</button>
   </div>
+  <div class="radar-bilgi"></div>
   <div class="cubuk"><i style="width:51.87434084314469%"></i><b>52</b></div>
   <div class="satir">
     <span class="etiket">Risk</span><span class="deger risk-düşük">düşük (0)</span>
@@ -2563,7 +2982,9 @@
   <div class="ust">
     <span class="ad">SNICA</span>
     <span class="karar k-izle">İZLE</span>
+    <button class="radarBtn" type="button" title="Radarıma ekle" aria-label="SNICA radarıma ekle">☆</button>
   </div>
+  <div class="radar-bilgi"></div>
   <div class="cubuk"><i style="width:51.47265455720056%"></i><b>51</b></div>
   <div class="satir">
     <span class="etiket">Risk</span><span class="deger risk-düşük">düşük (0)</span>
@@ -2575,7 +2996,9 @@
   <div class="ust">
     <span class="ad">AYES</span>
     <span class="karar k-izle">İZLE</span>
+    <button class="radarBtn" type="button" title="Radarıma ekle" aria-label="AYES radarıma ekle">☆</button>
   </div>
+  <div class="radar-bilgi"></div>
   <div class="cubuk"><i style="width:51.018784965007924%"></i><b>51</b></div>
   <div class="satir">
     <span class="etiket">Risk</span><span class="deger risk-düşük">düşük (0)</span>
@@ -2587,7 +3010,9 @@
   <div class="ust">
     <span class="ad">BNTAS</span>
     <span class="karar k-izle">İZLE</span>
+    <button class="radarBtn" type="button" title="Radarıma ekle" aria-label="BNTAS radarıma ekle">☆</button>
   </div>
+  <div class="radar-bilgi"></div>
   <div class="cubuk"><i style="width:50.97178355353134%"></i><b>51</b></div>
   <div class="satir">
     <span class="etiket">Risk</span><span class="deger risk-düşük">düşük (0)</span>
@@ -2599,7 +3024,9 @@
   <div class="ust">
     <span class="ad">PLTUR</span>
     <span class="karar k-izle">İZLE</span>
+    <button class="radarBtn" type="button" title="Radarıma ekle" aria-label="PLTUR radarıma ekle">☆</button>
   </div>
+  <div class="radar-bilgi"></div>
   <div class="cubuk"><i style="width:50.684691325696164%"></i><b>51</b></div>
   <div class="satir">
     <span class="etiket">Risk</span><span class="deger risk-düşük">düşük (6)</span>
@@ -2621,12 +3048,64 @@
   var arama = document.querySelector('.suzgec input');
   var aktif = 'hepsi';
 
+  // ---- RADAR: isaretlenen hisseler tarayicida saklanir ----
+  var ANAHTAR = 'bist-radar';
+  function radarOku(){
+    try { return JSON.parse(localStorage.getItem(ANAHTAR)) || {}; } catch (e) { return {}; }
+  }
+  function radarYaz(r){
+    try { localStorage.setItem(ANAHTAR, JSON.stringify(r)); } catch (e) {}
+  }
+  var radar = radarOku();
+
+  function gunFarki(iso){
+    var a = new Date(iso + 'T00:00:00'), b = new Date();
+    b = new Date(b.getFullYear(), b.getMonth(), b.getDate());
+    var f = Math.round((b - a) / 86400000);
+    return isNaN(f) ? 0 : f;
+  }
+  function bugunISO(){
+    var g = new Date(), p = function(n){ return (n < 10 ? '0' : '') + n; };
+    return g.getFullYear() + '-' + p(g.getMonth() + 1) + '-' + p(g.getDate());
+  }
+  function radarCiz(){
+    var n = 0;
+    kartlar.forEach(function(k){
+      var ad = k.dataset.ad, btn = k.querySelector('.radarBtn'), bilgi = k.querySelector('.radar-bilgi');
+      if (radar[ad]) {
+        n++;
+        k.classList.add('radarda'); btn.classList.add('acik');
+        btn.textContent = '★'; btn.title = 'Radarımdan çıkar';
+        var f = gunFarki(radar[ad]);
+        bilgi.textContent = f === 0 ? '★ bugün radarınıza eklediniz'
+          : f === 1 ? '★ dün radarınıza eklediniz'
+          : '★ ' + f + ' gündür radarınızda';
+      } else {
+        k.classList.remove('radarda'); btn.classList.remove('acik');
+        btn.textContent = '☆'; btn.title = 'Radarıma ekle';
+        bilgi.textContent = '';
+      }
+    });
+    var sayac = document.getElementById('radarSayi');
+    if (sayac) sayac.textContent = n;
+  }
+  kartlar.forEach(function(k){
+    k.querySelector('.radarBtn').addEventListener('click', function(e){
+      e.stopPropagation();
+      var ad = k.dataset.ad;
+      if (radar[ad]) delete radar[ad]; else radar[ad] = bugunISO();
+      radarYaz(radar); radarCiz();
+      if (aktif === 'radar') uygula();
+    });
+  });
+
   function uygula(){
     var q = (arama.value || '').trim().toUpperCase();
     kartlar.forEach(function(k){
       var d = k.dataset.durum, gorunur = true;
       if (aktif === 'hepsi') gorunur = (d === 'guclu' || d === 'al');
       else if (aktif === 'guclu') gorunur = (d === 'guclu');
+      else if (aktif === 'radar') gorunur = !!radar[k.dataset.ad];
       if (gorunur && q) gorunur = k.dataset.ad.indexOf(q) === 0;
       k.style.display = gorunur ? '' : 'none';
     });
@@ -2659,6 +3138,7 @@
   }
   sirasec.addEventListener('change', siralamayiUygula);
 
+  radarCiz();
   uygula();
 })();
 </script>
