@@ -100,10 +100,13 @@ export function htmlRapor(satirlar, stSinyalleri, tarih, gunIci) {
     <span class="ad">${kacis(x.ad)}</span>
     <span class="karar k-${sinif}">${d.karar}</span>
     ${stAl ? '<span class="rozet-st">⚡ ST bugün AL</span>' : ''}
+    <span class="skorBuyuk">${x.skor.toFixed(0)}</span>
+  </div>
+  <div class="cubuk"><i style="width:${Math.max(0, Math.min(100, x.skor))}%"></i></div>
+  <div class="altSira">
+    <span class="radar-bilgi"></span>
     <button class="radarBtn" type="button" title="Radarıma ekle" aria-label="${kacis(x.ad)} radarıma ekle">☆</button>
   </div>
-  <div class="radar-bilgi"></div>
-  <div class="cubuk"><i style="width:${Math.max(0, Math.min(100, x.skor))}%"></i><b>${x.skor.toFixed(0)}</b></div>
   <div class="satir">
     <span class="etiket">Risk</span><span class="deger risk-${d.riskSoz.split(' ')[0]}">${d.riskSoz} (${x.risk})</span>
     <span class="etiket">Potansiyel</span><span class="deger ${x.potansiyel < 0.1 ? '' : 'yes'}">${x.potansiyel < 0.1 ? 'zirvede' : '+' + x.potansiyel.toFixed(1) + '%'}</span>
@@ -181,13 +184,17 @@ export function htmlRapor(satirlar, stSinyalleri, tarih, gunIci) {
   .kart.al{border-left-color:var(--mavi)}
   .kart.izle{border-left-color:var(--gri)}
   .ust{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
-  .radarBtn{margin-left:auto;background:none;border:0;font-size:22px;line-height:1;cursor:pointer;
+  /* skor: cubugun USTUNDE, sagda, buyuk ve kalin */
+  .skorBuyuk{margin-left:auto;font-size:34px;font-weight:800;line-height:1;letter-spacing:-1px}
+  /* yildiz: cubugun ALTINDA, sagda */
+  .altSira{display:flex;align-items:center;gap:8px;margin:-4px 0 8px;min-height:26px}
+  .radarBtn{margin-left:auto;background:none;border:0;font-size:24px;line-height:1;cursor:pointer;
     color:var(--cizgi);padding:2px 4px;transition:color .15s,transform .1s}
   .radarBtn:hover{color:#f5b400}
   .radarBtn:active{transform:scale(1.2)}
   .radarBtn.acik{color:#f5b400}
   .kart.radarda{background:linear-gradient(90deg,var(--sari-bg) 0%,var(--kart) 55%)}
-  .radar-bilgi{display:none;margin-top:6px;font-size:12px;color:var(--amber);font-weight:600}
+  .radar-bilgi{display:none;font-size:12px;color:var(--amber);font-weight:600}
   .kart.radarda .radar-bilgi{display:block}
   .ad{font-weight:700;font-size:17px;letter-spacing:.3px}
   .karar{font-size:11px;font-weight:700;padding:3px 8px;border-radius:5px;margin-left:8px;white-space:nowrap}
@@ -200,11 +207,10 @@ export function htmlRapor(satirlar, stSinyalleri, tarih, gunIci) {
     padding:3px 8px;border-radius:5px;white-space:nowrap}
   .yildiz{color:#f5b400;letter-spacing:1px}
   .yildiz .sonuk{color:var(--cizgi)}
-  .cubuk{position:relative;height:6px;background:var(--gri-bg);border-radius:99px;margin:10px 0 12px}
+  .cubuk{position:relative;height:6px;background:var(--gri-bg);border-radius:99px;margin:10px 0 0}
   .cubuk i{display:block;height:100%;background:var(--yesil);border-radius:99px}
   .kart.al .cubuk i{background:var(--mavi)}
   .kart.izle .cubuk i{background:var(--gri)}
-  .cubuk b{position:absolute;right:0;top:-20px;font-size:12px;color:var(--soluk)}
   .satir{display:grid;grid-template-columns:auto 1fr auto 1fr auto 1fr;gap:4px 8px;font-size:13px;align-items:baseline}
   .etiket{color:var(--soluk);font-size:12px}
   .deger{font-weight:600}
