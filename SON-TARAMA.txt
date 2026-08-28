@@ -19,6 +19,6 @@ SUPERTREND TARAYICI  -  ATR 10 / Carpan 3 / Periyot 1D
 TradingView listesine yapistirmak icin:
   BIST:ENKAI,BIST:CANTE,BIST:GRTHO,BIST:IZFAS,BIST:MARTI,BIST:ISKPL,BIST:MAALT
 
-Not: 17 hisse yeterli gecmis veriye sahip degil (yeni islem gormeye baslamis): SARAE, QUICK, METEN, KPEKS, ORZAX, VEYAS, ALBTN, ISVEA, MASFN, SSAAT, BETAE, TKNKA, CITAS, KARCL, EKIM, GOLDA, SOHOE
+Not: 17 hisse yeterli gecmis veriye sahip degil (yeni islem gormeye baslamis): SARAE, KPEKS, QUICK, METEN, ORZAX, VEYAS, ALBTN, BETAE, MASFN, CITAS, ISVEA, EKIM, KARCL, GOLDA, SOHOE, SSAAT, TKNKA
 
 CSV yazildi: sonuclar\supertrend_2026-08-28.csv  (Excel ile acilabilir)
