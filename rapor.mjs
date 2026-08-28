@@ -111,10 +111,19 @@ export function htmlRapor(satirlar, stSinyalleri, tarih, gunIci) {
 </article>`;
   }).join('\n');
 
-  // Bugun ST AL veren ama listeye giremeyen hisseler (200 gunluk gecmisi yetersiz olanlar).
-  // Ust kutu kaldirildi; bu bilgi dipnotta duruyor ki gozden kacmasinlar.
+  // Bugun ST AL veren ama listeye giremeyen hisseler. Sebep hisseye gore degisir:
+  // ya hic hesaplanamamistir (gecmis veri yetersiz), ya da listeye girme kurallarina
+  // takilmistir (Supertrend asagi / IZLE olup skor 50 alti). Dipnotta gercek sebep yazar.
   const listedekiler = new Set(liste.map((x) => x.ad));
-  const stListeDisi = Array.from(stKume).filter((s) => !listedekiler.has(s));
+  const hesaplananlar = new Map(satirlar.map((x) => [x.ad, x]));
+  const stListeDisi = Array.from(stKume)
+    .filter((s) => !listedekiler.has(s))
+    .map((s) => {
+      const x = hesaplananlar.get(s);
+      if (!x) return kacis(s) + ' (yeterli geçmiş verisi yok)';
+      if (!x.stBull) return kacis(s) + ' (Supertrend yönü aşağı)';
+      return kacis(s) + ' (skor ' + x.skor.toFixed(0) + ' — 50 barajının altında)';
+    });
 
   return `<!doctype html>
 <html lang="tr">
@@ -255,7 +264,7 @@ ${kartlar}
 </main>
 
 <footer>
-  ${stListeDisi.length ? `Bugün Supertrend AL veren <b>${stListeDisi.map(kacis).join(', ')}</b> bu listede yok — 200 günlük geçmişi yetersiz.<br>` : ''}
+  ${stListeDisi.length ? `Bugün Supertrend AL verip listeye giremeyen: <b>${stListeDisi.join(', ')}</b><br>` : ''}
   Bu sayfa her iş günü 18:45'te kendiliğinden yenilenir.<br>
   Teknik tarama sonucudur, yatırım tavsiyesi değildir.
 </footer>
