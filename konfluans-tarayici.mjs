@@ -505,7 +505,10 @@ if (CFG.csv || CFG.rapor) {
     fs.writeFileSync(path.join(SONUC, 'veri.json'),
       JSON.stringify({ satirlar, stSinyal, gun, gunIci }), 'utf8');
   } catch (e) {}
-  fs.writeFileSync(path.join(KLASOR, 'index.html'), htmlRapor(satirlar, stSinyal, gun, gunIci), 'utf8');
+  // surum damgasi: sayfa acilista bunu okuyup eskiyse kendini yeniliyor
+  const surum = String(Date.now());
+  fs.writeFileSync(path.join(KLASOR, 'surum.txt'), surum, 'utf8');
+  fs.writeFileSync(path.join(KLASOR, 'index.html'), htmlRapor(satirlar, stSinyal, gun, gunIci, surum), 'utf8');
   yaz('Sade liste  : sonuclar\\firsatlar_' + bugunEtiket() + '.csv');
   yaz('Renkli sayfa: index.html\n');
 }

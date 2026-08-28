@@ -81,7 +81,8 @@ export function sadeListe(satirlar) {
 // ---------- 2) BENTO PANEL ----------
 const kacis = (s) => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
 
-export function htmlRapor(satirlar, stSinyalleri, tarih, gunIci) {
+export function htmlRapor(satirlar, stSinyalleri, tarih, gunIci, surum) {
+  const SURUM = String(surum || Date.now());
   const liste = suz(satirlar);
   const gucluAdet = liste.filter((x) => x.guclu).length;
   const alAdet = liste.filter((x) => x.al && !x.guclu).length;
@@ -137,6 +138,7 @@ export function htmlRapor(satirlar, stSinyalleri, tarih, gunIci) {
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="BIST hisselerinin konfluans skoru ve osilatör durumu — her iş günü 18:45'te yenilenir.">
 <meta name="theme-color" content="#0B0C0E">
+<meta http-equiv="Cache-Control" content="no-cache, must-revalidate">
 <title>BIST Günlük Tarama — ${kacis(tarih)}</title>
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='7' fill='%230B0C0E'/><path d='M7 21l5-6 4 3 9-10' stroke='%2334D07F' stroke-width='3' fill='none' stroke-linecap='round' stroke-linejoin='round'/></svg>">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -341,6 +343,26 @@ ${kartlar}
 
 </div>
 <script>
+/* Tarayici eski kopyayi onbellekte tutabiliyor. Sayfa acilinca sunucudaki
+   surum damgasini onbelleksiz okur; farkliysa kendini bir kez yeniler. */
+(function(){
+  var SURUM = '${SURUM}';
+  try {
+    fetch('surum.txt?_=' + Date.now(), { cache: 'no-store' })
+      .then(function(y){ return y.ok ? y.text() : null; })
+      .then(function(t){
+        if (!t) return;
+        t = t.trim();
+        var anahtar = 'yenilendi-' + t;
+        if (t && t !== SURUM && !sessionStorage.getItem(anahtar)) {
+          sessionStorage.setItem(anahtar, '1');   // dongu olmasin diye tek sefer
+          location.reload();
+        }
+      })
+      .catch(function(){});
+  } catch (e) {}
+})();
+
 (function(){
   var kartlar = Array.prototype.slice.call(document.querySelectorAll('.kart'));
   var grupDugmeleri = Array.prototype.slice.call(document.querySelectorAll('.suzgec button[data-g]'));

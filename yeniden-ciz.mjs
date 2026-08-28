@@ -26,7 +26,9 @@ if (!fs.existsSync(KAYNAK)) {
 }
 
 const { satirlar, stSinyal, gun, gunIci } = JSON.parse(fs.readFileSync(KAYNAK, 'utf8'));
-const html = htmlRapor(satirlar, stSinyal, gun, gunIci);
+const surum = String(Date.now());
+fs.writeFileSync(path.join(KLASOR, 'surum.txt'), surum, 'utf8');
+const html = htmlRapor(satirlar, stSinyal, gun, gunIci, surum);
 fs.writeFileSync(path.join(KLASOR, 'index.html'), html, 'utf8');
 console.log('index.html yeniden cizildi — ' + satirlar.length + ' hisse, ' + gun +
   (gunIci ? ' (gun ici)' : ' kapanisi') + ', ' + Math.round(html.length / 1024) + ' KB');
