@@ -3,23 +3,22 @@ SUPERTREND TARAYICI  -  ATR 10 / Carpan 3 / Periyot 1D
 
 === AL SINYALI: 7 hisse ===
   HISSE   KAPANIS      DEG%    ST CIZGISI     ISLEM HACMI (TL)   TARIH
-  ENKAI     89.20    +2.00        80.56        1.538.477.535   28.08.2026
-  CANTE      1.33    +9.92         1.15        1.162.749.980   28.08.2026
-  IZFAS     64.95    +2.12        52.44          397.581.618   28.08.2026
-  MARTI      1.56    +6.85         1.28          379.393.097   28.08.2026
-  MAKTK     10.53    +1.15         9.45          129.363.409   28.08.2026
-  ARTMS     40.76    +3.03        35.62           44.593.111   28.08.2026
-  MAALT   1100.00   +10.00       954.44           37.170.100   28.08.2026
+  ENKAI     89.00    +1.77        80.56        1.668.158.417   28.08.2026
+  CANTE      1.30    +7.44         1.15        1.354.594.332   28.08.2026
+  GRTHO    244.50    +9.99       204.73          644.423.027   28.08.2026
+  IZFAS     64.90    +2.04        52.44          455.342.813   28.08.2026
+  MARTI      1.55    +6.16         1.28          401.281.289   28.08.2026
+  ISKPL      8.79    +0.46         7.02          391.835.970   28.08.2026
+  MAALT   1100.00   +10.00       954.44           43.531.400   28.08.2026
 
-=== SAT SINYALI: 3 hisse ===
+=== SAT SINYALI: 2 hisse ===
   HISSE   KAPANIS      DEG%    ST CIZGISI     ISLEM HACMI (TL)   TARIH
-  PLTUR     20.92    -0.85        23.82           37.346.217   28.08.2026
-  DSTKF   1965.00    -9.99      2370.64           25.383.870   28.08.2026
-  SEKUR      9.89    -2.08        11.78           14.442.614   28.08.2026
+  PLTUR     21.00    -0.47        23.82           42.280.287   28.08.2026
+  DSTKF   1965.00    -9.99      2370.64           27.926.580   28.08.2026
 
 TradingView listesine yapistirmak icin:
-  BIST:ENKAI,BIST:CANTE,BIST:IZFAS,BIST:MARTI,BIST:MAKTK,BIST:ARTMS,BIST:MAALT
+  BIST:ENKAI,BIST:CANTE,BIST:GRTHO,BIST:IZFAS,BIST:MARTI,BIST:ISKPL,BIST:MAALT
 
-Not: 17 hisse yeterli gecmis veriye sahip degil (yeni islem gormeye baslamis): SARAE, KARCL, QUICK, GOLDA, MASFN, KPEKS, VEYAS, EKIM, CITAS, METEN, ORZAX, BETAE, ALBTN, ISVEA, SSAAT, TKNKA, SOHOE
+Not: 17 hisse yeterli gecmis veriye sahip degil (yeni islem gormeye baslamis): ORZAX, SARAE, ALBTN, QUICK, KPEKS, METEN, VEYAS, BETAE, ISVEA, CITAS, MASFN, EKIM, GOLDA, KARCL, SOHOE, SSAAT, TKNKA
 
 CSV yazildi: sonuclar\supertrend_2026-08-28.csv  (Excel ile acilabilir)
