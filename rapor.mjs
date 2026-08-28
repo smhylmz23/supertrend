@@ -94,7 +94,9 @@ export function htmlRapor(satirlar, stSinyalleri, tarih) {
   <div class="ust">
     <span class="ad">${kacis(x.ad)}</span>
     <span class="karar k-${sinif}">${d.karar}</span>
+    <button class="radarBtn" type="button" title="Radarıma ekle" aria-label="${kacis(x.ad)} radarıma ekle">☆</button>
   </div>
+  <div class="radar-bilgi"></div>
   <div class="cubuk"><i style="width:${Math.max(0, Math.min(100, x.skor))}%"></i><b>${x.skor.toFixed(0)}</b></div>
   <div class="satir">
     <span class="etiket">Risk</span><span class="deger risk-${d.riskSoz.split(' ')[0]}">${d.riskSoz} (${x.risk})</span>
@@ -119,11 +121,13 @@ export function htmlRapor(satirlar, stSinyalleri, tarih) {
     --zemin:#f6f7f9; --kart:#ffffff; --yazi:#1a1d21; --soluk:#6b7280; --cizgi:#e5e7eb;
     --yesil:#0f9d58; --yesil-bg:#e8f5ee; --mavi:#1a73e8; --mavi-bg:#e8f0fe;
     --gri:#9aa0a6; --gri-bg:#f1f3f4; --kirmizi:#d93025; --amber:#b06000; --amber-bg:#fef3e2;
+    --sari-bg:#fdf5d8;
   }
   @media (prefers-color-scheme: dark){
     :root{ --zemin:#15181c; --kart:#1e2227; --yazi:#e8eaed; --soluk:#9aa0a6; --cizgi:#2f343a;
       --yesil:#4ade80; --yesil-bg:#12301f; --mavi:#7cb0ff; --mavi-bg:#14243d;
-      --gri:#7c848d; --gri-bg:#23272c; --kirmizi:#f28b82; --amber:#fbbf24; --amber-bg:#33260f; }
+      --gri:#7c848d; --gri-bg:#23272c; --kirmizi:#f28b82; --amber:#fbbf24; --amber-bg:#33260f;
+      --sari-bg:#2b2412; }
   }
   *{box-sizing:border-box}
   body{margin:0;background:var(--zemin);color:var(--yazi);
@@ -156,7 +160,15 @@ export function htmlRapor(satirlar, stSinyalleri, tarih) {
   .kart.guclu{border-left-color:var(--yesil)}
   .kart.al{border-left-color:var(--mavi)}
   .kart.izle{border-left-color:var(--gri)}
-  .ust{display:flex;justify-content:space-between;align-items:center;gap:8px;flex-wrap:wrap}
+  .ust{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+  .radarBtn{margin-left:auto;background:none;border:0;font-size:22px;line-height:1;cursor:pointer;
+    color:var(--cizgi);padding:2px 4px;transition:color .15s,transform .1s}
+  .radarBtn:hover{color:#f5b400}
+  .radarBtn:active{transform:scale(1.2)}
+  .radarBtn.acik{color:#f5b400}
+  .kart.radarda{background:linear-gradient(90deg,var(--sari-bg) 0%,var(--kart) 55%)}
+  .radar-bilgi{display:none;margin-top:6px;font-size:12px;color:var(--amber);font-weight:600}
+  .kart.radarda .radar-bilgi{display:block}
   .ad{font-weight:700;font-size:17px;letter-spacing:.3px}
   .karar{font-size:11px;font-weight:700;padding:3px 8px;border-radius:5px;margin-left:8px;white-space:nowrap}
   .k-guclu{background:var(--yesil-bg);color:var(--yesil)}
@@ -206,6 +218,7 @@ ${stKutu}
   <button data-f="hepsi" aria-pressed="true">Fırsatlar</button>
   <button data-f="guclu" aria-pressed="false">Sadece güçlü</button>
   <button data-f="tumu" aria-pressed="false">Tümü</button>
+  <button data-f="radar" aria-pressed="false">★ Radarım (<span id="radarSayi">0</span>)</button>
   <input type="search" placeholder="hisse ara..." aria-label="Hisse ara">
 </div>
 
@@ -236,12 +249,64 @@ ${kartlar}
   var arama = document.querySelector('.suzgec input');
   var aktif = 'hepsi';
 
+  // ---- RADAR: isaretlenen hisseler tarayicida saklanir ----
+  var ANAHTAR = 'bist-radar';
+  function radarOku(){
+    try { return JSON.parse(localStorage.getItem(ANAHTAR)) || {}; } catch (e) { return {}; }
+  }
+  function radarYaz(r){
+    try { localStorage.setItem(ANAHTAR, JSON.stringify(r)); } catch (e) {}
+  }
+  var radar = radarOku();
+
+  function gunFarki(iso){
+    var a = new Date(iso + 'T00:00:00'), b = new Date();
+    b = new Date(b.getFullYear(), b.getMonth(), b.getDate());
+    var f = Math.round((b - a) / 86400000);
+    return isNaN(f) ? 0 : f;
+  }
+  function bugunISO(){
+    var g = new Date(), p = function(n){ return (n < 10 ? '0' : '') + n; };
+    return g.getFullYear() + '-' + p(g.getMonth() + 1) + '-' + p(g.getDate());
+  }
+  function radarCiz(){
+    var n = 0;
+    kartlar.forEach(function(k){
+      var ad = k.dataset.ad, btn = k.querySelector('.radarBtn'), bilgi = k.querySelector('.radar-bilgi');
+      if (radar[ad]) {
+        n++;
+        k.classList.add('radarda'); btn.classList.add('acik');
+        btn.textContent = '★'; btn.title = 'Radarımdan çıkar';
+        var f = gunFarki(radar[ad]);
+        bilgi.textContent = f === 0 ? '★ bugün radarınıza eklediniz'
+          : f === 1 ? '★ dün radarınıza eklediniz'
+          : '★ ' + f + ' gündür radarınızda';
+      } else {
+        k.classList.remove('radarda'); btn.classList.remove('acik');
+        btn.textContent = '☆'; btn.title = 'Radarıma ekle';
+        bilgi.textContent = '';
+      }
+    });
+    var sayac = document.getElementById('radarSayi');
+    if (sayac) sayac.textContent = n;
+  }
+  kartlar.forEach(function(k){
+    k.querySelector('.radarBtn').addEventListener('click', function(e){
+      e.stopPropagation();
+      var ad = k.dataset.ad;
+      if (radar[ad]) delete radar[ad]; else radar[ad] = bugunISO();
+      radarYaz(radar); radarCiz();
+      if (aktif === 'radar') uygula();
+    });
+  });
+
   function uygula(){
     var q = (arama.value || '').trim().toUpperCase();
     kartlar.forEach(function(k){
       var d = k.dataset.durum, gorunur = true;
       if (aktif === 'hepsi') gorunur = (d === 'guclu' || d === 'al');
       else if (aktif === 'guclu') gorunur = (d === 'guclu');
+      else if (aktif === 'radar') gorunur = !!radar[k.dataset.ad];
       if (gorunur && q) gorunur = k.dataset.ad.indexOf(q) === 0;
       k.style.display = gorunur ? '' : 'none';
     });
@@ -274,6 +339,7 @@ ${kartlar}
   }
   sirasec.addEventListener('change', siralamayiUygula);
 
+  radarCiz();
   uygula();
 })();
 </script>
