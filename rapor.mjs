@@ -90,12 +90,13 @@ export function htmlRapor(satirlar, stSinyalleri, tarih, gunIci) {
   const stKume = new Set((stSinyalleri || []).map((s) => String(s).trim().toUpperCase()));
   const stAdet = liste.filter((x) => stKume.has(x.ad)).length;
   const thAdet = liste.filter((x) => x.trendHacim).length;
+  const daAdet = liste.filter((x) => x.dipAvi).length;
 
   const kartlar = liste.map((x) => {
     const d = degerlendir(x);
     const sinif = x.guclu ? 'guclu' : x.al ? 'al' : 'izle';
     const stAl = stKume.has(x.ad);
-    return `<article class="kart ${sinif}" data-durum="${sinif}" data-ad="${kacis(x.ad)}" data-sira="${liste.indexOf(x)}" data-skor="${x.skor.toFixed(2)}" data-risk="${x.risk}" data-pot="${x.potansiyel.toFixed(2)}" data-osc="${x.osilator.alSayisi}" data-st="${stAl ? 1 : 0}" data-th="${x.trendHacim ? 1 : 0}">
+    return `<article class="kart ${sinif}" data-durum="${sinif}" data-ad="${kacis(x.ad)}" data-sira="${liste.indexOf(x)}" data-skor="${x.skor.toFixed(2)}" data-risk="${x.risk}" data-pot="${x.potansiyel.toFixed(2)}" data-osc="${x.osilator.alSayisi}" data-st="${stAl ? 1 : 0}" data-th="${x.trendHacim ? 1 : 0}" data-da="${x.dipAvi ? 1 : 0}">
   <div class="ust">
     <span class="ad">${kacis(x.ad)}</span>
     <span class="karar k-${sinif}">${d.karar}</span>
@@ -250,6 +251,7 @@ ${gunIci ? `<div class="uyari"><b>Borsa açık — bu rakamlar geçici.</b>
   <button id="tumuBtn" class="ikincil">Tümü</button>
   <button data-s="1" aria-pressed="false" class="ikincil">⚡ Bugün ST AL (${stAdet})</button>
   <button data-th="1" aria-pressed="false" class="ikincil" title="Günü artıda kapatmış, hacmi 500 binin üzerinde, göreceli hacmi 1.5×'ten yüksek, SMA20 &gt; SMA50 ve fiyatı EMA9 üzerinde olanlar">📈 Trend + Hacim (${thAdet})</button>
+  <button data-da="1" aria-pressed="false" class="ikincil" title="RSI son 5 günde 30'u yukarı kesmiş, Stokastik %K &gt; %D, MACD sinyal hattının üzerinde ve 30 günlük ortalama hacmi 300 binin üzerinde olanlar">🔄 Dip Avcılığı (${daAdet})</button>
   <button data-r="1" aria-pressed="false" class="ikincil">★ Radarım (<span id="radarSayi">0</span>)</button>
   <input type="search" placeholder="hisse ara..." aria-label="Hisse ara">
 </div>
@@ -284,6 +286,7 @@ ${kartlar}
   var radarDugmesi = document.querySelector('.suzgec button[data-r]');
   var stDugmesi = document.querySelector('.suzgec button[data-s]');
   var thDugmesi = document.querySelector('.suzgec button[data-th]');
+  var daDugmesi = document.querySelector('.suzgec button[data-da]');
   var tumuDugmesi = document.getElementById('tumuBtn');
   var bosMesaj = document.getElementById('bosMesaj');
   var arama = document.querySelector('.suzgec input');
@@ -292,6 +295,7 @@ ${kartlar}
   var radarAktif = false;
   var stAktif = false;
   var thAktif = false;
+  var daAktif = false;
 
   // ---- RADAR: isaretlenen hisseler tarayicida saklanir ----
   var ANAHTAR = 'bist-radar';
@@ -353,6 +357,7 @@ ${kartlar}
       var uyar = true;
       if (stAktif) uyar = k.dataset.st === '1';
       if (uyar && thAktif) uyar = k.dataset.th === '1';
+      if (uyar && daAktif) uyar = k.dataset.da === '1';
       if (uyar && radarAktif) uyar = !!radar[k.dataset.ad];
       if (uyar && q) uyar = k.dataset.ad.indexOf(q) === 0;
       if (uyar) grupHaric++;
@@ -372,6 +377,7 @@ ${kartlar}
     radarDugmesi.setAttribute('aria-pressed', String(radarAktif));
     stDugmesi.setAttribute('aria-pressed', String(stAktif));
     thDugmesi.setAttribute('aria-pressed', String(thAktif));
+    daDugmesi.setAttribute('aria-pressed', String(daAktif));
     tumuDugmesi.setAttribute('aria-pressed', String(secili.guclu && secili.al && secili.izle));
   }
 
@@ -397,6 +403,10 @@ ${kartlar}
   });
   thDugmesi.addEventListener('click', function(){
     thAktif = !thAktif;
+    uygula();
+  });
+  daDugmesi.addEventListener('click', function(){
+    daAktif = !daAktif;
     uygula();
   });
   arama.addEventListener('input', uygula);

@@ -197,6 +197,11 @@ function hesapla(bars, xu100, usdtry) {
   const hh = ta.highest(ta.seri(bars, 'h'), P.hhLen);
   // "Guclu Trend ve Hacim" taramasi icin gereken ek ortalamalar
   const s20 = ta.sma(kapanis, 20), s50 = ta.sma(kapanis, 50), e9 = ta.ema(kapanis, 9);
+  // "Dip Avciligi" taramasi: klasik Stokastik (14,3,3) ve 30 gunluk ortalama hacim.
+  // Not: bu, osilator panelindeki Stoch RSI'dan farkli — o RSI uzerinde, bu fiyat uzerinde calisir.
+  const stoK = ta.sma(ta.stoch(kapanis, ta.seri(bars, 'h'), ta.seri(bars, 'l'), 14), 3);
+  const stoD = ta.sma(stoK, 3);
+  const volSma30 = ta.sma(hacim, 30);
 
   // haftalik EMA20 filtresi
   const haftalik = ta.haftalikYap(bars);
@@ -291,7 +296,21 @@ function hesapla(bars, xu100, usdtry) {
         && hacim[i] > 500000
         && volRat > 1.5
         && s20[i] > s50[i]
-        && c > e9[i] };
+        && c > e9[i],
+      /* DIP AVCILIGI: asiri satimdan cikip yukari donenler.
+         RSI son 5 barda 30'u yukari kesmis + Stokastik %K > %D
+         + MACD sinyalin uzerinde + 30 gunluk ortalama hacim > 300.000 */
+      dipAvi: (function () {
+        if (!(rsi[i] > 30)) return false;
+        let kesti = false;
+        for (let k = Math.max(1, i - 4); k <= i; k++) {
+          if (rsi[k - 1] <= 30 && rsi[k] > 30) { kesti = true; break; }
+        }
+        return kesti
+          && stoK[i] > stoD[i]
+          && mac.cizgi[i] > mac.sinyal[i]
+          && volSma30[i] > 300000;
+      })() };
   };
 
   // ---- osilator paneli (Gelismis Secmeli Osilator v4) ----
