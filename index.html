@@ -20,8 +20,12 @@
     --yazi:#F2F4F6;
     --yazi-2:#A8B0B8;
     --soluk:#6E767E;
-    --yesil:#34D07F;      /* tek vurgu rengi */
+    --yesil:#34D07F;      /* GUCLU AL */
     --yesil-loş:rgba(52,208,127,.13);
+    --mavi:#6BA5F0;       /* AL */
+    --mavi-loş:rgba(107,165,240,.13);
+    --gri:#98A0A8;        /* IZLE */
+    --gri-loş:rgba(152,160,168,.11);
     --uyari:#D9A441;
     --dusus:#D96A6A;
     --r-kart:14px;
@@ -93,12 +97,10 @@
   /* ---------- BENTO: hisse izgarasi ---------- */
   #liste{display:grid;gap:12px;
     grid-template-columns:repeat(auto-fill,minmax(268px,1fr))}
+  /* sade kutu — sol renk seridi yok, renk vurgusu etikette ve olcekte */
   .kart{background:var(--yuzey);border:1px solid var(--cizgi);border-radius:var(--r-kart);
-    padding:16px 17px 14px;position:relative;overflow:hidden;
+    padding:16px 17px 14px;
     transition:border-color var(--gecis),background var(--gecis),transform var(--gecis)}
-  .kart::before{content:'';position:absolute;left:0;top:0;bottom:0;width:2px;background:var(--cizgi-2)}
-  .kart.guclu::before{background:var(--yesil)}
-  .kart.al::before{background:var(--yazi-2)}
   .kart:hover{border-color:var(--cizgi-2);background:var(--yuzey-2);transform:translateY(-1px)}
   .kart.radarda{border-color:rgba(52,208,127,.34)}
 
@@ -109,16 +111,17 @@
   .etiket{display:inline-block;margin-top:5px;font-size:10px;font-weight:600;
     letter-spacing:.1em;text-transform:uppercase;padding:3px 7px;border-radius:5px}
   .e-guclu{background:var(--yesil-loş);color:var(--yesil)}
-  .e-al{background:var(--yuzey-2);color:var(--yazi-2);border:1px solid var(--cizgi-2)}
-  .e-izle{background:transparent;color:var(--soluk);border:1px solid var(--cizgi)}
+  .e-al{background:var(--mavi-loş);color:var(--mavi)}
+  .e-izle{background:var(--gri-loş);color:var(--gri)}
   .skor{font-size:38px;font-weight:700;letter-spacing:-.045em;line-height:.9;
     font-variant-numeric:tabular-nums;flex:none}
   .kart.izle .skor{color:var(--yazi-2)}
 
   .olcek{height:3px;background:var(--cizgi);border-radius:99px;margin:12px 0 0;overflow:hidden}
-  .olcek i{display:block;height:100%;background:var(--cizgi-2);border-radius:99px}
+  .olcek i{display:block;height:100%;border-radius:99px}
   .kart.guclu .olcek i{background:var(--yesil)}
-  .kart.al .olcek i{background:var(--yazi-2)}
+  .kart.al .olcek i{background:var(--mavi)}
+  .kart.izle .olcek i{background:var(--gri)}
 
   .kart-alt{display:flex;align-items:center;gap:8px;min-height:24px;margin-top:2px}
   .radar-bilgi{display:none;font-size:11px;color:var(--yesil);font-weight:500}
