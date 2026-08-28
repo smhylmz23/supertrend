@@ -1,30 +1,26 @@
 
 SUPERTREND TARAYICI  -  ATR 10 / Carpan 3 / Periyot 1D
 
-=== AL SINYALI: 10 hisse ===
+=== AL SINYALI: 7 hisse ===
   HISSE   KAPANIS      DEG%    ST CIZGISI     ISLEM HACMI (TL)   TARIH
-  EUPWR    103.10    +3.62        90.76        1.337.108.436   27.08.2026
-  ATATR     16.10    +2.29        13.95          715.764.108   27.08.2026
-  DOHOL     22.34    +2.20        19.96          402.520.981   27.08.2026
-  MEYSU     12.74    +3.41        10.57          282.195.586   27.08.2026
-  ULUUN      9.07    +4.25         7.93          187.514.949   27.08.2026
-  PNSUT     11.02    +4.75        10.05          187.148.759   27.08.2026
-  ENSRI      6.14    +9.84         5.16          143.032.301   27.08.2026
-  BIENY     22.52    +2.46        19.77          131.030.368   27.08.2026
-  PETUN     11.59    +3.30        10.87           84.459.610   27.08.2026
-  AGESA    259.25    +2.98       230.95           84.058.183   27.08.2026
+  ENKAI     89.50    +2.34        80.56        1.207.980.426   28.08.2026
+  CANTE      1.33    +9.92         1.15          653.067.189   28.08.2026
+  IZFAS     64.65    +1.65        52.44          340.073.094   28.08.2026
+  MARTI      1.57    +7.53         1.28          321.368.117   28.08.2026
+  MAKTK     10.79    +3.65         9.45          105.982.800   28.08.2026
+  ARTMS     41.30    +4.40        35.62           40.772.888   28.08.2026
+  MAALT   1100.00   +10.00       954.44           35.971.100   28.08.2026
 
-=== SAT SINYALI: 5 hisse ===
+=== SAT SINYALI: 4 hisse ===
   HISSE   KAPANIS      DEG%    ST CIZGISI     ISLEM HACMI (TL)   TARIH
-  SDTTR     24.40   -90.62       133.32          524.165.582   27.08.2026
-  GZNMI     56.40    -1.23        65.91           79.213.180   27.08.2026
-  KMPUR     19.70    -1.89        23.21           35.661.827   27.08.2026
-  POLTK   4305.00    -2.21      4918.19           29.390.235   27.08.2026
-  SEYKM      4.54    -1.30         5.11            5.642.798   27.08.2026
+  PLTUR     20.82    -1.33        23.82           27.224.544   28.08.2026
+  DSTKF   1965.00    -9.99      2370.64           21.153.225   28.08.2026
+  SEKUR      9.80    -2.97        11.78           10.826.236   28.08.2026
+  TDGYO     16.12    -1.71        18.13            9.431.748   28.08.2026
 
 TradingView listesine yapistirmak icin:
-  BIST:EUPWR,BIST:ATATR,BIST:DOHOL,BIST:MEYSU,BIST:ULUUN,BIST:PNSUT,BIST:ENSRI,BIST:BIENY,BIST:PETUN,BIST:AGESA
+  BIST:ENKAI,BIST:CANTE,BIST:IZFAS,BIST:MARTI,BIST:MAKTK,BIST:ARTMS,BIST:MAALT
 
-Not: 17 hisse yeterli gecmis veriye sahip degil (yeni islem gormeye baslamis): TKNKA, SARAE, METEN, KPEKS, ALBTN, CITAS, BETAE, VEYAS, MASFN, ISVEA, ORZAX, GOLDA, KARCL, EKIM, QUICK, SOHOE, SSAAT
+Not: 17 hisse yeterli gecmis veriye sahip degil (yeni islem gormeye baslamis): KPEKS, ORZAX, ALBTN, SARAE, CITAS, KARCL, METEN, MASFN, BETAE, EKIM, QUICK, GOLDA, VEYAS, SOHOE, ISVEA, TKNKA, SSAAT
 
 CSV yazildi: sonuclar\supertrend_2026-08-28.csv  (Excel ile acilabilir)
