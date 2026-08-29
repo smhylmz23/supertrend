@@ -85,11 +85,42 @@ export function sadeListe(satirlar) {
 // ---------- 2) BENTO PANEL ----------
 const kacis = (s) => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
 
-// panelde filtre olarak sunulan endeksler ve sektor adlari (tarayici tarafiyla ayni)
-const ENDEKSLER = [
-  ['XU030', 'BIST 30'], ['XU050', 'BIST 50'], ['XU100', 'BIST 100'],
-  ['XYLDZ', 'Yıldız Pazar'], ['XBANA', 'Ana Pazar'],
-  ['XTMTU', 'BIST Temettü'], ['XK100', 'Katılım 100'], ['XUSRD', 'Sürdürülebilirlik'],
+/* Tum BIST endeksleri, gruplanmis. Sadece "Capped / Equal Weighted / Return"
+ * turevleri disarida: uye listeleri ana endeksle BIREBIR ayni oldugu icin
+ * filtrede hicbir sey daraltmiyorlar (X100S = XU100'un ayni 100 hissesi). */
+const ENDEKS_GRUP = [
+  ['Ana endeksler', [
+    ['XU030', 'BIST 30'], ['XU050', 'BIST 50'], ['XU100', 'BIST 100'],
+    ['XYUZO', 'BIST 100-30'], ['XELOT', 'BIST 50-30'],
+    ['XYLDZ', 'Yıldız Pazar'], ['XBANA', 'Ana Pazar'],
+    ['XTUMY', 'BIST Tüm-100'], ['XUTUM', 'BIST Tüm'],
+  ]],
+  ['Sektör endeksleri', [
+    ['XBANK', 'Bankacılık'], ['XUMAL', 'Mali'], ['XUSIN', 'Sınai'], ['XUHIZ', 'Hizmetler'],
+    ['XUTEK', 'Teknoloji'], ['XBLSM', 'Bilişim'], ['XILTM', 'Telekomünikasyon'],
+    ['XGIDA', 'Gıda & İçecek'], ['XKMYA', 'Kimya, Petrol, Plastik'],
+    ['XMESY', 'Metal Eşya & Makine'], ['XMANA', 'Ana Metal'], ['XELKT', 'Elektrik'],
+    ['XINSA', 'İnşaat'], ['XTEKS', 'Tekstil & Deri'], ['XKAGT', 'Orman, Kâğıt, Basım'],
+    ['XTAST', 'Taş & Toprak'], ['XTCRT', 'Ticaret'], ['XULAS', 'Ulaştırma'],
+    ['XTRZM', 'Turizm'], ['XMADN', 'Madencilik'], ['XSGRT', 'Sigorta'],
+    ['XAKUR', 'Aracı Kurumlar'], ['XFINK', 'Finansal Kiralama & Faktoring'],
+    ['XYORT', 'Yatırım Ortaklıkları'], ['XGMYO', 'Gayrimenkul Yat. Ort.'],
+    ['XHOLD', 'Holding & Yatırım'], ['XSPOR', 'Spor'],
+  ]],
+  ['Tema endeksleri', [
+    ['XTMTU', 'Temettü'], ['XTM25', 'Temettü 25'],
+    ['XUSRD', 'Sürdürülebilirlik'], ['XSD25', 'Sürdürülebilirlik 25'],
+    ['XKURY', 'Kurumsal Yönetim'], ['XHARZ', 'Halka Arz'], ['XKOBI', 'KOBİ Sanayi'],
+    ['XKTUM', 'Katılım Tüm'], ['XK100', 'Katılım 100'], ['XK050', 'Katılım 50'],
+    ['XK030', 'Katılım 30'], ['XKTMT', 'Katılım Temettü'], ['XSRDK', 'Katılım Sürdürülebilirlik'],
+    ['X10XB', 'Likit 10 (banka dışı)'], ['XLBNK', 'Likit Bankalar'],
+  ]],
+  ['Şehir endeksleri', [
+    ['XSIST', 'İstanbul'], ['XSANK', 'Ankara'], ['XSIZM', 'İzmir'], ['XSKOC', 'Kocaeli'],
+    ['XSBUR', 'Bursa'], ['XSKAY', 'Kayseri'], ['XSBAL', 'Balıkesir'], ['XSMNS', 'Manisa'],
+    ['XSTKR', 'Tekirdağ'], ['XSKON', 'Konya'], ['XSADA', 'Adana'], ['XSANT', 'Antalya'],
+    ['XSAYD', 'Aydın'], ['XSDNZ', 'Denizli'],
+  ]],
 ];
 const SEKTOR_TR = {
   'Finance': 'Finans', 'Process Industries': 'Kimya & Temel Sanayi',
@@ -120,9 +151,15 @@ export function htmlRapor(satirlar, stSinyalleri, tarih, gunIci, surum) {
   const hbAdet = liste.filter((x) => (x.haberVeri || {}).durum === 'pozitif').length;
 
   // endeks ve sektor secenekleri — sadece listede uyesi olanlar gosteriliyor
-  const endeksSecenek = ENDEKSLER
-    .map(([kod, ad]) => [kod, ad, liste.filter((x) => (x.endeksler || []).includes(kod)).length])
-    .filter(([, , n]) => n > 0);
+  const endeksGrupHtml = ENDEKS_GRUP.map(([grupAd, uyeler]) => {
+    const dolu = uyeler
+      .map(([kod, ad]) => [kod, ad, liste.filter((x) => (x.endeksler || []).includes(kod)).length])
+      .filter(([, , n]) => n > 0);
+    if (!dolu.length) return '';
+    return '<optgroup label="' + kacis(grupAd) + '">'
+      + dolu.map(([kod, ad, n]) => `<option value="${kod}">${kacis(ad)} (${n})</option>`).join('')
+      + '</optgroup>';
+  }).join('');
   const sektorSayim = {};
   for (const x of liste) { const s = x.sektor || ''; if (s) sektorSayim[s] = (sektorSayim[s] || 0) + 1; }
   const sektorSecenek = Object.entries(sektorSayim)
@@ -423,7 +460,7 @@ export function htmlRapor(satirlar, stSinyalleri, tarih, gunIci, surum) {
     <span class="ayrac"></span>
     <select id="endekssec" aria-label="Endeks">
       <option value="">Tüm endeksler</option>
-      ${endeksSecenek.map(([kod, ad, n]) => `<option value="${kod}">${kacis(ad)} (${n})</option>`).join('')}
+      ${endeksGrupHtml}
     </select>
     <select id="sektorsec" aria-label="Sektör">
       <option value="">Tüm sektörler</option>
