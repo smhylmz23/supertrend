@@ -387,6 +387,8 @@ export function htmlRapor(satirlar, stSinyalleri, tarih, gunIci, surum) {
       <option value="risk">Risk — düşükten</option>
       <option value="pot">Potansiyel — yüksekten</option>
       <option value="osc">Osilatör — yüksekten</option>
+      <option value="hb">Haber — pozitif önce</option>
+      <option value="tm">Temel — pozitif önce</option>
     </select>
     <input type="search" placeholder="hisse ara…" aria-label="Hisse ara">
   </div>
@@ -553,6 +555,10 @@ ${kartlar}
       if (t === 'risk') return sayi(a,'risk') - sayi(b,'risk') || sayi(b,'skor') - sayi(a,'skor');
       if (t === 'pot')  return sayi(b,'pot')  - sayi(a,'pot')  || sayi(b,'skor') - sayi(a,'skor');
       if (t === 'osc')  return sayi(b,'osc')  - sayi(a,'osc')  || sayi(b,'skor') - sayi(a,'skor');
+      // durum siralamasi: pozitif > notr > negatif > veri yok, esitlikte skor
+      var sira = { pozitif: 3, notr: 2, negatif: 1, yok: 0 };
+      if (t === 'hb') return (sira[b.dataset.hb]||0) - (sira[a.dataset.hb]||0) || sayi(b,'skor') - sayi(a,'skor');
+      if (t === 'tm') return (sira[b.dataset.tm]||0) - (sira[a.dataset.tm]||0) || sayi(b,'skor') - sayi(a,'skor');
       return sayi(a,'sira') - sayi(b,'sira');
     });
     var parca = document.createDocumentFragment();
