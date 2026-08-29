@@ -32,7 +32,7 @@ import https from 'https';
 import path from 'path';
 import { fileURLToPath } from 'url';
 import * as ta from './ta.mjs';
-import { sadeListe, htmlRapor } from './rapor.mjs';
+import { sadeListe, htmlRapor, listeyeUygun } from './rapor.mjs';
 
 const KLASOR = path.dirname(fileURLToPath(import.meta.url));
 const YEDEK_LISTE = path.join(KLASOR, 'hisseler.json');
@@ -136,6 +136,89 @@ function temelPuanla(evren) {
       gelir: g(T.GELIR), kar: g(T.KAR), karQ: g(T.KARQ), fk: g(T.FK),
     });
   }
+  return harita;
+}
+
+/* ================= HABER AKISI =================
+ * TradingView'in haber servisi: ucretsiz, Turkce, hisse bazinda, guncel.
+ * Basliklar acik geliyor (paywall sadece haber govdesinde).
+ *
+ * ONEMLI: Baslik metninden "pozitif/negatif" cikarmak GUVENILIR DEGIL —
+ * akis agirlikla araci kurum rapor duyurusundan olusuyor ve anahtar kelime
+ * denemesi 103 baslikta hic eslesmedi. Bu yuzden rengi tahminle degil,
+ * basligin icindeki ACIK ANALIST TAVSIYESI ile belirliyoruz. Tavsiye yoksa
+ * renk verilmiyor (bos nokta) — uydurma yapilmiyor.
+ */
+const TAVSIYE_RE = /tavsiye[:\s]+([A-Za-zÇĞİÖŞÜçğıöşü ]+?)(?:\s*$|,|\.|\))/i;
+const HEDEF_RE = /hedef fiyat[ıi]?\s*[:\s]\s*([\d]+(?:[.,]\d+)?)\s*TL/i;
+
+const tavsiyePuan = (t) => {
+  const s = t.toLocaleLowerCase('tr');
+  if (/endeks üstü|^al$|güçlü al|biriktir/.test(s)) return 1;
+  if (/endeks altı|^sat$|azalt/.test(s)) return -1;
+  return 0;   // TUT, Endekse Paralel, NÖTR
+};
+
+// "587" / "59.21" / "191,07" — Turkce ve Ingilizce ondaligi ayirt eder
+function sayiCoz(m) {
+  if (m.includes(',')) return parseFloat(m.replace(/\./g, '').replace(',', '.'));
+  const p = m.split('.');
+  if (p.length === 2 && p[1].length <= 2) return parseFloat(m);   // 59.21 = ondalik
+  return parseFloat(m.replace(/\./g, ''));                        // 1.388 = binlik
+}
+
+function haberAl(sembol) {
+  return new Promise((ok) => {
+    const yol = '/news-flow/v2/news?filter=lang%3Atr&filter=symbol%3A' + encodeURIComponent(sembol) + '&client=web';
+    const q = https.request({ host: 'news-mediator.tradingview.com', path: yol, method: 'GET', maxVersion: 'TLSv1.2',
+      headers: { 'User-Agent': WSOPTS.headers['User-Agent'], Origin: 'https://www.tradingview.com', Referer: 'https://www.tradingview.com/' } },
+      (r) => { let d = ''; r.setEncoding('utf8'); r.on('data', (c) => { d += c; });
+        r.on('end', () => { try { ok(JSON.parse(d)); } catch (e) { ok(null); } }); });
+    q.setTimeout(15000, () => { q.destroy(); ok(null); });
+    q.on('error', () => ok(null));
+    q.end();
+  });
+}
+
+async function haberleriAl(adlar, fiyatlar) {
+  const harita = new Map();
+  const simdi = Date.now() / 1000;
+  let i = 0;
+  const isci = async () => {
+    while (i < adlar.length) {
+      const ad = adlar[i++];
+      const j = await haberAl('BIST:' + ad);
+      const hepsi = j?.items || [];
+      const son90 = hepsi.filter((h) => h.published >= simdi - 90 * 86400);
+      const tavsiyeler = [];
+      const hedefler = [];
+      for (const h of son90) {
+        const a = h.title.match(TAVSIYE_RE);
+        if (a) tavsiyeler.push({ metin: a[1].trim(), puan: tavsiyePuan(a[1].trim()), t: h.published });
+        const b = h.title.match(HEDEF_RE);
+        if (b) {
+          const v = sayiCoz(b[1]);
+          const fiyat = fiyatlar.get(ad);
+          // ayrıştırma hatasına karşı koruma: hedef, fiyatın 0.2–8 katı aralığında olmalı
+          if (isFinite(v) && fiyat && v > fiyat * 0.2 && v < fiyat * 8) hedefler.push(v);
+        }
+      }
+      // kullanicinin kurali: son 3 tavsiyeye bak
+      const son3 = tavsiyeler.slice(0, 3);
+      const toplam = son3.reduce((a, b) => a + b.puan, 0);
+      const durum = son3.length === 0 ? 'yok' : (toplam >= 2 ? 'pozitif' : (toplam <= -1 ? 'negatif' : 'notr'));
+      harita.set(ad, {
+        durum,
+        hafta: hepsi.filter((h) => h.published >= simdi - 7 * 86400).length,
+        toplamHaber: son90.length,
+        sonBaslik: hepsi[0] ? hepsi[0].title : null,
+        sonTarih: hepsi[0] ? hepsi[0].published : null,
+        tavsiyeler: son3.map((t) => t.metin),
+        hedef: hedefler.length ? hedefler.reduce((a, b) => a + b, 0) / hedefler.length : null,
+      });
+    }
+  };
+  await Promise.all(Array.from({ length: 8 }, isci));
   return harita;
 }
 
@@ -463,6 +546,21 @@ for (const k in veri) {
     yeniGuclu: h.bugun.guclu && h.dun && !h.dun.guclu,
     kapanis: son.c, degisim: ((son.c - onceki.c) / onceki.c) * 100, hacimTL, tarih: new Date(son.t * 1000).toLocaleDateString('tr-TR'),
   });
+}
+
+// ---- haber akisi: sadece listeye giren hisseler icin ----
+if (!CFG.tekHisse) {
+  const listeye = satirlar.filter(listeyeUygun);
+  const fiyatlar = new Map(listeye.map((x) => [x.ad, x.kapanis]));
+  process.stderr.write('Haber akisi cekiliyor (' + listeye.length + ' hisse)...\n');
+  const t1 = Date.now();
+  const haberler = await haberleriAl(listeye.map((x) => x.ad), fiyatlar);
+  for (const x of satirlar) x.haberVeri = haberler.get(x.ad) || { durum: 'yok' };
+  const say = (d) => Array.from(haberler.values()).filter((h) => h.durum === d).length;
+  process.stderr.write('Haber   : ' + say('pozitif') + ' pozitif / ' + say('notr') + ' notr / '
+    + say('negatif') + ' negatif / ' + say('yok') + ' tavsiye yok  (' + ((Date.now() - t1) / 1000).toFixed(0) + ' sn)\n\n');
+} else {
+  for (const x of satirlar) x.haberVeri = { durum: 'yok' };
 }
 
 // tek hisse detay modu (dogrulama icin)

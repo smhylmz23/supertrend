@@ -64,7 +64,7 @@ export const suz = (satirlar) => satirlar.filter(listeyeUygun).sort(sirala);
 // ---------- 1) SADE CSV ----------
 export function sadeListe(satirlar) {
   const vir = (v) => String(v).replace('.', ',');
-  const bas = ['sira', 'hisse', 'karar', 'skor', 'risk', 'potansiyel_%', 'osilator', 'temel', 'bilanco'];
+  const bas = ['sira', 'hisse', 'karar', 'skor', 'risk', 'potansiyel_%', 'osilator', 'temel', 'bilanco', 'haber', 'analist_hedef', 'haber_7gun'];
   const out = [bas.join(';')];
   suz(satirlar).forEach((x, i) => {
     const d = degerlendir(x);
@@ -74,6 +74,9 @@ export function sadeListe(satirlar) {
       vir(x.potansiyel.toFixed(1)),
       x.osilator.alSayisi + '/6',
       x.temel || 'yok', x.bilanco || 'yok',
+      (x.haberVeri || {}).durum || 'yok',
+      (x.haberVeri || {}).hedef ? vir(x.haberVeri.hedef.toFixed(2)) : '',
+      (x.haberVeri || {}).hafta || 0,
     ].join(';'));
   });
   return out.join('\r\n');
@@ -95,6 +98,22 @@ export function htmlRapor(satirlar, stSinyalleri, tarih, gunIci, surum) {
   const daAdet = liste.filter((x) => x.dipAvi).length;
   const tmAdet = liste.filter((x) => x.temel === 'pozitif').length;
   const blAdet = liste.filter((x) => x.bilanco === 'pozitif').length;
+  const hbAdet = liste.filter((x) => (x.haberVeri || {}).durum === 'pozitif').length;
+
+  const haberIpucu = (x) => {
+    const h = x.haberVeri;
+    if (!h) return 'Haber verisi yok';
+    const p = [];
+    if (h.tavsiyeler && h.tavsiyeler.length) p.push('Son analist tavsiyeleri: ' + h.tavsiyeler.join(' · '));
+    else p.push('Analist tavsiyesi bulunamadı — nokta bu yüzden renksiz');
+    if (h.hedef) {
+      const fark = ((h.hedef / x.kapanis - 1) * 100);
+      p.push('Ortalama hedef fiyat ' + h.hedef.toFixed(2) + ' TL (' + (fark >= 0 ? '+' : '') + fark.toFixed(0) + '%)');
+    }
+    p.push('Son 7 günde ' + (h.hafta || 0) + ' haber, 90 günde ' + (h.toplamHaber || 0));
+    if (h.sonBaslik) p.push('Son başlık: ' + h.sonBaslik);
+    return p.join(' — ');
+  };
 
   // rozet ipucu: puanin hangi rakamlardan geldigini yazar
   const yuzde = (v) => (typeof v === 'number' && isFinite(v) ? (v >= 0 ? '+' : '') + v.toFixed(0) + '%' : '—');
@@ -132,7 +151,7 @@ export function htmlRapor(satirlar, stSinyalleri, tarih, gunIci, surum) {
     const sinif = x.guclu ? 'guclu' : x.al ? 'al' : 'izle';
     const stAl = stKume.has(x.ad);
     const riskSinif = x.risk <= 20 ? 'r-dusuk' : x.risk <= 40 ? 'r-orta' : 'r-yuksek';
-    return `<article class="kart ${sinif}" data-durum="${sinif}" data-ad="${kacis(x.ad)}" data-sira="${liste.indexOf(x)}" data-skor="${x.skor.toFixed(2)}" data-risk="${x.risk}" data-pot="${x.potansiyel.toFixed(2)}" data-osc="${x.osilator.alSayisi}" data-st="${stAl ? 1 : 0}" data-th="${x.trendHacim ? 1 : 0}" data-da="${x.dipAvi ? 1 : 0}" data-tm="${x.temel || 'yok'}" data-bl="${x.bilanco || 'yok'}">
+    return `<article class="kart ${sinif}" data-durum="${sinif}" data-ad="${kacis(x.ad)}" data-sira="${liste.indexOf(x)}" data-skor="${x.skor.toFixed(2)}" data-risk="${x.risk}" data-pot="${x.potansiyel.toFixed(2)}" data-osc="${x.osilator.alSayisi}" data-st="${stAl ? 1 : 0}" data-th="${x.trendHacim ? 1 : 0}" data-da="${x.dipAvi ? 1 : 0}" data-tm="${x.temel || 'yok'}" data-bl="${x.bilanco || 'yok'}" data-hb="${(x.haberVeri || {}).durum || 'yok'}">
   <div class="kart-ust">
     <div class="kimlik">
       <h3 class="ad">${kacis(x.ad)}${stAl ? '<i class="nokta" title="Supertrend bugün AL verdi"></i>' : ''}</h3>
@@ -153,6 +172,7 @@ export function htmlRapor(satirlar, stSinyalleri, tarih, gunIci, surum) {
   <div class="analiz">
     <span class="rozet d-${x.temel || 'yok'}" title="${kacis(temelIpucu(x))}"><i></i>Temel</span>
     <span class="rozet d-${x.bilanco || 'yok'}" title="${kacis(bilancoIpucu(x))}"><i></i>Bilanço</span>
+    <span class="rozet d-${(x.haberVeri || {}).durum || 'yok'}" title="${kacis(haberIpucu(x))}"><i></i>Haber</span>
   </div>
 </article>`;
   }).join('\n');
@@ -355,6 +375,7 @@ export function htmlRapor(satirlar, stSinyalleri, tarih, gunIci, surum) {
     <button data-da="1" aria-pressed="false" title="RSI son 5 günde 30'u yukarı kesmiş, Stokastik %K &gt; %D, MACD sinyal hattının üzerinde ve 30 günlük ortalama hacmi 300 binin üzerinde olanlar">Dip avcılığı <b>${daAdet}</b></button>
     <button data-tm="1" aria-pressed="false" title="PD/DD, ROE, net marj ve borç/özkaynak — piyasa medyanına göre çoğunlukla iyi olanlar">Temel pozitif <b>${tmAdet}</b></button>
     <button data-bl="1" aria-pressed="false" title="Son çeyrek gelir ve net kâr büyümesi — piyasa medyanının üzerinde olanlar">Bilanço pozitif <b>${blAdet}</b></button>
+    <button data-hb="1" aria-pressed="false" title="Son 3 analist tavsiyesi ağırlıklı olarak AL / Endeks Üstü olanlar">Haber pozitif <b>${hbAdet}</b></button>
     <button data-r="1" aria-pressed="false">★ Radarım <b id="radarSayi">0</b></button>
     <span class="ayrac"></span>
     <select id="sirasec" aria-label="Sıralama">
@@ -410,12 +431,13 @@ ${kartlar}
   var daDugmesi = document.querySelector('.suzgec button[data-da]');
   var tmDugmesi = document.querySelector('.suzgec button[data-tm]');
   var blDugmesi = document.querySelector('.suzgec button[data-bl]');
+  var hbDugmesi = document.querySelector('.suzgec button[data-hb]');
   var tumuDugmesi = document.getElementById('tumuBtn');
   var bosMesaj = document.getElementById('bosMesaj');
   var arama = document.querySelector('.suzgec input');
   var secili = { guclu: true, al: true, izle: false };
   var radarAktif = false, stAktif = false, thAktif = false, daAktif = false;
-  var tmAktif = false, blAktif = false;
+  var tmAktif = false, blAktif = false, hbAktif = false;
 
   // ---- RADAR: isaretlenen hisseler tarayicida saklanir ----
   var ANAHTAR = 'bist-radar';
@@ -474,6 +496,7 @@ ${kartlar}
       if (uyar && daAktif) uyar = k.dataset.da === '1';
       if (uyar && tmAktif) uyar = k.dataset.tm === 'pozitif';
       if (uyar && blAktif) uyar = k.dataset.bl === 'pozitif';
+      if (uyar && hbAktif) uyar = k.dataset.hb === 'pozitif';
       if (uyar && radarAktif) uyar = !!radar[k.dataset.ad];
       if (uyar && q) uyar = k.dataset.ad.indexOf(q) === 0;
       if (uyar) grupHaric++;
@@ -496,6 +519,7 @@ ${kartlar}
     daDugmesi.setAttribute('aria-pressed', String(daAktif));
     tmDugmesi.setAttribute('aria-pressed', String(tmAktif));
     blDugmesi.setAttribute('aria-pressed', String(blAktif));
+    hbDugmesi.setAttribute('aria-pressed', String(hbAktif));
   }
 
   grupDugmeleri.forEach(function(b){
@@ -512,6 +536,7 @@ ${kartlar}
   daDugmesi.addEventListener('click', function(){ daAktif = !daAktif; uygula(); });
   tmDugmesi.addEventListener('click', function(){ tmAktif = !tmAktif; uygula(); });
   blDugmesi.addEventListener('click', function(){ blAktif = !blAktif; uygula(); });
+  hbDugmesi.addEventListener('click', function(){ hbAktif = !hbAktif; uygula(); });
   arama.addEventListener('input', uygula);
 
   // ---- siralama ----
