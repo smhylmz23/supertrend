@@ -84,8 +84,41 @@ const TEMEL_KOLON = ['name',
   'net_income_yoy_growth_fq',      // 6  net kar buyumesi (son ceyrek, yillik)
   'net_income_qoq_growth_fq',      // 7  net kar buyumesi (onceki ceyrege gore)
   'price_earnings_ttm',            // 8  F/K — sadece bilgi amacli, puanlamada yok
+  'sector',                        // 9  sektor (Ingilizce gelir, panelde Turkcelestiriliyor)
+  'indexes',                       // 10 uye oldugu endeksler [{name, proname}]
 ];
-const T = { PDDD: 1, ROE: 2, MARJ: 3, BORC: 4, GELIR: 5, KAR: 6, KARQ: 7, FK: 8 };
+const T = { PDDD: 1, ROE: 2, MARJ: 3, BORC: 4, GELIR: 5, KAR: 6, KARQ: 7, FK: 8, SEKTOR: 9, ENDEKS: 10 };
+
+// Panelde filtre olarak sunulacak endeksler — hepsi degil, ise yarayanlar
+export const ENDEKSLER = [
+  ['XU030', 'BIST 30'], ['XU050', 'BIST 50'], ['XU100', 'BIST 100'],
+  ['XYLDZ', 'Yıldız Pazar'], ['XBANA', 'Ana Pazar'],
+  ['XTMTU', 'BIST Temettü'], ['XK100', 'Katılım 100'], ['XUSRD', 'Sürdürülebilirlik'],
+];
+
+// TradingView sektorleri Ingilizce geliyor
+export const SEKTOR_TR = {
+  'Finance': 'Finans',
+  'Process Industries': 'Kimya & Temel Sanayi',
+  'Producer Manufacturing': 'Üretim & Makine',
+  'Consumer Non-Durables': 'Gıda & Dayanıksız Tüketim',
+  'Non-Energy Minerals': 'Madencilik & Çimento',
+  'Utilities': 'Enerji & Altyapı',
+  'Consumer Services': 'Tüketici Hizmetleri',
+  'Consumer Durables': 'Dayanıklı Tüketim',
+  'Technology Services': 'Teknoloji Hizmetleri',
+  'Distribution Services': 'Dağıtım & Toptan',
+  'Retail Trade': 'Perakende',
+  'Industrial Services': 'Sanayi Hizmetleri',
+  'Transportation': 'Ulaştırma',
+  'Electronic Technology': 'Elektronik Teknoloji',
+  'Commercial Services': 'Ticari Hizmetler',
+  'Health Technology': 'Sağlık Teknolojisi',
+  'Health Services': 'Sağlık Hizmetleri',
+  'Energy Minerals': 'Enerji Madenleri',
+  'Communications': 'İletişim',
+  'Miscellaneous': 'Diğer',
+};
 
 const sayiMi = (v) => typeof v === 'number' && isFinite(v);
 const medyan = (dizi) => {
@@ -105,7 +138,7 @@ function temelPuanla(evren) {
   const harita = new Map();
   for (const u of evren) {
     const d = u.temelVeri;
-    if (!d) { harita.set(u.ad, { temel: 'yok', bilanco: 'yok', medyan: m }); continue; }
+    if (!d) { harita.set(u.ad, { temel: 'yok', bilanco: 'yok', medyan: m, sektor: '', endeksler: [] }); continue; }
     const g = (i) => (sayiMi(d[i]) ? d[i] : null);
 
     // --- TEMEL: deger + karlilik + borc (4 olcut, en az 3'u lazim) ---
@@ -130,8 +163,13 @@ function temelPuanla(evren) {
     boy(g(T.KARQ), m.KARQ);
     const bilanco = bs < 2 ? 'yok' : (bp - bn >= 2 ? 'pozitif' : (bn - bp >= 2 ? 'negatif' : 'notr'));
 
+    // endeks kodlari: "BIST:XU100" -> "XU100"
+    const endeksler = Array.isArray(d[T.ENDEKS])
+      ? d[T.ENDEKS].map((e) => String((e && e.proname) || '').replace('BIST:', '')).filter(Boolean)
+      : [];
     harita.set(u.ad, {
       temel, bilanco, medyan: m,
+      sektor: d[T.SEKTOR] || '', endeksler,
       pddd: g(T.PDDD), roe: g(T.ROE), marj: g(T.MARJ), borc: g(T.BORC),
       gelir: g(T.GELIR), kar: g(T.KAR), karQ: g(T.KARQ), fk: g(T.FK),
     });
@@ -549,6 +587,7 @@ for (const k in veri) {
   satirlar.push({
     ad: r.ad, ...h.bugun, divCnt: h.divCnt, osilator: h.osilator,
     temel: tv.temel, bilanco: tv.bilanco, temelDetay: tv,
+    sektor: tv.sektor || '', endeksler: tv.endeksler || [],
     yeniAl: h.bugun.al && h.dun && !h.dun.al,
     yeniGuclu: h.bugun.guclu && h.dun && !h.dun.guclu,
     kapanis: son.c, degisim: ((son.c - onceki.c) / onceki.c) * 100, hacimTL, tarih: new Date(son.t * 1000).toLocaleDateString('tr-TR'),

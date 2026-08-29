@@ -85,6 +85,25 @@ export function sadeListe(satirlar) {
 // ---------- 2) BENTO PANEL ----------
 const kacis = (s) => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
 
+// panelde filtre olarak sunulan endeksler ve sektor adlari (tarayici tarafiyla ayni)
+const ENDEKSLER = [
+  ['XU030', 'BIST 30'], ['XU050', 'BIST 50'], ['XU100', 'BIST 100'],
+  ['XYLDZ', 'Yıldız Pazar'], ['XBANA', 'Ana Pazar'],
+  ['XTMTU', 'BIST Temettü'], ['XK100', 'Katılım 100'], ['XUSRD', 'Sürdürülebilirlik'],
+];
+const SEKTOR_TR = {
+  'Finance': 'Finans', 'Process Industries': 'Kimya & Temel Sanayi',
+  'Producer Manufacturing': 'Üretim & Makine', 'Consumer Non-Durables': 'Gıda & Dayanıksız Tüketim',
+  'Non-Energy Minerals': 'Madencilik & Çimento', 'Utilities': 'Enerji & Altyapı',
+  'Consumer Services': 'Tüketici Hizmetleri', 'Consumer Durables': 'Dayanıklı Tüketim',
+  'Technology Services': 'Teknoloji Hizmetleri', 'Distribution Services': 'Dağıtım & Toptan',
+  'Retail Trade': 'Perakende', 'Industrial Services': 'Sanayi Hizmetleri',
+  'Transportation': 'Ulaştırma', 'Electronic Technology': 'Elektronik Teknoloji',
+  'Commercial Services': 'Ticari Hizmetler', 'Health Technology': 'Sağlık Teknolojisi',
+  'Health Services': 'Sağlık Hizmetleri', 'Energy Minerals': 'Enerji Madenleri',
+  'Communications': 'İletişim', 'Miscellaneous': 'Diğer',
+};
+
 export function htmlRapor(satirlar, stSinyalleri, tarih, gunIci, surum) {
   const SURUM = String(surum || Date.now());
   const liste = suz(satirlar);
@@ -99,6 +118,16 @@ export function htmlRapor(satirlar, stSinyalleri, tarih, gunIci, surum) {
   const tmAdet = liste.filter((x) => x.temel === 'pozitif').length;
   const blAdet = liste.filter((x) => x.bilanco === 'pozitif').length;
   const hbAdet = liste.filter((x) => (x.haberVeri || {}).durum === 'pozitif').length;
+
+  // endeks ve sektor secenekleri — sadece listede uyesi olanlar gosteriliyor
+  const endeksSecenek = ENDEKSLER
+    .map(([kod, ad]) => [kod, ad, liste.filter((x) => (x.endeksler || []).includes(kod)).length])
+    .filter(([, , n]) => n > 0);
+  const sektorSayim = {};
+  for (const x of liste) { const s = x.sektor || ''; if (s) sektorSayim[s] = (sektorSayim[s] || 0) + 1; }
+  const sektorSecenek = Object.entries(sektorSayim)
+    .map(([s, n]) => [s, SEKTOR_TR[s] || s, n])
+    .sort((a, b) => b[2] - a[2]);
 
   const haberIpucu = (x) => {
     const h = x.haberVeri;
@@ -151,7 +180,7 @@ export function htmlRapor(satirlar, stSinyalleri, tarih, gunIci, surum) {
     const sinif = x.guclu ? 'guclu' : x.al ? 'al' : 'izle';
     const stAl = stKume.has(x.ad);
     const riskSinif = x.risk <= 20 ? 'r-dusuk' : x.risk <= 40 ? 'r-orta' : 'r-yuksek';
-    return `<article class="kart ${sinif}" data-durum="${sinif}" data-ad="${kacis(x.ad)}" data-sira="${liste.indexOf(x)}" data-skor="${x.skor.toFixed(2)}" data-risk="${x.risk}" data-pot="${x.potansiyel.toFixed(2)}" data-osc="${x.osilator.alSayisi}" data-st="${stAl ? 1 : 0}" data-th="${x.trendHacim ? 1 : 0}" data-da="${x.dipAvi ? 1 : 0}" data-tm="${x.temel || 'yok'}" data-bl="${x.bilanco || 'yok'}" data-hb="${(x.haberVeri || {}).durum || 'yok'}">
+    return `<article class="kart ${sinif}" data-durum="${sinif}" data-ad="${kacis(x.ad)}" data-sira="${liste.indexOf(x)}" data-skor="${x.skor.toFixed(2)}" data-risk="${x.risk}" data-pot="${x.potansiyel.toFixed(2)}" data-osc="${x.osilator.alSayisi}" data-st="${stAl ? 1 : 0}" data-th="${x.trendHacim ? 1 : 0}" data-da="${x.dipAvi ? 1 : 0}" data-tm="${x.temel || 'yok'}" data-bl="${x.bilanco || 'yok'}" data-hb="${(x.haberVeri || {}).durum || 'yok'}" data-sk="${kacis(x.sektor || '')}" data-ex="${kacis((x.endeksler || []).join(' '))}">
   <div class="kart-ust">
     <div class="kimlik">
       <h3 class="ad">${kacis(x.ad)}${stAl ? '<i class="nokta" title="Supertrend bugün AL verdi"></i>' : ''}</h3>
@@ -381,6 +410,14 @@ export function htmlRapor(satirlar, stSinyalleri, tarih, gunIci, surum) {
     <button data-hb="1" aria-pressed="false" title="Son 3 analist tavsiyesi ağırlıklı olarak AL / Endeks Üstü olanlar">Haber pozitif <b>${hbAdet}</b></button>
     <button data-r="1" aria-pressed="false">★ Radarım <b id="radarSayi">0</b></button>
     <span class="ayrac"></span>
+    <select id="endekssec" aria-label="Endeks">
+      <option value="">Tüm endeksler</option>
+      ${endeksSecenek.map(([kod, ad, n]) => `<option value="${kod}">${kacis(ad)} (${n})</option>`).join('')}
+    </select>
+    <select id="sektorsec" aria-label="Sektör">
+      <option value="">Tüm sektörler</option>
+      ${sektorSecenek.map(([s, ad, n]) => `<option value="${kacis(s)}">${kacis(ad)} (${n})</option>`).join('')}
+    </select>
     <select id="sirasec" aria-label="Sıralama">
       <option value="varsayilan">Karar sırası</option>
       <option value="skor">Skor — yüksekten</option>
@@ -440,6 +477,8 @@ ${kartlar}
   var tumuDugmesi = document.getElementById('tumuBtn');
   var bosMesaj = document.getElementById('bosMesaj');
   var arama = document.querySelector('.suzgec input');
+  var endeksSec = document.getElementById('endekssec');
+  var sektorSec = document.getElementById('sektorsec');
   var secili = { guclu: true, al: true, izle: false };
   var radarAktif = false, stAktif = false, thAktif = false, daAktif = false;
   var tmAktif = false, blAktif = false, hbAktif = false;
@@ -491,6 +530,7 @@ ${kartlar}
 
   function uygula(){
     var q = (arama.value || '').trim().toUpperCase();
+    var ex = endeksSec.value, sk = sektorSec.value;
     var n = 0, grupHaric = 0;
     kartlar.forEach(function(k){
       // once grup disindaki olcutler, sonra grup secimi — boylece
@@ -503,6 +543,8 @@ ${kartlar}
       if (uyar && blAktif) uyar = k.dataset.bl === 'pozitif';
       if (uyar && hbAktif) uyar = k.dataset.hb === 'pozitif';
       if (uyar && radarAktif) uyar = !!radar[k.dataset.ad];
+      if (uyar && ex) uyar = (' ' + k.dataset.ex + ' ').indexOf(' ' + ex + ' ') >= 0;
+      if (uyar && sk) uyar = k.dataset.sk === sk;
       if (uyar && q) uyar = k.dataset.ad.indexOf(q) === 0;
       if (uyar) grupHaric++;
       var gorunur = uyar && !!secili[k.dataset.durum];
@@ -543,6 +585,8 @@ ${kartlar}
   blDugmesi.addEventListener('click', function(){ blAktif = !blAktif; uygula(); });
   hbDugmesi.addEventListener('click', function(){ hbAktif = !hbAktif; uygula(); });
   arama.addEventListener('input', uygula);
+  endeksSec.addEventListener('change', uygula);
+  sektorSec.addEventListener('change', uygula);
 
   // ---- siralama ----
   var kapsayici = document.getElementById('liste');
