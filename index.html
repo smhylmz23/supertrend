@@ -141,15 +141,18 @@
   .r-dusuk{color:var(--yesil)} .r-orta{color:var(--yazi)} .r-yuksek{color:var(--dusus)}
   .arti{color:var(--yesil)} .notr{color:var(--soluk)}
 
-  /* temel + bilanco rozetleri */
-  .analiz{display:flex;gap:7px;margin-top:11px;padding-top:10px;border-top:1px solid var(--cizgi)}
-  .rozet{display:inline-flex;align-items:center;gap:5px;font-size:11px;font-weight:500;
-    color:var(--soluk);cursor:help;letter-spacing:.01em}
-  .rozet i{width:6px;height:6px;border-radius:50%;background:var(--soluk);flex:none}
-  .d-pozitif{color:var(--yazi-2)} .d-pozitif i{background:var(--yesil)}
-  .d-negatif{color:var(--yazi-2)} .d-negatif i{background:var(--dusus)}
+  /* temel + bilanco + haber rozetleri — ustteki metrik satiriyla ayni izgara,
+     boylece Temel/Bilanco/Haber sirasiyla Risk/Potansiyel/Osilator ile hizalanir.
+     Etiketler her zaman ayni acik gri; renk SADECE noktada degisir. */
+  .analiz{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;
+    margin-top:10px;padding-top:10px;border-top:1px solid var(--cizgi)}
+  .rozet{display:inline-flex;align-items:center;gap:6px;font-size:11px;font-weight:500;
+    color:var(--soluk);cursor:help;letter-spacing:.01em;white-space:nowrap}
+  .rozet i{width:7px;height:7px;border-radius:50%;background:var(--cizgi-2);flex:none}
+  .d-pozitif i{background:var(--yesil)}
+  .d-negatif i{background:var(--dusus)}
   .d-notr i{background:var(--soluk)}
-  .d-yok{opacity:.42} .d-yok i{background:transparent;border:1px solid var(--cizgi-2)}
+  .d-yok i{background:transparent;box-shadow:inset 0 0 0 1px var(--cizgi-2)}
 
   .bos{display:none;grid-column:1/-1;text-align:center;color:var(--yazi-2);font-size:14px;
     background:var(--yuzey);border:1px dashed var(--cizgi-2);border-radius:var(--r-kart);padding:44px 20px}
@@ -5409,7 +5412,7 @@
 /* Tarayici eski kopyayi onbellekte tutabiliyor. Sayfa acilinca sunucudaki
    surum damgasini onbelleksiz okur; farkliysa kendini bir kez yeniler. */
 (function(){
-  var SURUM = '1787962242618';
+  var SURUM = '1787963102044';
   try {
     fetch('surum.txt?_=' + Date.now(), { cache: 'no-store' })
       .then(function(y){ return y.ok ? y.text() : null; })
