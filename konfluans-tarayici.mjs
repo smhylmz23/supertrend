@@ -125,6 +125,20 @@ const medyan = (dizi) => {
   const s = dizi.filter(sayiMi).sort((a, b) => a - b);
   return s.length ? s[Math.floor(s.length / 2)] : null;
 };
+// yuzdelik dilim — bilanco ivmesini iyi/normal/kotu diye ucе ayirmak icin
+const dilim = (dizi, p) => {
+  const s = dizi.filter(sayiMi).sort((a, b) => a - b);
+  return s.length ? s[Math.min(s.length - 1, Math.floor(s.length * p))] : null;
+};
+/* Kullanicinin istedigi okuma: "gecen yilin ayni ceyregine gore" ve
+ * "bir onceki ceyrege gore" performans iyi mi, normal mi, kotu mu.
+ * Esik uydurmuyoruz: piyasanin alt ve ust ucte birlik dilimlerini kullaniyoruz. */
+const ivmeDurumu = (deger, alt, ust) => {
+  if (!sayiMi(deger) || alt === null || ust === null) return 'yok';
+  if (deger > ust) return 'iyi';
+  if (deger < alt) return 'kötü';
+  return 'normal';
+};
 
 /* Turkiye'de enflasyon yuzunden mutlak esik yaniltir: BIST'in medyan net kar
  * buyumesi eksi cikabiliyor. Bu yuzden her metrik PIYASA MEDYANINA gore
@@ -134,6 +148,11 @@ function temelPuanla(evren) {
   if (!veri.length) return new Map();
   const m = {};
   for (const k in T) m[k] = medyan(veri.map((d) => d[T[k]]));
+  // ivme esikleri: piyasanin alt/ust ucte biri
+  const esik = {};
+  for (const k of ['GELIR', 'KAR', 'KARQ']) {
+    esik[k] = { alt: dilim(veri.map((d) => d[T[k]]), 1 / 3), ust: dilim(veri.map((d) => d[T[k]]), 2 / 3) };
+  }
 
   const harita = new Map();
   for (const u of evren) {
@@ -168,7 +187,11 @@ function temelPuanla(evren) {
       ? d[T.ENDEKS].map((e) => String((e && e.proname) || '').replace('BIST:', '')).filter(Boolean)
       : [];
     harita.set(u.ad, {
-      temel, bilanco, medyan: m,
+      temel, bilanco, medyan: m, esik,
+      // kullanicinin istedigi iki ayri okuma
+      yillikDurum: ivmeDurumu(g(T.KAR), esik.KAR.alt, esik.KAR.ust),      // gecen yilin ayni ceyregi
+      ceyrekDurum: ivmeDurumu(g(T.KARQ), esik.KARQ.alt, esik.KARQ.ust),   // bir onceki ceyrek
+      gelirDurum: ivmeDurumu(g(T.GELIR), esik.GELIR.alt, esik.GELIR.ust),
       sektor: d[T.SEKTOR] || '', endeksler,
       pddd: g(T.PDDD), roe: g(T.ROE), marj: g(T.MARJ), borc: g(T.BORC),
       gelir: g(T.GELIR), kar: g(T.KAR), karQ: g(T.KARQ), fk: g(T.FK),
@@ -266,6 +289,81 @@ async function haberleriAl(adlar, fiyatlar) {
   await Promise.all(Array.from({ length: 8 }, isci));
   return harita;
 }
+
+/* ================= MEVSIMSELLIK =================
+ * Aylik cozunurlukte ~25 yillik bar cekip, hedef ayda kac yil yukselmis sayiyoruz.
+ * Gunluk yerine aylik bar kullanmak sart: 216 hisse x 300 bar cok hafif kaliyor.
+ */
+function mevsimHesapla(aylik, hedefAy) {
+  const simdi = new Date();
+  const buAy = simdi.getUTCMonth(), buYil = simdi.getUTCFullYear();
+  let artan = 0, toplam = 0;
+  for (const b of aylik) {
+    const d = new Date(b.t * 1000);
+    if (d.getUTCMonth() !== hedefAy) continue;
+    // icinde bulundugumuz ay henuz kapanmadi, sayima katma
+    if (d.getUTCMonth() === buAy && d.getUTCFullYear() === buYil) continue;
+    if (!b.o || !isFinite(b.o) || !isFinite(b.c)) continue;
+    toplam++;
+    if (b.c > b.o) artan++;
+  }
+  const oran = toplam ? artan / toplam : 0;
+  const durum = toplam < 8 ? 'yok' : (oran >= 0.65 ? 'pozitif' : (oran <= 0.35 ? 'negatif' : 'notr'));
+  return { ay: hedefAy, artan, toplam, oran, durum };
+}
+
+async function mevsimsellikAl(adlar) {
+  // ayin 20'sinden sonraysak siradaki ay daha anlamli
+  const g = new Date();
+  const hedefAy = g.getUTCDate() > 20 ? (g.getUTCMonth() + 1) % 12 : g.getUTCMonth();
+  const harita = new Map();
+  let i = 0;
+  const isci = () => new Promise(async (bitti) => {
+    let ws, cs, sira = 0, akt = null, sayac = null;
+    const sonraki = () => {
+      if (i >= adlar.length) { try { ws.close(); } catch (e) {} return bitti(); }
+      const ad = adlar[i++]; sira++;
+      akt = { ad, sid: 'm' + sira, symid: 'my' + sira, bars: null };
+      clearTimeout(sayac); sayac = setTimeout(() => kapat(), 20000);
+      ws.send(cerceve({ m: 'resolve_symbol', p: [cs, akt.symid, '=' + JSON.stringify({ symbol: 'BIST:' + ad, adjustment: 'splits' })] }));
+      ws.send(cerceve({ m: 'create_series', p: [cs, akt.sid, akt.sid, akt.symid, '1M', 300, ''] }));
+    };
+    const kapat = () => {
+      clearTimeout(sayac);
+      if (akt) {
+        harita.set(akt.ad, akt.bars ? mevsimHesapla(akt.bars, hedefAy) : { durum: 'yok', ay: hedefAy, toplam: 0 });
+        try { ws.send(cerceve({ m: 'remove_series', p: [cs, akt.sid] })); } catch (e) {}
+        akt = null;
+      }
+      sonraki();
+    };
+    try { ws = await baglan(); } catch (e) { return bitti(); }
+    cs = 'cs_' + Math.random().toString(36).slice(2, 12);
+    ws.addEventListener('close', () => bitti());
+    ws.addEventListener('error', () => bitti());
+    ws.addEventListener('message', (ev) => {
+      for (const p of coz(String(ev.data))) {
+        if (p.startsWith('~h~')) { try { ws.send('~m~' + p.length + '~m~' + p); } catch (e) {} continue; }
+        let j; try { j = JSON.parse(p); } catch (e) { continue; }
+        if (j.session_id) {
+          ws.send(cerceve({ m: 'set_auth_token', p: ['unauthorized_user_token'] }));
+          ws.send(cerceve({ m: 'chart_create_session', p: [cs, ''] }));
+          sonraki(); continue;
+        }
+        if (!akt) continue;
+        if (j.m === 'timescale_update' && j.p?.[1]?.[akt.sid]) {
+          const s = j.p[1][akt.sid].s;
+          if (s?.length) akt.bars = s.map((x) => ({ t: x.v[0], o: x.v[1], c: x.v[4] }));
+        } else if (j.m === 'series_completed' || j.m === 'symbol_error' || j.m === 'series_error') kapat();
+      }
+    });
+  });
+  await Promise.all(Array.from({ length: 6 }, isci));
+  return { harita, hedefAy };
+}
+
+const AY_ADI = ['Ocak', 'Şubat', 'Mart', 'Nisan', 'Mayıs', 'Haziran',
+  'Temmuz', 'Ağustos', 'Eylül', 'Ekim', 'Kasım', 'Aralık'];
 
 // ================= VERI =================
 const WSOPTS = { headers: { Origin: 'https://www.tradingview.com', 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/126 Safari/537.36' } };
@@ -592,6 +690,24 @@ for (const k in veri) {
     yeniGuclu: h.bugun.guclu && h.dun && !h.dun.guclu,
     kapanis: son.c, degisim: ((son.c - onceki.c) / onceki.c) * 100, hacimTL, tarih: new Date(son.t * 1000).toLocaleDateString('tr-TR'),
   });
+}
+
+// ---- mevsimsellik: sadece listeye giren hisseler icin ----
+if (!CFG.tekHisse) {
+  const listeye = satirlar.filter(listeyeUygun);
+  process.stderr.write('Mevsimsellik hesaplaniyor (' + listeye.length + ' hisse, aylik veri)...\n');
+  const t2 = Date.now();
+  const { harita: mev, hedefAy } = await mevsimsellikAl(listeye.map((x) => x.ad));
+  for (const x of satirlar) {
+    const v = mev.get(x.ad);
+    x.mevsim = v ? { ...v, ayAdi: AY_ADI[v.ay] } : { durum: 'yok', ayAdi: AY_ADI[hedefAy], toplam: 0 };
+  }
+  const sayM = (d) => Array.from(mev.values()).filter((v) => v.durum === d).length;
+  process.stderr.write('Mevsim  : ' + AY_ADI[hedefAy] + ' — ' + sayM('pozitif') + ' pozitif / '
+    + sayM('notr') + ' notr / ' + sayM('negatif') + ' negatif / ' + sayM('yok')
+    + ' veri yetersiz  (' + ((Date.now() - t2) / 1000).toFixed(0) + ' sn)\n');
+} else {
+  for (const x of satirlar) x.mevsim = { durum: 'yok', toplam: 0 };
 }
 
 // ---- haber akisi: sadece listeye giren hisseler icin ----

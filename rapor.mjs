@@ -157,10 +157,20 @@ export function htmlRapor(satirlar, stSinyalleri, tarih, gunIci, surum) {
   };
   const bilancoIpucu = (x) => {
     const t = x.temelDetay; if (!t || !t.medyan) return 'Bilanço verisi yok';
-    const m = t.medyan;
-    return 'Son çeyrek, piyasa medyanına göre — Gelir ' + yuzde(t.gelir) + ' (medyan ' + yuzde(m.GELIR) + ')'
-      + ' · Net kâr ' + yuzde(t.kar) + ' (medyan ' + yuzde(m.KAR) + ')'
-      + ' · Net kâr çeyreklik ' + yuzde(t.karQ) + ' (medyan ' + yuzde(m.KARQ) + ')';
+    return 'Son çeyrek — '
+      + 'Geçen yılın aynı çeyreğine göre: net kâr ' + yuzde(t.kar) + ' → ' + (t.yillikDurum || '—')
+      + ' · Bir önceki çeyreğe göre: net kâr ' + yuzde(t.karQ) + ' → ' + (t.ceyrekDurum || '—')
+      + ' · Gelir (yıllık) ' + yuzde(t.gelir) + ' → ' + (t.gelirDurum || '—')
+      + ' — iyi/normal/kötü ayrımı piyasanın alt ve üst üçte birlik dilimine göre';
+  };
+  const mevsimIpucu = (x) => {
+    const v = x.mevsim;
+    if (!v || v.durum === 'yok') {
+      return (v && v.ayAdi ? v.ayAdi + ' için ' : '') + 'yeterli geçmiş yok (en az 8 yıl gerekiyor)'
+        + (v && v.toplam ? ' — elde ' + v.toplam + ' yıl var' : '');
+    }
+    return v.ayAdi + ' ayında son ' + v.toplam + ' yılın ' + v.artan + "'inde yükselmiş"
+      + ' (%' + Math.round(v.oran * 100) + ')';
   };
 
   // ST AL verip listeye giremeyenler — sebebi hisseye gore degisir
@@ -180,7 +190,7 @@ export function htmlRapor(satirlar, stSinyalleri, tarih, gunIci, surum) {
     const sinif = x.guclu ? 'guclu' : x.al ? 'al' : 'izle';
     const stAl = stKume.has(x.ad);
     const riskSinif = x.risk <= 20 ? 'r-dusuk' : x.risk <= 40 ? 'r-orta' : 'r-yuksek';
-    return `<article class="kart ${sinif}" data-durum="${sinif}" data-ad="${kacis(x.ad)}" data-sira="${liste.indexOf(x)}" data-skor="${x.skor.toFixed(2)}" data-risk="${x.risk}" data-pot="${x.potansiyel.toFixed(2)}" data-osc="${x.osilator.alSayisi}" data-st="${stAl ? 1 : 0}" data-th="${x.trendHacim ? 1 : 0}" data-da="${x.dipAvi ? 1 : 0}" data-tm="${x.temel || 'yok'}" data-bl="${x.bilanco || 'yok'}" data-hb="${(x.haberVeri || {}).durum || 'yok'}" data-sk="${kacis(x.sektor || '')}" data-ex="${kacis((x.endeksler || []).join(' '))}">
+    return `<article class="kart ${sinif}" data-durum="${sinif}" data-ad="${kacis(x.ad)}" data-sira="${liste.indexOf(x)}" data-skor="${x.skor.toFixed(2)}" data-risk="${x.risk}" data-pot="${x.potansiyel.toFixed(2)}" data-osc="${x.osilator.alSayisi}" data-st="${stAl ? 1 : 0}" data-th="${x.trendHacim ? 1 : 0}" data-da="${x.dipAvi ? 1 : 0}" data-tm="${x.temel || 'yok'}" data-bl="${x.bilanco || 'yok'}" data-hb="${(x.haberVeri || {}).durum || 'yok'}" data-sk="${kacis(x.sektor || '')}" data-ex="${kacis((x.endeksler || []).join(' '))}" data-mv="${(x.mevsim || {}).durum || 'yok'}">
   <div class="kart-ust">
     <div class="kimlik">
       <h3 class="ad">${kacis(x.ad)}${stAl ? '<i class="nokta" title="Supertrend bugün AL verdi"></i>' : ''}</h3>
@@ -202,6 +212,7 @@ export function htmlRapor(satirlar, stSinyalleri, tarih, gunIci, surum) {
     <span class="rozet d-${x.temel || 'yok'}" title="${kacis(temelIpucu(x))}"><i></i>Temel</span>
     <span class="rozet d-${x.bilanco || 'yok'}" title="${kacis(bilancoIpucu(x))}"><i></i>Bilanço</span>
     <span class="rozet d-${(x.haberVeri || {}).durum || 'yok'}" title="${kacis(haberIpucu(x))}"><i></i>Haber</span>
+    <span class="rozet d-${(x.mevsim || {}).durum || 'yok'}" title="${kacis(mevsimIpucu(x))}"><i></i>Mevsim</span>
   </div>
 </article>`;
   }).join('\n');
@@ -352,7 +363,7 @@ export function htmlRapor(satirlar, stSinyalleri, tarih, gunIci, surum) {
   /* temel + bilanco + haber rozetleri — ustteki metrik satiriyla ayni izgara,
      boylece Temel/Bilanco/Haber sirasiyla Risk/Potansiyel/Osilator ile hizalanir.
      Etiketler her zaman ayni acik gri; renk SADECE noktada degisir. */
-  .analiz{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;
+  .analiz{display:grid;grid-template-columns:repeat(2,1fr);gap:7px 8px;
     margin-top:10px;padding-top:10px;border-top:1px solid var(--cizgi)}
   .rozet{display:inline-flex;align-items:center;gap:6px;font-size:11px;font-weight:500;
     color:var(--soluk);cursor:help;letter-spacing:.01em;white-space:nowrap}
@@ -426,6 +437,7 @@ export function htmlRapor(satirlar, stSinyalleri, tarih, gunIci, surum) {
       <option value="osc">Osilatör — yüksekten</option>
       <option value="hb">Haber — pozitif önce</option>
       <option value="tm">Temel — pozitif önce</option>
+      <option value="mv">Mevsim — pozitif önce</option>
     </select>
     <input type="search" placeholder="hisse ara…" aria-label="Hisse ara">
   </div>
@@ -603,6 +615,7 @@ ${kartlar}
       var sira = { pozitif: 3, notr: 2, negatif: 1, yok: 0 };
       if (t === 'hb') return (sira[b.dataset.hb]||0) - (sira[a.dataset.hb]||0) || sayi(b,'skor') - sayi(a,'skor');
       if (t === 'tm') return (sira[b.dataset.tm]||0) - (sira[a.dataset.tm]||0) || sayi(b,'skor') - sayi(a,'skor');
+      if (t === 'mv') return (sira[b.dataset.mv]||0) - (sira[a.dataset.mv]||0) || sayi(b,'skor') - sayi(a,'skor');
       return sayi(a,'sira') - sayi(b,'sira');
     });
     var parca = document.createDocumentFragment();
