@@ -149,8 +149,15 @@ function temelPuanla(evren) {
  * basligin icindeki ACIK ANALIST TAVSIYESI ile belirliyoruz. Tavsiye yoksa
  * renk verilmiyor (bos nokta) — uydurma yapilmiyor.
  */
-const TAVSIYE_RE = /tavsiye[:\s]+([A-Za-zÇĞİÖŞÜçğıöşü ]+?)(?:\s*$|,|\.|\))/i;
-const HEDEF_RE = /hedef fiyat[ıi]?\s*[:\s]\s*([\d]+(?:[.,]\d+)?)\s*TL/i;
+/* Basliklar iki farkli kelime sirasiyla geliyor, ikisini de yakalamak sart:
+ *   A) "... ASTOR icin hedef fiyat 458 TL, tavsiye Endeks Ustu Getiri"
+ *   B) "... ASTOR icin 472.1 TL hedef fiyat belirledi ve Endeks Ustu Getiri tavsiyesini korudu"
+ * Sadece A kalibi kullanilirsa B tipi basliklar sessizce kaciriliyor. */
+const NOTLAR = 'Endeks Üstü Getiri|Endeks Altı Getiri|Endekse Paralel Getiri|Güçlü AL|Biriktir|Azalt|NÖTR|TUT|SAT|AL';
+const TAVSIYE_RE = /tavsiye[:\s]+([A-Za-zÇĞİÖŞÜçğıöşü ]+?)(?:\s*$|,|\.|\))/i;   // A: "tavsiye X"
+const TAVSIYE_RE2 = new RegExp('(' + NOTLAR + ')\\s+tavsiye', 'i');             // B: "X tavsiyesi"
+const HEDEF_RE = /hedef fiyat[ıi]?\s*[:\s]\s*([\d]+(?:[.,]\d+)?)\s*TL/i;        // A: "hedef fiyat 458 TL"
+const HEDEF_RE2 = /([\d]+(?:[.,]\d+)?)\s*TL\s+hedef fiyat/i;                     // B: "472.1 TL hedef fiyat"
 
 const tavsiyePuan = (t) => {
   const s = t.toLocaleLowerCase('tr');
@@ -193,9 +200,9 @@ async function haberleriAl(adlar, fiyatlar) {
       const tavsiyeler = [];
       const hedefler = [];
       for (const h of son90) {
-        const a = h.title.match(TAVSIYE_RE);
+        const a = h.title.match(TAVSIYE_RE) || h.title.match(TAVSIYE_RE2);
         if (a) tavsiyeler.push({ metin: a[1].trim(), puan: tavsiyePuan(a[1].trim()), t: h.published });
-        const b = h.title.match(HEDEF_RE);
+        const b = h.title.match(HEDEF_RE) || h.title.match(HEDEF_RE2);
         if (b) {
           const v = sayiCoz(b[1]);
           const fiyat = fiyatlar.get(ad);
