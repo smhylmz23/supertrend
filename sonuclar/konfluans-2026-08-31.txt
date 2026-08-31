@@ -1,0 +1,79 @@
+
+BIST KONFLUANS TARAYICI  —  TradingView gostergelerinizin birebir karsiligi
+
+=== TUM HISSELER : 585 hisse ===
+
+  HISSE   DURUM     SKOR  TRD  MOM  HCM  RISK UYM  ADX   RSI  KAPANIS   DEG%   OSILATOR
+  RYSAS  GUCLU AL   100   35   30   35    28   0   30    72     28.80    +6.6   6/6
+  KRDMD  GUCLU AL    99   34   30   35    18   0   27    67     47.38    +1.6   6/6
+  RGYAS  izle        98   33   30   35    50   4   26    66    215.40    +1.4   5/6
+  EUPWR  GUCLU AL    98   35   30   33    10   0   31    62    102.60    -2.7   5/6
+  HUNER  GUCLU AL    98   33   30   35    30   2   26    61      4.00    +1.0   6/6
+  GESAN  GUCLU AL    98   35   30   33    20   0   32    66     92.10    -0.9   5/6
+  TARKM  GUCLU AL    98   34   30   34    18   0   27    71    563.50    +1.7   5/6
+  AGESA  izle        97   32   30   35    50   4   23    69    261.25    -0.3   6/6
+  TNZTP  GUCLU AL    97   32   30   35    28   0   23    72     32.00    +0.0   6/6
+  BIMAS  GUCLU AL    97   34   28   34     0   0   28    55    405.50    -2.4   4/6
+  ARSAN  GUCLU AL    96   35   27   34    35   0   38    78      4.40    +3.3   5/6
+  SANFM  GUCLU AL    96   35   30   31     0   0   34    57     10.39   -10.0   5/6
+  PSDTC  GUCLU AL    96   35   30   31    32   2   30    63    174.30    -5.7   5/6
+  HATSN  GUCLU AL    95   35   30   30    28   0   34    71     81.00    -7.2   5/6
+  AHGAZ  GUCLU AL    95   32   30   33    20   0   21    70     37.98    -0.1   5/6
+  KUVVA  GUCLU AL    94   35   30   29    20   1   34    67    188.00    -0.9   5/6
+  BAHKM  izle        94   35   26   33    45   1   41    79    161.20    +1.1   5/6
+  TBORG  GUCLU AL    94   30   30   34    20   0   41    68    161.00    +2.2   4/6
+  ATSYH  izle        94   29   30   35    52   3   14    62    131.70    +9.9   5/6
+  RYGYO  GUCLU AL    94   35   24   35    35   0   48    85     50.80    +7.4   6/6
+  KCHOL  GUCLU AL    94   35   30   29    32   2   29    59    214.90    +0.4   4/6
+  ANELE  izle        94   35   24   35    67   3   32    84    190.50    +1.8   6/6
+  VERUS  GUCLU AL    94   35   30   29    10   0   39    58    670.00    -3.7   4/6
+  BIGEN  izle        93   35   25   33    69   2   40    82    183.80    +1.0   6/6
+  ORGE   GUCLU AL    93   34   30   29    30   2   28    65     24.02    -0.2   6/6
+  ALBRK  izle        93   34   27   32    32   3   31    54      8.68    -4.7   4/6
+  KRDMA  GUCLU AL    93   35   23   35    35   0   41    86     66.65   +10.0   6/6
+  SELEC  GUCLU AL    93   35   23   35    35   0   48    86    333.50    +0.2   6/6
+  BRLSM  izle        93   35   27   31    47   0   32    79     24.48    -2.9   5/6
+  BRSAN  izle        93   35   30   28    42   2   37    65    724.00    -0.3   4/6
+  KLSYN  GUCLU AL    93   34   30   28     8   0   28    61     15.69    -1.3   3/6
+  TGSAS  GUCLU AL    92   35   30   27     0   0   32    58    232.20   -10.0   5/6
+  AYGAZ  izle        92   35   30   27    50   2   44    69    335.00    +1.9   5/6
+  TRHOL  izle        92   35   22   35    45   1   43    93   3135.00    +1.1   5/6
+  DEVA   GUCLU AL    92   35   29   28    36   0   40    75     93.65    +2.2   6/6
+  INDES  GUCLU AL    92   34   30   27    18   0   28    66     11.87    -1.1   5/6
+  KTLEV  AL          91   30   30   31    18   0   17    60     62.80    -9.0   4/6
+  DAGI   GUCLU AL    91   30   30   31     0   0   33    57     10.42    -5.3   3/6
+  TUPRS  GUCLU AL    91   35   25   31    38   1   52    71    400.25    +1.1   4/6
+  GUBRF  GUCLU AL    90   35   29   26     0   0   29    58    481.75    -3.2   5/6
+  DURKN  GUCLU AL    89   34   29   26     8   0   28    58     22.38    -0.2   4/6
+  PASEU  GUCLU AL    89   35   30   24    20   0   48    69    241.20   -10.0   5/6
+  METRO  AL          89   30   27   32     8   0   17    58      8.77    +0.7   3/6
+  PRZMA  izle        89   35   30   24    50   2   30    66     91.00    +0.9   6/6
+  EDIP   GUCLU AL    89   25   30   34    10   1   22    63     40.26   +10.0   6/6
+  DMLKT  GUCLU AL    89   35   30   24    34   0   51    71      6.91    -0.6   4/6
+  VBTYZ  GUCLU AL    89   35   30   24    10   0   34    62     37.74    -3.3   4/6
+  TRMET  GUCLU AL    89   34   30   25    10   0   27    60    144.70    -1.4   6/6
+  AKFIS  GUCLU AL    88   35   30   23    20   1   30    59     17.80    -4.6   4/6
+  OZATD  izle        88   35   18   35    57   1   53    88   4835.00    +0.3   5/6
+  ADGYO  GUCLU AL    88   30   28   30     6   0   27    52     57.85    -4.5   2/6
+  ALKLC  izle        88   35   26   27    42   1   56    65    425.75    -0.4   5/6
+  KRPLS  GUCLU AL    88   35   30   23     0   0   45    58     10.55    -1.6   4/6
+  AKSGY  GUCLU AL    88   35   28   25     0   0   30    56     10.01    -1.0   4/6
+  OFSYM  GUCLU AL    87   30   30   27     0   0   44    63     67.05    -0.6   6/6
+  TRCAS  GUCLU AL    87   32   29   25     6   0   22    56     47.16    -1.3   6/6
+  KRDMB  AL          86   29   25   32     8   0   14    53    133.80    +0.8   4/6
+  ASELS  GUCLU AL    86   33   26   27     0   0   25    51    386.25    -4.4   3/6
+  BLUME  GUCLU AL    86   23   30   33    10   0   21    63     41.88    +2.0   3/6
+  TRENJ  GUCLU AL    86   32   30   24    10   1   22    58    106.90    -1.3   5/6
+  ... ve 525 hisse daha (tamami Excel dosyasinda)
+
+BUGUN YENI SINYAL VEREN: PSDTC, AHGAZ, EDIP, YGGYO, ENERY, RODRG, HKTM, PETUN, PNSUT, BRKVY, PRKME, MARTI, OZRDN, PAGYO, CANTE, KAYSE, OBAMS
+
+TradingView listesine yapistirmak icin:
+  BIST:RYSAS,BIST:KRDMD,BIST:RGYAS,BIST:EUPWR,BIST:HUNER,BIST:GESAN,BIST:TARKM,BIST:AGESA,BIST:TNZTP,BIST:BIMAS,BIST:ARSAN,BIST:SANFM,BIST:PSDTC,BIST:HATSN,BIST:AHGAZ,BIST:KUVVA,BIST:BAHKM,BIST:TBORG,BIST:ATSYH,BIST:RYGYO,BIST:KCHOL,BIST:ANELE,BIST:VERUS,BIST:BIGEN,BIST:ORGE,BIST:ALBRK,BIST:KRDMA,BIST:SELEC,BIST:BRLSM,BIST:BRSAN,BIST:KLSYN,BIST:TGSAS,BIST:AYGAZ,BIST:TRHOL,BIST:DEVA,BIST:INDES,BIST:KTLEV,BIST:DAGI,BIST:TUPRS,BIST:GUBRF
+
+Not: 38 hisse 200 gunluk EMA icin yeterli gecmise sahip degil.
+
+Excel dosyasi: sonuclar\konfluans_2026-08-31.csv  (585 satir, 34 sutun)
+
+Sade liste  : sonuclar\firsatlar_2026-08-31.csv
+Renkli sayfa: index.html

@@ -1,20 +1,35 @@
-﻿name: Supertrend Tarama
+name: Supertrend Tarama
 
 on:
   schedule:
-    # 15:45 UTC = 18:45 Turkiye saati, Pazartesi-Cuma
-    - cron: '45 15 * * 1-5'
-  workflow_dispatch:        # elle de calistirilabilsin
+    # Saatler UTC'dir. Turkiye = UTC+3 (yaz saati uygulanmiyor).
+    #
+    # GitHub'in ucretsiz zamanlayicisi "kesin" degildir: yogunlukta kosuyu
+    # saatlerce geciktirebilir ya da o slotu tamamen atlayabilir. Bu yuzden
+    # tek saate guvenmiyoruz; ayni gun icin bes ayri deneme var.
+    # Hangisi once veriyi getirirse getirsin, kalanlar "yayindaki veri zaten
+    # son kapanisa ait" deyip hicbir sey yapmadan cikar.
+    - cron: '45 15 * * 1-5'   # 18:45 TR  - asil deneme
+    - cron: '30 16 * * 1-5'   # 19:30 TR  - yedek
+    - cron: '30 17 * * 1-5'   # 20:30 TR  - yedek
+    - cron: '30 19 * * 1-5'   # 22:30 TR  - yedek
+    - cron: '0 4 * * 2-6'     # 07:00 TR  - ertesi sabah, son sans
+  workflow_dispatch:          # elle de calistirilabilsin
   push:
-    branches: [main]        # kod degisince test amacli calissin
+    branches: [main]          # kod degisince test amacli calissin
 
 permissions:
   contents: write
 
+# Iki cron ust uste binerse ayni anda iki tarama calismasin.
+concurrency:
+  group: tarama
+  cancel-in-progress: false
+
 jobs:
   tara:
     runs-on: ubuntu-latest
-    timeout-minutes: 20
+    timeout-minutes: 25
 
     steps:
       - name: Depoyu al
@@ -25,13 +40,30 @@ jobs:
         with:
           node-version: '22'
 
+      - name: Tarama gerekli mi
+        id: kontrol
+        run: |
+          if [ "${{ github.event_name }}" != "schedule" ]; then
+            echo "Elle ya da kod degisikligi ile tetiklendi - tarama yapilacak."
+            echo "calis=evet" >> $GITHUB_OUTPUT
+          elif [ "$(node taze-mi.mjs)" = "EVET" ]; then
+            echo "Yayindaki veri zaten borsanin son kapanisina ait - tarama atlaniyor."
+            echo "calis=hayir" >> $GITHUB_OUTPUT
+          else
+            echo "Yeni kapanis var - tarama yapilacak."
+            echo "calis=evet" >> $GITHUB_OUTPUT
+          fi
+
       - name: Supertrend taramasi
+        if: steps.kontrol.outputs.calis == 'evet'
         run: node supertrend-tarayici.mjs --sinyal hepsi --csv --rapor
 
       - name: Konfluans taramasi (KP paneli + osilator)
+        if: steps.kontrol.outputs.calis == 'evet'
         run: node konfluans-tarayici.mjs --sinyal tumu --csv --rapor
 
       - name: Sonuclari kaydet
+        if: steps.kontrol.outputs.calis == 'evet'
         run: |
           git config user.name "Supertrend Bot"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
@@ -39,6 +71,7 @@ jobs:
           if git diff --staged --quiet; then
             echo "Degisiklik yok."
           else
-            git commit -m "Tarama sonucu: $(date -u -d '+3 hours' +%Y-%m-%d)"
+            git commit -m "Tarama sonucu: $(TZ=Europe/Istanbul date +%Y-%m-%d)"
+            git pull --rebase origin main
             git push
           fi

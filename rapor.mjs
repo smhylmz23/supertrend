@@ -441,6 +441,7 @@ export function htmlRapor(satirlar, stSinyalleri, tarih, gunIci, surum) {
   <div class="kutu"><div class="sayac"><span class="n">${izleAdet}</span><span class="e">İzle</span></div></div>
   <div class="kutu"><div class="sayac"><span class="n">${liste.length}</span><span class="e">Taranan</span></div></div>
   ${gunIci ? `<div class="uyari"><b>Borsa açık — bu rakamlar geçici.</b>Bugünün mumu henüz kapanmadı; kapanışa kadar skorlar ve sinyaller değişebilir. Kesin liste her akşam 18:45'te oluşur.</div>` : ''}
+  <div class="uyari" id="bayatUyari" hidden><b>Bu liste son kapanışa ait olmayabilir.</b><span id="bayatMetin"></span></div>
 </section>
 
 <nav class="kontrol" aria-label="Filtreler">
@@ -511,6 +512,39 @@ ${kartlar}
       })
       .catch(function(){});
   } catch (e) {}
+})();
+
+/* Otomatik tarama gecikirse ya da hic calismazsa sayfa sessizce eski veriyi
+   gosterir. Bunu fark edelim: sayfadaki veri gunu, borsanin olmasi gereken
+   son kapanisindan eskiyse ustte uyari cikar. (Resmi tatillerde de cikabilir,
+   o yuzden "olmayabilir" diyoruz.) */
+(function(){
+  var VERI_GUNU = '${kacis(tarih)}';                 // GG.AA.YYYY
+  var p = VERI_GUNU.split('.');
+  if (p.length !== 3) return;
+  var veri = new Date(+p[2], +p[1] - 1, +p[0]);
+  if (isNaN(veri)) return;
+
+  // Borsanin son kapanisi hangi gun olmali? Hafta ici 18:45'ten once
+  // bakiyorsak bugunun kapanisi henuz yok; bir onceki is gunune bakariz.
+  var s = new Date();
+  var beklenen = new Date(s.getFullYear(), s.getMonth(), s.getDate());
+  if (s.getHours() * 60 + s.getMinutes() < 18 * 60 + 45) beklenen.setDate(beklenen.getDate() - 1);
+  while (beklenen.getDay() === 0 || beklenen.getDay() === 6) beklenen.setDate(beklenen.getDate() - 1);
+
+  var fark = Math.round((beklenen - veri) / 86400000);
+  if (fark < 1) return;
+
+  var kutu = document.getElementById('bayatUyari');
+  var metin = document.getElementById('bayatMetin');
+  if (!kutu || !metin) return;
+  var g = ['Pazar', 'Pazartesi', 'Salı', 'Çarşamba', 'Perşembe', 'Cuma', 'Cumartesi'][beklenen.getDay()];
+  metin.textContent = 'Ekrandaki veriler ' + VERI_GUNU + ' kapanışına ait. Bu arada ' +
+    ('0' + beklenen.getDate()).slice(-2) + '.' + ('0' + (beklenen.getMonth() + 1)).slice(-2) + '.' +
+    beklenen.getFullYear() + ' (' + g + ') kapanışı gerçekleşmiş olmalıydı. ' +
+    'Ya o gün borsa kapalıydı (resmi tatil), ya da akşamki otomatik tarama gecikti. ' +
+    'Birkaç saat sonra sayfayı tekrar açın; liste kendini yeniler.';
+  kutu.hidden = false;
 })();
 
 (function(){

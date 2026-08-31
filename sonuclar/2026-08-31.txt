@@ -1,0 +1,39 @@
+
+SUPERTREND TARAYICI  -  ATR 10 / Carpan 3 / Periyot 1D
+
+=== AL SINYALI: 3 hisse ===
+  HISSE   KAPANIS      DEG%    ST CIZGISI     ISLEM HACMI (TL)   TARIH
+  EDIP      40.26   +10.00        32.13          172.907.199   31.08.2026
+  MAKTK     10.72    +2.78         9.45          145.205.905   31.08.2026
+  TURGG     28.16    +4.37        25.30           57.102.200   31.08.2026
+
+=== SAT SINYALI: 21 hisse ===
+  HISSE   KAPANIS      DEG%    ST CIZGISI     ISLEM HACMI (TL)   TARIH
+  ALTIN     74.48    -3.85        80.52        1.529.670.314   31.08.2026
+  BJKAS      2.21    -9.80         2.98          788.514.497   31.08.2026
+  TCKRC    147.60   -10.00       178.20          711.590.818   31.08.2026
+  UFUK    1618.00    -7.54      1996.37          402.479.118   31.08.2026
+  PSGYO      3.21    -3.89         3.74          256.508.128   31.08.2026
+  TABGD    235.80    -4.80       267.36          206.098.632   31.08.2026
+  ZGYO      26.58    -9.96        36.41          146.218.175   31.08.2026
+  ENSRI      5.09    -7.96         6.29          145.642.476   31.08.2026
+  TKNSA     18.00    -5.26        22.51          122.261.958   31.08.2026
+  KAREL      8.56    -3.93         9.91           81.141.464   31.08.2026
+  BMSTL     43.56    -0.86        48.55           69.063.639   31.08.2026
+  ISFIN     19.42    -1.37        20.65           69.038.411   31.08.2026
+  ENTRA      4.29    -3.81         4.79           61.133.667   31.08.2026
+  DGNMO      7.27    -9.13         9.18           35.073.293   31.08.2026
+  ICBCT     19.42    -4.05        22.77           29.947.718   31.08.2026
+  OZYSR     11.36    -9.98        13.50           27.110.265   31.08.2026
+  DGATE     96.30    -4.08       115.55           17.815.885   31.08.2026
+  KERVN      9.36   -10.00        10.99           16.561.341   31.08.2026
+  SEKUR      9.95    -0.50        11.78           13.630.067   31.08.2026
+  AVGYO     14.85    -1.98        18.43            6.939.969   31.08.2026
+  AYES      29.50    -4.84        32.95            4.845.818   31.08.2026
+
+TradingView listesine yapistirmak icin:
+  BIST:EDIP,BIST:MAKTK,BIST:TURGG
+
+Not: 17 hisse yeterli gecmis veriye sahip degil (yeni islem gormeye baslamis): TKNKA, METEN, KARCL, SARAE, VEYAS, ISVEA, BETAE, CITAS, ORZAX, QUICK, ALBTN, KPEKS, SOHOE, GOLDA, EKIM, MASFN, SSAAT
+
+CSV yazildi: sonuclar\supertrend_2026-08-31.csv  (Excel ile acilabilir)
