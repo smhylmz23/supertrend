@@ -4,6 +4,12 @@
  *   2) htmlRapor()  -> telefonda ve masaustunde acilan bento panel
  */
 
+/* Cihazlar arasi radar senkronu icin Cloudflare Worker adresi.
+   Ornek: 'https://bist-senkron.kullanici.workers.dev'  (sonunda / olmayacak)
+   Bos birakilirsa senkron ozelligi panelde hic gorunmez, radar eskisi gibi
+   sadece o cihazin tarayicisinda saklanir. */
+export const SENKRON_ADRESI = '';
+
 // ---------- ortak degerlendirme ----------
 export function degerlendir(x) {
   const o = x.osilator;
@@ -337,6 +343,31 @@ export function htmlRapor(satirlar, stSinyalleri, tarih, gunIci, surum) {
   .suzgec button:hover{background:var(--yuzey-2);border-color:var(--cizgi-2);color:var(--yazi)}
   .suzgec button:active{transform:scale(.97)}
   .suzgec button b{font-variant-numeric:tabular-nums;font-weight:600;opacity:.5;margin-left:5px}
+
+  /* ---------- senkron kutusu ---------- */
+  #senkronBtn.bagli{color:var(--yesil);border-color:rgba(52,208,127,.34)}
+  #senkronKutu{position:relative;width:min(92vw,460px);border:1px solid var(--cizgi-2);
+    border-radius:var(--r-kart);background:var(--yuzey);color:var(--yazi);padding:26px 24px 20px}
+  #senkronKutu::backdrop{background:rgba(0,0,0,.62)}
+  #senkronKutu h2{margin:0 0 8px;font-size:17px;font-weight:600;letter-spacing:-.01em}
+  #senkronKutu p.acik{margin:0 0 16px;font-size:13px;line-height:1.55;color:var(--yazi-2)}
+  #senkronKodGiris{width:100%;box-sizing:border-box;font:inherit;font-size:14px;
+    font-variant-numeric:tabular-nums;letter-spacing:.04em;color:var(--yazi);
+    background:var(--zemin);border:1px solid var(--cizgi-2);border-radius:var(--r-ic);padding:11px 13px}
+  #senkronKodGiris:focus{outline:none;border-color:var(--yesil)}
+  .senkron-dugmeler{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
+  .senkron-dugmeler button{font:inherit;font-size:12.5px;font-weight:500;color:var(--yazi-2);
+    background:var(--yuzey-2);border:1px solid var(--cizgi);border-radius:999px;padding:8px 14px;cursor:pointer;
+    transition:background var(--gecis),color var(--gecis),border-color var(--gecis)}
+  .senkron-dugmeler button:hover{background:var(--cizgi);color:var(--yazi)}
+  .senkron-dugmeler button.birincil{margin-left:auto;color:#08130D;background:var(--yesil);border-color:var(--yesil);font-weight:600}
+  .senkron-dugmeler button.birincil:hover{filter:brightness(1.08);color:#08130D}
+  .senkron-durum{margin:13px 0 0;min-height:17px;font-size:12.5px;color:var(--soluk)}
+  .senkron-durum.iyi{color:var(--yesil)}
+  .senkron-durum.kotu{color:var(--dusus)}
+  .senkron-kapat{position:absolute;top:10px;right:12px;background:none;border:0;color:var(--soluk);
+    font-size:22px;line-height:1;cursor:pointer;padding:4px 8px}
+  .senkron-kapat:hover{color:var(--yazi)}
   .suzgec button[aria-pressed="true"]{background:var(--yazi);border-color:var(--yazi);color:var(--zemin)}
   .suzgec button[aria-pressed="true"] b{opacity:.55}
   .ayrac{width:1px;height:24px;background:var(--cizgi);margin:0 3px}
@@ -458,6 +489,7 @@ export function htmlRapor(satirlar, stSinyalleri, tarih, gunIci, surum) {
     <button data-bl="1" aria-pressed="false" title="Son çeyrek gelir ve net kâr büyümesi — piyasa medyanının üzerinde olanlar">Bilanço pozitif <b>${blAdet}</b></button>
     <button data-hb="1" aria-pressed="false" title="Son 3 analist tavsiyesi ağırlıklı olarak AL / Endeks Üstü olanlar">Haber pozitif <b>${hbAdet}</b></button>
     <button data-r="1" aria-pressed="false">★ Radarım <b id="radarSayi">0</b></button>
+    ${SENKRON_ADRESI ? `<button id="senkronBtn" type="button" title="Yıldızladığınız hisseleri telefon ve bilgisayar arasında eşitleyin">⇄ Senkron</button>` : ''}
     <span class="ayrac"></span>
     <select id="endekssec" aria-label="Endeks">
       <option value="">Tüm endeksler</option>
@@ -493,6 +525,22 @@ ${kartlar}
 </footer>
 
 </div>
+${SENKRON_ADRESI ? `
+<dialog id="senkronKutu">
+  <h2>Cihazlar arası senkron</h2>
+  <p class="acik">Aynı kodu telefonunuza da girerseniz, yıldızladığınız hisseler iki cihazda da aynı olur.
+  Kod bir şifre değil, sadece listenizin adresidir — kimseyle paylaşmayın, yeterli.</p>
+  <input id="senkronKodGiris" type="text" inputmode="latin" autocomplete="off" spellcheck="false"
+         placeholder="örn. k7m2x-9qpw4-rt8nc-2vhdz" aria-label="Senkron kodu">
+  <div class="senkron-dugmeler">
+    <button id="senkronUret" type="button">Yeni kod üret</button>
+    <button id="senkronKopyala" type="button">Kopyala</button>
+    <button id="senkronSil" type="button">Senkronu kapat</button>
+    <button id="senkronKaydet" type="button" class="birincil">Kaydet</button>
+  </div>
+  <p id="senkronDurum" class="senkron-durum"></p>
+  <button id="senkronKapat" type="button" class="senkron-kapat" aria-label="Kapat">×</button>
+</dialog>` : ''}
 <script>
 /* Tarayici eski kopyayi onbellekte tutabiliyor. Sayfa acilinca sunucudaki
    surum damgasini onbelleksiz okur; farkliysa kendini bir kez yeniler. */
@@ -566,11 +614,48 @@ ${kartlar}
   var radarAktif = false, stAktif = false, thAktif = false, daAktif = false;
   var tmAktif = false, blAktif = false, hbAktif = false;
 
-  // ---- RADAR: isaretlenen hisseler tarayicida saklanir ----
-  var ANAHTAR = 'bist-radar';
-  function radarOku(){ try { return JSON.parse(localStorage.getItem(ANAHTAR)) || {}; } catch (e) { return {}; } }
-  function radarYaz(r){ try { localStorage.setItem(ANAHTAR, JSON.stringify(r)); } catch (e) {} }
-  var radar = radarOku();
+  // ---- RADAR ----
+  // Iki bicim var. Ekranda kullanilan sade hali:  radar = { AD: 'YYYY-MM-DD' }
+  // Saklanan/senkronlanan hali:  kayit = { AD: { d:gun, t:son degisiklik ani, s:1 ekli / 0 cikarilmis } }
+  // Cikarilanlari silmek yerine s:0 ile isaretliyoruz; yoksa diger cihaz onlari geri diriltir.
+  var ANAHTAR = 'bist-radar';              // eski bicim - yedek olarak duruyor, silmiyoruz
+  var KAYIT_ANAHTAR = 'bist-radar-kayit';
+  var KOD_ANAHTAR = 'bist-senkron-kod';
+  var SENKRON_ADRESI = '${SENKRON_ADRESI}';
+
+  function kayitOku(){
+    try {
+      var ham = localStorage.getItem(KAYIT_ANAHTAR);
+      if (ham) { var j = JSON.parse(ham); if (j && typeof j === 'object') return j; }
+    } catch (e) {}
+    var eski = {};
+    try { eski = JSON.parse(localStorage.getItem(ANAHTAR)) || {}; } catch (e) {}
+    var yeni = {}, simdi = Date.now();
+    Object.keys(eski).forEach(function(ad){ yeni[ad] = { d: eski[ad], t: simdi, s: 1 }; });
+    return yeni;
+  }
+  function kayitYaz(){ try { localStorage.setItem(KAYIT_ANAHTAR, JSON.stringify(kayit)); } catch (e) {} }
+
+  var kayit = kayitOku();
+  var radar = {};
+  function radarKur(){
+    radar = {};
+    Object.keys(kayit).forEach(function(ad){
+      var v = kayit[ad];
+      if (v && v.s === 1) radar[ad] = v.d;
+    });
+  }
+  radarKur();
+
+  // Ayni hisse icin "t" degeri buyuk olan kazanir - yani en son yapilan islem.
+  function kayitBirlestir(a, b){
+    var c = {}, ad;
+    for (ad in a) if (Object.prototype.hasOwnProperty.call(a, ad)) c[ad] = a[ad];
+    for (ad in b) if (Object.prototype.hasOwnProperty.call(b, ad)) {
+      if (!c[ad] || (Number(b[ad].t) || 0) > (Number(c[ad].t) || 0)) c[ad] = b[ad];
+    }
+    return c;
+  }
 
   function gunFarki(iso){
     var a = new Date(iso + 'T00:00:00'), b = new Date();
@@ -604,12 +689,135 @@ ${kartlar}
   kartlar.forEach(function(k){
     k.querySelector('.radarBtn').addEventListener('click', function(e){
       e.stopPropagation();
-      var ad = k.dataset.ad;
-      if (radar[ad]) delete radar[ad]; else radar[ad] = bugunISO();
-      radarYaz(radar); radarCiz();
+      var ad = k.dataset.ad, simdi = Date.now();
+      if (radar[ad]) kayit[ad] = { d: kayit[ad] ? kayit[ad].d : bugunISO(), t: simdi, s: 0 };
+      else kayit[ad] = { d: bugunISO(), t: simdi, s: 1 };
+      kayitYaz(); radarKur(); radarCiz(); senkronYaz();
       if (radarAktif) uygula();
     });
   });
+
+  // ---- CIHAZLAR ARASI SENKRON ----
+  // Yildizlar, sadece sizin bildiginiz bir "senkron kodu" altinda bulutta durur.
+  // Telefona da ayni kodu girince iki liste birlesir. Adres tanimli degilse
+  // asagidaki her sey sessizce devre disi kalir; radar eskisi gibi cihazda saklanir.
+  var senkronKod = '';
+  try { senkronKod = localStorage.getItem(KOD_ANAHTAR) || ''; } catch (e) {}
+  function senkronAcikMi(){ return !!(SENKRON_ADRESI && senkronKod); }
+
+  var senkronDurumEl = document.getElementById('senkronDurum');
+  function durumYaz(metin, sinif){
+    if (!senkronDurumEl) return;
+    senkronDurumEl.textContent = metin || '';
+    senkronDurumEl.className = 'senkron-durum' + (sinif ? ' ' + sinif : '');
+  }
+  function rozetiTazele(){
+    var b = document.getElementById('senkronBtn');
+    if (!b) return;
+    if (senkronAcikMi()) { b.classList.add('bagli'); b.textContent = '⇄ Senkron açık'; }
+    else { b.classList.remove('bagli'); b.textContent = '⇄ Senkron'; }
+  }
+
+  function senkronUygula(gelen){
+    kayit = kayitBirlestir(kayit, gelen || {});
+    kayitYaz(); radarKur(); radarCiz();
+    if (radarAktif) uygula();
+  }
+
+  var yazZamani = null;
+  function senkronYaz(){
+    if (!senkronAcikMi()) return;
+    clearTimeout(yazZamani);
+    yazZamani = setTimeout(function(){
+      durumYaz('gönderiliyor…');
+      fetch(SENKRON_ADRESI + '/radar', {
+        method: 'POST', cache: 'no-store',
+        headers: { 'Content-Type': 'application/json', 'X-Kod': senkronKod },
+        body: JSON.stringify({ kayit: kayit })
+      })
+        .then(function(y){ return y.ok ? y.json() : null; })
+        .then(function(j){
+          if (!j || !j.kayit) { durumYaz('gönderilemedi', 'kotu'); return; }
+          senkronUygula(j.kayit);
+          durumYaz('eşitlendi', 'iyi');
+        })
+        .catch(function(){ durumYaz('bağlanılamadı', 'kotu'); });
+    }, 600);
+  }
+
+  function senkronOku(sessiz){
+    if (!senkronAcikMi()) return;
+    if (!sessiz) durumYaz('eşitleniyor…');
+    fetch(SENKRON_ADRESI + '/radar', { cache: 'no-store', headers: { 'X-Kod': senkronKod } })
+      .then(function(y){ return y.ok ? y.json() : null; })
+      .then(function(j){
+        if (!j || !j.kayit) { if (!sessiz) durumYaz('bağlanılamadı', 'kotu'); return; }
+        var oncesi = JSON.stringify(kayit);
+        senkronUygula(j.kayit);
+        // Sunucunun bilmedigi bir seyimiz varsa geri gonderelim.
+        if (JSON.stringify(kayit) !== JSON.stringify(j.kayit)) senkronYaz();
+        else if (!sessiz) durumYaz(oncesi === JSON.stringify(kayit) ? 'zaten güncel' : 'eşitlendi', 'iyi');
+      })
+      .catch(function(){ if (!sessiz) durumYaz('bağlanılamadı', 'kotu'); });
+  }
+
+  function kodUret(){
+    var harf = '23456789abcdefghjkmnpqrstuvwxyz', s = '', i;
+    var d = new Uint8Array(20);
+    if (window.crypto && crypto.getRandomValues) crypto.getRandomValues(d);
+    else for (i = 0; i < 20; i++) d[i] = Math.floor(Math.random() * 256);
+    for (i = 0; i < 20; i++) { s += harf[d[i] % harf.length]; if (i % 5 === 4 && i < 19) s += '-'; }
+    return s;
+  }
+
+  (function senkronKur(){
+    var btn = document.getElementById('senkronBtn'), kutu = document.getElementById('senkronKutu');
+    if (!btn || !kutu) return;
+    var giris = document.getElementById('senkronKodGiris');
+    rozetiTazele();
+
+    btn.addEventListener('click', function(){
+      giris.value = senkronKod;
+      durumYaz(senkronAcikMi() ? 'Bu cihaz eşitleniyor.' : 'Henüz kapalı. Kod üretin ya da diğer cihazdaki kodu yazın.');
+      kutu.showModal();
+    });
+    document.getElementById('senkronKapat').addEventListener('click', function(){ kutu.close(); });
+    document.getElementById('senkronUret').addEventListener('click', function(){
+      giris.value = kodUret(); giris.focus(); giris.select();
+      durumYaz('Yeni kod hazır. "Kaydet" deyin, sonra aynı kodu diğer cihaza da girin.');
+    });
+    document.getElementById('senkronKopyala').addEventListener('click', function(){
+      var d = giris.value.trim();
+      if (!d) { durumYaz('Önce bir kod olmalı.', 'kotu'); return; }
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(d).then(function(){ durumYaz('Kod kopyalandı.', 'iyi'); },
+          function(){ giris.select(); durumYaz('Kopyalanamadı — elle seçip kopyalayın.', 'kotu'); });
+      } else { giris.select(); durumYaz('Elle seçip kopyalayın.'); }
+    });
+    document.getElementById('senkronSil').addEventListener('click', function(){
+      senkronKod = '';
+      try { localStorage.removeItem(KOD_ANAHTAR); } catch (e) {}
+      giris.value = ''; rozetiTazele();
+      durumYaz('Senkron kapatıldı. Yıldızlarınız bu cihazda duruyor.');
+    });
+    document.getElementById('senkronKaydet').addEventListener('click', function(){
+      var d = giris.value.trim();
+      if (!/^[A-Za-z0-9-]{8,64}$/.test(d)) {
+        durumYaz('Kod en az 8 karakter olmalı; sadece harf, rakam ve tire.', 'kotu');
+        return;
+      }
+      senkronKod = d;
+      try { localStorage.setItem(KOD_ANAHTAR, d); } catch (e) {}
+      rozetiTazele();
+      senkronOku();
+    });
+
+    if (senkronAcikMi()) senkronOku(true);
+    // Telefonda yildizlayip bilgisayara gecince sekme one geldiginde yakalasin.
+    document.addEventListener('visibilitychange', function(){
+      if (!document.hidden) senkronOku(true);
+    });
+  })();
 
   function uygula(){
     var q = (arama.value || '').trim().toUpperCase();
