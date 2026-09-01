@@ -8,7 +8,7 @@
    Ornek: 'https://bist-senkron.kullanici.workers.dev'  (sonunda / olmayacak)
    Bos birakilirsa senkron ozelligi panelde hic gorunmez, radar eskisi gibi
    sadece o cihazin tarayicisinda saklanir. */
-export const SENKRON_ADRESI = '';
+export const SENKRON_ADRESI = 'https://sparkling-pine-258bbist-senkron.smhylmz23.workers.dev';
 
 // ---------- ortak degerlendirme ----------
 export function degerlendir(x) {
