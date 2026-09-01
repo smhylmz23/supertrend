@@ -1,188 +1,165 @@
 sira;hisse;karar;skor;risk;potansiyel_%;osilator;temel;bilanco;haber;analist_hedef;haber_7gun
-1;RYSAS;GÜÇLÜ AL;100;orta (28);0,0;6/6;notr;negatif;yok;;4
-2;KRDMD;GÜÇLÜ AL;99;düşük (18);1,2;6/6;pozitif;pozitif;notr;50,70;0
-3;EUPWR;GÜÇLÜ AL;98;düşük (10);6,5;5/6;notr;notr;yok;;0
-4;HUNER;GÜÇLÜ AL;98;orta (30);3,8;6/6;negatif;negatif;yok;;0
-5;GESAN;GÜÇLÜ AL;98;düşük (20);5,5;5/6;notr;notr;yok;;0
-6;TARKM;GÜÇLÜ AL;98;düşük (18);5,6;5/6;yok;negatif;yok;;0
-7;TNZTP;GÜÇLÜ AL;97;orta (28);1,6;6/6;pozitif;notr;notr;44,00;0
-8;BIMAS;GÜÇLÜ AL;97;düşük (0);4,3;4/6;notr;pozitif;pozitif;503,80;1
-9;ARSAN;GÜÇLÜ AL;96;orta (35);3,9;5/6;notr;pozitif;yok;;0
-10;SANFM;GÜÇLÜ AL;96;düşük (0);11,6;5/6;notr;notr;yok;;0
-11;PSDTC;GÜÇLÜ AL;96;orta (32);12,6;5/6;notr;notr;yok;;0
-12;HATSN;GÜÇLÜ AL;95;orta (28);13,6;5/6;negatif;negatif;yok;;0
-13;AHGAZ;GÜÇLÜ AL;95;düşük (20);6,3;5/6;pozitif;notr;yok;;0
-14;KUVVA;GÜÇLÜ AL;94;düşük (20);5,9;5/6;negatif;negatif;yok;;0
-15;TBORG;GÜÇLÜ AL;94;düşük (20);4,3;4/6;notr;pozitif;yok;;0
-16;RYGYO;GÜÇLÜ AL;94;orta (35);0,0;6/6;pozitif;notr;yok;;0
-17;KCHOL;GÜÇLÜ AL;94;orta (32);5,5;4/6;pozitif;pozitif;pozitif;321,79;1
-18;VERUS;GÜÇLÜ AL;94;düşük (10);14,1;4/6;negatif;notr;yok;;0
-19;ORGE;GÜÇLÜ AL;93;orta (30);11,7;6/6;pozitif;notr;pozitif;112,00;1
-20;KRDMA;GÜÇLÜ AL;93;orta (35);0,0;6/6;pozitif;pozitif;notr;50,70;0
-21;SELEC;GÜÇLÜ AL;93;orta (35);2,5;6/6;notr;notr;notr;129,78;0
-22;KLSYN;GÜÇLÜ AL;93;düşük (8);5,5;3/6;negatif;negatif;yok;;0
-23;TGSAS;GÜÇLÜ AL;92;düşük (0);20,9;5/6;pozitif;negatif;yok;;0
-24;DEVA;GÜÇLÜ AL;92;orta (36);0,5;6/6;notr;pozitif;yok;;0
-25;INDES;GÜÇLÜ AL;92;düşük (18);3,3;5/6;notr;notr;pozitif;15,00;9
-26;DAGI;GÜÇLÜ AL;91;düşük (0);12,8;3/6;negatif;pozitif;yok;;0
-27;TUPRS;GÜÇLÜ AL;91;orta (38);1,8;4/6;pozitif;pozitif;pozitif;357,35;3
-28;GUBRF;GÜÇLÜ AL;90;düşük (0);10,7;5/6;notr;notr;yok;;1
-29;DURKN;GÜÇLÜ AL;89;düşük (8);8,8;4/6;negatif;notr;yok;;0
-30;PASEU;GÜÇLÜ AL;89;düşük (20);11,1;5/6;notr;negatif;yok;;0
-31;EDIP;GÜÇLÜ AL;89;düşük (10);5,3;6/6;pozitif;notr;yok;;0
-32;DMLKT;GÜÇLÜ AL;89;orta (34);5,4;4/6;yok;yok;pozitif;33,43;2
-33;VBTYZ;GÜÇLÜ AL;89;düşük (10);5,7;4/6;notr;notr;yok;;1
-34;TRMET;GÜÇLÜ AL;89;düşük (10);3,7;6/6;pozitif;notr;notr;168,00;0
-35;AKFIS;GÜÇLÜ AL;88;düşük (20);9,7;4/6;notr;notr;yok;;1
-36;ADGYO;GÜÇLÜ AL;88;düşük (6);13,8;2/6;negatif;negatif;yok;;0
-37;KRPLS;GÜÇLÜ AL;88;düşük (0);7,3;4/6;negatif;yok;yok;;0
-38;AKSGY;GÜÇLÜ AL;88;düşük (0);3,3;4/6;pozitif;notr;pozitif;13,68;0
-39;OFSYM;GÜÇLÜ AL;87;düşük (0);3,1;6/6;notr;notr;notr;69,30;1
-40;TRCAS;GÜÇLÜ AL;87;düşük (6);3,1;6/6;pozitif;negatif;yok;;0
-41;ASELS;GÜÇLÜ AL;86;düşük (0);6,9;3/6;pozitif;pozitif;pozitif;457,99;1
-42;BLUME;GÜÇLÜ AL;86;düşük (10);8,2;3/6;negatif;notr;yok;;0
-43;TRENJ;GÜÇLÜ AL;86;düşük (10);5,2;5/6;pozitif;pozitif;notr;218,70;0
-44;BIOEN;GÜÇLÜ AL;86;düşük (6);9,4;4/6;negatif;notr;notr;22,00;0
-45;EGPRO;GÜÇLÜ AL;85;düşük (0);22,7;5/6;pozitif;notr;yok;;0
-46;IEYHO;GÜÇLÜ AL;85;orta (35);0,8;6/6;negatif;notr;yok;;1
-47;SAYAS;GÜÇLÜ AL;85;düşük (0);12,2;4/6;pozitif;notr;yok;;0
-48;KRGYO;GÜÇLÜ AL;84;orta (28);3,1;5/6;notr;negatif;yok;;1
-49;ARDYZ;GÜÇLÜ AL;84;düşük (10);13,2;2/6;notr;pozitif;notr;156,00;0
-50;BIGTK;GÜÇLÜ AL;84;düşük (10);15,9;3/6;notr;negatif;yok;;0
-51;ALARK;GÜÇLÜ AL;84;düşük (0);7,4;6/6;pozitif;notr;pozitif;154,34;2
-52;ETYAT;GÜÇLÜ AL;84;düşük (10);5,2;4/6;negatif;yok;yok;;0
-53;INVES;GÜÇLÜ AL;83;düşük (0);10,5;2/6;notr;notr;yok;;0
-54;TRALT;GÜÇLÜ AL;83;düşük (10);8,6;4/6;pozitif;notr;notr;57,09;7
-55;OZSUB;GÜÇLÜ AL;83;orta (26);5,5;3/6;notr;notr;yok;;0
-56;CATES;GÜÇLÜ AL;83;orta (35);2,8;5/6;pozitif;notr;yok;;0
-57;NETAS;GÜÇLÜ AL;83;düşük (10);19,6;4/6;yok;yok;yok;;0
-58;CEMZY;GÜÇLÜ AL;83;düşük (0);20,5;4/6;negatif;negatif;yok;;0
-59;MRGYO;GÜÇLÜ AL;82;düşük (18);8,1;5/6;pozitif;notr;yok;;0
-60;MANAS;GÜÇLÜ AL;82;düşük (6);7,2;2/6;negatif;negatif;yok;;0
-61;ENERY;GÜÇLÜ AL;82;düşük (0);19,3;6/6;pozitif;notr;yok;;0
-62;ALTNY;GÜÇLÜ AL;82;düşük (0);11,2;4/6;negatif;yok;yok;;0
-63;ARASE;GÜÇLÜ AL;82;düşük (0);7,8;3/6;pozitif;notr;notr;214,70;0
-64;GENIL;GÜÇLÜ AL;81;orta (28);10,9;3/6;notr;pozitif;yok;;0
-65;EGGUB;GÜÇLÜ AL;81;düşük (10);6,9;5/6;pozitif;pozitif;yok;;0
-66;GIPTA;GÜÇLÜ AL;80;düşük (0);21,6;4/6;negatif;negatif;yok;;1
-67;OYAKC;GÜÇLÜ AL;80;düşük (8);3,6;4/6;pozitif;notr;pozitif;33,76;0
-68;HKTM;GÜÇLÜ AL;80;düşük (20);17,9;4/6;negatif;negatif;yok;;0
-69;DUNYH;GÜÇLÜ AL;80;düşük (16);17,9;1/6;pozitif;notr;yok;;0
-70;PETUN;GÜÇLÜ AL;79;düşük (0);6,4;6/6;pozitif;notr;yok;;0
-71;MTRKS;GÜÇLÜ AL;79;düşük (0);14,6;3/6;pozitif;notr;yok;;0
-72;PRDGS;GÜÇLÜ AL;79;düşük (10);12,3;3/6;pozitif;yok;yok;;0
-73;CELHA;GÜÇLÜ AL;78;düşük (10);13,3;1/6;negatif;notr;yok;;1
-74;RUBNS;GÜÇLÜ AL;78;düşük (0);17,2;2/6;notr;notr;yok;;0
-75;TSPOR;GÜÇLÜ AL;78;düşük (10);17,4;4/6;notr;notr;yok;;0
-76;PNSUT;GÜÇLÜ AL;78;düşük (0);9,9;6/6;negatif;notr;yok;;0
-77;KORDS;GÜÇLÜ AL;78;düşük (0);17,7;2/6;negatif;notr;notr;84,43;0
-78;POLHO;GÜÇLÜ AL;78;düşük (10);7,5;1/6;notr;negatif;yok;;0
-79;TKFEN;GÜÇLÜ AL;77;düşük (16);17,2;2/6;negatif;notr;notr;126,35;0
-80;ATATP;GÜÇLÜ AL;77;düşük (0);23,1;3/6;pozitif;pozitif;notr;472,00;0
-81;HALKB;GÜÇLÜ AL;76;düşük (12);23,8;5/6;pozitif;notr;notr;48,18;13
-82;IZMDC;GÜÇLÜ AL;76;orta (22);18,2;0/6;negatif;yok;yok;;0
-83;GSDDE;GÜÇLÜ AL;76;düşük (0);19,8;3/6;pozitif;notr;yok;;0
-84;KTLEV;AL;91;düşük (18);9,9;4/6;pozitif;pozitif;yok;;0
-85;METRO;AL;89;düşük (8);10,0;3/6;pozitif;negatif;yok;;0
-86;KRDMB;AL;86;düşük (8);8,7;4/6;pozitif;pozitif;notr;50,70;0
-87;CVKMD;AL;85;düşük (8);8,2;4/6;notr;pozitif;yok;;0
-88;ERSU;AL;85;düşük (0);17,8;3/6;negatif;yok;yok;;0
-89;YGGYO;AL;85;düşük (0);15,6;4/6;pozitif;notr;yok;;0
-90;SOKM;AL;84;orta (22);10,3;3/6;negatif;notr;pozitif;85,42;0
-91;DOHOL;AL;82;düşük (0);5,6;4/6;pozitif;notr;pozitif;32,43;0
-92;ASTOR;AL;81;düşük (16);9,8;2/6;pozitif;pozitif;pozitif;423,63;7
-93;RODRG;AL;81;düşük (0);9,9;5/6;pozitif;notr;yok;;0
-94;SKYMD;AL;78;düşük (10);10,3;3/6;negatif;negatif;yok;;3
-95;ISBTR;AL;75;düşük (0);23,1;4/6;notr;negatif;pozitif;;4
-96;MOGAN;AL;75;orta (28);14,6;0/6;negatif;notr;notr;16,60;0
-97;BRKVY;AL;75;düşük (0);20,6;5/6;notr;negatif;yok;;0
-98;PCILT;AL;75;düşük (0);12,4;4/6;pozitif;notr;yok;;0
-99;EUKYO;AL;75;düşük (0);10,8;2/6;negatif;pozitif;yok;;0
-100;FRIGO;AL;74;düşük (20);21,4;5/6;negatif;notr;yok;;0
-101;SAHOL;AL;74;orta (22);10,8;4/6;pozitif;notr;pozitif;157,19;0
-102;VAKBN;AL;73;düşük (0);11,7;4/6;pozitif;notr;pozitif;45,47;1
-103;AKBNK;AL;73;düşük (0);15,5;4/6;pozitif;notr;pozitif;107,13;3
-104;DOCO;AL;73;düşük (0);8,9;2/6;notr;notr;yok;;0
-105;DIRIT;AL;73;düşük (6);11,9;1/6;negatif;notr;yok;;0
-106;KRONT;AL;72;düşük (6);17,3;2/6;pozitif;pozitif;yok;;0
-107;VANGD;AL;72;düşük (0);10,5;2/6;pozitif;pozitif;yok;;0
-108;EYGYO;AL;72;düşük (10);4,7;6/6;negatif;pozitif;yok;;0
-109;PRKME;AL;72;düşük (0);41,4;6/6;notr;negatif;yok;;0
-110;MARTI;AL;71;düşük (8);17,1;6/6;negatif;notr;yok;;0
-111;BUCIM;AL;71;düşük (0);7,3;6/6;negatif;yok;yok;;0
-112;GSRAY;AL;71;düşük (0);7,3;4/6;pozitif;pozitif;yok;;0
-113;ENDAE;AL;71;düşük (0);31,1;1/6;yok;negatif;yok;;1
-114;ADEL;AL;71;düşük (10);14,7;4/6;negatif;notr;yok;;0
-115;OZRDN;AL;70;düşük (0);19,4;5/6;negatif;notr;yok;;1
-116;KLYPV;AL;69;düşük (0);15,0;4/6;notr;yok;yok;;1
-117;PAGYO;AL;68;düşük (0);15,7;2/6;pozitif;pozitif;yok;;0
-118;EKGYO;AL;67;düşük (0);11,9;5/6;negatif;notr;pozitif;33,43;2
-119;YKBNK;AL;67;orta (22);21,0;5/6;pozitif;notr;pozitif;52,82;1
-120;AKMGY;AL;67;düşük (10);6,3;1/6;pozitif;pozitif;yok;;0
-121;AKCNS;AL;66;düşük (10);5,1;2/6;pozitif;yok;notr;274,35;0
-122;BOBET;AL;66;orta (22);9,9;4/6;negatif;pozitif;yok;;0
-123;KNFRT;AL;66;düşük (0);30,9;5/6;negatif;pozitif;yok;;0
-124;CANTE;AL;66;düşük (0);11,6;6/6;notr;notr;yok;;1
-125;TRGYO;AL;65;düşük (0);6,9;5/6;pozitif;pozitif;pozitif;131,49;0
-126;KAYSE;AL;65;düşük (0);10,2;6/6;negatif;notr;yok;;0
-127;ESEN;AL;63;düşük (18);10,2;5/6;negatif;negatif;yok;;0
-128;MNDRS;AL;63;düşük (0);7,8;5/6;pozitif;yok;yok;;0
-129;OZKGY;AL;62;düşük (0);14,6;5/6;notr;negatif;yok;;0
-130;OBAMS;AL;61;düşük (0);29,3;6/6;notr;yok;yok;;0
-131;KLGYO;AL;61;düşük (0);12,1;5/6;notr;notr;yok;;0
-132;ARMGD;AL;60;orta (28);18,7;0/6;notr;pozitif;notr;109,60;1
-133;RGYAS;İZLE;98;yüksek (50);0,3;5/6;pozitif;pozitif;pozitif;309,55;2
-134;AGESA;İZLE;97;yüksek (50);1,9;6/6;pozitif;pozitif;pozitif;352,13;1
-135;BAHKM;İZLE;94;yüksek (45);7,3;5/6;negatif;notr;yok;;0
-136;ATSYH;İZLE;94;yüksek (52);0,0;5/6;negatif;notr;yok;;0
-137;ANELE;İZLE;94;çok yüksek (67);3,7;6/6;negatif;notr;yok;;0
-138;BIGEN;İZLE;93;çok yüksek (69);6,6;6/6;negatif;yok;yok;;0
-139;ALBRK;İZLE;93;orta (32);8,6;4/6;pozitif;pozitif;notr;11,76;5
-140;BRLSM;İZLE;93;yüksek (47);11,1;5/6;negatif;notr;yok;;1
-141;BRSAN;İZLE;93;yüksek (42);4,9;4/6;notr;pozitif;pozitif;803,18;0
-142;AYGAZ;İZLE;92;yüksek (50);2,2;5/6;pozitif;pozitif;pozitif;337,67;0
-143;TRHOL;İZLE;92;yüksek (45);1,5;5/6;pozitif;notr;yok;;0
-144;PRZMA;İZLE;89;yüksek (50);4,9;6/6;negatif;notr;yok;;1
-145;OZATD;İZLE;88;yüksek (57);2,0;5/6;negatif;negatif;yok;;0
-146;ALKLC;İZLE;88;yüksek (42);3,1;5/6;negatif;notr;yok;;0
-147;ENJSA;İZLE;86;orta (32);7,7;3/6;pozitif;notr;notr;158,36;4
-148;KGYO;İZLE;84;yüksek (48);7,3;3/6;negatif;notr;yok;;1
-149;PEKGY;İZLE;84;orta (32);14,6;5/6;notr;negatif;yok;;2
-150;KCAER;İZLE;83;orta (32);6,3;2/6;notr;notr;pozitif;20,49;0
-151;AYDEM;İZLE;80;orta (40);10,8;3/6;pozitif;pozitif;pozitif;42,43;0
-152;RALYH;İZLE;77;orta (32);3,6;4/6;notr;negatif;yok;;1
-153;NTGAZ;İZLE;75;orta (32);11,0;5/6;pozitif;notr;yok;;0
-154;BYDNR;İZLE;74;orta (28);11,3;1/6;negatif;notr;yok;;0
-155;EPLAS;İZLE;73;yüksek (48);9,4;5/6;notr;notr;yok;;0
-156;SDTTR;İZLE;72;düşük (0);16,5;2/6;notr;notr;yok;;0
-157;ZRGYO;İZLE;70;yüksek (50);3,9;2/6;pozitif;notr;yok;;0
-158;ISGYO;İZLE;69;orta (40);11,1;0/6;notr;notr;notr;25,03;0
-159;BINBN;İZLE;66;düşük (10);12,3;1/6;negatif;notr;yok;;0
-160;KOCMT;İZLE;62;orta (38);37,7;1/6;negatif;notr;yok;;0
-161;RNPOL;İZLE;60;düşük (0);21,5;1/6;pozitif;pozitif;yok;;0
-162;PAPIL;İZLE;60;düşük (0);20,1;6/6;yok;notr;yok;;0
-163;EGEGY;İZLE;60;düşük (0);14,2;1/6;notr;notr;yok;;0
-164;KONYA;İZLE;59;düşük (10);13,4;4/6;pozitif;yok;yok;;0
-165;TURGG;İZLE;59;orta (30);15,6;6/6;pozitif;yok;yok;;0
-166;ENKAI;İZLE;59;düşük (0);11,9;5/6;pozitif;pozitif;pozitif;126,89;0
-167;GUNDG;İZLE;58;düşük (0);62,5;2/6;negatif;negatif;yok;;0
-168;DYOBY;İZLE;58;orta (22);22,0;6/6;pozitif;notr;yok;;0
-169;GLRMK;İZLE;58;düşük (0);9,5;1/6;notr;pozitif;pozitif;282,52;0
-170;ULUUN;İZLE;56;düşük (0);22,1;3/6;negatif;notr;yok;;2
-171;BAGFS;İZLE;56;orta (32);8,2;4/6;pozitif;yok;yok;;0
-172;BORSK;İZLE;56;düşük (0);7,5;4/6;notr;notr;yok;;0
-173;TERA;İZLE;56;düşük (10);26,4;5/6;notr;pozitif;yok;;3
-174;AVPGY;İZLE;56;düşük (0);13,6;4/6;pozitif;notr;pozitif;95,75;0
-175;EDATA;İZLE;56;düşük (0);16,9;0/6;negatif;notr;yok;;0
-176;FMIZP;İZLE;55;orta (32);10,5;4/6;pozitif;pozitif;yok;;0
-177;GLRYH;İZLE;55;düşük (0);11,6;5/6;pozitif;negatif;yok;;0
-178;EFOR;İZLE;55;orta (40);21,3;1/6;negatif;negatif;yok;;0
-179;GEREL;İZLE;55;orta (32);23,3;0/6;notr;notr;yok;;0
-180;BLCYT;İZLE;54;düşük (0);39,9;6/6;pozitif;notr;yok;;0
-181;SONME;İZLE;54;düşük (6);18,7;1/6;negatif;yok;yok;;0
-182;TTRAK;İZLE;54;düşük (0);7,1;4/6;negatif;notr;notr;592,39;0
-183;FORTE;İZLE;54;düşük (20);28,0;0/6;notr;pozitif;yok;;0
-184;GARAN;İZLE;53;düşük (0);10,8;4/6;pozitif;notr;pozitif;178,15;4
-185;ECILC;İZLE;53;düşük (0);12,2;5/6;notr;notr;yok;;0
-186;MAKTK;İZLE;52;düşük (12);26,9;5/6;notr;notr;yok;;0
-187;BASCM;İZLE;51;düşük (8);20,1;4/6;notr;yok;yok;;0
+1;EDIP;GÜÇLÜ AL;95;düşük (10);7,7;6/6;pozitif;notr;yok;;0
+2;KRDMA;GÜÇLÜ AL;90;orta (35);3,8;6/6;pozitif;pozitif;notr;50,70;0
+3;VBTYZ;GÜÇLÜ AL;90;düşük (20);3,6;4/6;notr;notr;yok;;1
+4;TARKM;GÜÇLÜ AL;89;düşük (18);3,6;6/6;yok;negatif;yok;;0
+5;BORSK;GÜÇLÜ AL;89;düşük (8);2,5;6/6;notr;notr;yok;;0
+6;RYSAS;GÜÇLÜ AL;89;orta (28);1,0;6/6;notr;negatif;yok;;4
+7;INDES;GÜÇLÜ AL;89;düşük (0);3,9;4/6;notr;notr;pozitif;15,00;9
+8;KUVVA;GÜÇLÜ AL;89;orta (28);5,3;6/6;negatif;negatif;yok;;0
+9;DMLKT;GÜÇLÜ AL;89;orta (26);5,7;3/6;yok;yok;pozitif;33,43;1
+10;KRDMD;GÜÇLÜ AL;89;düşük (8);4,1;5/6;pozitif;pozitif;notr;50,70;0
+11;BRSAN;GÜÇLÜ AL;89;düşük (20);6,1;4/6;notr;pozitif;pozitif;803,18;0
+12;AKFIS;GÜÇLÜ AL;88;orta (38);5,8;4/6;notr;notr;yok;;1
+13;AKSGY;GÜÇLÜ AL;88;düşük (0);3,0;4/6;pozitif;notr;pozitif;13,68;0
+14;DEVA;GÜÇLÜ AL;88;orta (36);0,5;6/6;notr;pozitif;yok;;0
+15;HUNER;GÜÇLÜ AL;88;orta (30);4,5;6/6;negatif;negatif;yok;;0
+16;BRLSM;GÜÇLÜ AL;88;düşük (20);18,6;5/6;negatif;notr;yok;;1
+17;PRZMA;GÜÇLÜ AL;88;orta (32);8,1;5/6;negatif;notr;yok;;1
+18;TNZTP;GÜÇLÜ AL;87;orta (28);2,1;6/6;pozitif;notr;notr;44,00;0
+19;ARSAN;GÜÇLÜ AL;87;orta (36);4,6;6/6;notr;pozitif;yok;;0
+20;TRCAS;GÜÇLÜ AL;87;düşük (14);2,3;6/6;pozitif;negatif;yok;;0
+21;AHGAZ;GÜÇLÜ AL;86;orta (28);5,3;5/6;pozitif;notr;yok;;0
+22;TRMET;GÜÇLÜ AL;86;düşük (0);8,5;4/6;pozitif;notr;notr;168,00;0
+23;PSDTC;GÜÇLÜ AL;85;orta (32);13,1;5/6;notr;notr;yok;;0
+24;ASELS;GÜÇLÜ AL;85;düşük (0);4,6;4/6;pozitif;pozitif;pozitif;457,99;1
+25;OFSYM;GÜÇLÜ AL;85;düşük (18);1,2;6/6;notr;notr;notr;69,30;1
+26;TRENJ;GÜÇLÜ AL;85;düşük (18);7,0;4/6;pozitif;pozitif;notr;218,70;0
+27;ORGE;GÜÇLÜ AL;85;orta (30);13,7;5/6;pozitif;notr;pozitif;112,00;2
+28;TBORG;GÜÇLÜ AL;85;düşük (20);3,6;5/6;notr;pozitif;yok;;0
+29;NETAS;GÜÇLÜ AL;85;düşük (20);15,1;4/6;yok;yok;yok;;0
+30;BIMAS;GÜÇLÜ AL;84;düşük (0);5,4;3/6;notr;pozitif;pozitif;503,80;1
+31;PASEU;GÜÇLÜ AL;84;düşük (20);15,7;4/6;notr;negatif;yok;;0
+32;DURKN;GÜÇLÜ AL;84;düşük (0);10,7;4/6;negatif;notr;yok;;0
+33;KRGYO;GÜÇLÜ AL;84;orta (28);2,5;4/6;notr;negatif;yok;;1
+34;RYGYO;GÜÇLÜ AL;83;orta (35);1,0;6/6;pozitif;notr;yok;;0
+35;ARASE;GÜÇLÜ AL;83;düşük (0);6,7;5/6;pozitif;notr;notr;214,70;0
+36;MRGYO;GÜÇLÜ AL;83;düşük (18);6,1;5/6;pozitif;notr;yok;;0
+37;GUBRF;GÜÇLÜ AL;83;düşük (0);13,3;4/6;notr;notr;yok;;2
+38;SELEC;GÜÇLÜ AL;83;orta (35);1,9;5/6;notr;notr;notr;129,78;0
+39;KRPLS;GÜÇLÜ AL;83;düşük (0);7,2;3/6;negatif;yok;yok;;0
+40;KLSYN;GÜÇLÜ AL;83;düşük (0);5,5;2/6;negatif;negatif;yok;;1
+41;OZSUB;GÜÇLÜ AL;82;orta (26);7,0;2/6;notr;notr;yok;;0
+42;IEYHO;GÜÇLÜ AL;82;orta (35);0,9;6/6;negatif;notr;yok;;1
+43;CATES;GÜÇLÜ AL;82;orta (35);1,4;5/6;pozitif;notr;yok;;0
+44;ENERY;GÜÇLÜ AL;82;düşük (10);16,4;6/6;pozitif;notr;yok;;0
+45;ETYAT;GÜÇLÜ AL;82;düşük (0);6,5;4/6;negatif;yok;yok;;0
+46;ALARK;GÜÇLÜ AL;82;düşük (0);8,7;3/6;pozitif;notr;pozitif;154,34;2
+47;DAGI;GÜÇLÜ AL;82;düşük (0);11,4;3/6;negatif;pozitif;yok;;0
+48;RUBNS;GÜÇLÜ AL;82;düşük (0);12,9;3/6;notr;notr;yok;;0
+49;EGPRO;GÜÇLÜ AL;82;düşük (8);21,3;4/6;pozitif;pozitif;yok;;0
+50;HATSN;GÜÇLÜ AL;81;düşük (10);26,2;5/6;negatif;negatif;yok;;1
+51;GENIL;GÜÇLÜ AL;81;orta (28);10,9;3/6;notr;pozitif;yok;;0
+52;KCAER;GÜÇLÜ AL;81;orta (22);6,9;2/6;notr;notr;pozitif;20,49;0
+53;MARTI;GÜÇLÜ AL;80;düşük (18);8,2;6/6;negatif;notr;yok;;0
+54;TGSAS;GÜÇLÜ AL;80;düşük (0);28,4;4/6;pozitif;negatif;yok;;0
+55;PRDGS;GÜÇLÜ AL;80;düşük (10);9,2;2/6;pozitif;yok;yok;;0
+56;EGGUB;GÜÇLÜ AL;80;düşük (0);8,8;5/6;pozitif;pozitif;yok;;0
+57;VERUS;GÜÇLÜ AL;80;düşük (10);13,4;3/6;negatif;notr;yok;;0
+58;CEMZY;GÜÇLÜ AL;79;düşük (0);24,1;4/6;negatif;negatif;yok;;0
+59;CELHA;GÜÇLÜ AL;78;düşük (10);12,5;1/6;negatif;notr;yok;;1
+60;SAYAS;GÜÇLÜ AL;78;düşük (0);14,1;3/6;pozitif;notr;yok;;0
+61;ALKLC;GÜÇLÜ AL;78;orta (30);2,8;5/6;negatif;notr;yok;;0
+62;EUKYO;GÜÇLÜ AL;78;düşük (0);9,6;4/6;negatif;pozitif;yok;;0
+63;KORDS;GÜÇLÜ AL;78;düşük (0);17,0;2/6;negatif;notr;notr;84,43;0
+64;TKFEN;GÜÇLÜ AL;78;düşük (16);15,1;2/6;negatif;notr;notr;126,35;0
+65;ALTNY;GÜÇLÜ AL;78;düşük (0);13,3;4/6;negatif;yok;yok;;0
+66;ARDYZ;GÜÇLÜ AL;77;düşük (0);17,8;2/6;notr;pozitif;notr;156,00;0
+67;ATATP;GÜÇLÜ AL;76;düşük (0);23,3;3/6;pozitif;pozitif;notr;472,00;0
+68;TRALT;GÜÇLÜ AL;76;düşük (10);13,2;3/6;pozitif;notr;notr;57,09;7
+69;BIOEN;GÜÇLÜ AL;76;düşük (6);9,4;4/6;negatif;notr;notr;22,00;0
+70;INVES;GÜÇLÜ AL;75;düşük (0);10,4;2/6;notr;notr;yok;;0
+71;CVKMD;AL;83;düşük (0);8,0;5/6;notr;pozitif;yok;;0
+72;DOHOL;AL;81;düşük (0);5,8;4/6;pozitif;notr;pozitif;32,43;0
+73;DIRIT;AL;80;orta (34);1,8;5/6;negatif;notr;yok;;0
+74;KTLEV;AL;77;düşük (0);17,4;3/6;pozitif;pozitif;yok;;0
+75;SOKM;AL;76;orta (22);10,1;2/6;negatif;notr;pozitif;85,42;0
+76;ISBTR;AL;75;düşük (0);23,1;4/6;notr;negatif;pozitif;;4
+77;OYAKC;AL;75;düşük (0);4,1;4/6;pozitif;notr;pozitif;33,76;0
+78;POLHO;AL;74;düşük (10);8,0;1/6;notr;negatif;yok;;0
+79;FRIGO;AL;74;düşük (20);23,3;5/6;negatif;notr;yok;;0
+80;BLUME;AL;74;düşük (18);9,7;3/6;negatif;notr;yok;;0
+81;TURGG;AL;74;orta (22);13,0;6/6;pozitif;yok;yok;;0
+82;METRO;AL;74;düşük (0);13,4;2/6;pozitif;negatif;yok;;0
+83;RODRG;AL;73;düşük (0);8,6;5/6;pozitif;notr;yok;;0
+84;ADGYO;AL;73;düşük (6);13,0;2/6;negatif;negatif;yok;;0
+85;MANAS;AL;72;düşük (6);7,3;2/6;negatif;negatif;yok;;0
+86;SAHOL;AL;72;orta (30);9,9;4/6;pozitif;notr;pozitif;157,19;0
+87;DUNYH;AL;71;düşük (16);17,6;1/6;pozitif;notr;yok;;0
+88;EYGYO;AL;71;düşük (10);6,2;6/6;negatif;pozitif;yok;;0
+89;KRDMB;AL;71;düşük (0);10,0;2/6;pozitif;pozitif;notr;50,70;0
+90;HKTM;AL;71;orta (28);16,5;4/6;negatif;negatif;yok;;0
+91;GSDDE;AL;70;düşük (0);19,6;2/6;pozitif;yok;yok;;0
+92;AKCNS;AL;70;düşük (10);5,1;1/6;pozitif;yok;notr;274,35;0
+93;MTRKS;AL;70;düşük (0);15,3;2/6;pozitif;notr;yok;;0
+94;GSRAY;AL;69;düşük (0);8,3;4/6;pozitif;pozitif;yok;;0
+95;ARTMS;AL;69;düşük (10);11,2;5/6;pozitif;negatif;yok;;0
+96;BUCIM;AL;68;düşük (8);6,4;5/6;negatif;yok;yok;;0
+97;SKYMD;AL;68;düşük (10);9,7;2/6;negatif;negatif;yok;;3
+98;VAKBN;AL;68;düşük (0);10,3;5/6;pozitif;notr;pozitif;45,47;1
+99;AKBNK;AL;67;düşük (8);15,2;4/6;pozitif;notr;pozitif;107,13;3
+100;KLGYO;AL;67;düşük (0);9,1;5/6;notr;notr;yok;;0
+101;KLYPV;AL;67;düşük (0);15,8;4/6;notr;yok;yok;;1
+102;BIGTK;AL;67;düşük (10);20,2;0/6;notr;negatif;yok;;0
+103;AVPGY;AL;67;düşük (0);10,2;5/6;pozitif;notr;pozitif;95,75;0
+104;HALKB;AL;67;düşük (10);22,3;5/6;notr;notr;notr;48,18;13
+105;TSPOR;AL;67;düşük (10);20,8;1/6;notr;notr;yok;;0
+106;PCILT;AL;66;düşük (0);15,5;3/6;pozitif;notr;yok;;0
+107;YKBNK;AL;66;orta (22);20,7;4/6;pozitif;notr;pozitif;52,82;1
+108;AKMGY;AL;65;düşük (10);6,8;1/6;pozitif;pozitif;yok;;0
+109;BRKVY;AL;65;düşük (0);20,7;6/6;notr;negatif;yok;;0
+110;VANGD;AL;64;düşük (0);14,3;1/6;pozitif;pozitif;yok;;0
+111;DOCO;AL;64;orta (22);10,8;0/6;notr;notr;yok;;0
+112;ASTOR;AL;63;düşük (10);11,6;0/6;pozitif;pozitif;pozitif;423,63;10
+113;ENDAE;AL;62;orta (22);31,6;1/6;yok;negatif;yok;;0
+114;MNDRS;AL;62;düşük (8);8,0;4/6;pozitif;yok;yok;;0
+115;OZRDN;AL;61;düşük (0);22,0;5/6;negatif;notr;yok;;1
+116;KNFRT;AL;60;düşük (0);33,8;4/6;negatif;pozitif;yok;;0
+117;KCHOL;İZLE;90;yüksek (42);4,5;5/6;pozitif;pozitif;pozitif;321,79;1
+118;AYGAZ;İZLE;90;yüksek (58);2,3;6/6;pozitif;pozitif;pozitif;337,67;0
+119;TUPRS;İZLE;89;yüksek (46);1,6;6/6;pozitif;pozitif;pozitif;357,35;7
+120;AGESA;İZLE;88;yüksek (50);1,8;5/6;pozitif;pozitif;pozitif;352,13;1
+121;RGYAS;İZLE;88;orta (40);1,9;5/6;pozitif;pozitif;pozitif;309,55;2
+122;ANELE;İZLE;85;çok yüksek (67);3,2;6/6;negatif;notr;yok;;0
+123;BAHKM;İZLE;85;yüksek (45);6,7;5/6;negatif;notr;yok;;0
+124;ATSYH;İZLE;84;yüksek (52);2,3;5/6;negatif;notr;yok;;0
+125;BIGEN;İZLE;84;yüksek (57);5,7;6/6;negatif;yok;yok;;0
+126;KGYO;İZLE;83;orta (40);9,1;2/6;negatif;notr;yok;;0
+127;TRHOL;İZLE;82;yüksek (45);1,0;5/6;pozitif;notr;yok;;0
+128;AYDEM;İZLE;82;orta (40);10,2;3/6;pozitif;pozitif;pozitif;42,43;0
+129;ALBRK;İZLE;81;orta (32);9,5;4/6;pozitif;pozitif;notr;11,76;5
+130;OZATD;İZLE;79;yüksek (45);2,5;5/6;negatif;negatif;yok;;0
+131;ENJSA;İZLE;76;orta (32);7,3;2/6;pozitif;notr;notr;158,36;5
+132;RALYH;İZLE;73;orta (32);5,3;4/6;notr;negatif;yok;;1
+133;EPLAS;İZLE;70;yüksek (48);10,2;4/6;notr;notr;yok;;0
+134;ERSU;İZLE;66;düşük (0);21,1;0/6;negatif;yok;yok;;0
+135;BOBET;İZLE;65;orta (32);10,2;4/6;negatif;pozitif;yok;;0
+136;ISGYO;İZLE;64;orta (40);11,9;0/6;notr;notr;notr;25,03;0
+137;YGGYO;İZLE;63;düşük (0);20,4;3/6;pozitif;notr;yok;;0
+138;KRONT;İZLE;62;düşük (0);22,7;1/6;pozitif;pozitif;yok;;0
+139;MOGAN;İZLE;61;orta (32);20,8;0/6;negatif;notr;notr;16,60;0
+140;PAGYO;İZLE;61;düşük (0);18,5;1/6;pozitif;pozitif;yok;;0
+141;ZRGYO;İZLE;60;yüksek (50);3,7;3/6;pozitif;notr;yok;;0
+142;ARMGD;İZLE;60;orta (22);17,8;0/6;notr;pozitif;notr;109,60;0
+143;PNSUT;İZLE;59;düşük (0);12,6;5/6;negatif;notr;yok;;0
+144;RNPOL;İZLE;58;düşük (0);15,7;0/6;pozitif;pozitif;yok;;0
+145;PETUN;İZLE;57;düşük (0);8,2;5/6;pozitif;notr;yok;;0
+146;BINBN;İZLE;57;düşük (10);11,8;1/6;negatif;notr;yok;;0
+147;HURGZ;İZLE;57;düşük (6);19,6;1/6;negatif;negatif;yok;;0
+148;TRGYO;İZLE;56;düşük (0);9,0;2/6;pozitif;pozitif;pozitif;131,49;0
+149;KAYSE;İZLE;56;düşük (8);9,4;6/6;negatif;notr;yok;;0
+150;ADEL;İZLE;55;düşük (10);18,6;3/6;negatif;notr;yok;;0
+151;BAGFS;İZLE;55;orta (40);8,4;3/6;pozitif;yok;yok;;0
+152;SONME;İZLE;55;düşük (6);18,1;2/6;negatif;yok;yok;;0
+153;BASCM;İZLE;55;düşük (8);20,1;3/6;notr;yok;yok;;0
+154;CANTE;İZLE;54;düşük (0);15,8;6/6;notr;notr;yok;;1
+155;PRKME;İZLE;54;düşük (0);46,1;6/6;notr;negatif;yok;;0
+156;NTGAZ;İZLE;54;orta (40);13,2;5/6;pozitif;notr;yok;;0
+157;ENKAI;İZLE;54;düşük (0);11,4;5/6;pozitif;pozitif;pozitif;126,89;0
+158;GUNDG;İZLE;53;düşük (0);73,7;0/6;negatif;negatif;yok;;0
+159;ESEN;İZLE;53;düşük (8);10,5;5/6;negatif;negatif;yok;;0
+160;TTRAK;İZLE;52;düşük (8);6,3;4/6;negatif;notr;notr;592,39;0
+161;OZKGY;İZLE;51;düşük (0);15,8;5/6;notr;negatif;yok;;0
+162;GLRMK;İZLE;51;düşük (0);9,6;1/6;notr;pozitif;pozitif;282,52;0
+163;GLRYH;İZLE;51;düşük (0);9,8;4/6;pozitif;negatif;yok;;0
+164;BYDNR;İZLE;51;orta (22);11,8;2/6;negatif;notr;yok;;0

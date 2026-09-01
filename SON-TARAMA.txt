@@ -1,39 +1,38 @@
 
 SUPERTREND TARAYICI  -  ATR 10 / Carpan 3 / Periyot 1D
 
-=== AL SINYALI: 3 hisse ===
+=== AL SINYALI: 2 hisse ===
   HISSE   KAPANIS      DEG%    ST CIZGISI     ISLEM HACMI (TL)   TARIH
-  EDIP      40.26   +10.00        32.13          172.907.199   31.08.2026
-  MAKTK     10.72    +2.78         9.45          145.205.905   31.08.2026
-  TURGG     28.16    +4.37        25.30           57.102.200   31.08.2026
+  KARSN     10.49    +6.17         9.16          305.726.823   01.09.2026
+  ARTMS     42.18    +4.87        36.06           42.141.616   01.09.2026
 
 === SAT SINYALI: 21 hisse ===
   HISSE   KAPANIS      DEG%    ST CIZGISI     ISLEM HACMI (TL)   TARIH
-  ALTIN     74.48    -3.85        80.52        1.529.670.314   31.08.2026
-  BJKAS      2.21    -9.80         2.98          788.514.497   31.08.2026
-  TCKRC    147.60   -10.00       178.20          711.590.818   31.08.2026
-  UFUK    1618.00    -7.54      1996.37          402.479.118   31.08.2026
-  PSGYO      3.21    -3.89         3.74          256.508.128   31.08.2026
-  TABGD    235.80    -4.80       267.36          206.098.632   31.08.2026
-  ZGYO      26.58    -9.96        36.41          146.218.175   31.08.2026
-  ENSRI      5.09    -7.96         6.29          145.642.476   31.08.2026
-  TKNSA     18.00    -5.26        22.51          122.261.958   31.08.2026
-  KAREL      8.56    -3.93         9.91           81.141.464   31.08.2026
-  BMSTL     43.56    -0.86        48.55           69.063.639   31.08.2026
-  ISFIN     19.42    -1.37        20.65           69.038.411   31.08.2026
-  ENTRA      4.29    -3.81         4.79           61.133.667   31.08.2026
-  DGNMO      7.27    -9.13         9.18           35.073.293   31.08.2026
-  ICBCT     19.42    -4.05        22.77           29.947.718   31.08.2026
-  OZYSR     11.36    -9.98        13.50           27.110.265   31.08.2026
-  DGATE     96.30    -4.08       115.55           17.815.885   31.08.2026
-  KERVN      9.36   -10.00        10.99           16.561.341   31.08.2026
-  SEKUR      9.95    -0.50        11.78           13.630.067   31.08.2026
-  AVGYO     14.85    -1.98        18.43            6.939.969   31.08.2026
-  AYES      29.50    -4.84        32.95            4.845.818   31.08.2026
+  GESAN     82.90    -9.99       100.18        1.084.494.070   01.09.2026
+  TAVHL    262.00    -1.13       292.81          531.882.008   01.09.2026
+  EUPWR     92.35    -9.99       112.06          419.881.558   01.09.2026
+  EFOR      17.35    -3.72        21.63          379.913.644   01.09.2026
+  GIPTA     76.40    -9.96       100.20          238.748.854   01.09.2026
+  ATATR     13.93    -2.79        16.49          236.349.669   01.09.2026
+  PEKGY     14.18    -9.97        16.98          206.895.148   01.09.2026
+  GRTHO    198.10   -10.00       244.15          183.800.152   01.09.2026
+  KOCMT      4.18    -9.91         5.67          173.097.967   01.09.2026
+  TSPOR      1.05    -3.67         1.24          164.539.569   01.09.2026
+  KBORU     19.74    -8.70        24.82          144.163.924   01.09.2026
+  EMPAE     64.05    -2.36        81.82          132.238.719   01.09.2026
+  IZMDC     11.67    -7.09        14.49           71.027.401   01.09.2026
+  FORTE    112.10    -1.75       137.25           54.773.293   01.09.2026
+  GEREL     37.94    -0.94        44.44           37.154.035   01.09.2026
+  SANFM      9.89    -4.81        11.56           30.677.020   01.09.2026
+  EGEGY     26.64   -10.00        32.95           24.573.349   01.09.2026
+  BLCYT      2.09   -90.39        11.33           24.456.352   01.09.2026
+  IHAAS     50.45    -2.89        62.94           17.021.124   01.09.2026
+  BAYRK      4.24    -0.24         4.79            4.889.759   01.09.2026
+  GRNYO     13.17    -0.83        14.98              427.788   01.09.2026
 
 TradingView listesine yapistirmak icin:
-  BIST:EDIP,BIST:MAKTK,BIST:TURGG
+  BIST:KARSN,BIST:ARTMS
 
-Not: 17 hisse yeterli gecmis veriye sahip degil (yeni islem gormeye baslamis): KARCL, CITAS, SARAE, TKNKA, BETAE, VEYAS, GOLDA, MASFN, ORZAX, ALBTN, METEN, ISVEA, KPEKS, SOHOE, QUICK, SSAAT, EKIM
+Not: 19 hisse yeterli gecmis veriye sahip degil (yeni islem gormeye baslamis): TKNKA, CITAS, KPEKS, SARAE, METEN, VEYAS, MASFN, GOLDA, ALBTN, QUICK, ISVEA, BETAE, ORZAX, KARCL, EKIM, SSAAT, SOHOE, USHOL, INTET
 
 CSV yazildi: sonuclar\supertrend_2026-09-01.csv  (Excel ile acilabilir)
