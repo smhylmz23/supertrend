@@ -198,7 +198,7 @@ export function supertrend(bars, carpan, periyot) {
   const n = bars.length;
   const a = atr(bars, periyot);
   const yon = new Array(n).fill(N), cizgi = new Array(n).fill(N);
-  let ustO = 0, altO = 0, stO = N;
+  let ustO = 0, altO = 0, stO = N, sonGecerli = -1;
   for (let i = 0; i < n; i++) {
     if (Number.isNaN(a[i])) continue;
     const orta = (bars[i].h + bars[i].l) / 2;
@@ -213,8 +213,16 @@ export function supertrend(bars, carpan, periyot) {
     const s = d === -1 ? alt : ust;
     yon[i] = d; cizgi[i] = s;
     ustO = ust; altO = alt; stO = s;
+    sonGecerli = i;
   }
-  return { yon, cizgi };
+  /* Son barin durumu. Tarayici bunu alip canli fiyatla tek adim ileri
+     goturuyor; boylece seans ortasinda Supertrend'in o anki yonu, tum
+     gecmisi yeniden indirmeden ve TradingView ile birebir ayni cikiyor. */
+  const durum = sonGecerli < 0 ? null : {
+    ust: ustO, alt: altO, yon: yon[sonGecerli],
+    kapanis: bars[sonGecerli].c, atr: a[sonGecerli],
+  };
+  return { yon, cizgi, durum };
 }
 
 // ---------- yardimcilar ----------

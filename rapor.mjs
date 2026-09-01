@@ -242,6 +242,7 @@ export function htmlRapor(satirlar, stSinyalleri, tarih, gunIci, surum) {
     <span class="skor">${x.skor.toFixed(0)}</span>
   </div>
   <div class="olcek"><i style="width:${Math.max(0, Math.min(100, x.skor))}%"></i></div>
+  <div class="canli-satir" hidden></div>
   <div class="kart-alt">
     <span class="radar-bilgi"></span>
     <button class="radarBtn" type="button" title="Radarıma ekle" aria-label="${kacis(x.ad)} radarıma ekle">☆</button>
@@ -343,6 +344,30 @@ export function htmlRapor(satirlar, stSinyalleri, tarih, gunIci, surum) {
   .suzgec button:hover{background:var(--yuzey-2);border-color:var(--cizgi-2);color:var(--yazi)}
   .suzgec button:active{transform:scale(.97)}
   .suzgec button b{font-variant-numeric:tabular-nums;font-weight:600;opacity:.5;margin-left:5px}
+
+  /* ---------- canli mod ---------- */
+  #canliBtn.acik{color:var(--yesil);border-color:rgba(52,208,127,.4);background:var(--yesil-loş)}
+  #canliSerit{margin:0 0 14px;padding:12px 16px;background:var(--yuzey);border:1px solid var(--cizgi);
+    border-left:3px solid var(--yesil);border-radius:var(--r-kart);font-size:13px;color:var(--yazi-2);line-height:1.6}
+  #canliSerit b{color:var(--yazi);font-weight:600}
+  #canliSerit .an{font-variant-numeric:tabular-nums;color:var(--soluk)}
+  #canliSerit .kume{display:block;margin-top:6px}
+  #canliSerit .sim{display:inline-block;font-family:'Geist Mono',ui-monospace,monospace;font-size:12px;
+    padding:2px 7px;margin:2px 4px 2px 0;border-radius:5px;background:var(--yuzey-2);border:1px solid var(--cizgi-2)}
+  #canliSerit .sim.yeni{color:var(--yesil);border-color:rgba(52,208,127,.4)}
+  #canliSerit .sim.dusen{color:var(--dusus);border-color:rgba(217,106,106,.4)}
+  #canliSerit .sim.disarda{opacity:.68}
+  .canli-satir{display:flex;align-items:baseline;gap:10px;margin-top:10px;padding-top:10px;
+    border-top:1px dashed var(--cizgi-2);font-size:12.5px;font-variant-numeric:tabular-nums}
+  .canli-satir .fiyat{font-weight:600;color:var(--yazi)}
+  .canli-satir .deg.arti{color:var(--yesil)}
+  .canli-satir .deg.eksi{color:var(--dusus)}
+  .canli-satir .deg.notr{color:var(--soluk)}
+  .canli-satir .st{margin-left:auto;font-size:11px;letter-spacing:.04em;text-transform:uppercase}
+  .canli-satir .st.al{color:var(--yesil)}
+  .canli-satir .st.sat{color:var(--dusus)}
+  .kart.st-yeni{border-color:rgba(52,208,127,.5)}
+  .kart.st-dusen{border-color:rgba(217,106,106,.45)}
 
   /* ---------- senkron kutusu ---------- */
   #senkronBtn.bagli{color:var(--yesil);border-color:rgba(52,208,127,.34)}
@@ -488,6 +513,7 @@ export function htmlRapor(satirlar, stSinyalleri, tarih, gunIci, surum) {
     <button data-tm="1" aria-pressed="false" title="PD/DD, ROE, net marj ve borç/özkaynak — piyasa medyanına göre çoğunlukla iyi olanlar">Temel pozitif <b>${tmAdet}</b></button>
     <button data-bl="1" aria-pressed="false" title="Son çeyrek gelir ve net kâr büyümesi — piyasa medyanının üzerinde olanlar">Bilanço pozitif <b>${blAdet}</b></button>
     <button data-hb="1" aria-pressed="false" title="Son 3 analist tavsiyesi ağırlıklı olarak AL / Endeks Üstü olanlar">Haber pozitif <b>${hbAdet}</b></button>
+    <button id="canliBtn" type="button" aria-pressed="false" title="Borsa açıkken hisselerin o anki fiyatını ve Supertrend yönünü gösterir">◉ Canlı</button>
     <button data-r="1" aria-pressed="false">★ Radarım <b id="radarSayi">0</b></button>
     ${SENKRON_ADRESI ? `<button id="senkronBtn" type="button" title="Yıldızladığınız hisseleri telefon ve bilgisayar arasında eşitleyin">⇄ Senkron</button>` : ''}
     <span class="ayrac"></span>
@@ -512,6 +538,8 @@ export function htmlRapor(satirlar, stSinyalleri, tarih, gunIci, surum) {
     <input type="search" placeholder="hisse ara…" aria-label="Hisse ara">
   </div>
 </nav>
+
+<div id="canliSerit" hidden></div>
 
 <main id="liste">
 <p id="bosMesaj" class="bos">Seçili grupta gösterilecek hisse yok.</p>
@@ -818,6 +846,168 @@ ${SENKRON_ADRESI ? `
       if (!document.hidden) senkronOku(true);
     });
   })();
+
+  /* ================= CANLI MOD =================
+     Borsa acikken hisselerin o anki fiyatini ve Supertrend yonunu gosterir.
+     GitHub'a hic ugramaz: veriyi tarayici dogrudan TradingView'in tarayici
+     servisinden aliyor (~1 saniye).
+
+     Supertrend'i dogru hesaplayabilmek icin akşamki tarama her hisse icin son
+     TAMAMLANMIS gunun durumunu st-durum.json'a yaziyor:
+        [oncekiKapanis, atr, ustBant, altBant, yon]
+     Buradan canli yuksek/dusuk/son ile tek adim ileri gidiyoruz. Bu, butun
+     gecmisi yeniden indirmekle ayni sonucu veriyor (15 hissede birebir test
+     edildi), cunku Supertrend ozyinelemeli: sadece bir onceki adim gerekiyor. */
+
+  var canliAcik = false, canliSayac = null, stDurum = null, canliMesgul = false;
+  var canliBtn = document.getElementById('canliBtn');
+  var canliSerit = document.getElementById('canliSerit');
+  var CANLI_ARALIK = 30000;
+
+  function trAn(){ return new Date(Date.now() + 3 * 3600 * 1000); }   // TR = UTC+3, yaz saati yok
+  function borsaAcikMi(){
+    var t = trAn(), g = t.getUTCDay();
+    if (g === 0 || g === 6) return false;
+    var dk = t.getUTCHours() * 60 + t.getUTCMinutes();
+    return dk >= 10 * 60 && dk < 18 * 60 + 10;
+  }
+  function saatYaz(){
+    var t = trAn(), i = function(n){ return (n < 10 ? '0' : '') + n; };
+    return i(t.getUTCHours()) + ':' + i(t.getUTCMinutes());
+  }
+
+  // Supertrend'i bir gun ileri goturur. ta.mjs'teki dongunun tek adimlik hali.
+  function stIleri(d, y, dk, kap, periyot, carpan){
+    var oncekiKapanis = d[0], atrO = d[1], ustO = d[2], altO = d[3], yonO = d[4];
+    var tr = Math.max(y - dk, Math.abs(y - oncekiKapanis), Math.abs(dk - oncekiKapanis));
+    var atr = (1 / periyot) * tr + (1 - 1 / periyot) * atrO;
+    var orta = (y + dk) / 2;
+    var ust = orta + carpan * atr, alt = orta - carpan * atr;
+    alt = (alt > altO || oncekiKapanis < altO) ? alt : altO;
+    ust = (ust < ustO || oncekiKapanis > ustO) ? ust : ustO;
+    return yonO === 1 ? (kap > ust ? -1 : 1) : (kap < alt ? 1 : -1);
+  }
+
+  function stDurumAl(){
+    if (stDurum) return Promise.resolve(stDurum);
+    return fetch('st-durum.json?_=' + Date.now(), { cache: 'no-store' })
+      .then(function(y){ return y.ok ? y.json() : null; })
+      .then(function(j){ stDurum = (j && j.hisseler) ? j : null; return stDurum; })
+      .catch(function(){ return null; });
+  }
+
+  // TradingView'in tarayici servisi. Basliga dokunmuyoruz; ozel baslik
+  // eklersek tarayici on-kontrol istegi atar ve servis onu reddediyor.
+  function canliVeriAl(){
+    var govde = JSON.stringify({
+      filter: [{ left: 'type', operation: 'equal', right: 'stock' }],
+      options: { lang: 'tr' }, markets: ['turkey'],
+      symbols: { query: { types: [] }, tickers: [] },
+      columns: ['name', 'close', 'high', 'low', 'change', 'volume'],
+      sort: { sortBy: 'Value.Traded', sortOrder: 'desc' }, range: [0, 2000]
+    });
+    return fetch('https://scanner.tradingview.com/turkey/scan', { method: 'POST', body: govde })
+      .then(function(y){ return y.ok ? y.json() : null; })
+      .catch(function(){ return null; });
+  }
+
+  function seritYaz(html){ canliSerit.innerHTML = html; canliSerit.hidden = false; }
+
+  function simgeler(liste, sinif, sayfadaki){
+    return liste.slice(0, 40).map(function(ad){
+      var disarda = sayfadaki.indexOf(ad) === -1;
+      return '<span class="sim ' + sinif + (disarda ? ' disarda' : '') + '"' +
+        (disarda ? ' title="Bu hisse listede değil — son kapanışta şartları tutmuyordu"' : '') +
+        '>' + ad + (disarda ? ' •' : '') + '</span>';
+    }).join('') + (liste.length > 40 ? '<span class="sim">+' + (liste.length - 40) + '</span>' : '');
+  }
+
+  function canliCiz(canli){
+    var acik = borsaAcikMi();
+    var gecen = [], dusen = [], sayfadaki = [];
+    kartlar.forEach(function(k){ sayfadaki.push(k.dataset.ad); });
+
+    var yonler = {};
+    for (var ad in stDurum.hisseler) {
+      if (!Object.prototype.hasOwnProperty.call(stDurum.hisseler, ad)) continue;
+      var d = stDurum.hisseler[ad], v = canli[ad];
+      if (!v || v.k == null || v.y == null || v.dk == null) continue;
+      var yon = acik ? stIleri(d, v.y, v.dk, v.k, stDurum.atrPeriyot, stDurum.carpan) : d[4];
+      yonler[ad] = yon;
+      if (acik && yon === -1 && d[4] === 1) gecen.push(ad);
+      if (acik && yon === 1 && d[4] === -1) dusen.push(ad);
+    }
+
+    kartlar.forEach(function(k){
+      var ad = k.dataset.ad, v = canli[ad], satir = k.querySelector('.canli-satir');
+      if (!satir) return;
+      k.classList.remove('st-yeni', 'st-dusen');
+      if (!v) { satir.hidden = true; return; }
+      var yon = yonler[ad];
+      var d = (v.deg == null) ? 0 : v.deg;
+      var degSinif = d > 0.05 ? 'arti' : (d < -0.05 ? 'eksi' : 'notr');
+      var stHtml = yon === undefined ? '' :
+        '<span class="st ' + (yon === -1 ? 'al' : 'sat') + '">Supertrend ' + (yon === -1 ? 'AL' : 'SAT') + '</span>';
+      satir.innerHTML =
+        '<span class="fiyat">' + v.k.toFixed(2) + '</span>' +
+        '<span class="deg ' + degSinif + '">' + (d >= 0 ? '+' : '') + d.toFixed(2) + '%</span>' + stHtml;
+      satir.hidden = false;
+      if (gecen.indexOf(ad) !== -1) k.classList.add('st-yeni');
+      if (dusen.indexOf(ad) !== -1) k.classList.add('st-dusen');
+    });
+
+    var bas = acik
+      ? '<b>Canlı</b> <span class="an">· ' + saatYaz() + ' · her 30 saniyede yenileniyor</span>'
+      : '<b>Borsa kapalı</b> <span class="an">· gösterilen rakamlar son kapanışa ait</span>';
+    var govde = '';
+    if (acik) {
+      govde += '<span class="kume">Bugün Supertrend <b>AL</b>\\'a geçen (' + gecen.length + '): ' +
+        (gecen.length ? simgeler(gecen, 'yeni', sayfadaki) : '<i>yok</i>') + '</span>';
+      govde += '<span class="kume">AL\\'ını <b>kaybeden</b> (' + dusen.length + '): ' +
+        (dusen.length ? simgeler(dusen, 'dusen', sayfadaki) : '<i>yok</i>') + '</span>';
+      govde += '<span class="kume an">Soluk gösterilenler (•) listede yok — son kapanışta skor ya da diğer şartları tutmuyorlardı. ' +
+        'Mum kapanmadan bu yönler değişebilir; kesin liste 18:45\\'te oluşur.</span>';
+    }
+    seritYaz(bas + govde);
+  }
+
+  function canliTazele(){
+    if (canliMesgul) return;
+    canliMesgul = true;
+    Promise.all([stDurumAl(), canliVeriAl()]).then(function(c){
+      canliMesgul = false;
+      if (!canliAcik) return;
+      if (!c[0]) { seritYaz('<b>Canlı veri hazır değil.</b> <span class="an">Supertrend başlangıç durumu (st-durum.json) henüz oluşmamış — ilk akşam taramasından sonra çalışacak.</span>'); return; }
+      if (!c[1] || !c[1].data) { seritYaz('<b>Canlı veriye ulaşılamadı.</b> <span class="an">TradingView yanıt vermedi, birazdan tekrar denenecek.</span>'); return; }
+      var canli = {};
+      c[1].data.forEach(function(r){
+        canli[r.d[0]] = { k: r.d[1], y: r.d[2], dk: r.d[3], deg: r.d[4], hac: r.d[5] };
+      });
+      canliCiz(canli);
+    }).catch(function(){ canliMesgul = false; });
+  }
+
+  function canliKapat(){
+    canliAcik = false;
+    clearInterval(canliSayac); canliSayac = null;
+    canliBtn.classList.remove('acik'); canliBtn.setAttribute('aria-pressed', 'false');
+    canliSerit.hidden = true;
+    kartlar.forEach(function(k){
+      k.classList.remove('st-yeni', 'st-dusen');
+      var s = k.querySelector('.canli-satir'); if (s) s.hidden = true;
+    });
+  }
+
+  if (canliBtn) {
+    canliBtn.addEventListener('click', function(){
+      if (canliAcik) { canliKapat(); return; }
+      canliAcik = true;
+      canliBtn.classList.add('acik'); canliBtn.setAttribute('aria-pressed', 'true');
+      seritYaz('<b>Canlı veri alınıyor…</b>');
+      canliTazele();
+      canliSayac = setInterval(function(){ if (!document.hidden) canliTazele(); }, CANLI_ARALIK);
+    });
+  }
 
   function uygula(){
     var q = (arama.value || '').trim().toUpperCase();

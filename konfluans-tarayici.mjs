@@ -635,7 +635,7 @@ function hesapla(bars, xu100, usdtry) {
   osilator.alSayisi = ['macd', 'adx', 'wavetrend', 'stochrsi'].filter((k) => osilator[k] === 'AL').length
     + (osilator.rsi === 'POZITIF' ? 1 : 0) + (osilator.momentum === 'POZITIF' ? 1 : 0);
 
-  return { bugun: bardaki(n - 1), dun: bardaki(n - 2), divCnt, uyumsuzluk: { dRsi, dMfi, dObv, dRs, dUsd }, osilator };
+  return { bugun: bardaki(n - 1), dun: bardaki(n - 2), divCnt, uyumsuzluk: { dRsi, dMfi, dObv, dRs, dUsd }, osilator, stDurum: st.durum };
 }
 
 // ================= CALISTIR =================
@@ -671,7 +671,11 @@ if (temelHarita.size) {
   process.stderr.write('Bilanco: ' + say('bilanco', 'pozitif') + ' pozitif / ' + say('bilanco', 'notr') + ' notr / ' + say('bilanco', 'negatif') + ' negatif\n\n');
 }
 
-const satirlar = []; const yetersiz = [];
+const satirlar = []; const yetersiz = []; const stDurumlar = {};
+// Turkiye saati = UTC+3 (yaz saati yok). Son mumun kapanip kapanmadigini bundan anliyoruz.
+const trSimdiAn = new Date(Date.now() + 3 * 3600 * 1000);
+const trBugunISO = trSimdiAn.toISOString().slice(0, 10);
+const trSaatSimdi = trSimdiAn.getUTCHours();
 for (const k in veri) {
   if (k === 'BIST:XU100' || k === 'FX_IDC:USDTRY') continue;
   const r = veri[k], b = r.bars;
@@ -680,6 +684,19 @@ for (const k in veri) {
   const hacimTL = (son.c || 0) * (son.v || 0);
   if (hacimTL < CFG.minHacim) continue;
   let h; try { h = hesapla(b, xu100, usdtry); } catch (e) { yetersiz.push(r.ad + '(hata)'); continue; }
+  /* Canli mod icin: Supertrend'in son TAMAMLANMIS bardaki durumu. Listeye
+     giren hisselerle sinirli degil — seans icinde AL'a yeni gecen hisseleri de
+     yakalayabilmek icin taranan HER hisse icin saklaniyor.
+     Tarama seans ortasinda calistiysa son mum kapanmamistir; onu disarida
+     birakiyoruz, yoksa tarayici bir kez daha ileri goturunce ayni gunu iki
+     kez saymis olur. */
+  const sonBarTr = new Date((son.t + 3 * 3600) * 1000).toISOString().slice(0, 10);
+  const yarimMum = sonBarTr === trBugunISO && trSaatSimdi < 18;
+  const sd = yarimMum ? ta.supertrend(b.slice(0, -1), P.stMult, P.stLen).durum : h.stDurum;
+  if (sd) stDurumlar[r.ad] = [
+    +sd.kapanis.toFixed(4), +sd.atr.toFixed(6),
+    +sd.ust.toFixed(4), +sd.alt.toFixed(4), sd.yon,
+  ];
   if (!h.bugun || Number.isNaN(h.bugun.skor)) { yetersiz.push(r.ad); continue; }
   const tv = temelHarita.get(r.ad) || { temel: 'yok', bilanco: 'yok' };
   satirlar.push({
@@ -841,6 +858,16 @@ if (CFG.csv || CFG.rapor) {
     fs.writeFileSync(path.join(SONUC, 'veri.json'),
       JSON.stringify({ satirlar, stSinyal, gun, gunIci }), 'utf8');
   } catch (e) {}
+  /* CANLI MOD ICIN: Supertrend'in son kapanistaki durumu.
+     Panel bu dosyayi okuyup TradingView'den aldigi anlik fiyatla tek adim
+     ileri goturuyor ve seans ortasindaki Supertrend yonunu hesapliyor.
+     Bicim: [oncekiKapanis, atr, ustBant, altBant, yon]  (yon: -1 yukari, 1 asagi) */
+  try {
+    fs.writeFileSync(path.join(KLASOR, 'st-durum.json'), JSON.stringify({
+      gun, gunIci, atrPeriyot: P.stLen, carpan: P.stMult, hisseler: stDurumlar,
+    }), 'utf8');
+  } catch (e) {}
+
   // surum damgasi: sayfa acilista bunu okuyup eskiyse kendini yeniliyor
   const surum = String(Date.now());
   fs.writeFileSync(path.join(KLASOR, 'surum.txt'), surum, 'utf8');
