@@ -4,72 +4,72 @@ BIST KONFLUANS TARAYICI  —  TradingView gostergelerinizin birebir karsiligi
 === TUM HISSELER : 585 hisse ===
 
   HISSE   DURUM     SKOR  TRD  MOM  HCM  RISK UYM  ADX   RSI  KAPANIS   DEG%   OSILATOR
-  EDIP   GUCLU AL    97   33   30   34    10   1   24    64     40.36    +0.2   6/6
-  KCHOL  izle        92   35   30   27    42   2   30    62    217.30    +1.1   5/6
-  KRDMA  GUCLU AL    92   35   23   34    35   0   44    86     67.85    +1.8   6/6
-  INDES  GUCLU AL    91   34   30   26    18   0   29    66     11.89    +0.2   4/6
-  RYSAS  GUCLU AL    90   35   29   26    28   0   32    74     29.62    +2.8   6/6
-  AGESA  izle        90   33   30   27    58   4   25    71    263.50    +0.9   5/6
-  VBTYZ  GUCLU AL    90   35   30   25    20   0   34    64     38.82    +2.9   4/6
+  EDIP   GUCLU AL    97   33   30   34    10   1   24    64     40.40    +0.3   6/6
+  KCHOL  izle        93   35   30   28    50   2   30    63    218.30    +1.6   5/6
+  KRDMA  GUCLU AL    92   35   23   34    35   0   44    86     67.70    +1.6   6/6
+  RYSAS  GUCLU AL    91   35   29   28    28   0   32    75     29.80    +3.5   6/6
+  INDES  GUCLU AL    91   34   30   26    18   0   29    66     11.90    +0.3   4/6
+  AGESA  izle        90   33   30   27    58   4   25    70    263.25    +0.8   5/6
+  OFSYM  GUCLU AL    90   35   30   25    18   0   45    67     70.05    +4.5   6/6
+  VBTYZ  GUCLU AL    90   35   30   25    20   0   34    64     38.78    +2.8   4/6
   AYGAZ  izle        90   35   30   25    50   2   45    69    336.00    +0.3   6/6
-  KUVVA  GUCLU AL    90   35   30   25    36   1   35    70    193.60    +3.0   6/6
-  TARKM  GUCLU AL    90   35   30   25    28   0   29    72    570.50    +1.2   6/6
+  KUVVA  GUCLU AL    90   35   30   25    28   1   35    70    193.20    +2.8   6/6
+  TARKM  GUCLU AL    90   35   30   25    28   0   29    72    571.50    +1.4   6/6
   DIRIT  AL          89   25   30   34    34   0   18    65     29.44    +9.9   5/6
-  BRLSM  GUCLU AL    89   35   30   24    10   0   34    67     22.70    -7.3   5/6
-  TUPRS  izle        89   35   29   25    46   1   52    74    411.00    +2.7   6/6
+  BRLSM  GUCLU AL    89   35   30   24    10   0   34    67     22.68    -7.4   5/6
+  TUPRS  izle        89   35   29   25    46   1   52    74    410.75    +2.6   6/6
   DMLKT  GUCLU AL    89   35   30   24    26   0   51    69      6.88    -0.4   3/6
   HUNER  GUCLU AL    89   34   30   25    30   2   27    63      4.04    +1.0   6/6
-  KRDMD  GUCLU AL    88   34   30   24     8   0   28    59     45.90    -3.1   5/6
+  KRDMD  GUCLU AL    88   34   30   24     8   0   28    59     45.86    -3.2   5/6
   BRSAN  GUCLU AL    88   35   30   23    10   0   38    63    714.00    -1.4   4/6
-  AKSGY  GUCLU AL    88   35   28   25     0   0   30    58     10.05    +0.4   4/6
-  DEVA   GUCLU AL    88   35   28   25    36   0   42    76     94.85    +1.3   6/6
+  BORSK  GUCLU AL    88   25   29   35     8   0   28    60      6.38    +3.9   6/6
+  AKSGY  GUCLU AL    88   35   28   25     0   0   30    58     10.06    +0.5   4/6
+  DEVA   GUCLU AL    88   35   28   25    36   0   42    76     94.80    +1.2   6/6
   ARSAN  GUCLU AL    88   35   30   23    20   0   41    70      4.26    -3.2   4/6
-  BORSK  GUCLU AL    88   25   28   35     8   0   28    59      6.37    +3.7   5/6
-  AKFIS  GUCLU AL    88   35   30   23    20   1   29    62     18.18    +2.1   4/6
-  PRZMA  GUCLU AL    88   35   30   23    32   2   31    62     88.20    -3.1   5/6
-  RGYAS  izle        87   34   29   25    40   4   27    57    210.50    -2.3   5/6
-  TNZTP  GUCLU AL    87   32   30   25    28   0   23    71     31.90    -0.3   6/6
-  BAHKM  GUCLU AL    87   35   28   24    38   1   43    77    159.60    -1.0   5/6
-  TRCAS  GUCLU AL    87   32   30   25    14   0   23    57     47.46    +0.6   6/6
-  AHGAZ  GUCLU AL    86   32   30   24    28   0   23    72     38.60    +1.6   5/6
-  ANELE  izle        86   35   24   27    67   3   35    84    191.50    +0.5   6/6
-  BIGEN  izle        86   35   25   26    57   2   42    83    187.20    +1.8   6/6
-  BIMAS  GUCLU AL    85   34   27   24     0   0   27    53    402.50    -0.7   3/6
-  OFSYM  GUCLU AL    85   30   30   25    18   0   45    66     69.65    +3.9   6/6
+  AKFIS  GUCLU AL    88   35   30   23    20   1   29    62     18.17    +2.1   4/6
+  PRZMA  GUCLU AL    88   35   30   23    32   2   31    62     88.30    -3.0   5/6
+  BAHKM  GUCLU AL    87   35   28   24    38   1   43    76    159.00    -1.4   5/6
+  TNZTP  GUCLU AL    87   32   30   25    28   0   23    70     31.84    -0.5   6/6
+  TRCAS  GUCLU AL    87   32   30   25    14   0   23    57     47.50    +0.7   6/6
+  RGYAS  izle        87   34   28   25    48   4   26    56    209.80    -2.6   5/6
+  AHGAZ  GUCLU AL    86   32   30   24    28   0   23    72     38.58    +1.6   5/6
+  ANELE  izle        86   35   24   27    67   3   35    85    192.50    +1.0   6/6
+  BIGEN  izle        86   35   25   26    57   2   42    83    187.60    +2.1   6/6
+  ORGE   GUCLU AL    85   35   30   20    30   2   29    62     23.72    -1.2   5/6
+  TRENJ  GUCLU AL    85   32   30   23    18   1   22    56    105.50    -1.3   4/6
   TBORG  GUCLU AL    85   30   30   25    36   0   42    70    164.10    +1.9   5/6
-  ORGE   GUCLU AL    85   35   30   20    30   2   29    61     23.66    -1.5   5/6
-  TRENJ  GUCLU AL    85   32   30   23    18   1   22    56    105.10    -1.7   4/6
-  ASELS  GUCLU AL    85   33   28   24     0   0   24    55    393.50    +1.9   4/6
-  TRMET  GUCLU AL    85   33   29   22     0   0   26    53    137.40    -5.0   4/6
-  DURKN  GUCLU AL    85   34   29   22     0   0   27    56     22.16    -1.0   4/6
-  PSDTC  GUCLU AL    84   35   30   19    22   2   31    59    170.00    -2.5   5/6
-  NETAS  GUCLU AL    84   35   30   19    20   0   41    65     94.90    +3.5   4/6
+  ASELS  GUCLU AL    85   33   28   24     0   0   24    55    394.25    +2.1   4/6
+  BIMAS  GUCLU AL    85   34   27   24     0   0   27    52    402.25    -0.8   3/6
+  TRMET  GUCLU AL    85   33   29   22     0   0   26    53    137.70    -4.8   4/6
+  DURKN  GUCLU AL    85   34   29   22     0   0   27    56     22.14    -1.1   4/6
+  NETAS  GUCLU AL    84   35   30   19    20   0   41    64     94.75    +3.4   4/6
+  PSDTC  GUCLU AL    84   35   30   19    22   2   31    59    169.30    -2.9   5/6
+  KRGYO  GUCLU AL    84   30   29   25    28   0   43    73      3.19    +0.0   4/6
   ATSYH  izle        84   29   30   25    52   3   15    59    128.70    -2.3   5/6
-  KRGYO  GUCLU AL    84   30   29   25    28   0   43    74      3.20    +0.3   4/6
   MRGYO  GUCLU AL    84   24   28   33    18   0   32    77      1.63    +1.9   5/6
-  ALARK  GUCLU AL    84   34   27   23     0   0   28    54    108.20    -0.1   4/6
-  PASEU  GUCLU AL    84   35   30   19    20   0   47    63    227.80    -5.6   4/6
-  GUBRF  GUCLU AL    84   35   28   21     0   0   29    55    472.75    -1.9   4/6
-  RYGYO  GUCLU AL    83   35   23   25    35   0   50    86     51.85    +2.1   6/6
-  SELEC  GUCLU AL    83   35   23   25    35   0   50    86    335.50    +0.6   5/6
-  KRPLS  GUCLU AL    83   35   25   23     0   0   45    58     10.56    +0.1   3/6
-  CVKMD  AL          83   30   30   23     0   0   17    60     16.85    +0.5   5/6
+  ALARK  GUCLU AL    84   34   27   23     0   0   28    55    108.40    +0.1   4/6
+  GUBRF  GUCLU AL    84   35   28   21     0   0   29    55    473.50    -1.7   4/6
+  PASEU  GUCLU AL    84   35   30   19    20   0   47    63    227.20    -5.8   4/6
+  KRPLS  GUCLU AL    83   35   25   23     0   0   45    58     10.58    +0.3   3/6
+  SELEC  GUCLU AL    83   35   23   25    35   0   50    86    335.75    +0.7   5/6
+  RYGYO  GUCLU AL    83   35   23   25    35   0   50    86     52.05    +2.5   6/6
+  ARASE  GUCLU AL    83   34   26   23     0   0   26    55    121.40    +1.0   5/6
+  CVKMD  AL          83   30   30   23     0   0   17    60     16.81    +0.3   5/6
   KLSYN  GUCLU AL    83   34   25   24     0   0   28    60     15.66    -0.2   2/6
-  KGYO   izle        82   31   30   22    40   4   19    58     12.71    -2.6   2/6
-  ARASE  GUCLU AL    82   34   26   23     0   0   26    54    121.00    +0.7   4/6
+  KGYO   izle        82   31   30   22    40   4   19    58     12.70    -2.7   2/6
   ENERY  GUCLU AL    82   33   30   19    10   0   24    70     10.17    +2.9   6/6
-  OZSUB  GUCLU AL    82   35   24   23    26   1   34    59     42.64    -1.8   2/6
+  OZSUB  GUCLU AL    82   35   24   23    26   1   34    59     42.60    -1.8   2/6
   ALBRK  izle        82   33   27   22    32   3   30    53      8.65    -0.3   4/6
-  TRHOL  izle        82   35   22   25    45   1   45    93   3145.00    +0.3   5/6
-  CATES  GUCLU AL    82   35   22   25    35   0   52    88     71.90    +2.6   5/6
-  IEYHO  GUCLU AL    82   35   22   25    35   0   84    92    207.90    +0.1   6/6
-  AYDEM  izle        81   35   25   22    40   4   30    52     26.42    +0.4   3/6
+  IEYHO  GUCLU AL    82   35   22   25    35   0   84    92    208.00    +0.2   6/6
+  TRHOL  izle        82   35   22   25    45   1   45    93   3137.50    +0.1   5/6
+  CATES  izle        82   35   22   25    43   0   52    88     71.70    +2.4   5/6
+  DAGI   GUCLU AL    81   30   30   21     0   0   31    58     10.50    +0.8   3/6
   ... ve 525 hisse daha (tamami Excel dosyasinda)
 
 BUGUN YENI SINYAL VEREN: BRLSM, BORSK, PRZMA, BAHKM, MARTI, ALKLC, EUKYO, ARTMS
 
 TradingView listesine yapistirmak icin:
-  BIST:EDIP,BIST:KCHOL,BIST:KRDMA,BIST:INDES,BIST:RYSAS,BIST:AGESA,BIST:VBTYZ,BIST:AYGAZ,BIST:KUVVA,BIST:TARKM,BIST:DIRIT,BIST:BRLSM,BIST:TUPRS,BIST:DMLKT,BIST:HUNER,BIST:KRDMD,BIST:BRSAN,BIST:AKSGY,BIST:DEVA,BIST:ARSAN,BIST:BORSK,BIST:AKFIS,BIST:PRZMA,BIST:RGYAS,BIST:TNZTP,BIST:BAHKM,BIST:TRCAS,BIST:AHGAZ,BIST:ANELE,BIST:BIGEN,BIST:BIMAS,BIST:OFSYM,BIST:TBORG,BIST:ORGE,BIST:TRENJ,BIST:ASELS,BIST:TRMET,BIST:DURKN,BIST:PSDTC,BIST:NETAS
+  BIST:EDIP,BIST:KCHOL,BIST:KRDMA,BIST:RYSAS,BIST:INDES,BIST:AGESA,BIST:OFSYM,BIST:VBTYZ,BIST:AYGAZ,BIST:KUVVA,BIST:TARKM,BIST:DIRIT,BIST:BRLSM,BIST:TUPRS,BIST:DMLKT,BIST:HUNER,BIST:KRDMD,BIST:BRSAN,BIST:BORSK,BIST:AKSGY,BIST:DEVA,BIST:ARSAN,BIST:AKFIS,BIST:PRZMA,BIST:BAHKM,BIST:TNZTP,BIST:TRCAS,BIST:RGYAS,BIST:AHGAZ,BIST:ANELE,BIST:BIGEN,BIST:ORGE,BIST:TRENJ,BIST:TBORG,BIST:ASELS,BIST:BIMAS,BIST:TRMET,BIST:DURKN,BIST:NETAS,BIST:PSDTC
 
 Not: 40 hisse 200 gunluk EMA icin yeterli gecmise sahip degil.
 

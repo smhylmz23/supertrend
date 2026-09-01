@@ -3,39 +3,37 @@ SUPERTREND TARAYICI  -  ATR 10 / Carpan 3 / Periyot 1D
 
 === AL SINYALI: 3 hisse ===
   HISSE   KAPANIS      DEG%    ST CIZGISI     ISLEM HACMI (TL)   TARIH
-  KARSN     10.51    +6.38         9.16          343.824.024   01.09.2026
-  ARTMS     42.00    +4.43        36.10           52.334.058   01.09.2026
-  OYYAT     39.62    +9.99        33.59           51.418.083   01.09.2026
+  KARSN     10.49    +6.17         9.16          344.682.245   01.09.2026
+  OYYAT     39.54    +9.77        33.59           54.494.068   01.09.2026
+  ARTMS     42.00    +4.43        36.10           52.433.808   01.09.2026
 
-=== SAT SINYALI: 23 hisse ===
+=== SAT SINYALI: 21 hisse ===
   HISSE   KAPANIS      DEG%    ST CIZGISI     ISLEM HACMI (TL)   TARIH
-  GESAN     82.90    -9.99       100.18        1.088.026.439   01.09.2026
-  TAVHL    258.75    -2.36       291.96          933.962.265   01.09.2026
-  EUPWR     92.35    -9.99       112.06          435.019.477   01.09.2026
-  EFOR      17.41    -3.39        21.63          430.453.005   01.09.2026
-  ATATR     13.91    -2.93        16.47          276.790.277   01.09.2026
-  GIPTA     76.40    -9.96       100.20          240.539.594   01.09.2026
-  PEKGY     14.18    -9.97        16.98          208.714.995   01.09.2026
-  GRTHO    198.10   -10.00       244.15          207.272.228   01.09.2026
-  KBORU     19.73    -8.74        24.82          183.081.240   01.09.2026
-  KOCMT      4.18    -9.91         5.67          176.424.320   01.09.2026
-  TSPOR      1.05    -3.67         1.24          175.983.470   01.09.2026
-  EMPAE     63.70    -2.90        81.82          153.543.818   01.09.2026
-  IZMDC     11.57    -7.88        14.48           79.878.424   01.09.2026
-  FORTE    112.00    -1.84       137.17           65.764.720   01.09.2026
-  GEREL     37.98    -0.84        44.44           49.180.530   01.09.2026
-  BLCYT      2.04   -90.62        11.33           40.050.235   01.09.2026
-  SANFM      9.76    -6.06        11.54           36.865.072   01.09.2026
-  EGEGY     26.64   -10.00        32.95           28.401.304   01.09.2026
-  SEGMN     46.50    -2.31        57.69           18.434.879   01.09.2026
-  IHAAS     50.45    -2.89        62.94           17.954.499   01.09.2026
-  BAYRK      4.24    -0.24         4.79            5.879.252   01.09.2026
-  GRNYO     13.01    -2.03        14.97              560.185   01.09.2026
+  GESAN     82.90    -9.99       100.18        1.088.229.295   01.09.2026
+  TAVHL    258.75    -2.36       291.96          936.308.093   01.09.2026
+  EFOR      17.37    -3.61        21.63          435.937.930   01.09.2026
+  EUPWR     92.35    -9.99       112.06          435.430.989   01.09.2026
+  ATATR     13.90    -3.00        16.47          276.831.524   01.09.2026
+  GIPTA     76.40    -9.96       100.20          240.587.191   01.09.2026
+  PEKGY     14.18    -9.97        16.98          211.722.261   01.09.2026
+  GRTHO    198.10   -10.00       244.15          207.430.708   01.09.2026
+  KBORU     19.68    -8.97        24.82          184.461.368   01.09.2026
+  KOCMT      4.18    -9.91         5.67          177.057.360   01.09.2026
+  EMPAE     63.75    -2.82        81.82          156.475.650   01.09.2026
+  IZMDC     11.56    -7.96        14.48           80.103.968   01.09.2026
+  FORTE    112.00    -1.84       137.17           66.111.472   01.09.2026
+  GEREL     38.00    -0.78        44.44           50.206.018   01.09.2026
+  BLCYT      2.05   -90.57        11.33           40.418.954   01.09.2026
+  SANFM      9.74    -6.26        11.54           37.868.399   01.09.2026
+  EGEGY     26.64   -10.00        32.95           28.465.426   01.09.2026
+  IHAAS     50.35    -3.08        62.94           17.931.498   01.09.2026
+  BEYAZ     22.76    -1.13        25.14           17.186.053   01.09.2026
+  GRNYO     13.05    -1.73        14.97              630.158   01.09.2026
   EMNIS    152.00    -1.30       161.91              487.616   01.09.2026
 
 TradingView listesine yapistirmak icin:
-  BIST:KARSN,BIST:ARTMS,BIST:OYYAT
+  BIST:KARSN,BIST:OYYAT,BIST:ARTMS
 
-Not: 19 hisse yeterli gecmis veriye sahip degil (yeni islem gormeye baslamis): ALBTN, KARCL, CITAS, KPEKS, QUICK, SARAE, TKNKA, GOLDA, VEYAS, BETAE, EKIM, METEN, SOHOE, MASFN, ISVEA, ORZAX, USHOL, INTET, SSAAT
+Not: 19 hisse yeterli gecmis veriye sahip degil (yeni islem gormeye baslamis): ALBTN, KARCL, BETAE, TKNKA, CITAS, SARAE, ISVEA, VEYAS, SOHOE, KPEKS, EKIM, METEN, GOLDA, SSAAT, QUICK, ORZAX, MASFN, USHOL, INTET
 
 CSV yazildi: sonuclar\supertrend_2026-09-01.csv  (Excel ile acilabilir)
