@@ -1,6 +1,13 @@
-// Yayindaki index.html hangi kapanisa ait? Borsanin son kapanisi hangi gun?
-// Ikisi ayniysa "EVET" (tarama gereksiz), degilse "HAYIR" yazar.
-// Herhangi bir aksilikte HAYIR der; yani suphede kalirsak tarariz.
+// Yayindaki index.html tazelenmeli mi?  "EVET" = gerek yok, atla.  "HAYIR" = tara.
+// Herhangi bir aksilikte HAYIR der; suphede kalirsak tararız.
+//
+// Iki tuzagi birden kolluyor:
+//  1) Yayindaki sayfa gun-ici (borsa aciktan) uretilmisse ASLA taze sayilmaz.
+//     Yoksa "tarih ayni" diye bakip yarim veriyi guncel sanar, aksam taramasini
+//     atlar ve panel butun aksam kapanmamis mumla kalir.
+//  2) Su anda borsa aciksa zamanlanmis tarama hic yapilmaz. Gecikmis bir yedek
+//     cron seans ortasina denk gelip saglam kapanis verisinin uzerine yarim
+//     veri yazmasin. (Elle "zorla" calistirilirsa yine de tarar.)
 import fs from 'fs';
 
 const WSOPTS = { headers: { Origin: 'https://www.tradingview.com', 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/126 Safari/537.36' } };
@@ -35,15 +42,41 @@ function sonKapanisGunu() {
   });
 }
 
-function yayindakiGun() {
+// Yayindaki sayfadan iki bilgi: hangi gune ait, ve gun-ici mi uretilmis.
+function yayinDurumu() {
   try {
-    const h = fs.readFileSync('index.html', 'utf8').slice(0, 4000);
-    const m = h.match(/<title>[^<]*?(\d{2})\.(\d{2})\.(\d{4})/);
-    return m ? m[3] + '-' + m[2] + '-' + m[1] : null;
-  } catch (e) { return null; }
+    const h = fs.readFileSync('index.html', 'utf8');
+    const m = h.slice(0, 4000).match(/<title>[^<]*?(\d{2})\.(\d{2})\.(\d{4})/);
+    return {
+      gun: m ? m[3] + '-' + m[2] + '-' + m[1] : null,
+      gunIci: h.includes('Borsa açık — bu rakamlar geçici.'),
+    };
+  } catch (e) { return { gun: null, gunIci: false }; }
+}
+
+// Borsa su anda acik mi? (Turkiye = UTC+3, yaz saati yok. Seans 10:00-18:00,
+// kapanis seansi 18:10'a kadar surer.)
+function borsaAcikMi() {
+  const tr = new Date(Date.now() + 3 * 3600 * 1000);
+  const gun = tr.getUTCDay();                       // 0 Pazar ... 6 Cumartesi
+  if (gun === 0 || gun === 6) return false;
+  const dk = tr.getUTCHours() * 60 + tr.getUTCMinutes();
+  return dk >= 10 * 60 && dk < 18 * 60 + 10;
 }
 
 const borsa = await sonKapanisGunu();
-const yayin = yayindakiGun();
-process.stderr.write('  borsanin son kapanisi: ' + (borsa || '?') + ' | yayindaki veri: ' + (yayin || '?') + '\n');
-console.log(borsa && yayin && borsa === yayin ? 'EVET' : 'HAYIR');
+const yayin = yayinDurumu();
+const acik = borsaAcikMi();
+
+let sonuc;
+if (acik) sonuc = 'EVET';                                   // seans ortasinda tarama yok
+else if (!borsa || !yayin.gun) sonuc = 'HAYIR';             // bilgi eksik -> tara
+else if (yayin.gunIci) sonuc = 'HAYIR';                     // yayindaki veri yarim -> tara
+else sonuc = borsa === yayin.gun ? 'EVET' : 'HAYIR';
+
+process.stderr.write(
+  '  borsanin son bari: ' + (borsa || '?') +
+  ' | yayindaki veri: ' + (yayin.gun || '?') + (yayin.gunIci ? ' (GUN ICI, yarim)' : '') +
+  ' | borsa su an: ' + (acik ? 'ACIK' : 'kapali') +
+  ' -> ' + sonuc + '\n');
+console.log(sonuc);
