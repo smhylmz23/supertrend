@@ -14,6 +14,18 @@ on:
     - cron: '30 17 * * 1-5'   # 20:30 TR  - yedek
     - cron: '30 19 * * 1-5'   # 22:30 TR  - yedek
     - cron: '0 4 * * 2-6'     # 07:00 TR  - ertesi sabah, son sans
+    #
+    # CUMA'YA OZEL EK DENEMELER
+    # Cloudflare'in gun numaralari farkli (1 = Pazar), bu yuzden oradaki
+    # zamanlayici Pazar-Persembe calisiyor ve Cuma aksamini kacirtiyor.
+    # O ayar duzeltilene kadar Cuma tamamen GitHub'a kaliyor; GitHub da
+    # gecikebildigi icin o gune fazladan deneme koyuyoruz. Veri zaten
+    # guncelse hepsi hicbir sey yapmadan cikar, maliyeti yok.
+    - cron: '0 16 * * 5'      # 19:00 TR  Cuma
+    - cron: '0 17 * * 5'      # 20:00 TR  Cuma
+    - cron: '0 18 * * 5'      # 21:00 TR  Cuma
+    - cron: '0 21 * * 5'      # 00:00 TR  Cumartesi gecesi
+    - cron: '0 6 * * 6'       # 09:00 TR  Cumartesi sabahi
   workflow_dispatch:          # elle ya da Cloudflare zamanlayicisindan
     inputs:
       zorla:
