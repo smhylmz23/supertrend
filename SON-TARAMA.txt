@@ -1,24 +1,27 @@
 
 SUPERTREND TARAYICI  -  ATR 10 / Carpan 3 / Periyot 1D
 
-=== AL SINYALI: 9 hisse ===
+=== AL SINYALI: 10 hisse ===
   HISSE   KAPANIS      DEG%    ST CIZGISI     ISLEM HACMI (TL)   TARIH
-  PAHOL      1.03    +5.10         0.80          283.165.746   09.10.2026
-  GEREL     26.18   +10.00        18.60          170.827.275   09.10.2026
-  KRGYO      3.70    +5.71         2.81          143.278.815   09.10.2026
-  ANGEN      8.24    +3.26         6.78           95.103.715   09.10.2026
-  AVHOL     29.88    +5.58        24.62           35.152.595   09.10.2026
-  CUSAN     21.78   +10.00        17.31           30.197.513   09.10.2026
-  PKENT    108.40    +9.94        91.90           13.892.436   09.10.2026
-  VKFYO     20.62    +4.72        16.64            8.985.371   09.10.2026
-  INTEK    195.40    +9.10       161.41            1.566.913   09.10.2026
+  MARTI      1.60    +8.11         1.06          581.063.504   12.10.2026
+  EFOR      17.50    +3.73        14.21          476.933.083   12.10.2026
+  POLTK   3500.00    +9.98      2608.72           84.087.500   12.10.2026
+  USHOL     64.20    +6.38        47.39           82.307.995   12.10.2026
+  AFYON     12.22    +9.99        10.60           51.649.138   12.10.2026
+  LIDFA      1.71    +4.91         1.42           37.080.329   12.10.2026
+  SKYLP     86.45    +9.71        53.21           29.250.185   12.10.2026
+  SEKUR      5.01    +7.97         3.05           27.320.863   12.10.2026
+  SNPAM     19.51    +4.95        17.83            1.393.619   12.10.2026
+  SUMAS    225.00    +7.66       199.49            1.101.600   12.10.2026
 
-=== SAT SINYALI: 0 hisse ===
-  (yok)
+=== SAT SINYALI: 2 hisse ===
+  HISSE   KAPANIS      DEG%    ST CIZGISI     ISLEM HACMI (TL)   TARIH
+  FLAP      10.90    -3.20        13.12            8.996.141   12.10.2026
+  QNBTR    155.00    -2.52       167.87            2.946.550   12.10.2026
 
 TradingView listesine yapistirmak icin:
-  BIST:PAHOL,BIST:GEREL,BIST:KRGYO,BIST:ANGEN,BIST:AVHOL,BIST:CUSAN,BIST:PKENT,BIST:VKFYO,BIST:INTEK
+  BIST:MARTI,BIST:EFOR,BIST:POLTK,BIST:USHOL,BIST:AFYON,BIST:LIDFA,BIST:SKYLP,BIST:SEKUR,BIST:SNPAM,BIST:SUMAS
 
-Not: 8 hisse yeterli gecmis veriye sahip degil (yeni islem gormeye baslamis): CITAS, TKNKA, NETGL, KPEKS, QUICK, INTET, VEYAS, BKRGY
+Not: 8 hisse yeterli gecmis veriye sahip degil (yeni islem gormeye baslamis): CITAS, TKNKA, KPEKS, NETGL, INTET, QUICK, VEYAS, BKRGY
 
-CSV yazildi: sonuclar\supertrend_2026-10-09.csv  (Excel ile acilabilir)
+CSV yazildi: sonuclar\supertrend_2026-10-12.csv  (Excel ile acilabilir)
