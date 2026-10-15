@@ -1,22 +1,16 @@
 
 SUPERTREND TARAYICI  -  ATR 10 / Carpan 3 / Periyot 1D
 
-=== AL SINYALI: 3 hisse ===
+=== AL SINYALI: 1 hisse ===
   HISSE   KAPANIS      DEG%    ST CIZGISI     ISLEM HACMI (TL)   TARIH
-  HEDEF     18.24    +9.95         9.61        1.163.970.753   14.10.2026
-  TMPOL    128.80    +9.99        72.24          569.910.247   14.10.2026
-  HUBVC      1.98   +10.00         1.37            8.891.434   14.10.2026
+  IZFAS     20.48    +9.93        12.46           65.754.378   15.10.2026
 
-=== SAT SINYALI: 4 hisse ===
-  HISSE   KAPANIS      DEG%    ST CIZGISI     ISLEM HACMI (TL)   TARIH
-  TKFEN    214.50    -7.46       273.76        1.012.186.676   14.10.2026
-  ALVES      0.59    -9.23         0.76            2.282.630   14.10.2026
-  TRILC      0.84    -6.67         0.99            1.814.157   14.10.2026
-  ISBIR     54.50    -5.22        63.35            1.021.221   14.10.2026
+=== SAT SINYALI: 0 hisse ===
+  (yok)
 
 TradingView listesine yapistirmak icin:
-  BIST:HEDEF,BIST:TMPOL,BIST:HUBVC
+  BIST:IZFAS
 
-Not: 7 hisse yeterli gecmis veriye sahip degil (yeni islem gormeye baslamis): TKNKA, CITAS, KPEKS, NETGL, INTET, BKRGY, VEYAS
+Not: 7 hisse yeterli gecmis veriye sahip degil (yeni islem gormeye baslamis): INTET, NETGL, TKNKA, VEYAS, BKRGY, KPEKS, CITAS
 
-CSV yazildi: sonuclar\supertrend_2026-10-14.csv  (Excel ile acilabilir)
+CSV yazildi: sonuclar\supertrend_2026-10-15.csv  (Excel ile acilabilir)

@@ -4,76 +4,76 @@ BIST KONFLUANS TARAYICI  —  TradingView gostergelerinizin birebir karsiligi
 === TUM HISSELER : 588 hisse ===
 
   HISSE   DURUM     SKOR  TRD  MOM  HCM  RISK UYM  ADX   RSI  KAPANIS   DEG%   OSILATOR
-  DURDO  GUCLU AL    97   35   27   35    28   0   40    78      7.01    +9.9   5/6
-  CELHA  GUCLU AL    94   35   30   29    10   0   30    63     31.48    +3.6   4/6
-  RYGYO  izle        94   35   26   33    40   4   30    58     50.50    +2.7   5/6
-  KRGYO  GUCLU AL    91   33   29   30    10   1   24    53      3.41    -8.6   5/6
-  AHGAZ  GUCLU AL    88   34   30   25    20   0   26    66     47.16    -1.1   4/6
-  INDES  izle        86   31   29   26    48   4   19    58     11.82    +1.5   5/6
-  GLYHO  GUCLU AL    86   32   30   24     0   0   22    64     17.71    +0.3   6/6
-  HRKET  GUCLU AL    85   35   25   25    35   0   42    82     10.09    -0.3   5/6
-  ENERY  GUCLU AL    83   34   25   24    20   0   27    64     14.04    -2.9   3/6
-  AKFIS  AL          81   30   29   23     0   0   16    55     17.33    +5.2   3/6
-  SOKM   izle        80   20   29   31    22   2   12    56     58.60    +1.1   5/6
-  GMTAS  AL          80   30   28   22     0   0   16    54     49.40    +0.8   5/6
-  TUPRS  izle        78   30   25   23    40   4   28    51    391.00    +1.4   4/6
-  ETYAT  GUCLU AL    77   26   28   24     0   0   24    57     12.50    -3.5   5/6
-  ETILR  AL          75   29   23   22    22   2   15    53      7.00    -1.4   1/6
-  ORGE   izle        74   29   27   18    38   3   14    51     22.72    -0.7   4/6
-  DMLKT  AL          74   30   25   18     0   0   18    54      6.97    -0.6   3/6
-  ALBRK  izle        72   21   28   23     0   0   18    55      8.80    +0.0   4/6
-  ISDMR  AL          72   33   23   16     6   0   26    51     61.35    -1.7   3/6
-  ALARK  izle        71   21   27   23    10   1   19    52    108.30    -0.1   4/6
-  EFOR   AL          70   22   30   18     0   0   22    61     18.40    +4.1   6/6
-  VAKBN  izle        70   20   28   21     0   0   11    53     34.24    -0.5   5/6
-  HUNER  izle        70   29   24   17    32   3   14    52      4.20    +1.0   1/6
-  FRIGO  AL          69   14   29   26     0   0   26    62      2.28    +2.2   5/6
-  BEGYO  AL          67   15   30   22     0   0   29    68      3.45    +9.9   6/6
-  RYSAS  izle        67   20   28   19     0   0   12    53     26.08    +1.6   5/6
-  SANKO  izle        67   20   26   20    22   2   36    49     19.79   -10.0   3/6
-  ENJSA  izle        66   22   28   16    32   2   17    53    112.80    -1.4   4/6
-  BAHKM  izle        65   21   22   22    22   2   20    47    153.00    +1.3   1/6
-  YKBNK  izle        65   15   27   24     0   0   17    51     35.94    -1.3   5/6
-  BIMAS  izle        65   21   22   21    40   4   18    48    408.00    -0.8   2/6
-  KRDMD  izle        64   20   20   24    50   4   12    45     43.16    -1.7   1/6
-  YGGYO  izle        63   15   25   23     0   0   37    48    212.70    +2.3   4/6
-  CCOLA  izle        62   14   27   22     0   0   16    51     81.05    -3.1   4/6
-  METRO  izle        62   25   26   11     8   0   22    52      7.71    -2.2   6/6
-  CRFSA  izle        61   14   21   26     0   0   19    48    221.60    +7.4   4/6
-  AFYON  izle        61   15   25   21     0   0   31    49     11.56    -7.1   4/6
-  BRSAN  izle        60   20   23   17    10   1   15    49    661.50    +0.2   1/6
-  KLSYN  izle        59   16   26   18     0   0   19    49     14.48    +1.3   4/6
-  OTKAR  izle        59   14   27   18     6   0   17    52    327.00    -2.2   3/6
-  AKFYE  izle        58   12   27   19     0   0   11    55      3.86    +1.6   4/6
-  KCHOL  izle        58   22   22   14    22   2   27    48    211.20    -0.6   3/6
-  MARTI  izle        57   13   26   18    12   0   25    50      1.63    -7.4   5/6
-  VANGD  izle        56   18   21   18     0   0   30    51     73.00    -8.6   5/6
-  INVES  izle        56   15   23   18     0   0   26    45    722.00    -1.5   3/6
-  EBEBK  izle        56   13   25   17    32   3   11    47     79.70    -3.2   3/6
-  HUBVC  izle        56   15   23   18     0   0   39    56      1.98   +10.0   6/6
-  AVHOL  izle        54   15   25   14     0   0   34    55     30.68    +2.7   5/6
-  ERCB   izle        54   15   25   14    12   0   31    53     40.00    -3.0   6/6
-  AYGAZ  izle        53   22   21   10     0   0   25    45    291.50    -0.9   3/6
-  SERNT  izle        53   15   20   18     0   0   38    52      6.27    -1.3   5/6
-  KRPLS  izle        53   23   22    8    28   2   19    46     11.01    -0.8   0/6
-  RGYAS  izle        53   14   25   13     0   0   23    48    193.60    +0.0   4/6
-  MHRGY  izle        52   14   20   18    22   2   27    46      1.87    -9.7   5/6
-  POLTK  izle        51   15   23   14     0   0   29    52   3540.00    -8.1   5/6
-  AGESA  izle        51   10   21   20     0   0   31    43    232.40    +0.3   4/6
-  MRGYO  izle        50   12   22   16     0   0   23    46      1.32    -9.0   4/6
-  AGHOL  izle        50    7   25   18     0   0   15    46     32.36    -2.1   4/6
-  DZGYO  izle        50   11   25   15     0   0   20    47      6.92    -4.7   4/6
-  GEREL  izle        50   14   18   18     0   0   27    53     28.64    +6.8   6/6
+  DURDO  GUCLU AL    94   35   30   29    10   0   42    62      6.31   -10.0   5/6
+  INDES  AL          91   31   30   30     0   0   19    60     11.97    +1.3   5/6
+  CELHA  GUCLU AL    88   35   30   24     0   0   31    56     30.04    -4.6   4/6
+  GLYHO  GUCLU AL    85   32   29   23     0   0   23    59     17.41    -1.7   5/6
+  HRKET  GUCLU AL    84   35   24   25    35   0   44    84     10.43    +3.4   5/6
+  AHGAZ  GUCLU AL    83   33   25   25    20   0   26    69     47.90    +1.6   3/6
+  ENERY  GUCLU AL    83   33   25   25    20   0   26    68     14.50    +3.3   3/6
+  GMTAS  AL          80   30   28   22     0   0   17    54     49.42    +0.0   4/6
+  RYGYO  izle        80   35   24   21    40   4   29    52     48.68    -3.6   3/6
+  KRGYO  GUCLU AL    78   32   27   19    10   1   22    49      3.28    -3.8   3/6
+  SOKM   izle        78   20   28   29    22   2   12    54     58.00    -1.0   4/6
+  ETILR  AL          77   29   23   25    22   2   14    54      7.05    +0.7   1/6
+  RYSAS  izle        77   20   28   29     0   0   11    53     26.08    +0.0   5/6
+  ETYAT  AL          74   26   28   20     0   0   24    59     12.84    +2.7   5/6
+  FRIGO  AL          72   17   30   25     0   0   26    65      2.35    +3.1   6/6
+  ALBRK  izle        72   20   28   23     0   0   17    54      8.78    -0.2   4/6
+  DMLKT  AL          71   30   25   16     0   0   17    55      6.99    +0.3   3/6
+  ALARK  izle        71   21   28   23     0   0   17    54    109.10    +0.7   4/6
+  ENJSA  izle        71   22   29   20    40   2   16    57    114.70    +1.7   5/6
+  YKBNK  izle        71   16   28   28     0   0   17    53     36.30    +1.0   5/6
+  METRO  AL          70   24   27   19     8   0   20    54      7.81    +1.3   5/6
+  ISDMR  AL          70   33   22   15     0   0   26    50     61.25    -0.2   3/6
+  BEGYO  AL          69   15   29   25    28   0   31    74      3.79    +9.9   6/6
+  TUPRS  izle        69   30   24   15    40   4   28    48    384.50    -1.7   2/6
+  DOCO   izle        69   12   27   30     0   0   14    55  10945.00    +2.4   5/6
+  AKFIS  izle        69   29   21   19     6   0   15    46     15.82    -8.7   0/6
+  ORGE   izle        68   28   27   13    38   3   13    48     22.38    -1.5   2/6
+  AKFYE  izle        67   13   28   26     0   0   11    57      3.90    +1.0   5/6
+  MARTI  AL          65   13   27   25     0   0   24    53      1.73    +6.1   5/6
+  GARAN  izle        64    5   29   30     0   0   21    57    133.90    +2.6   5/6
+  SANKO  AL          63   20   27   16    22   2   36    51     20.04    +1.3   4/6
+  VAKBN  izle        63   20   28   14     0   0   11    52     34.08    -0.5   4/6
+  RGYAS  izle        62   14   26   22     0   0   22    52    195.80    +1.1   5/6
+  BAHKM  izle        61   22   23   16    22   2   18    48    157.00    +2.6   2/6
+  KLSYN  izle        61   15   25   20     0   0   17    46     14.20    -1.9   3/6
+  HUBVC  AL          60   15   27   18     0   0   38    63      2.17    +9.6   5/6
+  EFOR   AL          60   17   28   15     6   0   21    55     17.33    -5.8   5/6
+  HUNER  izle        60   28   21   11    32   3   13    47      4.04    -3.8   0/6
+  BIMAS  izle        59   21   19   19    40   4   18    44    401.50    -1.6   2/6
+  EBEBK  izle        59   13   26   20    32   3   10    48     80.40    +0.9   1/6
+  HKTM   izle        58   13   27   18     0   0   25    54     11.90    +7.1   6/6
+  INVES  izle        58   15   20   23     0   0   26    41    710.00    -1.7   2/6
+  KCHOL  izle        57   21   22   14     0   0   27    48    210.90    -0.1   3/6
+  YGGYO  izle        57   15   25   17     0   0   37    48    212.10    -0.3   3/6
+  KRPLS  izle        57   22   22   12    28   2   18    46     11.03    +0.2   0/6
+  BRSAN  izle        55   20   23   12    10   1   15    48    660.50    -0.2   1/6
+  KRDMD  izle        55   20   18   17     6   0   12    44     42.96    -0.5   0/6
+  OTKAR  izle        54   13   27   14     6   0   15    50    323.00    -1.2   3/6
+  SUMAS  izle        52   15   23   14     0   0   34    53    229.40    +6.0   5/6
+  ERCB   izle        51   15   25   11     0   0   31    53     40.00    +0.0   5/6
+  AVHOL  izle        51   15   28    8     0   0   33    62     32.60    +6.3   6/6
+  AFYON  izle        50   15   24   11     0   0   30    48     11.45    -1.0   4/6
+  TAVHL  izle        49    8   26   15    10   1   14    50    271.00    -0.1   3/6
+  CRDFA  izle        49   15   16   18     0   0   41    55     17.30    +2.4   5/6
+  HALKB  izle        49   21   20    8     0   0   16    45     43.40    +0.8   1/6
+  EREGL  izle        48   13   25   10     0   0   10    50     37.40    +0.8   3/6
+  USHOL  izle        47   17   22    8     0   0   26    52     64.30    +0.6   4/6
+  LIDFA  izle        47   11   26    9     0   0   20    55      1.67    -0.6   5/6
+  OTTO   izle        47   10   24   13    14   0   28    54    124.00    -2.8   4/6
+  ISCTR  izle        46    3   27   17     0   0   19    52     13.10    +0.7   5/6
   ... ve 528 hisse daha (tamami Excel dosyasinda)
 
-BUGUN YENI SINYAL VEREN: BEGYO
+BUGUN YENI SINYAL VEREN: METRO, MARTI, SANKO, HUBVC
 
 TradingView listesine yapistirmak icin:
-  BIST:DURDO,BIST:CELHA,BIST:RYGYO,BIST:KRGYO,BIST:AHGAZ,BIST:INDES,BIST:GLYHO,BIST:HRKET,BIST:ENERY,BIST:AKFIS,BIST:SOKM,BIST:GMTAS,BIST:TUPRS,BIST:ETYAT,BIST:ETILR,BIST:ORGE,BIST:DMLKT,BIST:ALBRK,BIST:ISDMR,BIST:ALARK,BIST:EFOR,BIST:VAKBN,BIST:HUNER,BIST:FRIGO,BIST:BEGYO,BIST:RYSAS,BIST:SANKO,BIST:ENJSA,BIST:BAHKM,BIST:YKBNK,BIST:BIMAS,BIST:KRDMD,BIST:YGGYO,BIST:CCOLA,BIST:METRO,BIST:CRFSA,BIST:AFYON,BIST:BRSAN,BIST:KLSYN,BIST:OTKAR
+  BIST:DURDO,BIST:INDES,BIST:CELHA,BIST:GLYHO,BIST:HRKET,BIST:AHGAZ,BIST:ENERY,BIST:GMTAS,BIST:RYGYO,BIST:KRGYO,BIST:SOKM,BIST:ETILR,BIST:RYSAS,BIST:ETYAT,BIST:FRIGO,BIST:ALBRK,BIST:DMLKT,BIST:ALARK,BIST:ENJSA,BIST:YKBNK,BIST:METRO,BIST:ISDMR,BIST:BEGYO,BIST:TUPRS,BIST:DOCO,BIST:AKFIS,BIST:ORGE,BIST:AKFYE,BIST:MARTI,BIST:GARAN,BIST:SANKO,BIST:VAKBN,BIST:RGYAS,BIST:BAHKM,BIST:KLSYN,BIST:HUBVC,BIST:EFOR,BIST:HUNER,BIST:BIMAS,BIST:EBEBK
 
 Not: 38 hisse 200 gunluk EMA icin yeterli gecmise sahip degil.
 
-Excel dosyasi: sonuclar\konfluans_2026-10-14.csv  (588 satir, 34 sutun)
+Excel dosyasi: sonuclar\konfluans_2026-10-15.csv  (588 satir, 34 sutun)
 
-Sade liste  : sonuclar\firsatlar_2026-10-14.csv
+Sade liste  : sonuclar\firsatlar_2026-10-15.csv
 Renkli sayfa: index.html

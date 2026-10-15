@@ -1,0 +1,16 @@
+
+SUPERTREND TARAYICI  -  ATR 10 / Carpan 3 / Periyot 1D
+
+=== AL SINYALI: 1 hisse ===
+  HISSE   KAPANIS      DEG%    ST CIZGISI     ISLEM HACMI (TL)   TARIH
+  IZFAS     20.48    +9.93        12.46           65.754.378   15.10.2026
+
+=== SAT SINYALI: 0 hisse ===
+  (yok)
+
+TradingView listesine yapistirmak icin:
+  BIST:IZFAS
+
+Not: 7 hisse yeterli gecmis veriye sahip degil (yeni islem gormeye baslamis): INTET, NETGL, TKNKA, VEYAS, BKRGY, KPEKS, CITAS
+
+CSV yazildi: sonuclar\supertrend_2026-10-15.csv  (Excel ile acilabilir)
