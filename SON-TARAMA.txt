@@ -1,16 +1,21 @@
 
 SUPERTREND TARAYICI  -  ATR 10 / Carpan 3 / Periyot 1D
 
-=== AL SINYALI: 1 hisse ===
-  HISSE   KAPANIS      DEG%    ST CIZGISI     ISLEM HACMI (TL)   TARIH
-  IZFAS     20.48    +9.93        12.46           65.754.378   15.10.2026
-
-=== SAT SINYALI: 0 hisse ===
+=== AL SINYALI: 0 hisse ===
   (yok)
 
-TradingView listesine yapistirmak icin:
-  BIST:IZFAS
+=== SAT SINYALI: 9 hisse ===
+  HISSE   KAPANIS      DEG%    ST CIZGISI     ISLEM HACMI (TL)   TARIH
+  AKFIS     14.24    -9.99        18.80          154.237.527   16.10.2026
+  EKIM      16.15    -2.12        20.46          125.971.130   16.10.2026
+  LOGO     127.20    -4.43       146.58           81.065.196   16.10.2026
+  BERA      10.71    -3.16        12.33           47.669.118   16.10.2026
+  PRKME     13.04    -5.03        16.24           19.833.592   16.10.2026
+  AFYON     11.05    -3.49        12.61           18.341.343   16.10.2026
+  LYDYE   5287.50    -9.96      7328.74            1.919.363   16.10.2026
+  BASCM     10.99    -2.74        11.88            1.259.795   16.10.2026
+  ORMA     125.90    -2.48       142.64              722.162   16.10.2026
 
-Not: 7 hisse yeterli gecmis veriye sahip degil (yeni islem gormeye baslamis): INTET, NETGL, TKNKA, VEYAS, BKRGY, KPEKS, CITAS
+Not: 7 hisse yeterli gecmis veriye sahip degil (yeni islem gormeye baslamis): CITAS, KPEKS, NETGL, TKNKA, INTET, VEYAS, BKRGY
 
-CSV yazildi: sonuclar\supertrend_2026-10-15.csv  (Excel ile acilabilir)
+CSV yazildi: sonuclar\supertrend_2026-10-16.csv  (Excel ile acilabilir)
