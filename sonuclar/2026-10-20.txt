@@ -1,0 +1,16 @@
+
+SUPERTREND TARAYICI  -  ATR 10 / Carpan 3 / Periyot 1D
+
+=== AL SINYALI: 0 hisse ===
+  (yok)
+
+=== SAT SINYALI: 4 hisse ===
+  HISSE   KAPANIS      DEG%    ST CIZGISI     ISLEM HACMI (TL)   TARIH
+  INFO       0.98    -9.26         1.50           95.484.906   20.10.2026
+  SUMAS    202.10    -9.98       246.67            1.148.534   20.10.2026
+  EKIZ      43.50    -9.90        55.53              861.605   20.10.2026
+  YBTAS     10.25    -0.97        11.42              582.108   20.10.2026
+
+Not: 7 hisse yeterli gecmis veriye sahip degil (yeni islem gormeye baslamis): INTET, CITAS, KPEKS, NETGL, TKNKA, BKRGY, VEYAS
+
+CSV yazildi: sonuclar\supertrend_2026-10-20.csv  (Excel ile acilabilir)
