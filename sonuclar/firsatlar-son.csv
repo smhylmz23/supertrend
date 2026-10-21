@@ -1,22 +1,20 @@
 sira;hisse;karar;skor;risk;potansiyel_%;osilator;temel;bilanco;haber;analist_hedef;haber_7gun
-1;SANKO;GÜÇLÜ AL;85;orta (28);5,9;5/6;negatif;notr;yok;;0
-2;ENERY;GÜÇLÜ AL;83;düşük (16);4,9;2/6;pozitif;notr;notr;20,00;0
-3;AHGAZ;GÜÇLÜ AL;83;düşük (20);3,0;3/6;pozitif;notr;notr;65,00;0
-4;HRKET;GÜÇLÜ AL;82;düşük (0);19,2;2/6;negatif;notr;yok;;0
-5;INDES;AL;93;düşük (14);2,5;2/6;negatif;notr;pozitif;15,00;2
-6;GLYHO;AL;88;düşük (0);6,7;3/6;notr;notr;yok;;0
-7;METRO;AL;83;düşük (8);11,3;5/6;pozitif;negatif;yok;;0
-8;GMTAS;AL;80;düşük (0);8,5;5/6;negatif;notr;yok;;0
-9;TAVHL;AL;80;düşük (10);2,4;5/6;notr;yok;pozitif;450,42;7
-10;ETILR;AL;77;düşük (0);7,8;2/6;negatif;notr;yok;;0
-11;DMLKT;AL;76;düşük (0);4,0;3/6;yok;yok;pozitif;33,50;3
-12;DURDO;AL;71;düşük (0);19,4;2/6;negatif;yok;yok;;0
-13;ETYAT;AL;68;düşük (0);34,2;5/6;negatif;yok;yok;;0
-14;USHOL;AL;64;düşük (0);35,4;6/6;pozitif;negatif;yok;;0
-15;RYGYO;İZLE;80;yüksek (46);9,2;2/6;pozitif;notr;yok;;0
-16;ISDMR;İZLE;66;düşük (0);12,1;1/6;notr;notr;notr;68,20;0
-17;KRGYO;İZLE;60;orta (22);23,6;0/6;negatif;negatif;yok;;0
-18;HUBVC;İZLE;58;düşük (0);43,3;5/6;negatif;notr;yok;;0
-19;HUNER;İZLE;58;düşük (0);19,7;0/6;negatif;negatif;yok;;0
-20;HKTM;İZLE;53;düşük (0);39,1;4/6;negatif;negatif;yok;;0
-21;BEGYO;İZLE;53;düşük (12);35,6;5/6;notr;yok;yok;;0
+1;AHGAZ;GÜÇLÜ AL;79;düşük (0);11,0;1/6;pozitif;notr;notr;65,00;0
+2;HRKET;GÜÇLÜ AL;77;düşük (0);17,2;2/6;negatif;notr;yok;;2
+3;DURDO;GÜÇLÜ AL;76;düşük (0);21,0;2/6;negatif;yok;yok;;0
+4;TAVHL;AL;85;düşük (10);2,1;5/6;notr;yok;pozitif;450,42;11
+5;INDES;AL;80;düşük (6);6,5;3/6;negatif;notr;pozitif;15,00;3
+6;GMTAS;AL;79;düşük (0);9,4;4/6;negatif;notr;yok;;0
+7;DMLKT;AL;76;düşük (6);4,3;2/6;yok;yok;pozitif;33,50;3
+8;ETILR;AL;76;düşük (0);9,4;4/6;negatif;notr;yok;;0
+9;USHOL;AL;74;düşük (0);32,5;6/6;pozitif;negatif;yok;;0
+10;SANKO;AL;63;orta (28);13,0;3/6;negatif;notr;yok;;0
+11;LIDFA;AL;60;düşük (20);15,6;5/6;notr;pozitif;yok;;0
+12;GLYHO;İZLE;81;düşük (0);11,6;1/6;notr;notr;yok;;0
+13;RYGYO;İZLE;80;orta (40);9,2;4/6;pozitif;notr;yok;;1
+14;METRO;İZLE;65;düşük (8);17,6;4/6;pozitif;negatif;yok;;0
+15;KRGYO;İZLE;63;orta (22);22,4;0/6;negatif;negatif;yok;;0
+16;ULUFA;İZLE;56;düşük (8);13,2;5/6;pozitif;pozitif;yok;;1
+17;BORLS;İZLE;54;düşük (12);109,8;5/6;yok;notr;yok;;1
+18;HUBVC;İZLE;52;düşük (0);46,6;5/6;negatif;notr;yok;;0
+19;ETYAT;İZLE;52;düşük (0);49,1;3/6;negatif;yok;yok;;0

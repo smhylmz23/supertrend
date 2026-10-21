@@ -1,16 +1,34 @@
 
 SUPERTREND TARAYICI  -  ATR 10 / Carpan 3 / Periyot 1D
 
-=== AL SINYALI: 0 hisse ===
-  (yok)
-
-=== SAT SINYALI: 4 hisse ===
+=== AL SINYALI: 1 hisse ===
   HISSE   KAPANIS      DEG%    ST CIZGISI     ISLEM HACMI (TL)   TARIH
-  INFO       0.98    -9.26         1.50           95.484.906   20.10.2026
-  SUMAS    202.10    -9.98       246.67            1.148.534   20.10.2026
-  EKIZ      43.50    -9.90        55.53              861.605   20.10.2026
-  YBTAS     10.25    -0.97        11.42              582.108   20.10.2026
+  ULUFA      1.59    +9.66         1.38           21.993.996   21.10.2026
 
-Not: 7 hisse yeterli gecmis veriye sahip degil (yeni islem gormeye baslamis): INTET, CITAS, KPEKS, NETGL, TKNKA, BKRGY, VEYAS
+=== SAT SINYALI: 18 hisse ===
+  HISSE   KAPANIS      DEG%    ST CIZGISI     ISLEM HACMI (TL)   TARIH
+  ENERY     12.79    -9.03        15.34        1.014.037.935   21.10.2026
+  ORGE      20.00    -3.85        23.20          158.063.260   21.10.2026
+  LMKDC     19.70    -6.64        23.18           86.155.153   21.10.2026
+  AAGYO      7.47    -1.97         9.06           53.101.406   21.10.2026
+  BEGYO      3.04    -9.79         4.15           41.270.453   21.10.2026
+  SAFKR     11.28    -4.73        13.81           21.333.108   21.10.2026
+  OTTO      87.35    -9.99       123.20           16.246.314   21.10.2026
+  POLTK   2850.00    -4.52      3732.85           11.858.850   21.10.2026
+  CUSAN     16.96    -9.98        22.40           11.326.770   21.10.2026
+  ANGEN      6.71    -2.04         8.13            7.841.286   21.10.2026
+  COSMO     78.00    -5.74       102.21            7.639.476   21.10.2026
+  SERNT      5.07    -8.15         6.57            5.146.172   21.10.2026
+  MEPET     17.19    -6.93        22.27            5.101.339   21.10.2026
+  YONGA     29.08    -9.13        36.95            1.323.809   21.10.2026
+  CRDFA     12.64    -9.97        17.64            1.113.432   21.10.2026
+  INTEK    159.90    -6.33       189.81              882.168   21.10.2026
+  ATEKS     81.95    -3.93        96.09              802.209   21.10.2026
+  GATEG    121.20    -9.96       162.11              783.437   21.10.2026
 
-CSV yazildi: sonuclar\supertrend_2026-10-20.csv  (Excel ile acilabilir)
+TradingView listesine yapistirmak icin:
+  BIST:ULUFA
+
+Not: 7 hisse yeterli gecmis veriye sahip degil (yeni islem gormeye baslamis): CITAS, TKNKA, NETGL, INTET, KPEKS, BKRGY, VEYAS
+
+CSV yazildi: sonuclar\supertrend_2026-10-21.csv  (Excel ile acilabilir)
