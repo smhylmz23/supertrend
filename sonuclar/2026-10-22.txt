@@ -1,0 +1,28 @@
+
+SUPERTREND TARAYICI  -  ATR 10 / Carpan 3 / Periyot 1D
+
+=== AL SINYALI: 1 hisse ===
+  HISSE   KAPANIS      DEG%    ST CIZGISI     ISLEM HACMI (TL)   TARIH
+  DGNMO      4.93    +5.34         3.37          111.159.520   22.10.2026
+
+=== SAT SINYALI: 12 hisse ===
+  HISSE   KAPANIS      DEG%    ST CIZGISI     ISLEM HACMI (TL)   TARIH
+  AHGAZ     42.72    -3.35        50.15          179.517.215   22.10.2026
+  HRKET      8.53    -4.16        10.60          161.798.192   22.10.2026
+  GEREL     19.95    -9.56        28.62          136.025.065   22.10.2026
+  HUNER      3.77    -2.08         4.46           72.936.105   22.10.2026
+  GLYHO     15.97    -4.37        18.47           72.153.211   22.10.2026
+  ISDMR     55.25    -2.81        64.94           59.838.181   22.10.2026
+  FRIGO      1.86    -9.27         2.40           50.787.125   22.10.2026
+  HEDEF     14.49   -10.00        21.84            8.575.892   22.10.2026
+  VKFYO     16.30    -7.33        21.07            4.049.507   22.10.2026
+  TMPOL    102.30    -9.95       149.47            1.625.956   22.10.2026
+  EMNIS    112.50   -10.00       136.48              856.350   22.10.2026
+  YYAPI      0.54    -3.57         0.63              635.409   22.10.2026
+
+TradingView listesine yapistirmak icin:
+  BIST:DGNMO
+
+Not: 7 hisse yeterli gecmis veriye sahip degil (yeni islem gormeye baslamis): CITAS, TKNKA, INTET, NETGL, KPEKS, VEYAS, BKRGY
+
+CSV yazildi: sonuclar\supertrend_2026-10-22.csv  (Excel ile acilabilir)

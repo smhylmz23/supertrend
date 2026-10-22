@@ -3,32 +3,26 @@ SUPERTREND TARAYICI  -  ATR 10 / Carpan 3 / Periyot 1D
 
 === AL SINYALI: 1 hisse ===
   HISSE   KAPANIS      DEG%    ST CIZGISI     ISLEM HACMI (TL)   TARIH
-  ULUFA      1.59    +9.66         1.38           21.993.996   21.10.2026
+  DGNMO      4.93    +5.34         3.37          111.159.520   22.10.2026
 
-=== SAT SINYALI: 18 hisse ===
+=== SAT SINYALI: 12 hisse ===
   HISSE   KAPANIS      DEG%    ST CIZGISI     ISLEM HACMI (TL)   TARIH
-  ENERY     12.79    -9.03        15.34        1.014.037.935   21.10.2026
-  ORGE      20.00    -3.85        23.20          158.063.260   21.10.2026
-  LMKDC     19.70    -6.64        23.18           86.155.153   21.10.2026
-  AAGYO      7.47    -1.97         9.06           53.101.406   21.10.2026
-  BEGYO      3.04    -9.79         4.15           41.270.453   21.10.2026
-  SAFKR     11.28    -4.73        13.81           21.333.108   21.10.2026
-  OTTO      87.35    -9.99       123.20           16.246.314   21.10.2026
-  POLTK   2850.00    -4.52      3732.85           11.858.850   21.10.2026
-  CUSAN     16.96    -9.98        22.40           11.326.770   21.10.2026
-  ANGEN      6.71    -2.04         8.13            7.841.286   21.10.2026
-  COSMO     78.00    -5.74       102.21            7.639.476   21.10.2026
-  SERNT      5.07    -8.15         6.57            5.146.172   21.10.2026
-  MEPET     17.19    -6.93        22.27            5.101.339   21.10.2026
-  YONGA     29.08    -9.13        36.95            1.323.809   21.10.2026
-  CRDFA     12.64    -9.97        17.64            1.113.432   21.10.2026
-  INTEK    159.90    -6.33       189.81              882.168   21.10.2026
-  ATEKS     81.95    -3.93        96.09              802.209   21.10.2026
-  GATEG    121.20    -9.96       162.11              783.437   21.10.2026
+  AHGAZ     42.72    -3.35        50.15          179.517.215   22.10.2026
+  HRKET      8.53    -4.16        10.60          161.798.192   22.10.2026
+  GEREL     19.95    -9.56        28.62          136.025.065   22.10.2026
+  HUNER      3.77    -2.08         4.46           72.936.105   22.10.2026
+  GLYHO     15.97    -4.37        18.47           72.153.211   22.10.2026
+  ISDMR     55.25    -2.81        64.94           59.838.181   22.10.2026
+  FRIGO      1.86    -9.27         2.40           50.787.125   22.10.2026
+  HEDEF     14.49   -10.00        21.84            8.575.892   22.10.2026
+  VKFYO     16.30    -7.33        21.07            4.049.507   22.10.2026
+  TMPOL    102.30    -9.95       149.47            1.625.956   22.10.2026
+  EMNIS    112.50   -10.00       136.48              856.350   22.10.2026
+  YYAPI      0.54    -3.57         0.63              635.409   22.10.2026
 
 TradingView listesine yapistirmak icin:
-  BIST:ULUFA
+  BIST:DGNMO
 
-Not: 7 hisse yeterli gecmis veriye sahip degil (yeni islem gormeye baslamis): CITAS, TKNKA, NETGL, INTET, KPEKS, BKRGY, VEYAS
+Not: 7 hisse yeterli gecmis veriye sahip degil (yeni islem gormeye baslamis): CITAS, TKNKA, INTET, NETGL, KPEKS, VEYAS, BKRGY
 
-CSV yazildi: sonuclar\supertrend_2026-10-21.csv  (Excel ile acilabilir)
+CSV yazildi: sonuclar\supertrend_2026-10-22.csv  (Excel ile acilabilir)
