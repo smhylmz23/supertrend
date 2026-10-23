@@ -1,28 +1,24 @@
 
 SUPERTREND TARAYICI  -  ATR 10 / Carpan 3 / Periyot 1D
 
-=== AL SINYALI: 1 hisse ===
+=== AL SINYALI: 2 hisse ===
   HISSE   KAPANIS      DEG%    ST CIZGISI     ISLEM HACMI (TL)   TARIH
-  DGNMO      4.93    +5.34         3.37          111.159.520   22.10.2026
+  DCTTR      4.26    +9.79         3.05          115.536.721   23.10.2026
+  DOCO   11732.50    +6.68     10330.95           75.545.568   23.10.2026
 
-=== SAT SINYALI: 12 hisse ===
+=== SAT SINYALI: 7 hisse ===
   HISSE   KAPANIS      DEG%    ST CIZGISI     ISLEM HACMI (TL)   TARIH
-  AHGAZ     42.72    -3.35        50.15          179.517.215   22.10.2026
-  HRKET      8.53    -4.16        10.60          161.798.192   22.10.2026
-  GEREL     19.95    -9.56        28.62          136.025.065   22.10.2026
-  HUNER      3.77    -2.08         4.46           72.936.105   22.10.2026
-  GLYHO     15.97    -4.37        18.47           72.153.211   22.10.2026
-  ISDMR     55.25    -2.81        64.94           59.838.181   22.10.2026
-  FRIGO      1.86    -9.27         2.40           50.787.125   22.10.2026
-  HEDEF     14.49   -10.00        21.84            8.575.892   22.10.2026
-  VKFYO     16.30    -7.33        21.07            4.049.507   22.10.2026
-  TMPOL    102.30    -9.95       149.47            1.625.956   22.10.2026
-  EMNIS    112.50   -10.00       136.48              856.350   22.10.2026
-  YYAPI      0.54    -3.57         0.63              635.409   22.10.2026
+  BALSU      7.23    -1.77         9.04          176.923.935   23.10.2026
+  IZFAS     13.12    -8.25        20.10           75.702.885   23.10.2026
+  TUREX      4.98    -2.35         5.78           43.625.861   23.10.2026
+  ERCB      32.02    -5.21        40.21           28.862.796   23.10.2026
+  ETYAT      9.99    -0.30        12.58           11.993.185   23.10.2026
+  VANGD     55.10    -8.17        78.82            8.000.465   23.10.2026
+  SKYLP     61.20    -9.93        87.45            1.437.527   23.10.2026
 
 TradingView listesine yapistirmak icin:
-  BIST:DGNMO
+  BIST:DCTTR,BIST:DOCO
 
-Not: 7 hisse yeterli gecmis veriye sahip degil (yeni islem gormeye baslamis): CITAS, TKNKA, INTET, NETGL, KPEKS, VEYAS, BKRGY
+Not: 7 hisse yeterli gecmis veriye sahip degil (yeni islem gormeye baslamis): CITAS, KPEKS, INTET, NETGL, TKNKA, BKRGY, VEYAS
 
-CSV yazildi: sonuclar\supertrend_2026-10-22.csv  (Excel ile acilabilir)
+CSV yazildi: sonuclar\supertrend_2026-10-23.csv  (Excel ile acilabilir)
