@@ -1,0 +1,12 @@
+
+SUPERTREND TARAYICI  -  ATR 10 / Carpan 3 / Periyot 1D
+
+=== AL SINYALI: 0 hisse ===
+  (yok)
+
+=== SAT SINYALI: 0 hisse ===
+  (yok)
+
+Not: 6 hisse yeterli gecmis veriye sahip degil (yeni islem gormeye baslamis): INTET, NETGL, TKNKA, KPEKS, VEYAS, BKRGY
+
+CSV yazildi: sonuclar\supertrend_2026-10-26.csv  (Excel ile acilabilir)
