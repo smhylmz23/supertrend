@@ -6,7 +6,7 @@
 <meta name="description" content="BIST hisselerinin konfluans skoru ve osilatör durumu — her iş günü 18:45'te yenilenir.">
 <meta name="theme-color" content="#0B0C0E">
 <meta http-equiv="Cache-Control" content="no-cache, must-revalidate">
-<title>BIST Günlük Tarama — 28.10.2026</title>
+<title>BIST Günlük Tarama — 30.10.2026</title>
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='7' fill='%230B0C0E'/><path d='M7 21l5-6 4 3 9-10' stroke='%2334D07F' stroke-width='3' fill='none' stroke-linecap='round' stroke-linejoin='round'/></svg>">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -226,13 +226,13 @@
   <div class="kutu kutu-baslik">
     <div>
       <h1>BIST Günlük Tarama</h1>
-      <p class="altbaslik"><b>28.10.2026</b> kapanışı · konfluans sistemi + osilatör paneli</p>
+      <p class="altbaslik"><b>30.10.2026</b> kapanışı · konfluans sistemi + osilatör paneli</p>
     </div>
   </div>
   <div class="kutu vurgu"><div class="sayac"><span class="n">1</span><span class="e">Güçlü al</span></div></div>
-  <div class="kutu"><div class="sayac"><span class="n">5</span><span class="e">Al</span></div></div>
-  <div class="kutu"><div class="sayac"><span class="n">5</span><span class="e">İzle</span></div></div>
-  <div class="kutu"><div class="sayac"><span class="n">11</span><span class="e">Taranan</span></div></div>
+  <div class="kutu"><div class="sayac"><span class="n">6</span><span class="e">Al</span></div></div>
+  <div class="kutu"><div class="sayac"><span class="n">3</span><span class="e">İzle</span></div></div>
+  <div class="kutu"><div class="sayac"><span class="n">10</span><span class="e">Taranan</span></div></div>
   
   <div class="uyari" id="bayatUyari" hidden><b>Bu liste son kapanışa ait olmayabilir.</b><span id="bayatMetin"></span></div>
 </section>
@@ -240,27 +240,27 @@
 <nav class="kontrol" aria-label="Filtreler">
   <div class="suzgec">
     <button data-g="guclu" aria-pressed="true">Güçlü al <b>1</b></button>
-    <button data-g="al" aria-pressed="true">Al <b>5</b></button>
-    <button data-g="izle" aria-pressed="false">İzle <b>5</b></button>
+    <button data-g="al" aria-pressed="true">Al <b>6</b></button>
+    <button data-g="izle" aria-pressed="false">İzle <b>3</b></button>
     <button id="tumuBtn">Tümü</button>
     <span class="ayrac"></span>
     <button data-s="1" aria-pressed="false" title="Supertrend'in tam bugün yukarı döndüğü hisseler">Bugün ST al <b>1</b></button>
     <button data-th="1" aria-pressed="false" title="Günü artıda kapatmış, hacmi 500 binin üzerinde, göreceli hacmi 1.5×'ten yüksek, SMA20 &gt; SMA50 ve fiyatı EMA9 üzerinde olanlar">Trend + hacim <b>0</b></button>
-    <button data-da="1" aria-pressed="false" title="RSI son 5 günde 30'u yukarı kesmiş, Stokastik %K &gt; %D, MACD sinyal hattının üzerinde ve 30 günlük ortalama hacmi 300 binin üzerinde olanlar">Dip avcılığı <b>1</b></button>
-    <button data-tm="1" aria-pressed="false" title="PD/DD, ROE, net marj ve borç/özkaynak — piyasa medyanına göre çoğunlukla iyi olanlar">Temel pozitif <b>3</b></button>
+    <button data-da="1" aria-pressed="false" title="RSI son 5 günde 30'u yukarı kesmiş, Stokastik %K &gt; %D, MACD sinyal hattının üzerinde ve 30 günlük ortalama hacmi 300 binin üzerinde olanlar">Dip avcılığı <b>2</b></button>
+    <button data-tm="1" aria-pressed="false" title="PD/DD, ROE, net marj ve borç/özkaynak — piyasa medyanına göre çoğunlukla iyi olanlar">Temel pozitif <b>4</b></button>
     <button data-bl="1" aria-pressed="false" title="Son çeyrek gelir ve net kâr büyümesi — piyasa medyanının üzerinde olanlar">Bilanço pozitif <b>1</b></button>
-    <button data-hb="1" aria-pressed="false" title="Son 3 analist tavsiyesi ağırlıklı olarak AL / Endeks Üstü olanlar">Haber pozitif <b>1</b></button>
+    <button data-hb="1" aria-pressed="false" title="Son 3 analist tavsiyesi ağırlıklı olarak AL / Endeks Üstü olanlar">Haber pozitif <b>2</b></button>
     <button id="canliBtn" type="button" aria-pressed="false" title="Borsa açıkken hisselerin o anki fiyatını ve Supertrend yönünü gösterir">◉ Canlı</button>
     <button data-r="1" aria-pressed="false">★ Radarım <b id="radarSayi">0</b></button>
     <button id="senkronBtn" type="button" title="Yıldızladığınız hisseleri telefon ve bilgisayar arasında eşitleyin">⇄ Senkron</button>
     <span class="ayrac"></span>
     <select id="endekssec" aria-label="Endeks">
       <option value="">Tüm endeksler</option>
-      <optgroup label="Ana endeksler"><option value="XYLDZ">Yıldız Pazar (2)</option><option value="XBANA">Ana Pazar (8)</option><option value="XTUMY">BIST Tüm-100 (10)</option><option value="XUTUM">BIST Tüm (10)</option></optgroup><optgroup label="Sektör endeksleri"><option value="XUMAL">Mali (5)</option><option value="XUSIN">Sınai (2)</option><option value="XUHIZ">Hizmetler (3)</option><option value="XTEKS">Tekstil &amp; Deri (1)</option><option value="XKAGT">Orman, Kâğıt, Basım (1)</option><option value="XTCRT">Ticaret (2)</option><option value="XTRZM">Turizm (1)</option><option value="XFINK">Finansal Kiralama &amp; Faktoring (1)</option><option value="XGMYO">Gayrimenkul Yat. Ort. (2)</option><option value="XHOLD">Holding &amp; Yatırım (1)</option></optgroup><optgroup label="Tema endeksleri"><option value="XUSRD">Sürdürülebilirlik (1)</option><option value="XKURY">Kurumsal Yönetim (1)</option><option value="XKTUM">Katılım Tüm (3)</option><option value="XK100">Katılım 100 (1)</option></optgroup><optgroup label="Şehir endeksleri"><option value="XSIST">İstanbul (2)</option><option value="XSDNZ">Denizli (1)</option></optgroup>
+      <optgroup label="Ana endeksler"><option value="XU050">BIST 50 (1)</option><option value="XU100">BIST 100 (1)</option><option value="XYUZO">BIST 100-30 (1)</option><option value="XELOT">BIST 50-30 (1)</option><option value="XYLDZ">Yıldız Pazar (3)</option><option value="XBANA">Ana Pazar (7)</option><option value="XTUMY">BIST Tüm-100 (8)</option><option value="XUTUM">BIST Tüm (9)</option></optgroup><optgroup label="Sektör endeksleri"><option value="XUMAL">Mali (3)</option><option value="XUSIN">Sınai (2)</option><option value="XUHIZ">Hizmetler (4)</option><option value="XTEKS">Tekstil &amp; Deri (1)</option><option value="XKAGT">Orman, Kâğıt, Basım (1)</option><option value="XTCRT">Ticaret (3)</option><option value="XTRZM">Turizm (1)</option><option value="XGMYO">Gayrimenkul Yat. Ort. (2)</option><option value="XHOLD">Holding &amp; Yatırım (1)</option></optgroup><optgroup label="Tema endeksleri"><option value="XTMTU">Temettü (1)</option><option value="XTM25">Temettü 25 (1)</option><option value="XUSRD">Sürdürülebilirlik (2)</option><option value="XKURY">Kurumsal Yönetim (1)</option><option value="XKTUM">Katılım Tüm (3)</option><option value="XK100">Katılım 100 (1)</option></optgroup><optgroup label="Şehir endeksleri"><option value="XSIST">İstanbul (3)</option><option value="XSDNZ">Denizli (1)</option></optgroup>
     </select>
     <select id="sektorsec" aria-label="Sektör">
       <option value="">Tüm sektörler</option>
-      <option value="Finance">Finans (5)</option><option value="Process Industries">Kimya &amp; Temel Sanayi (2)</option><option value="Consumer Services">Tüketici Hizmetleri (1)</option><option value="Retail Trade">Perakende (1)</option><option value="Distribution Services">Dağıtım &amp; Toptan (1)</option><option value="Consumer Non-Durables">Gıda &amp; Dayanıksız Tüketim (1)</option>
+      <option value="Finance">Finans (3)</option><option value="Retail Trade">Perakende (2)</option><option value="Process Industries">Kimya &amp; Temel Sanayi (2)</option><option value="Consumer Services">Tüketici Hizmetleri (1)</option><option value="Distribution Services">Dağıtım &amp; Toptan (1)</option><option value="Consumer Non-Durables">Gıda &amp; Dayanıksız Tüketim (1)</option>
     </select>
     <select id="sirasec" aria-label="Sıralama">
       <option value="varsayilan">Karar sırası</option>
@@ -280,93 +280,67 @@
 
 <main id="liste">
 <p id="bosMesaj" class="bos">Seçili grupta gösterilecek hisse yok.</p>
-<article class="kart guclu" data-durum="guclu" data-ad="DOCO" data-sira="0" data-skor="79.29" data-risk="0" data-pot="10.33" data-osc="4" data-st="0" data-th="0" data-da="0" data-tm="notr" data-bl="notr" data-hb="yok" data-sk="Consumer Services" data-ex="XTUMY XUTUM XTRZM XUHIZ XBANA XUSRD" data-mv="pozitif">
+<article class="kart guclu" data-durum="guclu" data-ad="DOCO" data-sira="0" data-skor="98.63" data-risk="8" data-pot="3.80" data-osc="6" data-st="0" data-th="0" data-da="0" data-tm="notr" data-bl="notr" data-hb="yok" data-sk="Consumer Services" data-ex="XTUMY XUTUM XTRZM XUHIZ XBANA XUSRD" data-mv="pozitif">
   <div class="kart-ust">
     <div class="kimlik">
       <h3 class="ad">DOCO</h3>
       <span class="etiket e-guclu">GÜÇLÜ AL</span>
     </div>
-    <span class="skor">79</span>
+    <span class="skor">99</span>
   </div>
-  <div class="olcek"><i style="width:79.28634194103456%"></i></div>
+  <div class="olcek"><i style="width:98.63044496352481%"></i></div>
   <div class="canli-satir" hidden></div>
   <div class="kart-alt">
     <span class="radar-bilgi"></span>
     <button class="radarBtn" type="button" title="Radarıma ekle" aria-label="DOCO radarıma ekle">☆</button>
   </div>
   <dl class="metrik">
-    <div><dt>Risk</dt><dd class="r-dusuk">0</dd></div>
-    <div><dt>Potansiyel</dt><dd class="arti">+10.3%</dd></div>
-    <div><dt>Osilatör</dt><dd>4<span class="bolu">/6</span></dd></div>
+    <div><dt>Risk</dt><dd class="r-dusuk">8</dd></div>
+    <div><dt>Potansiyel</dt><dd class="arti">+3.8%</dd></div>
+    <div><dt>Osilatör</dt><dd>6<span class="bolu">/6</span></dd></div>
   </dl>
   <div class="analiz">
-    <span class="rozet d-notr" title="Piyasa medyanına göre — PD/DD 4.30 (medyan 0.79) · ROE +24% (medyan +2%) · Net marj +4% (medyan +1%) · Borç/Özkaynak 0.48 (medyan 0.24)"><i></i>Temel</span>
+    <span class="rozet d-notr" title="Piyasa medyanına göre — PD/DD 4.57 (medyan 0.76) · ROE +24% (medyan +2%) · Net marj +4% (medyan +1%) · Borç/Özkaynak 0.48 (medyan 0.25)"><i></i>Temel</span>
     <span class="rozet d-notr" title="Son çeyrek — Geçen yılın aynı çeyreğine göre: net kâr +32% → normal · Bir önceki çeyreğe göre: net kâr +53% → iyi · Gelir (yıllık) +20% → normal — iyi/normal/kötü ayrımı piyasanın alt ve üst üçte birlik dilimine göre"><i></i>Bilanço</span>
     <span class="rozet d-yok" title="Analist tavsiyesi bulunamadı — nokta bu yüzden renksiz — Son 7 günde 0 haber, 90 günde 0 — Son başlık: HSBC DOCO için 12500 TL hedef fiyat belirledi ve AL tavsiyesini korudu. (Önceki hedef fiyat: 12500 TL)"><i></i>Haber</span>
     <span class="rozet d-pozitif" title="Kasım ayında son 15 yılın 11'inde yükselmiş (%73)"><i></i>Mevsim</span>
   </div>
 </article>
-<article class="kart al" data-durum="al" data-ad="GMTAS" data-sira="1" data-skor="82.21" data-risk="0" data-pot="7.18" data-osc="5" data-st="0" data-th="0" data-da="0" data-tm="negatif" data-bl="notr" data-hb="yok" data-sk="Retail Trade" data-ex="XTUMY XUTUM XTCRT XUHIZ XK100 XKTUM XYLDZ XBANA" data-mv="yok">
+<article class="kart al" data-durum="al" data-ad="GMTAS" data-sira="1" data-skor="94.20" data-risk="10" data-pot="4.17" data-osc="4" data-st="0" data-th="0" data-da="0" data-tm="negatif" data-bl="notr" data-hb="yok" data-sk="Retail Trade" data-ex="XTUMY XUTUM XTCRT XUHIZ XK100 XKTUM XYLDZ XBANA" data-mv="yok">
   <div class="kart-ust">
     <div class="kimlik">
       <h3 class="ad">GMTAS</h3>
       <span class="etiket e-al">AL</span>
     </div>
-    <span class="skor">82</span>
+    <span class="skor">94</span>
   </div>
-  <div class="olcek"><i style="width:82.21282686946356%"></i></div>
+  <div class="olcek"><i style="width:94.19884265215438%"></i></div>
   <div class="canli-satir" hidden></div>
   <div class="kart-alt">
     <span class="radar-bilgi"></span>
     <button class="radarBtn" type="button" title="Radarıma ekle" aria-label="GMTAS radarıma ekle">☆</button>
   </div>
   <dl class="metrik">
-    <div><dt>Risk</dt><dd class="r-dusuk">0</dd></div>
-    <div><dt>Potansiyel</dt><dd class="arti">+7.2%</dd></div>
-    <div><dt>Osilatör</dt><dd>5<span class="bolu">/6</span></dd></div>
+    <div><dt>Risk</dt><dd class="r-dusuk">10</dd></div>
+    <div><dt>Potansiyel</dt><dd class="arti">+4.2%</dd></div>
+    <div><dt>Osilatör</dt><dd>4<span class="bolu">/6</span></dd></div>
   </dl>
   <div class="analiz">
-    <span class="rozet d-negatif" title="Piyasa medyanına göre — PD/DD 3.41 (medyan 0.79) · ROE -2% (medyan +2%) · Net marj -2% (medyan +1%) · Borç/Özkaynak 0.03 (medyan 0.24)"><i></i>Temel</span>
+    <span class="rozet d-negatif" title="Piyasa medyanına göre — PD/DD 3.59 (medyan 0.76) · ROE -2% (medyan +2%) · Net marj -2% (medyan +1%) · Borç/Özkaynak 0.03 (medyan 0.25)"><i></i>Temel</span>
     <span class="rozet d-notr" title="Son çeyrek — Geçen yılın aynı çeyreğine göre: net kâr -40% → normal · Bir önceki çeyreğe göre: net kâr -138% → kötü · Gelir (yıllık) +32% → normal — iyi/normal/kötü ayrımı piyasanın alt ve üst üçte birlik dilimine göre"><i></i>Bilanço</span>
-    <span class="rozet d-yok" title="Analist tavsiyesi bulunamadı — nokta bu yüzden renksiz — Son 7 günde 0 haber, 90 günde 2 — Son başlık: GMTAS Gimat Mağazacılık Sanayi ve Tic. solo bilanço 2026 6 aylık net karı 81,524,332 TL (Önceki: 33,510,159 TL net kar)"><i></i>Haber</span>
+    <span class="rozet d-yok" title="Analist tavsiyesi bulunamadı — nokta bu yüzden renksiz — Son 7 günde 1 haber, 90 günde 3 — Son başlık: GMTAS Gimat Mağazacılık Sanayi ve Tic. solo bilanço 2026 9 aylık net karı 67,211,402 TL (Önceki: 78,426,792 TL net zarar)"><i></i>Haber</span>
     <span class="rozet d-yok" title="Kasım için yeterli geçmiş yok (en az 8 yıl gerekiyor) — elde 5 yıl var"><i></i>Mevsim</span>
   </div>
 </article>
-<article class="kart al" data-durum="al" data-ad="KRGYO" data-sira="2" data-skor="70.90" data-risk="22" data-pot="18.27" data-osc="2" data-st="0" data-th="0" data-da="0" data-tm="negatif" data-bl="negatif" data-hb="yok" data-sk="Finance" data-ex="XTUMY XUTUM XGMYO XUMAL XKTUM XBANA" data-mv="notr">
-  <div class="kart-ust">
-    <div class="kimlik">
-      <h3 class="ad">KRGYO</h3>
-      <span class="etiket e-al">AL</span>
-    </div>
-    <span class="skor">71</span>
-  </div>
-  <div class="olcek"><i style="width:70.90161357249904%"></i></div>
-  <div class="canli-satir" hidden></div>
-  <div class="kart-alt">
-    <span class="radar-bilgi"></span>
-    <button class="radarBtn" type="button" title="Radarıma ekle" aria-label="KRGYO radarıma ekle">☆</button>
-  </div>
-  <dl class="metrik">
-    <div><dt>Risk</dt><dd class="r-orta">22</dd></div>
-    <div><dt>Potansiyel</dt><dd class="arti">+18.3%</dd></div>
-    <div><dt>Osilatör</dt><dd>2<span class="bolu">/6</span></dd></div>
-  </dl>
-  <div class="analiz">
-    <span class="rozet d-negatif" title="Piyasa medyanına göre — PD/DD 1.17 (medyan 0.79) · ROE -2% (medyan +2%) · Net marj -15% (medyan +1%) · Borç/Özkaynak 0.00 (medyan 0.24)"><i></i>Temel</span>
-    <span class="rozet d-negatif" title="Son çeyrek — Geçen yılın aynı çeyreğine göre: net kâr -98% → kötü · Bir önceki çeyreğe göre: net kâr — → yok · Gelir (yıllık) -41% → kötü — iyi/normal/kötü ayrımı piyasanın alt ve üst üçte birlik dilimine göre"><i></i>Bilanço</span>
-    <span class="rozet d-yok" title="Analist tavsiyesi bulunamadı — nokta bu yüzden renksiz — Son 7 günde 1 haber, 90 günde 3 — Son başlık: KRGYO Körfez Gayrimenkul Yatırım Ortaklığı solo bilanço 2026 9 aylık net zararı 45,809,990 TL (Önceki: 170,544,756 TL net kar)"><i></i>Haber</span>
-    <span class="rozet d-notr" title="Kasım ayında son 12 yılın 6'inde yükselmiş (%50)"><i></i>Mevsim</span>
-  </div>
-</article>
-<article class="kart al" data-durum="al" data-ad="USHOL" data-sira="3" data-skor="70.19" data-risk="8" data-pot="22.07" data-osc="4" data-st="0" data-th="0" data-da="0" data-tm="pozitif" data-bl="negatif" data-hb="yok" data-sk="Distribution Services" data-ex="XTUMY XUTUM XHOLD XUMAL XSIST XBANA" data-mv="notr">
+<article class="kart al" data-durum="al" data-ad="USHOL" data-sira="2" data-skor="75.39" data-risk="8" data-pot="25.41" data-osc="4" data-st="0" data-th="0" data-da="0" data-tm="pozitif" data-bl="negatif" data-hb="yok" data-sk="Distribution Services" data-ex="XTUMY XUTUM XHOLD XUMAL XSIST XBANA" data-mv="notr">
   <div class="kart-ust">
     <div class="kimlik">
       <h3 class="ad">USHOL</h3>
       <span class="etiket e-al">AL</span>
     </div>
-    <span class="skor">70</span>
+    <span class="skor">75</span>
   </div>
-  <div class="olcek"><i style="width:70.19277286614563%"></i></div>
+  <div class="olcek"><i style="width:75.39246387891532%"></i></div>
   <div class="canli-satir" hidden></div>
   <div class="kart-alt">
     <span class="radar-bilgi"></span>
@@ -374,129 +348,77 @@
   </div>
   <dl class="metrik">
     <div><dt>Risk</dt><dd class="r-dusuk">8</dd></div>
-    <div><dt>Potansiyel</dt><dd class="arti">+22.1%</dd></div>
+    <div><dt>Potansiyel</dt><dd class="arti">+25.4%</dd></div>
     <div><dt>Osilatör</dt><dd>4<span class="bolu">/6</span></dd></div>
   </dl>
   <div class="analiz">
-    <span class="rozet d-pozitif" title="Piyasa medyanına göre — PD/DD 7.63 (medyan 0.79) · ROE +28% (medyan +2%) · Net marj +51% (medyan +1%) · Borç/Özkaynak 0.00 (medyan 0.24)"><i></i>Temel</span>
-    <span class="rozet d-negatif" title="Son çeyrek — Geçen yılın aynı çeyreğine göre: net kâr -76% → kötü · Bir önceki çeyreğe göre: net kâr — → yok · Gelir (yıllık) -100% → kötü — iyi/normal/kötü ayrımı piyasanın alt ve üst üçte birlik dilimine göre"><i></i>Bilanço</span>
+    <span class="rozet d-pozitif" title="Piyasa medyanına göre — PD/DD 7.43 (medyan 0.76) · ROE +28% (medyan +2%) · Net marj +51% (medyan +1%) · Borç/Özkaynak 0.00 (medyan 0.25)"><i></i>Temel</span>
+    <span class="rozet d-negatif" title="Son çeyrek — Geçen yılın aynı çeyreğine göre: net kâr -76% → normal · Bir önceki çeyreğe göre: net kâr — → yok · Gelir (yıllık) -100% → kötü — iyi/normal/kötü ayrımı piyasanın alt ve üst üçte birlik dilimine göre"><i></i>Bilanço</span>
     <span class="rozet d-yok" title="Analist tavsiyesi bulunamadı — nokta bu yüzden renksiz — Son 7 günde 0 haber, 90 günde 0"><i></i>Haber</span>
     <span class="rozet d-notr" title="Kasım ayında son 21 yılın 11'inde yükselmiş (%52)"><i></i>Mevsim</span>
   </div>
 </article>
-<article class="kart al" data-durum="al" data-ad="DMLKT" data-sira="4" data-skor="67.85" data-risk="0" data-pot="4.75" data-osc="1" data-st="0" data-th="0" data-da="0" data-tm="yok" data-bl="yok" data-hb="pozitif" data-sk="Finance" data-ex="" data-mv="yok">
+<article class="kart al" data-durum="al" data-ad="DMLKT" data-sira="3" data-skor="71.87" data-risk="6" data-pot="4.90" data-osc="0" data-st="0" data-th="0" data-da="0" data-tm="yok" data-bl="yok" data-hb="pozitif" data-sk="Finance" data-ex="" data-mv="yok">
   <div class="kart-ust">
     <div class="kimlik">
       <h3 class="ad">DMLKT</h3>
       <span class="etiket e-al">AL</span>
     </div>
-    <span class="skor">68</span>
+    <span class="skor">72</span>
   </div>
-  <div class="olcek"><i style="width:67.8500077699621%"></i></div>
+  <div class="olcek"><i style="width:71.86830086090744%"></i></div>
   <div class="canli-satir" hidden></div>
   <div class="kart-alt">
     <span class="radar-bilgi"></span>
     <button class="radarBtn" type="button" title="Radarıma ekle" aria-label="DMLKT radarıma ekle">☆</button>
   </div>
   <dl class="metrik">
-    <div><dt>Risk</dt><dd class="r-dusuk">0</dd></div>
-    <div><dt>Potansiyel</dt><dd class="arti">+4.7%</dd></div>
-    <div><dt>Osilatör</dt><dd>1<span class="bolu">/6</span></dd></div>
+    <div><dt>Risk</dt><dd class="r-dusuk">6</dd></div>
+    <div><dt>Potansiyel</dt><dd class="arti">+4.9%</dd></div>
+    <div><dt>Osilatör</dt><dd>0<span class="bolu">/6</span></dd></div>
   </dl>
   <div class="analiz">
-    <span class="rozet d-yok" title="Piyasa medyanına göre — PD/DD — (medyan 0.79) · ROE — (medyan +2%) · Net marj — (medyan +1%) · Borç/Özkaynak — (medyan 0.24)"><i></i>Temel</span>
+    <span class="rozet d-yok" title="Piyasa medyanına göre — PD/DD — (medyan 0.76) · ROE — (medyan +2%) · Net marj — (medyan +1%) · Borç/Özkaynak — (medyan 0.25)"><i></i>Temel</span>
     <span class="rozet d-yok" title="Son çeyrek — Geçen yılın aynı çeyreğine göre: net kâr — → yok · Bir önceki çeyreğe göre: net kâr — → yok · Gelir (yıllık) — → yok — iyi/normal/kötü ayrımı piyasanın alt ve üst üçte birlik dilimine göre"><i></i>Bilanço</span>
-    <span class="rozet d-pozitif" title="Son analist tavsiyeleri: AL · AL · Endeks Üstü Getiri — Ortalama hedef fiyat 33.50 TL (+382%) — Son 7 günde 0 haber, 90 günde 39 — Son başlık: Emlak Konut, Aselsan ile iş birliği protokolü kapsamında Ankara'da arsa satışı karşılığı gelir paylaşımı işi sözleşmesi imzaladı-KAP"><i></i>Haber</span>
+    <span class="rozet d-pozitif" title="Son analist tavsiyeleri: AL · AL · Endeks Üstü Getiri — Ortalama hedef fiyat 33.50 TL (+383%) — Son 7 günde 0 haber, 90 günde 39 — Son başlık: Emlak Konut, Aselsan ile iş birliği protokolü kapsamında Ankara'da arsa satışı karşılığı gelir paylaşımı işi sözleşmesi imzaladı-KAP"><i></i>Haber</span>
     <span class="rozet d-yok" title="Kasım için yeterli geçmiş yok (en az 8 yıl gerekiyor) — elde 1 yıl var"><i></i>Mevsim</span>
   </div>
 </article>
-<article class="kart al" data-durum="al" data-ad="DURDO" data-sira="5" data-skor="63.54" data-risk="0" data-pot="29.46" data-osc="1" data-st="0" data-th="0" data-da="0" data-tm="negatif" data-bl="yok" data-hb="yok" data-sk="Process Industries" data-ex="XTUMY XUSIN XUTUM XKAGT XSIST XBANA" data-mv="notr">
+<article class="kart al" data-durum="al" data-ad="KRGYO" data-sira="4" data-skor="71.87" data-risk="22" data-pot="16.46" data-osc="3" data-st="0" data-th="0" data-da="0" data-tm="negatif" data-bl="pozitif" data-hb="yok" data-sk="Finance" data-ex="XTUMY XUTUM XGMYO XUMAL XKTUM XBANA" data-mv="notr">
   <div class="kart-ust">
     <div class="kimlik">
-      <h3 class="ad">DURDO</h3>
+      <h3 class="ad">KRGYO</h3>
       <span class="etiket e-al">AL</span>
     </div>
-    <span class="skor">64</span>
+    <span class="skor">72</span>
   </div>
-  <div class="olcek"><i style="width:63.538355226180265%"></i></div>
+  <div class="olcek"><i style="width:71.8664470548545%"></i></div>
   <div class="canli-satir" hidden></div>
   <div class="kart-alt">
     <span class="radar-bilgi"></span>
-    <button class="radarBtn" type="button" title="Radarıma ekle" aria-label="DURDO radarıma ekle">☆</button>
+    <button class="radarBtn" type="button" title="Radarıma ekle" aria-label="KRGYO radarıma ekle">☆</button>
   </div>
   <dl class="metrik">
-    <div><dt>Risk</dt><dd class="r-dusuk">0</dd></div>
-    <div><dt>Potansiyel</dt><dd class="arti">+29.5%</dd></div>
-    <div><dt>Osilatör</dt><dd>1<span class="bolu">/6</span></dd></div>
+    <div><dt>Risk</dt><dd class="r-orta">22</dd></div>
+    <div><dt>Potansiyel</dt><dd class="arti">+16.5%</dd></div>
+    <div><dt>Osilatör</dt><dd>3<span class="bolu">/6</span></dd></div>
   </dl>
   <div class="analiz">
-    <span class="rozet d-negatif" title="Piyasa medyanına göre — PD/DD 1.66 (medyan 0.79) · ROE -9% (medyan +2%) · Net marj -5% (medyan +1%) · Borç/Özkaynak 0.73 (medyan 0.24)"><i></i>Temel</span>
-    <span class="rozet d-yok" title="Son çeyrek — Geçen yılın aynı çeyreğine göre: net kâr — → yok · Bir önceki çeyreğe göre: net kâr — → yok · Gelir (yıllık) +24% → normal — iyi/normal/kötü ayrımı piyasanın alt ve üst üçte birlik dilimine göre"><i></i>Bilanço</span>
-    <span class="rozet d-yok" title="Analist tavsiyesi bulunamadı — nokta bu yüzden renksiz — Son 7 günde 0 haber, 90 günde 1 — Son başlık: DURDO Duran Doğan Basım ve Ambalaj Sanayi konsolide bilanço 2026 6 aylık net zararı 53,959,209 TL (Önceki: 239,709,694 TL net zarar)"><i></i>Haber</span>
-    <span class="rozet d-notr" title="Kasım ayında son 25 yılın 14'inde yükselmiş (%56)"><i></i>Mevsim</span>
+    <span class="rozet d-negatif" title="Piyasa medyanına göre — PD/DD 1.12 (medyan 0.76) · ROE -1% (medyan +2%) · Net marj -10% (medyan +1%) · Borç/Özkaynak 0.00 (medyan 0.25)"><i></i>Temel</span>
+    <span class="rozet d-pozitif" title="Son çeyrek — Geçen yılın aynı çeyreğine göre: net kâr +328% → iyi · Bir önceki çeyreğe göre: net kâr +360% → iyi · Gelir (yıllık) +55% → iyi — iyi/normal/kötü ayrımı piyasanın alt ve üst üçte birlik dilimine göre"><i></i>Bilanço</span>
+    <span class="rozet d-yok" title="Analist tavsiyesi bulunamadı — nokta bu yüzden renksiz — Son 7 günde 1 haber, 90 günde 3 — Son başlık: KRGYO Körfez Gayrimenkul Yatırım Ortaklığı solo bilanço 2026 9 aylık net zararı 45,809,990 TL (Önceki: 170,544,756 TL net kar)"><i></i>Haber</span>
+    <span class="rozet d-notr" title="Kasım ayında son 12 yılın 6'inde yükselmiş (%50)"><i></i>Mevsim</span>
   </div>
 </article>
-<article class="kart izle" data-durum="izle" data-ad="RYGYO" data-sira="6" data-skor="87.77" data-risk="50" data-pot="1.11" data-osc="6" data-st="0" data-th="0" data-da="0" data-tm="pozitif" data-bl="notr" data-hb="yok" data-sk="Finance" data-ex="XTUMY XUTUM XGMYO XUMAL XYLDZ" data-mv="notr">
-  <div class="kart-ust">
-    <div class="kimlik">
-      <h3 class="ad">RYGYO</h3>
-      <span class="etiket e-izle">İZLE</span>
-    </div>
-    <span class="skor">88</span>
-  </div>
-  <div class="olcek"><i style="width:87.77243563%"></i></div>
-  <div class="canli-satir" hidden></div>
-  <div class="kart-alt">
-    <span class="radar-bilgi"></span>
-    <button class="radarBtn" type="button" title="Radarıma ekle" aria-label="RYGYO radarıma ekle">☆</button>
-  </div>
-  <dl class="metrik">
-    <div><dt>Risk</dt><dd class="r-yuksek">50</dd></div>
-    <div><dt>Potansiyel</dt><dd class="arti">+1.1%</dd></div>
-    <div><dt>Osilatör</dt><dd>6<span class="bolu">/6</span></dd></div>
-  </dl>
-  <div class="analiz">
-    <span class="rozet d-pozitif" title="Piyasa medyanına göre — PD/DD 1.05 (medyan 0.79) · ROE +22% (medyan +2%) · Net marj +90% (medyan +1%) · Borç/Özkaynak 0.14 (medyan 0.24)"><i></i>Temel</span>
-    <span class="rozet d-notr" title="Son çeyrek — Geçen yılın aynı çeyreğine göre: net kâr +199% → iyi · Bir önceki çeyreğe göre: net kâr +83% → iyi · Gelir (yıllık) +3% → kötü — iyi/normal/kötü ayrımı piyasanın alt ve üst üçte birlik dilimine göre"><i></i>Bilanço</span>
-    <span class="rozet d-yok" title="Analist tavsiyesi bulunamadı — nokta bu yüzden renksiz — Son 7 günde 2 haber, 90 günde 10 — Son başlık: RYGYO Reysaş Gayrimenkul Yatırım Ortaklığı solo bilanço 2026 9 aylık net karı 3,832,787,920 TL (Önceki: 13,555,979,107 TL net kar)"><i></i>Haber</span>
-    <span class="rozet d-notr" title="Kasım ayında son 16 yılın 9'inde yükselmiş (%56)"><i></i>Mevsim</span>
-  </div>
-</article>
-<article class="kart izle" data-durum="izle" data-ad="MNDRS" data-sira="7" data-skor="57.38" data-risk="6" data-pot="29.98" data-osc="6" data-st="1" data-th="0" data-da="1" data-tm="pozitif" data-bl="yok" data-hb="yok" data-sk="Consumer Non-Durables" data-ex="XTUMY XUSIN XUTUM XTEKS XBANA XSDNZ" data-mv="notr">
-  <div class="kart-ust">
-    <div class="kimlik">
-      <h3 class="ad">MNDRS<i class="nokta" title="Supertrend bugün AL verdi"></i></h3>
-      <span class="etiket e-izle">İZLE</span>
-    </div>
-    <span class="skor">57</span>
-  </div>
-  <div class="olcek"><i style="width:57.37527955284157%"></i></div>
-  <div class="canli-satir" hidden></div>
-  <div class="kart-alt">
-    <span class="radar-bilgi"></span>
-    <button class="radarBtn" type="button" title="Radarıma ekle" aria-label="MNDRS radarıma ekle">☆</button>
-  </div>
-  <dl class="metrik">
-    <div><dt>Risk</dt><dd class="r-dusuk">6</dd></div>
-    <div><dt>Potansiyel</dt><dd class="arti">+30.0%</dd></div>
-    <div><dt>Osilatör</dt><dd>6<span class="bolu">/6</span></dd></div>
-  </dl>
-  <div class="analiz">
-    <span class="rozet d-pozitif" title="Piyasa medyanına göre — PD/DD 0.15 (medyan 0.79) · ROE +3% (medyan +2%) · Net marj +5% (medyan +1%) · Borç/Özkaynak 0.23 (medyan 0.24)"><i></i>Temel</span>
-    <span class="rozet d-yok" title="Son çeyrek — Geçen yılın aynı çeyreğine göre: net kâr — → yok · Bir önceki çeyreğe göre: net kâr — → yok · Gelir (yıllık) +12% → kötü — iyi/normal/kötü ayrımı piyasanın alt ve üst üçte birlik dilimine göre"><i></i>Bilanço</span>
-    <span class="rozet d-yok" title="Analist tavsiyesi bulunamadı — nokta bu yüzden renksiz — Son 7 günde 0 haber, 90 günde 2 — Son başlık: ÇED Duyurusu - Menderes Tekstil"><i></i>Haber</span>
-    <span class="rozet d-notr" title="Kasım ayında son 25 yılın 11'inde yükselmiş (%44)"><i></i>Mevsim</span>
-  </div>
-</article>
-<article class="kart izle" data-durum="izle" data-ad="SANKO" data-sira="8" data-skor="55.31" data-risk="22" data-pot="12.55" data-osc="2" data-st="0" data-th="0" data-da="0" data-tm="negatif" data-bl="notr" data-hb="yok" data-sk="Process Industries" data-ex="XTUMY XUTUM XTCRT XUHIZ XKTUM XBANA" data-mv="notr">
+<article class="kart al" data-durum="al" data-ad="SANKO" data-sira="5" data-skor="68.94" data-risk="22" data-pot="11.23" data-osc="3" data-st="0" data-th="0" data-da="0" data-tm="negatif" data-bl="notr" data-hb="yok" data-sk="Process Industries" data-ex="XTUMY XUTUM XTCRT XUHIZ XKTUM XBANA" data-mv="notr">
   <div class="kart-ust">
     <div class="kimlik">
       <h3 class="ad">SANKO</h3>
-      <span class="etiket e-izle">İZLE</span>
+      <span class="etiket e-al">AL</span>
     </div>
-    <span class="skor">55</span>
+    <span class="skor">69</span>
   </div>
-  <div class="olcek"><i style="width:55.30714482654001%"></i></div>
+  <div class="olcek"><i style="width:68.93901679880932%"></i></div>
   <div class="canli-satir" hidden></div>
   <div class="kart-alt">
     <span class="radar-bilgi"></span>
@@ -504,72 +426,124 @@
   </div>
   <dl class="metrik">
     <div><dt>Risk</dt><dd class="r-orta">22</dd></div>
-    <div><dt>Potansiyel</dt><dd class="arti">+12.5%</dd></div>
-    <div><dt>Osilatör</dt><dd>2<span class="bolu">/6</span></dd></div>
+    <div><dt>Potansiyel</dt><dd class="arti">+11.2%</dd></div>
+    <div><dt>Osilatör</dt><dd>3<span class="bolu">/6</span></dd></div>
   </dl>
   <div class="analiz">
-    <span class="rozet d-negatif" title="Piyasa medyanına göre — PD/DD 1.18 (medyan 0.79) · ROE -8% (medyan +2%) · Net marj -4% (medyan +1%) · Borç/Özkaynak 0.00 (medyan 0.24)"><i></i>Temel</span>
+    <span class="rozet d-negatif" title="Piyasa medyanına göre — PD/DD 1.19 (medyan 0.76) · ROE -8% (medyan +2%) · Net marj -4% (medyan +1%) · Borç/Özkaynak 0.00 (medyan 0.25)"><i></i>Temel</span>
     <span class="rozet d-notr" title="Son çeyrek — Geçen yılın aynı çeyreğine göre: net kâr -491% → kötü · Bir önceki çeyreğe göre: net kâr +36% → normal · Gelir (yıllık) -33% → kötü — iyi/normal/kötü ayrımı piyasanın alt ve üst üçte birlik dilimine göre"><i></i>Bilanço</span>
     <span class="rozet d-yok" title="Analist tavsiyesi bulunamadı — nokta bu yüzden renksiz — Son 7 günde 0 haber, 90 günde 0 — Son başlık: SANKO Sanko Pazarlama İthalat İhracat solo bilanço 2026 3 aylık net zararı 74.622.811 TL (Önceki: 17.108.856 TL net zarar)"><i></i>Haber</span>
     <span class="rozet d-notr" title="Kasım ayında son 25 yılın 14'inde yükselmiş (%56)"><i></i>Mevsim</span>
   </div>
 </article>
-<article class="kart izle" data-durum="izle" data-ad="LIDFA" data-sira="9" data-skor="50.56" data-risk="0" data-pot="11.14" data-osc="4" data-st="0" data-th="0" data-da="0" data-tm="notr" data-bl="pozitif" data-hb="yok" data-sk="Finance" data-ex="XTUMY XUTUM XFINK XUMAL XBANA XKURY" data-mv="pozitif">
+<article class="kart al" data-durum="al" data-ad="DURDO" data-sira="6" data-skor="62.55" data-risk="6" data-pot="30.16" data-osc="1" data-st="0" data-th="0" data-da="0" data-tm="negatif" data-bl="yok" data-hb="yok" data-sk="Process Industries" data-ex="XTUMY XUSIN XUTUM XKAGT XSIST XBANA" data-mv="notr">
   <div class="kart-ust">
     <div class="kimlik">
-      <h3 class="ad">LIDFA</h3>
+      <h3 class="ad">DURDO</h3>
+      <span class="etiket e-al">AL</span>
+    </div>
+    <span class="skor">63</span>
+  </div>
+  <div class="olcek"><i style="width:62.55286886599993%"></i></div>
+  <div class="canli-satir" hidden></div>
+  <div class="kart-alt">
+    <span class="radar-bilgi"></span>
+    <button class="radarBtn" type="button" title="Radarıma ekle" aria-label="DURDO radarıma ekle">☆</button>
+  </div>
+  <dl class="metrik">
+    <div><dt>Risk</dt><dd class="r-dusuk">6</dd></div>
+    <div><dt>Potansiyel</dt><dd class="arti">+30.2%</dd></div>
+    <div><dt>Osilatör</dt><dd>1<span class="bolu">/6</span></dd></div>
+  </dl>
+  <div class="analiz">
+    <span class="rozet d-negatif" title="Piyasa medyanına göre — PD/DD 1.65 (medyan 0.76) · ROE -9% (medyan +2%) · Net marj -5% (medyan +1%) · Borç/Özkaynak 0.73 (medyan 0.25)"><i></i>Temel</span>
+    <span class="rozet d-yok" title="Son çeyrek — Geçen yılın aynı çeyreğine göre: net kâr — → yok · Bir önceki çeyreğe göre: net kâr — → yok · Gelir (yıllık) +24% → normal — iyi/normal/kötü ayrımı piyasanın alt ve üst üçte birlik dilimine göre"><i></i>Bilanço</span>
+    <span class="rozet d-yok" title="Analist tavsiyesi bulunamadı — nokta bu yüzden renksiz — Son 7 günde 0 haber, 90 günde 1 — Son başlık: DURDO Duran Doğan Basım ve Ambalaj Sanayi konsolide bilanço 2026 6 aylık net zararı 53,959,209 TL (Önceki: 239,709,694 TL net zarar)"><i></i>Haber</span>
+    <span class="rozet d-notr" title="Kasım ayında son 25 yılın 14'inde yükselmiş (%56)"><i></i>Mevsim</span>
+  </div>
+</article>
+<article class="kart izle" data-durum="izle" data-ad="RYGYO" data-sira="7" data-skor="94.89" data-risk="40" data-pot="6.93" data-osc="5" data-st="0" data-th="0" data-da="0" data-tm="pozitif" data-bl="notr" data-hb="yok" data-sk="Finance" data-ex="XTUMY XUTUM XGMYO XUMAL XYLDZ" data-mv="notr">
+  <div class="kart-ust">
+    <div class="kimlik">
+      <h3 class="ad">RYGYO</h3>
+      <span class="etiket e-izle">İZLE</span>
+    </div>
+    <span class="skor">95</span>
+  </div>
+  <div class="olcek"><i style="width:94.89336063932896%"></i></div>
+  <div class="canli-satir" hidden></div>
+  <div class="kart-alt">
+    <span class="radar-bilgi"></span>
+    <button class="radarBtn" type="button" title="Radarıma ekle" aria-label="RYGYO radarıma ekle">☆</button>
+  </div>
+  <dl class="metrik">
+    <div><dt>Risk</dt><dd class="r-orta">40</dd></div>
+    <div><dt>Potansiyel</dt><dd class="arti">+6.9%</dd></div>
+    <div><dt>Osilatör</dt><dd>5<span class="bolu">/6</span></dd></div>
+  </dl>
+  <div class="analiz">
+    <span class="rozet d-pozitif" title="Piyasa medyanına göre — PD/DD 0.92 (medyan 0.76) · ROE +22% (medyan +2%) · Net marj +97% (medyan +1%) · Borç/Özkaynak 0.15 (medyan 0.25)"><i></i>Temel</span>
+    <span class="rozet d-notr" title="Son çeyrek — Geçen yılın aynı çeyreğine göre: net kâr +366% → iyi · Bir önceki çeyreğe göre: net kâr +54% → iyi · Gelir (yıllık) -7% → kötü — iyi/normal/kötü ayrımı piyasanın alt ve üst üçte birlik dilimine göre"><i></i>Bilanço</span>
+    <span class="rozet d-yok" title="Analist tavsiyesi bulunamadı — nokta bu yüzden renksiz — Son 7 günde 2 haber, 90 günde 10 — Son başlık: RYGYO Reysaş Gayrimenkul Yatırım Ortaklığı solo bilanço 2026 9 aylık net karı 3,832,787,920 TL (Önceki: 13,555,979,107 TL net kar)"><i></i>Haber</span>
+    <span class="rozet d-notr" title="Kasım ayında son 16 yılın 9'inde yükselmiş (%56)"><i></i>Mevsim</span>
+  </div>
+</article>
+<article class="kart izle" data-durum="izle" data-ad="DOAS" data-sira="8" data-skor="58.78" data-risk="6" data-pot="32.84" data-osc="6" data-st="1" data-th="0" data-da="1" data-tm="pozitif" data-bl="notr" data-hb="pozitif" data-sk="Retail Trade" data-ex="XU100 X100S XUTUM XU050 XTCRT XUHIZ XSIST XYUZO X100C XYLDZ XTM25 XTMTU XUSRD XKURY XELOT XELOC XELOS" data-mv="notr">
+  <div class="kart-ust">
+    <div class="kimlik">
+      <h3 class="ad">DOAS<i class="nokta" title="Supertrend bugün AL verdi"></i></h3>
+      <span class="etiket e-izle">İZLE</span>
+    </div>
+    <span class="skor">59</span>
+  </div>
+  <div class="olcek"><i style="width:58.78017594190847%"></i></div>
+  <div class="canli-satir" hidden></div>
+  <div class="kart-alt">
+    <span class="radar-bilgi"></span>
+    <button class="radarBtn" type="button" title="Radarıma ekle" aria-label="DOAS radarıma ekle">☆</button>
+  </div>
+  <dl class="metrik">
+    <div><dt>Risk</dt><dd class="r-dusuk">6</dd></div>
+    <div><dt>Potansiyel</dt><dd class="arti">+32.8%</dd></div>
+    <div><dt>Osilatör</dt><dd>6<span class="bolu">/6</span></dd></div>
+  </dl>
+  <div class="analiz">
+    <span class="rozet d-pozitif" title="Piyasa medyanına göre — PD/DD 0.44 (medyan 0.76) · ROE +4% (medyan +2%) · Net marj +1% (medyan +1%) · Borç/Özkaynak 0.45 (medyan 0.25)"><i></i>Temel</span>
+    <span class="rozet d-notr" title="Son çeyrek — Geçen yılın aynı çeyreğine göre: net kâr -18% → normal · Bir önceki çeyreğe göre: net kâr +204% → iyi · Gelir (yıllık) -0% → kötü — iyi/normal/kötü ayrımı piyasanın alt ve üst üçte birlik dilimine göre"><i></i>Bilanço</span>
+    <span class="rozet d-pozitif" title="Son analist tavsiyeleri: TUT · Endeks Üstü Getiri · Endeks Üstü Getiri — Ortalama hedef fiyat 269.23 TL (+80%) — Son 7 günde 5 haber, 90 günde 56 — Son başlık: Doğuş Otomotiv, Volkswagen grup şirketleri ile Türkiye'de üretim için niyet mektubu imzaladı"><i></i>Haber</span>
+    <span class="rozet d-notr" title="Kasım ayında son 22 yılın 9'inde yükselmiş (%41)"><i></i>Mevsim</span>
+  </div>
+</article>
+<article class="kart izle" data-durum="izle" data-ad="MNDRS" data-sira="9" data-skor="50.93" data-risk="6" data-pot="36.94" data-osc="5" data-st="0" data-th="0" data-da="1" data-tm="pozitif" data-bl="yok" data-hb="yok" data-sk="Consumer Non-Durables" data-ex="XTUMY XUSIN XUTUM XTEKS XBANA XSDNZ" data-mv="notr">
+  <div class="kart-ust">
+    <div class="kimlik">
+      <h3 class="ad">MNDRS</h3>
       <span class="etiket e-izle">İZLE</span>
     </div>
     <span class="skor">51</span>
   </div>
-  <div class="olcek"><i style="width:50.55767692400627%"></i></div>
+  <div class="olcek"><i style="width:50.928322928859%"></i></div>
   <div class="canli-satir" hidden></div>
   <div class="kart-alt">
     <span class="radar-bilgi"></span>
-    <button class="radarBtn" type="button" title="Radarıma ekle" aria-label="LIDFA radarıma ekle">☆</button>
+    <button class="radarBtn" type="button" title="Radarıma ekle" aria-label="MNDRS radarıma ekle">☆</button>
   </div>
   <dl class="metrik">
-    <div><dt>Risk</dt><dd class="r-dusuk">0</dd></div>
-    <div><dt>Potansiyel</dt><dd class="arti">+11.1%</dd></div>
-    <div><dt>Osilatör</dt><dd>4<span class="bolu">/6</span></dd></div>
+    <div><dt>Risk</dt><dd class="r-dusuk">6</dd></div>
+    <div><dt>Potansiyel</dt><dd class="arti">+36.9%</dd></div>
+    <div><dt>Osilatör</dt><dd>5<span class="bolu">/6</span></dd></div>
   </dl>
   <div class="analiz">
-    <span class="rozet d-notr" title="Piyasa medyanına göre — PD/DD 0.86 (medyan 0.79) · ROE +39% (medyan +2%) · Net marj +17% (medyan +1%) · Borç/Özkaynak 4.04 (medyan 0.24)"><i></i>Temel</span>
-    <span class="rozet d-pozitif" title="Son çeyrek — Geçen yılın aynı çeyreğine göre: net kâr +33% → normal · Bir önceki çeyreğe göre: net kâr +15% → normal · Gelir (yıllık) +41% → normal — iyi/normal/kötü ayrımı piyasanın alt ve üst üçte birlik dilimine göre"><i></i>Bilanço</span>
-    <span class="rozet d-yok" title="Analist tavsiyesi bulunamadı — nokta bu yüzden renksiz — Son 7 günde 0 haber, 90 günde 2 — Son başlık: SPK, 2 şirketin sermaye artışlarını onayladı"><i></i>Haber</span>
-    <span class="rozet d-pozitif" title="Kasım ayında son 12 yılın 8'inde yükselmiş (%67)"><i></i>Mevsim</span>
-  </div>
-</article>
-<article class="kart izle" data-durum="izle" data-ad="HUBVC" data-sira="10" data-skor="50.05" data-risk="8" data-pot="32.24" data-osc="6" data-st="0" data-th="0" data-da="0" data-tm="negatif" data-bl="notr" data-hb="yok" data-sk="Finance" data-ex="XTUMY XUTUM XUMAL" data-mv="notr">
-  <div class="kart-ust">
-    <div class="kimlik">
-      <h3 class="ad">HUBVC</h3>
-      <span class="etiket e-izle">İZLE</span>
-    </div>
-    <span class="skor">50</span>
-  </div>
-  <div class="olcek"><i style="width:50.04921688223526%"></i></div>
-  <div class="canli-satir" hidden></div>
-  <div class="kart-alt">
-    <span class="radar-bilgi"></span>
-    <button class="radarBtn" type="button" title="Radarıma ekle" aria-label="HUBVC radarıma ekle">☆</button>
-  </div>
-  <dl class="metrik">
-    <div><dt>Risk</dt><dd class="r-dusuk">8</dd></div>
-    <div><dt>Potansiyel</dt><dd class="arti">+32.2%</dd></div>
-    <div><dt>Osilatör</dt><dd>6<span class="bolu">/6</span></dd></div>
-  </dl>
-  <div class="analiz">
-    <span class="rozet d-negatif" title="Piyasa medyanına göre — PD/DD 0.99 (medyan 0.79) · ROE -29% (medyan +2%) · Net marj -1082% (medyan +1%) · Borç/Özkaynak 0.00 (medyan 0.24)"><i></i>Temel</span>
-    <span class="rozet d-notr" title="Son çeyrek — Geçen yılın aynı çeyreğine göre: net kâr +60% → iyi · Bir önceki çeyreğe göre: net kâr -1279% → kötü · Gelir (yıllık) — → yok — iyi/normal/kötü ayrımı piyasanın alt ve üst üçte birlik dilimine göre"><i></i>Bilanço</span>
-    <span class="rozet d-yok" title="Analist tavsiyesi bulunamadı — nokta bu yüzden renksiz — Son 7 günde 0 haber, 90 günde 3 — Son başlık: HUB Girişim SYO, bedelli sermaye artırımı sürecini sonlandırma kararı aldı."><i></i>Haber</span>
-    <span class="rozet d-notr" title="Kasım ayında son 19 yılın 9'inde yükselmiş (%47)"><i></i>Mevsim</span>
+    <span class="rozet d-pozitif" title="Piyasa medyanına göre — PD/DD 0.14 (medyan 0.76) · ROE +3% (medyan +2%) · Net marj +5% (medyan +1%) · Borç/Özkaynak 0.23 (medyan 0.25)"><i></i>Temel</span>
+    <span class="rozet d-yok" title="Son çeyrek — Geçen yılın aynı çeyreğine göre: net kâr — → yok · Bir önceki çeyreğe göre: net kâr — → yok · Gelir (yıllık) +12% → kötü — iyi/normal/kötü ayrımı piyasanın alt ve üst üçte birlik dilimine göre"><i></i>Bilanço</span>
+    <span class="rozet d-yok" title="Analist tavsiyesi bulunamadı — nokta bu yüzden renksiz — Son 7 günde 0 haber, 90 günde 2 — Son başlık: ÇED Duyurusu - Menderes Tekstil"><i></i>Haber</span>
+    <span class="rozet d-notr" title="Kasım ayında son 25 yılın 11'inde yükselmiş (%44)"><i></i>Mevsim</span>
   </div>
 </article>
 </main>
 
 <footer>
-  Bugün Supertrend al verip listeye giremeyen: <b>MCARD (yeterli geçmiş verisi yok), KONTR (skor 22 — 50 barajının altında), AYES (skor 43 — 50 barajının altında), KERVN (skor 35 — 50 barajının altında), EUHOL (skor 23 — 50 barajının altında), ORMA (skor 37 — 50 barajının altında)</b><br>
+  Bugün Supertrend al verip listeye giremeyen: <b>KARTN (skor 45 — 50 barajının altında), DOGUB (skor 42 — 50 barajının altında), QNBTR (skor 27 — 50 barajının altında), ENPRA (yeterli geçmiş verisi yok)</b><br>
   Bu sayfa her iş günü 18:45'te kendiliğinden yenilenir.<br>
   Teknik tarama sonucudur, yatırım tavsiyesi değildir.
 </footer>
@@ -595,7 +569,7 @@
 /* Tarayici eski kopyayi onbellekte tutabiliyor. Sayfa acilinca sunucudaki
    surum damgasini onbelleksiz okur; farkliysa kendini bir kez yeniler. */
 (function(){
-  var SURUM = '1793202420432';
+  var SURUM = '1793390972062';
   try {
     fetch('surum.txt?_=' + Date.now(), { cache: 'no-store' })
       .then(function(y){ return y.ok ? y.text() : null; })
@@ -617,7 +591,7 @@
    son kapanisindan eskiyse ustte uyari cikar. (Resmi tatillerde de cikabilir,
    o yuzden "olmayabilir" diyoruz.) */
 (function(){
-  var VERI_GUNU = '28.10.2026';                 // GG.AA.YYYY
+  var VERI_GUNU = '30.10.2026';                 // GG.AA.YYYY
   var p = VERI_GUNU.split('.');
   if (p.length !== 3) return;
   var veri = new Date(+p[2], +p[1] - 1, +p[0]);

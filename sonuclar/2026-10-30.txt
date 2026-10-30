@@ -1,0 +1,24 @@
+
+SUPERTREND TARAYICI  -  ATR 10 / Carpan 3 / Periyot 1D
+
+=== AL SINYALI: 5 hisse ===
+  HISSE   KAPANIS      DEG%    ST CIZGISI     ISLEM HACMI (TL)   TARIH
+  DOAS     149.20    +9.95       133.15          219.996.594   30.10.2026
+  KARTN    108.40    +1.78        80.43          119.099.947   30.10.2026
+  DOGUB     20.10    +9.90        13.40           16.315.652   30.10.2026
+  QNBTR    126.50   +10.00       108.77            4.493.407   30.10.2026
+  ENPRA     39.00    +2.96        34.50            1.435.980   30.10.2026
+
+=== SAT SINYALI: 4 hisse ===
+  HISSE   KAPANIS      DEG%    ST CIZGISI     ISLEM HACMI (TL)   TARIH
+  MRGYO      1.03    -3.74         1.38           65.857.041   30.10.2026
+  INDES     10.19    -4.50        12.10           27.356.971   30.10.2026
+  ETILR      5.60    -8.05         7.17           19.131.258   30.10.2026
+  SEKUR      2.98    -7.74         4.43            4.596.146   30.10.2026
+
+TradingView listesine yapistirmak icin:
+  BIST:DOAS,BIST:KARTN,BIST:DOGUB,BIST:QNBTR,BIST:ENPRA
+
+Not: 3 hisse yeterli gecmis veriye sahip degil (yeni islem gormeye baslamis): INTET, NETGL, BKRGY
+
+CSV yazildi: sonuclar\supertrend_2026-10-30.csv  (Excel ile acilabilir)
