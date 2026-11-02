@@ -1,0 +1,20 @@
+
+SUPERTREND TARAYICI  -  ATR 10 / Carpan 3 / Periyot 1D
+
+=== AL SINYALI: 3 hisse ===
+  HISSE   KAPANIS      DEG%    ST CIZGISI     ISLEM HACMI (TL)   TARIH
+  ATAKP     37.00    +5.71        29.74           21.820.491   02.11.2026
+  QNBFK     36.96   +10.00        31.53            2.643.379   02.11.2026
+  KENT     255.00    +6.25       231.40            1.129.140   02.11.2026
+
+=== SAT SINYALI: 2 hisse ===
+  HISSE   KAPANIS      DEG%    ST CIZGISI     ISLEM HACMI (TL)   TARIH
+  ZERGY      5.67   -10.00         7.82           61.169.117   02.11.2026
+  RTALB      1.86    -6.06         2.39           48.047.818   02.11.2026
+
+TradingView listesine yapistirmak icin:
+  BIST:ATAKP,BIST:QNBFK,BIST:KENT
+
+Not: 3 hisse yeterli gecmis veriye sahip degil (yeni islem gormeye baslamis): INTET, NETGL, BKRGY
+
+CSV yazildi: sonuclar\supertrend_2026-11-02.csv  (Excel ile acilabilir)

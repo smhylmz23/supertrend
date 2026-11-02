@@ -1,11 +1,13 @@
 sira;hisse;karar;skor;risk;potansiyel_%;osilator;temel;bilanco;haber;analist_hedef;haber_7gun
-1;DOCO;GÜÇLÜ AL;99;düşük (8);3,8;6/6;notr;notr;yok;;0
-2;GMTAS;AL;94;düşük (10);4,2;4/6;negatif;notr;yok;;1
-3;USHOL;AL;75;düşük (8);25,4;4/6;pozitif;negatif;yok;;0
-4;DMLKT;AL;72;düşük (6);4,9;0/6;yok;yok;pozitif;33,50;0
-5;KRGYO;AL;72;orta (22);16,5;3/6;negatif;pozitif;yok;;1
-6;SANKO;AL;69;orta (22);11,2;3/6;negatif;notr;yok;;0
-7;DURDO;AL;63;düşük (6);30,2;1/6;negatif;yok;yok;;0
-8;RYGYO;İZLE;95;orta (40);6,9;5/6;pozitif;notr;yok;;2
-9;DOAS;İZLE;59;düşük (6);32,8;6/6;pozitif;notr;pozitif;269,23;5
-10;MNDRS;İZLE;51;düşük (6);36,9;5/6;pozitif;yok;yok;;0
+1;DOCO;GÜÇLÜ AL;100;düşük (18);1,4;6/6;notr;notr;yok;;0
+2;KRGYO;AL;84;orta (22);11,7;5/6;negatif;pozitif;yok;;1
+3;GMTAS;AL;82;düşük (0);8,4;4/6;negatif;notr;yok;;1
+4;DMLKT;AL;77;düşük (6);5,2;0/6;yok;yok;pozitif;33,50;0
+5;DURDO;AL;66;düşük (6);24,4;4/6;negatif;yok;yok;;0
+6;RYGYO;İZLE;84;orta (40);9,5;4/6;pozitif;notr;yok;;2
+7;LIDFA;İZLE;59;düşük (0);11,1;3/6;notr;pozitif;yok;;0
+8;ATAKP;İZLE;57;düşük (0);32,0;6/6;notr;pozitif;yok;;4
+9;SANKO;İZLE;57;orta (22);13,3;1/6;negatif;notr;yok;;1
+10;KARTN;İZLE;56;düşük (0);68,1;6/6;negatif;yok;yok;;0
+11;USHOL;İZLE;55;düşük (0);33,3;4/6;pozitif;negatif;yok;;0
+12;EUHOL;İZLE;50;düşük (0);92,8;6/6;pozitif;negatif;yok;;1
