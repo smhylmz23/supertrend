@@ -1,13 +1,17 @@
 sira;hisse;karar;skor;risk;potansiyel_%;osilator;temel;bilanco;haber;analist_hedef;haber_7gun
-1;DOCO;GÜÇLÜ AL;100;düşük (18);1,4;6/6;notr;notr;yok;;0
-2;KRGYO;AL;84;orta (22);11,7;5/6;negatif;pozitif;yok;;1
-3;GMTAS;AL;82;düşük (0);8,4;4/6;negatif;notr;yok;;1
-4;DMLKT;AL;77;düşük (6);5,2;0/6;yok;yok;pozitif;33,50;0
-5;DURDO;AL;66;düşük (6);24,4;4/6;negatif;yok;yok;;0
-6;RYGYO;İZLE;84;orta (40);9,5;4/6;pozitif;notr;yok;;2
-7;LIDFA;İZLE;59;düşük (0);11,1;3/6;notr;pozitif;yok;;0
-8;ATAKP;İZLE;57;düşük (0);32,0;6/6;notr;pozitif;yok;;4
-9;SANKO;İZLE;57;orta (22);13,3;1/6;negatif;notr;yok;;1
-10;KARTN;İZLE;56;düşük (0);68,1;6/6;negatif;yok;yok;;0
-11;USHOL;İZLE;55;düşük (0);33,3;4/6;pozitif;negatif;yok;;0
-12;EUHOL;İZLE;50;düşük (0);92,8;6/6;pozitif;negatif;yok;;1
+1;DOCO;GÜÇLÜ AL;91;düşük (0);4,9;6/6;notr;notr;yok;;0
+2;RYSAS;AL;90;düşük (0);9,7;4/6;notr;negatif;yok;;0
+3;GMTAS;AL;80;düşük (0);16,4;1/6;negatif;notr;yok;;1
+4;KRGYO;AL;80;orta (22);14,7;5/6;negatif;pozitif;yok;;1
+5;DURDO;AL;71;düşük (6);21,4;4/6;negatif;yok;yok;;0
+6;DMLKT;AL;66;düşük (6);5,4;0/6;yok;yok;pozitif;33,50;0
+7;USHOL;AL;65;düşük (0);32,1;3/6;pozitif;negatif;yok;;0
+8;KARTN;AL;65;düşük (0);53,0;6/6;negatif;yok;yok;;0
+9;QNBFK;AL;61;düşük (0);18,2;6/6;notr;pozitif;yok;;0
+10;RYGYO;İZLE;87;orta (40);6,8;4/6;pozitif;notr;yok;;2
+11;QNBTR;İZLE;58;düşük (0);28,1;6/6;notr;notr;yok;;2
+12;ATAKP;İZLE;57;düşük (0);31,7;6/6;notr;pozitif;yok;;0
+13;KIMMR;İZLE;57;düşük (0);35,5;6/6;pozitif;notr;yok;;1
+14;EUHOL;İZLE;55;düşük (0);92,3;6/6;pozitif;negatif;yok;;1
+15;SANKO;İZLE;54;orta (22);13,0;2/6;negatif;notr;yok;;1
+16;METRO;İZLE;50;düşük (10);23,2;1/6;pozitif;yok;yok;;0
