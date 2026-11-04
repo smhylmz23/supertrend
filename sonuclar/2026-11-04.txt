@@ -1,0 +1,36 @@
+
+SUPERTREND TARAYICI  -  ATR 10 / Carpan 3 / Periyot 1D
+
+=== AL SINYALI: 21 hisse ===
+  HISSE   KAPANIS      DEG%    ST CIZGISI     ISLEM HACMI (TL)   TARIH
+  THYAO    291.25    +9.91       246.59       22.809.309.864   04.11.2026
+  GARAN    137.50    +6.75       123.97        6.603.975.538   04.11.2026
+  PGSUS    134.60    +5.82       116.93        2.258.234.944   04.11.2026
+  ENKAI     81.25    +1.31        73.32        1.748.166.306   04.11.2026
+  TCKRC    120.90    +6.52        91.29          575.732.933   04.11.2026
+  ENJSA    118.60    +4.13       104.44          528.584.545   04.11.2026
+  TSKB       9.90    +7.38         8.58          326.666.914   04.11.2026
+  KCAER     10.20    +8.40         8.22          271.598.174   04.11.2026
+  CIMSA     41.68    +4.30        36.72          243.203.050   04.11.2026
+  ENTRA      4.87    +9.93         4.25           95.108.894   04.11.2026
+  YUNSA      5.88    +9.91         4.80           77.718.759   04.11.2026
+  LMKDC     21.80    +6.86        18.09           63.409.682   04.11.2026
+  GRSEL    277.25    +9.91       225.14           62.503.795   04.11.2026
+  KONYA   3162.50    +8.68      2595.19           56.978.763   04.11.2026
+  ARSAN      3.25    +9.80         2.65           56.682.031   04.11.2026
+  OZKGY     12.03    +5.07        10.69           50.188.931   04.11.2026
+  ACSEL     85.50    +9.97        66.23           36.384.269   04.11.2026
+  KRSTL      7.05    +3.68         6.02           26.779.785   04.11.2026
+  VESBE      3.52   +10.00         2.82           15.848.409   04.11.2026
+  DOFER     18.81    +9.36        14.78           10.437.575   04.11.2026
+  PENTA      9.00    +9.89         7.54            6.808.005   04.11.2026
+
+=== SAT SINYALI: 0 hisse ===
+  (yok)
+
+TradingView listesine yapistirmak icin:
+  BIST:THYAO,BIST:GARAN,BIST:PGSUS,BIST:ENKAI,BIST:TCKRC,BIST:ENJSA,BIST:TSKB,BIST:KCAER,BIST:CIMSA,BIST:ENTRA,BIST:YUNSA,BIST:LMKDC,BIST:GRSEL,BIST:KONYA,BIST:ARSAN,BIST:OZKGY,BIST:ACSEL,BIST:KRSTL,BIST:VESBE,BIST:DOFER,BIST:PENTA
+
+Not: 3 hisse yeterli gecmis veriye sahip degil (yeni islem gormeye baslamis): BKRGY, NETGL, INTET
+
+CSV yazildi: sonuclar\supertrend_2026-11-04.csv  (Excel ile acilabilir)
