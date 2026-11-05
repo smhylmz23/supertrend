@@ -1,0 +1,61 @@
+
+SUPERTREND TARAYICI  -  ATR 10 / Carpan 3 / Periyot 1D
+
+=== AL SINYALI: 46 hisse ===
+  HISSE   KAPANIS      DEG%    ST CIZGISI     ISLEM HACMI (TL)   TARIH
+  TAVHL    291.00    +4.39       252.29        2.271.110.373   05.11.2026
+  ALTIN     72.20    +1.52        69.02          803.584.267   05.11.2026
+  CWENE     17.30    +5.75        13.73          557.915.087   05.11.2026
+  CVKMD     13.51    +6.38        10.98          537.581.544   05.11.2026
+  BTCIM      1.89    +9.25         1.42          525.035.209   05.11.2026
+  MPARK    429.25    +6.25       369.94          523.930.531   05.11.2026
+  SKBNK      3.65    +9.94         2.83          454.871.797   05.11.2026
+  ALBTN     22.70    +9.56        17.36          189.403.102   05.11.2026
+  ZOREN      1.42    +5.97         1.12          174.789.085   05.11.2026
+  EGEEN   4395.00    +1.50      3714.22          136.921.830   05.11.2026
+  BMSTL     38.06   +10.00        29.04          108.692.814   05.11.2026
+  ANSGR     23.02    +1.41        20.16          100.407.485   05.11.2026
+  KARSN      7.66    +3.10         6.31           96.284.890   05.11.2026
+  DEVA      78.80    +7.95        66.17           72.546.274   05.11.2026
+  BASGZ     36.48    +3.64        31.61           59.721.517   05.11.2026
+  AKSUE     14.00    +9.98         9.69           51.620.730   05.11.2026
+  IZENR      3.80    +5.56         2.93           48.500.365   05.11.2026
+  FZLGY      5.44    +7.09         4.25           46.199.760   05.11.2026
+  AFYON     12.26    +4.07        10.52           40.006.795   05.11.2026
+  BIENY     12.97    +8.54        10.05           38.402.990   05.11.2026
+  AYCES    336.00    +8.91       267.41           37.632.336   05.11.2026
+  ENSRI      2.67    +9.88         2.00           35.392.132   05.11.2026
+  ALGYO      2.75    +1.48         2.37           32.631.610   05.11.2026
+  OZSUB     34.00    +8.01        26.04           31.479.342   05.11.2026
+  AKHAN     26.98    +9.94        20.14           31.335.678   05.11.2026
+  ADGYO     45.18    +8.66        35.35           30.988.465   05.11.2026
+  BURCE     20.96    +9.97        15.65           27.951.355   05.11.2026
+  ICBCT     14.17    +5.35        11.48           26.544.505   05.11.2026
+  AKFGY      2.40    +3.00         2.11           23.496.348   05.11.2026
+  ISFIN     16.20    +1.50        13.80           22.790.063   05.11.2026
+  YAPRK      7.32    +9.91         5.52           21.362.922   05.11.2026
+  CUSAN     18.80    +6.33        13.71           18.676.710   05.11.2026
+  SELVA      0.98    +4.26         0.82           18.323.803   05.11.2026
+  BFREN    101.20    +4.06        86.15           16.587.186   05.11.2026
+  EDIP      23.94    +2.31        20.58           14.177.005   05.11.2026
+  LKMNH     11.28    +5.92         9.47           14.147.613   05.11.2026
+  DYOBY      8.84    +4.12         7.39           13.222.695   05.11.2026
+  CATES     27.36    +9.97        21.35            5.117.278   05.11.2026
+  BRKO       6.38   +10.00         4.92            4.203.999   05.11.2026
+  RODRG     12.76    +9.91         9.46            1.979.484   05.11.2026
+  CASA      40.64    +9.96        30.56            1.651.610   05.11.2026
+  ATSYH     76.15    +9.96        60.77            1.482.260   05.11.2026
+  BRKVY     31.12    +9.96        21.87            1.118.920   05.11.2026
+  INTEK    180.50    +4.52       149.95            1.096.718   05.11.2026
+  BRMEN      5.46    +9.86         4.04              630.777   05.11.2026
+  YBTAS     10.70    +7.00         9.61              466.359   05.11.2026
+
+=== SAT SINYALI: 0 hisse ===
+  (yok)
+
+TradingView listesine yapistirmak icin:
+  BIST:TAVHL,BIST:ALTIN,BIST:CWENE,BIST:CVKMD,BIST:BTCIM,BIST:MPARK,BIST:SKBNK,BIST:ALBTN,BIST:ZOREN,BIST:EGEEN,BIST:BMSTL,BIST:ANSGR,BIST:KARSN,BIST:DEVA,BIST:BASGZ,BIST:AKSUE,BIST:IZENR,BIST:FZLGY,BIST:AFYON,BIST:BIENY,BIST:AYCES,BIST:ENSRI,BIST:ALGYO,BIST:OZSUB,BIST:AKHAN,BIST:ADGYO,BIST:BURCE,BIST:ICBCT,BIST:AKFGY,BIST:ISFIN,BIST:YAPRK,BIST:CUSAN,BIST:SELVA,BIST:BFREN,BIST:EDIP,BIST:LKMNH,BIST:DYOBY,BIST:CATES,BIST:BRKO,BIST:RODRG,BIST:CASA,BIST:ATSYH,BIST:BRKVY,BIST:INTEK,BIST:BRMEN,BIST:YBTAS
+
+Not: 3 hisse yeterli gecmis veriye sahip degil (yeni islem gormeye baslamis): INTET, NETGL, BKRGY
+
+CSV yazildi: sonuclar\supertrend_2026-11-05.csv  (Excel ile acilabilir)
