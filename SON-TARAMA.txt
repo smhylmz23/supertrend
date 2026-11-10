@@ -1,84 +1,27 @@
 
 SUPERTREND TARAYICI  -  ATR 10 / Carpan 3 / Periyot 1D
 
-=== AL SINYALI: 69 hisse ===
+=== AL SINYALI: 11 hisse ===
   HISSE   KAPANIS      DEG%    ST CIZGISI     ISLEM HACMI (TL)   TARIH
-  AKBNK     70.95    +3.35        61.92        9.787.797.065   09.11.2026
-  TRALT     40.24    +5.51        32.55        3.165.367.612   09.11.2026
-  TRMET    115.90    +3.57        93.58          734.243.074   09.11.2026
-  YEOTK     28.20    +9.98        21.68          577.497.310   09.11.2026
-  ARDYZ     62.00    +6.16        47.60          512.902.874   09.11.2026
-  GLRMK    125.40    +4.33       102.71          369.591.295   09.11.2026
-  NETCD     95.70    +3.01        79.03          358.859.592   09.11.2026
-  GESAN     37.92    +5.04        29.81          351.194.070   09.11.2026
-  TUKAS      2.05    +9.63         1.66          251.105.154   09.11.2026
-  MOGAN      9.02    +4.28         7.18          232.909.479   09.11.2026
-  BLUME     30.50    +8.31        23.00          153.444.128   09.11.2026
-  PSGYO      1.41    +4.44         1.06          118.316.821   09.11.2026
-  ECILC     51.50    +4.38        42.86          116.765.538   09.11.2026
-  ADESE      0.57    +9.62         0.45          108.543.863   09.11.2026
-  SMRTG      4.45    +9.88         3.44          105.299.242   09.11.2026
-  AYDEM     23.68    +5.34        19.25           95.974.472   09.11.2026
-  KZBGY      1.25    +7.76         1.02           93.512.676   09.11.2026
-  INDES     11.89    +4.76         9.94           90.988.653   09.11.2026
-  SNGYO      2.73    +9.64         2.22           74.427.155   09.11.2026
-  FONET      4.08    +3.29         3.44           69.858.890   09.11.2026
-  EUREN      2.55    +4.94         2.12           66.470.853   09.11.2026
-  TRGYO     92.10    +1.88        84.35           61.080.075   09.11.2026
-  MERCN      3.35    +4.04         2.69           57.469.193   09.11.2026
-  GWIND     18.63    +3.33        16.16           54.853.557   09.11.2026
-  KATMR      1.25    +5.93         1.02           51.806.474   09.11.2026
-  MOPAS     16.29    +3.89        13.59           49.789.245   09.11.2026
-  FORTE     88.05    +9.99        72.42           44.565.011   09.11.2026
-  TARKM    353.75    +7.85       286.12           42.752.103   09.11.2026
-  VSNMD     21.86    +7.05        16.69           42.277.480   09.11.2026
-  KOPOL      3.10    +5.80         2.50           39.952.351   09.11.2026
-  CLEBI   1319.00    +4.60      1137.84           36.049.589   09.11.2026
-  UCAYM     12.32    +4.67         9.76           35.990.391   09.11.2026
-  VKGYO      1.57    +3.97         1.38           31.530.437   09.11.2026
-  TEZOL      7.24    +6.16         6.11           31.192.353   09.11.2026
-  BESLR     10.41    +3.58         9.10           29.609.454   09.11.2026
-  LRSHO      1.74    +9.43         1.39           29.298.419   09.11.2026
-  TTRAK    374.50    +0.94       335.57           25.624.039   09.11.2026
-  YIGIT     13.93    +2.80        11.83           24.973.161   09.11.2026
-  IMASM      1.43    +2.88         1.21           23.215.335   09.11.2026
-  BRLSM      9.25    +4.52         7.23           22.929.622   09.11.2026
-  EKOS       2.99    +9.93         2.32           21.652.964   09.11.2026
-  SANEL     32.42    +9.97        21.88           21.480.487   09.11.2026
-  EGPRO     30.92    +6.69        25.80           20.738.910   09.11.2026
-  KMPUR     13.25    +6.00        10.35           20.208.913   09.11.2026
-  ASGYO      9.59    +2.57         8.62           20.104.783   09.11.2026
-  SANFM      4.20    +0.96         3.15           19.302.150   09.11.2026
-  SMART     12.04    +4.33         9.23           17.232.106   09.11.2026
-  BRISA     73.65    +3.15        63.15           16.389.703   09.11.2026
-  AGROT      1.24    +2.48         1.06           15.881.746   09.11.2026
-  LUKSK     54.20    +9.98        41.53           13.599.322   09.11.2026
-  FORMT      0.95    +4.40         0.79           12.745.987   09.11.2026
-  BORSK      5.00    +3.52         4.26           12.457.990   09.11.2026
-  CONSE      1.45    +5.07         1.22           12.354.003   09.11.2026
-  ALKIM     10.78    +6.10         8.88           12.331.867   09.11.2026
-  OSMEN      5.22    +9.89         4.20           12.057.652   09.11.2026
-  BNTAS      5.28    +2.52         4.57           10.378.896   09.11.2026
-  PETUN      9.70    +3.30         8.20           10.199.550   09.11.2026
-  DNISI      3.95    +4.22         3.23            7.200.423   09.11.2026
-  YESIL      0.80    +2.56         0.67            6.668.146   09.11.2026
-  GEDZA     19.54    +2.52        16.61            5.878.843   09.11.2026
-  BRKSN      5.81    +9.83         4.50            5.835.239   09.11.2026
-  SAYAS     36.96   +10.00        30.86            5.161.279   09.11.2026
-  PAMEL     42.20    +5.76        32.23            4.812.108   09.11.2026
-  PNLSN     30.60    +9.99        25.22            3.690.697   09.11.2026
-  GRNYO      8.28    +9.67         5.98            3.096.927   09.11.2026
-  HATEK      7.67    +6.23         5.47            2.468.881   09.11.2026
-  SONME    112.00    +8.74        84.57            2.324.672   09.11.2026
-  OYLUM      6.24    +3.14         5.20            1.295.449   09.11.2026
-  DIRIT     17.09    +3.58        13.15              231.980   09.11.2026
+  ALARK    104.70    +6.08        90.59          524.010.203   10.11.2026
+  BUCIM      4.29    +4.63         3.76          132.733.231   10.11.2026
+  KARCL     41.86    +9.98        27.69          101.959.951   10.11.2026
+  SEGYO      2.42    +6.61         1.90           51.147.228   10.11.2026
+  A1YEN      1.60    +9.59         1.23           38.946.243   10.11.2026
+  ELITE     19.51    +9.98        15.98           38.400.753   10.11.2026
+  KLKIM     20.90    +1.95        18.08           30.891.496   10.11.2026
+  BAKAB     28.28    +9.95        22.55           16.994.668   10.11.2026
+  FMIZP    229.60    +2.23       192.51           16.364.510   10.11.2026
+  DERHL      1.36    +3.03         1.09           13.614.982   10.11.2026
+  RNPOL      1.99    +4.19         1.51            6.266.202   10.11.2026
 
-=== SAT SINYALI: 0 hisse ===
-  (yok)
+=== SAT SINYALI: 1 hisse ===
+  HISSE   KAPANIS      DEG%    ST CIZGISI     ISLEM HACMI (TL)   TARIH
+  DURDO      5.44    -1.63         6.70           10.537.329   10.11.2026
 
 TradingView listesine yapistirmak icin:
-  BIST:AKBNK,BIST:TRALT,BIST:TRMET,BIST:YEOTK,BIST:ARDYZ,BIST:GLRMK,BIST:NETCD,BIST:GESAN,BIST:TUKAS,BIST:MOGAN,BIST:BLUME,BIST:PSGYO,BIST:ECILC,BIST:ADESE,BIST:SMRTG,BIST:AYDEM,BIST:KZBGY,BIST:INDES,BIST:SNGYO,BIST:FONET,BIST:EUREN,BIST:TRGYO,BIST:MERCN,BIST:GWIND,BIST:KATMR,BIST:MOPAS,BIST:FORTE,BIST:TARKM,BIST:VSNMD,BIST:KOPOL,BIST:CLEBI,BIST:UCAYM,BIST:VKGYO,BIST:TEZOL,BIST:BESLR,BIST:LRSHO,BIST:TTRAK,BIST:YIGIT,BIST:IMASM,BIST:BRLSM,BIST:EKOS,BIST:SANEL,BIST:EGPRO,BIST:KMPUR,BIST:ASGYO,BIST:SANFM,BIST:SMART,BIST:BRISA,BIST:AGROT,BIST:LUKSK,BIST:FORMT,BIST:BORSK,BIST:CONSE,BIST:ALKIM,BIST:OSMEN,BIST:BNTAS,BIST:PETUN,BIST:DNISI,BIST:YESIL,BIST:GEDZA,BIST:BRKSN,BIST:SAYAS,BIST:PAMEL,BIST:PNLSN,BIST:GRNYO,BIST:HATEK,BIST:SONME,BIST:OYLUM,BIST:DIRIT
+  BIST:ALARK,BIST:BUCIM,BIST:KARCL,BIST:SEGYO,BIST:A1YEN,BIST:ELITE,BIST:KLKIM,BIST:BAKAB,BIST:FMIZP,BIST:DERHL,BIST:RNPOL
 
-Not: 3 hisse yeterli gecmis veriye sahip degil (yeni islem gormeye baslamis): INTET, NETGL, BKRGY
+Not: 2 hisse yeterli gecmis veriye sahip degil (yeni islem gormeye baslamis): NETGL, BKRGY
 
-CSV yazildi: sonuclar\supertrend_2026-11-09.csv  (Excel ile acilabilir)
+CSV yazildi: sonuclar\supertrend_2026-11-10.csv  (Excel ile acilabilir)
