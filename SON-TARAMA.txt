@@ -1,27 +1,31 @@
 
 SUPERTREND TARAYICI  -  ATR 10 / Carpan 3 / Periyot 1D
 
-=== AL SINYALI: 11 hisse ===
+=== AL SINYALI: 13 hisse ===
   HISSE   KAPANIS      DEG%    ST CIZGISI     ISLEM HACMI (TL)   TARIH
-  ALARK    104.70    +6.08        90.59          524.010.203   10.11.2026
-  BUCIM      4.29    +4.63         3.76          132.733.231   10.11.2026
-  KARCL     41.86    +9.98        27.69          101.959.951   10.11.2026
-  SEGYO      2.42    +6.61         1.90           51.147.228   10.11.2026
-  A1YEN      1.60    +9.59         1.23           38.946.243   10.11.2026
-  ELITE     19.51    +9.98        15.98           38.400.753   10.11.2026
-  KLKIM     20.90    +1.95        18.08           30.891.496   10.11.2026
-  BAKAB     28.28    +9.95        22.55           16.994.668   10.11.2026
-  FMIZP    229.60    +2.23       192.51           16.364.510   10.11.2026
-  DERHL      1.36    +3.03         1.09           13.614.982   10.11.2026
-  RNPOL      1.99    +4.19         1.51            6.266.202   10.11.2026
+  KTLEV      6.13    +9.86         3.97        2.759.259.814   11.11.2026
+  PEKGY      1.26    +9.57         0.78          519.237.199   11.11.2026
+  ZGYO      15.07   +10.00        10.66          166.140.918   11.11.2026
+  TATEN      4.17    +6.92         3.21          128.425.959   11.11.2026
+  ISVEA     21.24    +9.99        14.36           98.190.948   11.11.2026
+  BOBET     16.03    +5.05        13.04           83.720.394   11.11.2026
+  QUAGR      1.56    +2.63         1.23           59.156.187   11.11.2026
+  SVGYO      2.60    +9.70         1.77           56.943.260   11.11.2026
+  MARBL      8.91   +10.00         7.02           19.293.937   11.11.2026
+  OZRDN     12.14    +9.96         8.58            9.974.248   11.11.2026
+  KLNMA      7.50    +9.81         6.29            5.860.853   11.11.2026
+  IDGYO      1.89    +9.88         1.31            3.477.944   11.11.2026
+  MMCAS     12.48    +8.81         9.67            1.497.388   11.11.2026
 
-=== SAT SINYALI: 1 hisse ===
+=== SAT SINYALI: 3 hisse ===
   HISSE   KAPANIS      DEG%    ST CIZGISI     ISLEM HACMI (TL)   TARIH
-  DURDO      5.44    -1.63         6.70           10.537.329   10.11.2026
+  GLRMK    101.70    -9.92       131.24        1.343.071.455   11.11.2026
+  KONTR      2.17    -9.96         2.61            4.207.391   11.11.2026
+  QNBTR    141.50    -3.15       163.44            1.317.082   11.11.2026
 
 TradingView listesine yapistirmak icin:
-  BIST:ALARK,BIST:BUCIM,BIST:KARCL,BIST:SEGYO,BIST:A1YEN,BIST:ELITE,BIST:KLKIM,BIST:BAKAB,BIST:FMIZP,BIST:DERHL,BIST:RNPOL
+  BIST:KTLEV,BIST:PEKGY,BIST:ZGYO,BIST:TATEN,BIST:ISVEA,BIST:BOBET,BIST:QUAGR,BIST:SVGYO,BIST:MARBL,BIST:OZRDN,BIST:KLNMA,BIST:IDGYO,BIST:MMCAS
 
-Not: 2 hisse yeterli gecmis veriye sahip degil (yeni islem gormeye baslamis): NETGL, BKRGY
+Not: 1 hisse yeterli gecmis veriye sahip degil (yeni islem gormeye baslamis): NETGL
 
-CSV yazildi: sonuclar\supertrend_2026-11-10.csv  (Excel ile acilabilir)
+CSV yazildi: sonuclar\supertrend_2026-11-11.csv  (Excel ile acilabilir)
