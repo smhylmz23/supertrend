@@ -1,0 +1,29 @@
+
+SUPERTREND TARAYICI  -  ATR 10 / Carpan 3 / Periyot 1D
+
+=== AL SINYALI: 14 hisse ===
+  HISSE   KAPANIS      DEG%    ST CIZGISI     ISLEM HACMI (TL)   TARIH
+  EKGYO     18.81    +2.40        16.54        1.686.076.277   12.11.2026
+  SELEC     92.40    +5.36        64.83        1.221.088.823   12.11.2026
+  PASEU     36.24    +9.95        24.24          498.109.233   12.11.2026
+  ORZAX     70.60    +4.21        56.12          452.676.257   12.11.2026
+  ENERY     14.45    +2.48        12.62          410.367.978   12.11.2026
+  GENIL      4.61    +5.01         3.42          367.983.481   12.11.2026
+  DAPGM      2.73    +9.64         2.02          187.696.479   12.11.2026
+  SARAE     36.52   +10.00        27.91          166.657.084   12.11.2026
+  BKRGY      4.48    +9.54         3.55           88.825.278   12.11.2026
+  MEYSU      8.15    +4.76         6.60           55.713.098   12.11.2026
+  VESTL     14.08   +10.00        11.33           15.716.856   12.11.2026
+  FLAP      10.26    +3.12         8.56           14.246.667   12.11.2026
+  SUWEN      5.14    +4.68         4.11           11.695.607   12.11.2026
+  TBORG    122.00    +2.52       110.14            8.652.484   12.11.2026
+
+=== SAT SINYALI: 0 hisse ===
+  (yok)
+
+TradingView listesine yapistirmak icin:
+  BIST:EKGYO,BIST:SELEC,BIST:PASEU,BIST:ORZAX,BIST:ENERY,BIST:GENIL,BIST:DAPGM,BIST:SARAE,BIST:BKRGY,BIST:MEYSU,BIST:VESTL,BIST:FLAP,BIST:SUWEN,BIST:TBORG
+
+Not: 1 hisse yeterli gecmis veriye sahip degil (yeni islem gormeye baslamis): NETGL
+
+CSV yazildi: sonuclar\supertrend_2026-11-12.csv  (Excel ile acilabilir)
