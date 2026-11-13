@@ -1,0 +1,36 @@
+
+SUPERTREND TARAYICI  -  ATR 10 / Carpan 3 / Periyot 1D
+
+=== AL SINYALI: 20 hisse ===
+  HISSE   KAPANIS      DEG%    ST CIZGISI     ISLEM HACMI (TL)   TARIH
+  BIMAS    395.50    +1.93       356.06        4.150.649.500   13.11.2026
+  CCOLA     80.30    +5.45        69.52          476.982.723   13.11.2026
+  KLRHO     11.85    +9.93         8.52          270.004.893   13.11.2026
+  MAGEN      6.98    +9.92         4.59          263.630.977   13.11.2026
+  BIGTK     53.05    +5.57        37.39          198.099.204   13.11.2026
+  TKNKA     37.62   +10.00        25.71          175.690.817   13.11.2026
+  ATATR      5.03    +9.83         3.72          151.664.263   13.11.2026
+  VEYAS     62.60    +9.92        46.83          146.393.105   13.11.2026
+  MANAS      3.56    +9.88         2.35          126.232.691   13.11.2026
+  KAPLM    133.00    +3.74        98.32           94.523.366   13.11.2026
+  ESCAR     11.96    +9.93         7.33           77.561.808   13.11.2026
+  BINBN     39.24    +9.98        27.34           71.200.313   13.11.2026
+  CELHA     30.48    +1.60        24.76           67.297.554   13.11.2026
+  SMRVA      5.29    +9.98         3.90           55.028.082   13.11.2026
+  SEKFK      3.21    +9.93         2.45           45.066.625   13.11.2026
+  AHSGY      7.35    +9.87         5.22           32.993.709   13.11.2026
+  GUNDG    116.00    +9.95        74.44           22.388.580   13.11.2026
+  EKSUN      4.00    +4.99         3.29           11.727.836   13.11.2026
+  OYYAT     24.84    +3.07        19.95            9.244.156   13.11.2026
+  AVGYO     15.26    +3.60        12.23            8.642.348   13.11.2026
+
+=== SAT SINYALI: 1 hisse ===
+  HISSE   KAPANIS      DEG%    ST CIZGISI     ISLEM HACMI (TL)   TARIH
+  ERSU      14.12    -3.42        17.66            8.180.973   13.11.2026
+
+TradingView listesine yapistirmak icin:
+  BIST:BIMAS,BIST:CCOLA,BIST:KLRHO,BIST:MAGEN,BIST:BIGTK,BIST:TKNKA,BIST:ATATR,BIST:VEYAS,BIST:MANAS,BIST:KAPLM,BIST:ESCAR,BIST:BINBN,BIST:CELHA,BIST:SMRVA,BIST:SEKFK,BIST:AHSGY,BIST:GUNDG,BIST:EKSUN,BIST:OYYAT,BIST:AVGYO
+
+Not: 1 hisse yeterli gecmis veriye sahip degil (yeni islem gormeye baslamis): NETGL
+
+CSV yazildi: sonuclar\supertrend_2026-11-13.csv  (Excel ile acilabilir)
