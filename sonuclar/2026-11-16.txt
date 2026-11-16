@@ -1,0 +1,52 @@
+
+SUPERTREND TARAYICI  -  ATR 10 / Carpan 3 / Periyot 1D
+
+=== AL SINYALI: 35 hisse ===
+  HISSE   KAPANIS      DEG%    ST CIZGISI     ISLEM HACMI (TL)   TARIH
+  KUYAS     12.37    +9.96         8.67          455.235.384   16.11.2026
+  ISKPL      3.10    +5.80         2.33          280.598.369   16.11.2026
+  HDFGS      1.39    +9.45         1.01          215.704.930   16.11.2026
+  PATEK     10.21    +8.50         7.31          203.010.739   16.11.2026
+  BAHKM    171.20    +4.71       135.62          174.828.755   16.11.2026
+  BINHO      4.27    +3.14         3.30          158.153.831   16.11.2026
+  PAHOL      0.87    +6.10         0.68          137.018.218   16.11.2026
+  INFO       0.95    +9.20         0.63          118.615.670   16.11.2026
+  LIDER      8.95    +9.95         6.60           87.555.935   16.11.2026
+  ICUGS      1.41    +5.22         1.00           70.784.696   16.11.2026
+  EGEGY     18.12    +9.95        14.66           64.936.390   16.11.2026
+  YYLGD      6.83    +2.25         5.94           63.828.044   16.11.2026
+  CGCAM     20.02   +10.00        15.57           58.518.640   16.11.2026
+  PKART     85.30    +9.99        66.45           51.789.980   16.11.2026
+  DUNYH     17.94    +9.99        11.91           49.283.153   16.11.2026
+  SURGY     17.60    +4.14        14.33           43.336.040   16.11.2026
+  VERUS    553.00    +8.01       450.13           42.324.961   16.11.2026
+  RUZYE      4.13    +9.84         2.99           37.255.247   16.11.2026
+  ANELE     12.14    +9.96         7.66           34.282.692   16.11.2026
+  IHLGM      1.10   +10.00         0.87           32.033.697   16.11.2026
+  PSDTC     75.25    +9.53        57.24           29.537.205   16.11.2026
+  SEGMN     16.69    +9.95        11.59           29.407.713   16.11.2026
+  KRPLS     10.62    +7.16         7.91           25.917.462   16.11.2026
+  EDATA      4.14    +9.81         2.87           25.865.834   16.11.2026
+  PRKAB     20.10    +6.91        16.62           24.643.444   16.11.2026
+  BULGS      7.87    +9.92         5.29           23.208.496   16.11.2026
+  BIGEN     10.93    +9.96         7.07           21.037.867   16.11.2026
+  SKYLP     75.90    +7.36        50.99           16.286.622   16.11.2026
+  ZRGYO     17.58    +1.62        15.82           15.021.231   16.11.2026
+  AKYHO      1.63    +4.49         1.30           13.866.726   16.11.2026
+  VKING     13.25    +6.94        10.35           12.480.175   16.11.2026
+  INVES    725.00    +3.94       638.44           11.936.400   16.11.2026
+  OZGYO      1.47    +0.68         1.23            9.370.322   16.11.2026
+  UFUK     176.60    +9.96       118.11            5.105.329   16.11.2026
+  YONGA     30.00    +7.14        24.60              549.390   16.11.2026
+
+=== SAT SINYALI: 2 hisse ===
+  HISSE   KAPANIS      DEG%    ST CIZGISI     ISLEM HACMI (TL)   TARIH
+  ULKER     72.55    -2.55        81.18          287.459.714   16.11.2026
+  USHOL     60.50    -9.02        75.34          137.257.560   16.11.2026
+
+TradingView listesine yapistirmak icin:
+  BIST:KUYAS,BIST:ISKPL,BIST:HDFGS,BIST:PATEK,BIST:BAHKM,BIST:BINHO,BIST:PAHOL,BIST:INFO,BIST:LIDER,BIST:ICUGS,BIST:EGEGY,BIST:YYLGD,BIST:CGCAM,BIST:PKART,BIST:DUNYH,BIST:SURGY,BIST:VERUS,BIST:RUZYE,BIST:ANELE,BIST:IHLGM,BIST:PSDTC,BIST:SEGMN,BIST:KRPLS,BIST:EDATA,BIST:PRKAB,BIST:BULGS,BIST:BIGEN,BIST:SKYLP,BIST:ZRGYO,BIST:AKYHO,BIST:VKING,BIST:INVES,BIST:OZGYO,BIST:UFUK,BIST:YONGA
+
+Not: 1 hisse yeterli gecmis veriye sahip degil (yeni islem gormeye baslamis): NETGL
+
+CSV yazildi: sonuclar\supertrend_2026-11-16.csv  (Excel ile acilabilir)

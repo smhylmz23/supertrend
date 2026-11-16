@@ -1,0 +1,79 @@
+
+BIST KONFLUANS TARAYICI  —  TradingView gostergelerinizin birebir karsiligi
+
+=== TUM HISSELER : 590 hisse ===
+
+  HISSE   DURUM     SKOR  TRD  MOM  HCM  RISK UYM  ADX   RSI  KAPANIS   DEG%   OSILATOR
+  KRGYO  GUCLU AL    97   33   30   35    22   2   24    57      3.68    +6.4   4/6
+  MPARK  GUCLU AL    94   33   30   31    10   0   25    67    462.75    -0.7   6/6
+  GARAN  GUCLU AL    91   35   30   26    20   0   33    66    150.10    -0.1   4/6
+  DOCO   GUCLU AL    91   35   30   26    10   0   44    65  12742.50    -1.4   5/6
+  METRO  AL          88   31   28   29    28   0   19    75      9.46    +4.5   4/6
+  OZYSR  GUCLU AL    86   33   30   23    10   0   26    68     13.68    -0.9   5/6
+  THYAO  GUCLU AL    85   30   30   25    28   0   38    73    323.50    +1.0   5/6
+  ENERY  AL          85   30   30   25    20   0   16    63     14.74    +1.0   5/6
+  TAVHL  GUCLU AL    83   28   30   25    18   0   24    67    304.00    +0.6   6/6
+  BAHKM  AL          82   23   30   29     0   0   18    63    171.20    +4.7   4/6
+  CELHA  GUCLU AL    81   32   30   19     0   0   21    66     30.72    +0.8   6/6
+  KLSYN  izle        80   21   29   30     0   0   15    60     15.70    +0.5   5/6
+  SANKO  GUCLU AL    79   27   29   23    30   2   37    56     21.44    +0.1   6/6
+  AVGYO  AL          79   22   29   28     0   0   16    60     15.98    +4.7   5/6
+  VERUS  AL          79   24   30   25     0   0   19    66    553.00    +8.0   5/6
+  BIMAS  GUCLU AL    77   25   26   26     0   0   23    56    394.50    -0.3   6/6
+  ALARK  GUCLU AL    76   25   28   22    10   1   24    57    107.50    -1.5   5/6
+  SAYAS  GUCLU AL    76   20   30   26    10   0   39    70     46.52    +7.7   6/6
+  DURDO  izle        76   22   26   28     0   0   17    59      6.09    +2.5   4/6
+  PGSUS  AL          76   15   30   31    10   0   38    70    157.50    +1.4   5/6
+  SODSN  AL          75   13   30   32    10   0   26    68      7.07    +6.5   6/6
+  ENJSA  AL          75   28   30   17    18   1   11    60    121.10    -1.0   5/6
+  DMLKT  AL          75   28   24   23     0   0    9    51      6.96    +0.4   3/6
+  INVES  AL          74   27   29   18     0   0   28    64    725.00    +3.9   6/6
+  HKTM   AL          74   20   28   26    30   2   22    57     12.05    +0.1   5/6
+  YKBNK  AL          73   28   29   16     0   0   16    55     37.48    -0.8   3/6
+  KRPLS  AL          73   23   28   22     0   0   18    59     10.62    +7.2   5/6
+  ADGYO  AL          71   24   30   17    10   0   29    69     54.10    +0.2   5/6
+  CCOLA  AL          71   27   28   16    22   2   29    59     80.05    -0.3   6/6
+  AKSA   AL          71   17   30   24     0   0   18    63     11.18    +1.2   5/6
+  AHGAZ  izle        71   20   26   25     0   0   12    53     46.28    +0.1   1/6
+  TCKRC  AL          71   22   28   21     8   0   21    56    127.30    -2.7   5/6
+  EGPRO  AL          70   20   28   22     0   0   37    59     33.26    -0.7   5/6
+  ISCTR  AL          68   18   29   22     0   0   19    56     13.34    -1.5   4/6
+  VAKBN  AL          67   20   27   20     0   0   17    54     33.20    -0.1   5/6
+  GMTAS  izle        66   28   20   18     0   0   11    48     48.00    -1.4   1/6
+  RYSAS  izle        65   28   19   18     6   0   10    48     25.50    +0.0   1/6
+  PKENT  izle        65    5   30   30    32   3   24    62    119.20   +10.0   6/6
+  OTKAR  izle        65    2   29   33     6   0   18    59    332.00    +3.8   5/6
+  TRCAS  izle        64   12   27   25    10   0   28    56     44.32    +1.1   6/6
+  DGNMO  AL          63   14   30   20     0   0   26    66      6.19    +5.6   5/6
+  IDGYO  AL          63   15   30   18     0   0   33    69      2.45    +9.9   6/6
+  SEGYO  AL          63   15   30   18     0   0   35    68      3.07    +6.2   6/6
+  SMART  AL          62   15   29   18    18   0   36    74     18.17   +10.0   5/6
+  RNPOL  AL          62   15   29   17     0   0   30    65      2.11    +0.0   6/6
+  FONET  AL          61   15   28   18     0   0   22    63      4.31    +8.6   6/6
+  HUNER  izle        61   14   25   22     0   0   21    52      3.96    +0.5   5/6
+  PNLSN  AL          61   15   28   18     0   0   39    61     33.88    +5.2   6/6
+  SANFM  AL          60   15   27   18     0   0   31    65      5.30    +6.0   5/6
+  FZLGY  izle        60   15   27   17    18   0   33    77      7.78    +9.9   5/6
+  ENTRA  izle        60   17   22   21    22   2   20    51      4.52    -1.7   3/6
+  EMNIS  izle        59   10   28   22     0   0   17    56    140.40    +0.6   4/6
+  BLUME  izle        59   13   28   18     0   0   26    58     32.00    +7.5   6/6
+  AKBNK  izle        59   16   28   14     0   0   25    57     69.90    -0.1   5/6
+  CEMZY  izle        59   13   27   18     0   0   26    64      8.33    +3.1   6/6
+  KIMMR  izle        58   15   27   16    14   0   33    57     11.12    +3.9   6/6
+  AKSGY  izle        58   14   27   18     0   0   22    56      9.39    +1.5   6/6
+  TUPRS  izle        58   15   21   22     0   0   28    49    356.00    -0.8   4/6
+  BRSAN  izle        58   13   20   25    22   2   10    49    648.00    +1.6   1/6
+  EGEGY  izle        58   13   27   18     8   0   25    65     18.12   +10.0   6/6
+  ... ve 530 hisse daha (tamami Excel dosyasinda)
+
+BUGUN YENI SINYAL VEREN: BAHKM, VERUS, SAYAS, INVES, KRPLS, DGNMO, RNPOL, FONET, PNLSN, SANFM
+
+TradingView listesine yapistirmak icin:
+  BIST:KRGYO,BIST:MPARK,BIST:GARAN,BIST:DOCO,BIST:METRO,BIST:OZYSR,BIST:THYAO,BIST:ENERY,BIST:TAVHL,BIST:BAHKM,BIST:CELHA,BIST:KLSYN,BIST:SANKO,BIST:AVGYO,BIST:VERUS,BIST:BIMAS,BIST:ALARK,BIST:SAYAS,BIST:DURDO,BIST:PGSUS,BIST:SODSN,BIST:ENJSA,BIST:DMLKT,BIST:INVES,BIST:HKTM,BIST:YKBNK,BIST:KRPLS,BIST:ADGYO,BIST:CCOLA,BIST:AKSA,BIST:AHGAZ,BIST:TCKRC,BIST:EGPRO,BIST:ISCTR,BIST:VAKBN,BIST:GMTAS,BIST:RYSAS,BIST:PKENT,BIST:OTKAR,BIST:TRCAS
+
+Not: 35 hisse 200 gunluk EMA icin yeterli gecmise sahip degil.
+
+Excel dosyasi: sonuclar\konfluans_2026-11-16.csv  (590 satir, 34 sutun)
+
+Sade liste  : sonuclar\firsatlar_2026-11-16.csv
+Renkli sayfa: index.html
