@@ -1,32 +1,28 @@
 
 SUPERTREND TARAYICI  -  ATR 10 / Carpan 3 / Periyot 1D
 
-=== AL SINYALI: 8 hisse ===
+=== AL SINYALI: 6 hisse ===
   HISSE   KAPANIS      DEG%    ST CIZGISI     ISLEM HACMI (TL)   TARIH
-  CITAS    113.70    +2.06        86.19        1.084.877.646   18.11.2026
-  ALKLC     37.68    +9.98        23.03          660.280.770   18.11.2026
-  IEYHO     12.94    +9.94         8.09           83.287.171   18.11.2026
-  LYDYE   2752.50    +9.99      1795.73           46.046.573   18.11.2026
-  KLSYN     16.31    +2.84        13.75           40.228.599   18.11.2026
-  KONTR      2.75    +5.77         2.30           16.943.908   18.11.2026
-  EUKYO      8.90    +7.23         6.84            7.510.728   18.11.2026
-  MEGAP      1.09    +9.00         0.89            1.970.039   18.11.2026
+  TOASO    249.30    +3.14       215.26        1.255.639.338   19.11.2026
+  TEHOL      2.66    +9.92         1.77           38.020.532   19.11.2026
+  NUGYO      6.87    +9.92         5.39           22.708.057   19.11.2026
+  IHEVA      1.56    +9.86         1.24           14.924.682   19.11.2026
+  USAK       0.46    +9.52         0.39            9.127.394   19.11.2026
+  IHYAY      0.88   +10.00         0.69            4.823.240   19.11.2026
 
-=== SAT SINYALI: 9 hisse ===
+=== SAT SINYALI: 7 hisse ===
   HISSE   KAPANIS      DEG%    ST CIZGISI     ISLEM HACMI (TL)   TARIH
-  DOHOL     16.18    -2.12        18.05          201.763.063   18.11.2026
-  AYDEM     19.15    -5.94        24.02          182.005.028   18.11.2026
-  TUKAS      1.84    -3.66         2.26           98.504.963   18.11.2026
-  GMTAS     45.00    -2.60        51.92           93.734.730   18.11.2026
-  ULUUN      5.79    -3.34         6.57           29.012.051   18.11.2026
-  GOKNR     11.69    -4.10        13.51           22.518.938   18.11.2026
-  BIENY     12.07    -4.43        14.78           14.221.888   18.11.2026
-  ENPRA     40.00    -4.81        45.21            1.325.480   18.11.2026
-  INTEK    147.20    -5.03       177.05            1.059.398   18.11.2026
+  TRGYO     84.20    -0.82        90.45          166.967.674   19.11.2026
+  BURCE     17.10   -10.00        22.97           50.522.634   19.11.2026
+  KARTN     98.85    -3.75       126.01           27.971.881   19.11.2026
+  TTRAK    332.25    -3.70       374.36           26.975.378   19.11.2026
+  GRSEL    240.90    -2.51       282.14           22.228.325   19.11.2026
+  BESLR      9.31    -0.53        10.27            8.090.483   19.11.2026
+  AYES       6.34    -5.65         7.55            1.824.576   19.11.2026
 
 TradingView listesine yapistirmak icin:
-  BIST:CITAS,BIST:ALKLC,BIST:IEYHO,BIST:LYDYE,BIST:KLSYN,BIST:KONTR,BIST:EUKYO,BIST:MEGAP
+  BIST:TOASO,BIST:TEHOL,BIST:NUGYO,BIST:IHEVA,BIST:USAK,BIST:IHYAY
 
 Not: 1 hisse yeterli gecmis veriye sahip degil (yeni islem gormeye baslamis): NETGL
 
-CSV yazildi: sonuclar\supertrend_2026-11-18.csv  (Excel ile acilabilir)
+CSV yazildi: sonuclar\supertrend_2026-11-19.csv  (Excel ile acilabilir)
