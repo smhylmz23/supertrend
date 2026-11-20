@@ -1,28 +1,35 @@
 
 SUPERTREND TARAYICI  -  ATR 10 / Carpan 3 / Periyot 1D
 
-=== AL SINYALI: 6 hisse ===
+=== AL SINYALI: 3 hisse ===
   HISSE   KAPANIS      DEG%    ST CIZGISI     ISLEM HACMI (TL)   TARIH
-  TOASO    249.30    +3.14       215.26        1.255.639.338   19.11.2026
-  TEHOL      2.66    +9.92         1.77           38.020.532   19.11.2026
-  NUGYO      6.87    +9.92         5.39           22.708.057   19.11.2026
-  IHEVA      1.56    +9.86         1.24           14.924.682   19.11.2026
-  USAK       0.46    +9.52         0.39            9.127.394   19.11.2026
-  IHYAY      0.88   +10.00         0.69            4.823.240   19.11.2026
+  DSTKF    134.70    +9.96        81.16          195.692.025   20.11.2026
+  MOBTL      9.66    +3.65         7.91          116.062.900   20.11.2026
+  SAMAT      3.81    +9.80         3.01            7.977.782   20.11.2026
 
-=== SAT SINYALI: 7 hisse ===
+=== SAT SINYALI: 17 hisse ===
   HISSE   KAPANIS      DEG%    ST CIZGISI     ISLEM HACMI (TL)   TARIH
-  TRGYO     84.20    -0.82        90.45          166.967.674   19.11.2026
-  BURCE     17.10   -10.00        22.97           50.522.634   19.11.2026
-  KARTN     98.85    -3.75       126.01           27.971.881   19.11.2026
-  TTRAK    332.25    -3.70       374.36           26.975.378   19.11.2026
-  GRSEL    240.90    -2.51       282.14           22.228.325   19.11.2026
-  BESLR      9.31    -0.53        10.27            8.090.483   19.11.2026
-  AYES       6.34    -5.65         7.55            1.824.576   19.11.2026
+  ALTIN     68.43    -0.98        71.23          809.643.163   20.11.2026
+  CVKMD     11.22    -9.95        13.89          666.188.285   20.11.2026
+  MGROS    435.25    -3.06       479.63          637.868.015   20.11.2026
+  ARDYZ     45.78    -5.14        57.69          307.074.111   20.11.2026
+  MAGEN      4.62    -9.94         6.85          166.750.732   20.11.2026
+  FZLGY      6.55    -9.66         8.46          164.177.525   20.11.2026
+  SMRVA      4.64    -5.11         6.16           39.770.493   20.11.2026
+  MASFN     31.04    -3.42        36.33           26.722.522   20.11.2026
+  ICBCT     11.67    -4.34        13.90           17.421.443   20.11.2026
+  ARSAN      2.93    -1.68         3.33           15.034.003   20.11.2026
+  ALGYO      2.49    -1.58         2.80           13.983.770   20.11.2026
+  DEVA      70.00    -1.96        79.56           12.681.340   20.11.2026
+  SAFKR     11.50    -4.17        13.97           11.072.200   20.11.2026
+  LKMNH     10.02    -2.34        11.58           10.667.402   20.11.2026
+  LIDFA      1.56    -2.50         1.77            6.074.250   20.11.2026
+  CASA      37.14    -6.45        46.70              533.442   20.11.2026
+  ORMA     120.00    -5.44       135.99              413.040   20.11.2026
 
 TradingView listesine yapistirmak icin:
-  BIST:TOASO,BIST:TEHOL,BIST:NUGYO,BIST:IHEVA,BIST:USAK,BIST:IHYAY
+  BIST:DSTKF,BIST:MOBTL,BIST:SAMAT
 
 Not: 1 hisse yeterli gecmis veriye sahip degil (yeni islem gormeye baslamis): NETGL
 
-CSV yazildi: sonuclar\supertrend_2026-11-19.csv  (Excel ile acilabilir)
+CSV yazildi: sonuclar\supertrend_2026-11-20.csv  (Excel ile acilabilir)

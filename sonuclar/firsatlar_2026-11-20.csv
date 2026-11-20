@@ -1,0 +1,56 @@
+﻿sira;hisse;karar;skor;risk;potansiyel_%;osilator;temel;bilanco;haber;analist_hedef;haber_7gun
+1;DOCO;GÜÇLÜ AL;89;düşük (0);4,3;3/6;notr;notr;yok;;0
+2;OZYSR;GÜÇLÜ AL;88;düşük (18);6,3;4/6;negatif;notr;yok;;0
+3;METRO;GÜÇLÜ AL;86;düşük (8);8,4;4/6;pozitif;yok;yok;;1
+4;CELHA;GÜÇLÜ AL;86;orta (28);8,0;6/6;negatif;notr;yok;;0
+5;THYAO;GÜÇLÜ AL;85;orta (36);0,8;6/6;pozitif;notr;pozitif;436,52;0
+6;BAHKM;GÜÇLÜ AL;84;düşük (10);8,3;5/6;negatif;negatif;yok;;0
+7;IDGYO;GÜÇLÜ AL;84;orta (35);0,0;6/6;notr;yok;yok;;0
+8;ENERY;AL;85;düşük (20);3,5;3/6;pozitif;pozitif;notr;20,00;0
+9;HKTM;AL;81;orta (30);25,5;5/6;negatif;notr;yok;;0
+10;PGSUS;AL;79;düşük (18);5,5;5/6;notr;pozitif;pozitif;235,81;4
+11;GARAN;AL;74;düşük (10);9,0;2/6;notr;pozitif;pozitif;189,09;3
+12;MPARK;AL;73;düşük (0);7,9;4/6;notr;pozitif;pozitif;666,02;0
+13;TAVHL;AL;72;düşük (6);9,2;1/6;notr;notr;pozitif;434,88;3
+14;SANKO;AL;69;orta (22);8,7;2/6;negatif;notr;yok;;0
+15;VAKBN;AL;68;düşük (0);15,4;3/6;notr;notr;pozitif;44,22;5
+16;DGNMO;AL;67;düşük (8);27,5;6/6;negatif;negatif;yok;;1
+17;IHEVA;AL;63;düşük (0);24,0;6/6;pozitif;yok;yok;;0
+18;IHLGM;AL;62;orta (35);13,1;5/6;pozitif;notr;yok;;0
+19;SEGYO;AL;60;düşük (0);19,1;5/6;notr;pozitif;yok;;0
+20;IHYAY;AL;60;düşük (0);41,7;5/6;negatif;notr;yok;;0
+21;DMLKT;İZLE;68;düşük (6);4,4;0/6;yok;yok;pozitif;32,42;0
+22;INVES;İZLE;66;düşük (0);24,7;3/6;negatif;notr;yok;;0
+23;RYSAS;İZLE;64;düşük (10);23,8;1/6;notr;negatif;yok;;1
+24;KRGYO;İZLE;62;düşük (6);23,5;0/6;negatif;pozitif;yok;;0
+25;KLSYN;İZLE;62;düşük (0);25,3;0/6;negatif;notr;yok;;2
+26;AVGYO;İZLE;61;düşük (0);29,1;2/6;pozitif;pozitif;yok;;0
+27;SMART;İZLE;60;düşük (8);49,3;5/6;negatif;notr;yok;;0
+28;SAMAT;İZLE;60;düşük (0);45,4;5/6;pozitif;pozitif;yok;;1
+29;IHLAS;İZLE;58;düşük (0);52,9;6/6;negatif;notr;yok;;0
+30;IHGZT;İZLE;58;düşük (0);47,8;6/6;pozitif;yok;yok;;0
+31;YKBNK;İZLE;58;orta (22);8,2;0/6;notr;notr;pozitif;49,22;2
+32;AHSGY;İZLE;57;düşük (8);143,6;6/6;pozitif;notr;yok;;0
+33;CATES;İZLE;57;düşük (8);123,9;5/6;pozitif;notr;yok;;0
+34;CCOLA;İZLE;57;düşük (0);7,6;5/6;notr;pozitif;pozitif;119,48;2
+35;PKART;İZLE;56;düşük (8);59,5;6/6;pozitif;notr;yok;;1
+36;TCKRC;İZLE;56;düşük (0);35,9;2/6;pozitif;pozitif;yok;;1
+37;BSOKE;İZLE;56;düşük (0);306,6;5/6;negatif;yok;yok;;0
+38;MOBTL;İZLE;56;düşük (0);40,0;6/6;notr;notr;yok;;1
+39;RYGYO;İZLE;55;düşük (10);19,7;0/6;pozitif;notr;yok;;0
+40;SODSN;İZLE;55;düşük (0);17,1;4/6;negatif;yok;yok;;0
+41;ARFYE;İZLE;55;düşük (0);83,3;5/6;negatif;pozitif;yok;;0
+42;RNPOL;İZLE;54;düşük (0);27,5;4/6;notr;negatif;yok;;0
+43;FRIGO;İZLE;54;düşük (8);28,4;3/6;negatif;notr;yok;;0
+44;BIOEN;İZLE;53;orta (26);46,8;5/6;negatif;notr;yok;;4
+45;AKYHO;İZLE;52;düşük (0);50,6;1/6;notr;notr;yok;;0
+46;SAYAS;İZLE;52;düşük (0);47,0;5/6;pozitif;notr;yok;;0
+47;CGCAM;İZLE;52;düşük (12);70,0;5/6;notr;notr;yok;;1
+48;AKSA;İZLE;52;düşük (0);9,5;3/6;notr;pozitif;pozitif;16,79;0
+49;NUGYO;İZLE;51;düşük (0);37,5;6/6;notr;notr;yok;;0
+50;YAPRK;İZLE;51;düşük (0);51,5;4/6;pozitif;notr;yok;;0
+51;KRPLS;İZLE;51;düşük (0);51,6;4/6;negatif;negatif;yok;;1
+52;FLAP;İZLE;51;düşük (0);31,6;4/6;negatif;notr;yok;;1
+53;EGGUB;İZLE;51;düşük (0);26,3;5/6;pozitif;pozitif;yok;;0
+54;TOASO;İZLE;50;düşük (8);21,6;5/6;notr;pozitif;pozitif;452,57;2
+55;DOGUB;İZLE;50;düşük (0);97,8;4/6;negatif;notr;yok;;0
