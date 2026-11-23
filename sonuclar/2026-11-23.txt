@@ -1,0 +1,28 @@
+
+SUPERTREND TARAYICI  -  ATR 10 / Carpan 3 / Periyot 1D
+
+=== AL SINYALI: 0 hisse ===
+  (yok)
+
+=== SAT SINYALI: 16 hisse ===
+  HISSE   KAPANIS      DEG%    ST CIZGISI     ISLEM HACMI (TL)   TARIH
+  PASEU     31.66    -9.95        46.27          290.511.084   23.11.2026
+  CIMSA     38.56    -0.87        42.49          208.703.224   23.11.2026
+  MARTI      1.08    -9.24         1.48          171.199.075   23.11.2026
+  KLRHO     10.60    -1.30        13.96          122.795.573   23.11.2026
+  KLSYN     13.60    -2.51        16.52           79.620.819   23.11.2026
+  LYDHO     18.22    -9.98        28.25           53.235.251   23.11.2026
+  MOGAN      8.10    -2.53         9.77           41.185.357   23.11.2026
+  MOPAS     14.25    -3.13        16.73           23.745.573   23.11.2026
+  AVHOL     25.20    -5.76        30.15           20.797.636   23.11.2026
+  FLAP       2.55   -75.92         6.72           17.728.329   23.11.2026
+  ESEN       1.93    -2.53         2.29           17.675.857   23.11.2026
+  ADGYO     45.70    -2.10        54.37           15.956.978   23.11.2026
+  ALVES      0.48    -5.88         0.58            3.060.588   23.11.2026
+  BALAT     49.00    -2.00        57.51            1.107.890   23.11.2026
+  SODSN      5.96    -9.97         7.60              536.233   23.11.2026
+  BASCM      9.79    -1.11        10.84              243.644   23.11.2026
+
+Not: 1 hisse yeterli gecmis veriye sahip degil (yeni islem gormeye baslamis): NETGL
+
+CSV yazildi: sonuclar\supertrend_2026-11-23.csv  (Excel ile acilabilir)
