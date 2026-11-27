@@ -1,0 +1,17 @@
+
+SUPERTREND TARAYICI  -  ATR 10 / Carpan 3 / Periyot 1D
+
+=== AL SINYALI: 0 hisse ===
+  (yok)
+
+=== SAT SINYALI: 7 hisse ===
+  HISSE   KAPANIS      DEG%    ST CIZGISI     ISLEM HACMI (TL)   TARIH
+  IEYHO      9.90    -9.92        15.53          395.513.484   27.11.2026
+  MIATK     21.54    -1.10        25.32          198.686.963   27.11.2026
+  PKART      5.83   -92.89        48.88           38.626.811   27.11.2026
+  SKYLP     49.92    -9.97        73.91           22.846.936   27.11.2026
+  IDGYO      2.77    -9.77         3.67            5.458.750   27.11.2026
+  GRNYO      6.68    -0.89         8.11            1.064.946   27.11.2026
+  EUHOL      5.63    -2.93         6.67              948.790   27.11.2026
+
+CSV yazildi: sonuclar\supertrend_2026-11-27.csv  (Excel ile acilabilir)

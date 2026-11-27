@@ -4,17 +4,14 @@ SUPERTREND TARAYICI  -  ATR 10 / Carpan 3 / Periyot 1D
 === AL SINYALI: 0 hisse ===
   (yok)
 
-=== SAT SINYALI: 10 hisse ===
+=== SAT SINYALI: 7 hisse ===
   HISSE   KAPANIS      DEG%    ST CIZGISI     ISLEM HACMI (TL)   TARIH
-  FROTO     65.80    -1.64        74.12        1.049.977.509   26.11.2026
-  ALKLC     30.40    -8.60        45.41          937.320.251   26.11.2026
-  IHLGM      1.30    -9.72         1.69          177.176.930   26.11.2026
-  BINBN     33.60    -1.58        46.25           56.203.056   26.11.2026
-  AFYON     10.59    -2.67        11.95           30.594.764   26.11.2026
-  AKHAN     21.86    -5.78        29.01           20.036.045   26.11.2026
-  PETUN      8.40    -1.18         9.50            6.950.034   26.11.2026
-  PEKGY      1.78    -9.64         2.33            2.532.054   26.11.2026
-  MMCAS     12.25    -4.30        16.12              422.980   26.11.2026
-  GUNDG    136.10    -9.99       181.01              215.991   26.11.2026
+  IEYHO      9.90    -9.92        15.53          395.513.484   27.11.2026
+  MIATK     21.54    -1.10        25.32          198.686.963   27.11.2026
+  PKART      5.83   -92.89        48.88           38.626.811   27.11.2026
+  SKYLP     49.92    -9.97        73.91           22.846.936   27.11.2026
+  IDGYO      2.77    -9.77         3.67            5.458.750   27.11.2026
+  GRNYO      6.68    -0.89         8.11            1.064.946   27.11.2026
+  EUHOL      5.63    -2.93         6.67              948.790   27.11.2026
 
-CSV yazildi: sonuclar\supertrend_2026-11-26.csv  (Excel ile acilabilir)
+CSV yazildi: sonuclar\supertrend_2026-11-27.csv  (Excel ile acilabilir)
